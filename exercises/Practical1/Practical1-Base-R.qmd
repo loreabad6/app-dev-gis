@@ -67,14 +67,10 @@ my_symbols%Num <- 1:len
 This chunk (which should NOT have errors) will load up the encoded secret message as a vector:
 
 ```{r}
-top_secret <- read.csv("Secret_Code_AppDev", header = TRUE)$x
+top_secret <- read.csv(
+  "https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/exercises/Practical1/Secret_Code_AppDev", 
+  header = TRUE)$x
 ```
-
-::: callout-tip
-If you have errors in this one try: `readr::read.csv("Secret_Code_AppDev", header = TRUE)$x`
-
-or come see me for help 🙃
-:::
 
 By altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.
 
@@ -198,7 +194,7 @@ Headquarters has informed you that your final message should have 820 even numbe
 
 Use your final vector of numbers as indices for my_symbols to discover the final message! 
 
-*Hint*: to make your code more legible, checkout the function `cat()`, you can access the help file by typing `?cat` on your console.
+*Hint*: to make your solution more legible, checkout the function `cat()`, you can access the help file by typing `?cat` on your console.
 
 ```{r}
 #| output: asis

@@ -3187,21 +3187,9 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="part-two-decoding-the-secret-message.">Part Two: Decoding the secret message.</h2>
 <p>This chunk (which should NOT have errors) will load up the encoded secret message as a vector:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>top_secret <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Secret_Code_AppDev&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you have errors in this one try: <code>readr::read.csv(&quot;Secret_Code_AppDev&quot;, header = TRUE)$x</code></p>
-<p>or come see me for help 🙃</p>
-</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>top_secret <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/exercises/Practical1/Secret_Code_AppDev&quot;</span>, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">header =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>By altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.</p>
 <ol start="0" type="1">
@@ -3339,7 +3327,7 @@ Checkpoint
 <section id="part-3-the-secret-message" class="level2">
 <h2 class="anchored" data-anchor-id="part-3-the-secret-message">Part 3: The secret message!</h2>
 <p>Use your final vector of numbers as indices for my_symbols to discover the final message!</p>
-<p><em>Hint</em>: to make your code more legible, checkout the function <code>cat()</code>, you can access the help file by typing <code>?cat</code> on your console.</p>
+<p><em>Hint</em>: to make your solution more legible, checkout the function <code>cat()</code>, you can access the help file by typing <code>?cat</code> on your console.</p>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># write code to decode the message</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Google the message, if you do not recognize it, and find its title and author.</p>
 <div class="callout callout-style-default callout-note callout-titled">
