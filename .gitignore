@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# preparation-solutions materials should remain hidden from students
+preparation-solutions/
