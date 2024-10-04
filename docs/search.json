@@ -1,0 +1,56 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Part 2: R workflows for reproducible spatial analysis",
+    "section": "",
+    "text": "About\n\n\napp-dev-gis\nCourse materials for the Application Development Course (GIS) - R module",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "lessons/notes.html",
+    "href": "lessons/notes.html",
+    "title": "Part 2: R workflows for reproducible spatial analysis",
+    "section": "",
+    "text": "Tidy data: https://openscapes.org/blog/2020-10-12-tidy-data/",
+    "crumbs": [
+      "Lessons",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>notes.html</span>"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical0/Practical0-Getting-Started-R.html",
+    "href": "practicals/Practical0/Practical0-Getting-Started-R.html",
+    "title": "Practical 0 - Getting Started with R",
+    "section": "",
+    "text": "Self-paced introduction to R\nIn this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. It should take you around 1h30 to 2h to complete the course.",
+    "crumbs": [
+      "Practicals",
+      "Practical 0 - Getting Started with R"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical0/Practical0-Getting-Started-R.html#self-paced-introduction-to-r",
+    "href": "practicals/Practical0/Practical0-Getting-Started-R.html#self-paced-introduction-to-r",
+    "title": "Practical 0 - Getting Started with R",
+    "section": "",
+    "text": "Go to the following link in R for the Rest of Us - Getting Started with R.\nPlease register to the course as indicated. This introductory course is free of charge.\nBy the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment.",
+    "crumbs": [
+      "Practicals",
+      "Practical 0 - Getting Started with R"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical0/Practical0-Getting-Started-R.html#interactively-learn-r-with-swirl",
+    "href": "practicals/Practical0/Practical0-Getting-Started-R.html#interactively-learn-r-with-swirl",
+    "title": "Practical 0 - Getting Started with R",
+    "section": "Interactively learn R with swirl",
+    "text": "Interactively learn R with swirl\nIf you went through the fundamentals of R faster than you expected, feel free to learn or freshen up your R basics interactively via the swirl package.\n\nGo to the swirl website\nFollow the instructions to start interactive R courses from the R console.\n\nYou can skip steps 1 and 2, since you did this already in the course above.\n\nCheck Step 5 for instructions to download more courses, in different languages available at the Swirl Course Network.\n\nThis part of the practical is optional and you don’t need to prove completion. I do recommend you to test a couple of swirl modules though since we will get full hands-on in the next session.",
+    "crumbs": [
+      "Practicals",
+      "Practical 0 - Getting Started with R"
+    ]
+  }
+]
