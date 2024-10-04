@@ -1,0 +1,47 @@
+project:
+  type: book
+  execute-dir: project
+  output-dir: docs
+
+book:
+  title: "Part 2: R workflows for reproducible spatial analysis"
+  subtitle: "IP: Application Development (GIS)"
+  author:
+    - name: Lorena Abad
+      affiliations:
+      - name: University of Salzburg
+      email: lorena.abad@plus.ac.at
+      orcid: 0000-0003-0554-734X
+  date: "today"
+  chapters:
+    - index.qmd
+    - part: "Lessons"
+      chapters: 
+        - lessons/notes.qmd
+    - part: "Practicals"
+      chapters: 
+        - practicals/Practical0/Practical0-Getting-Started-R.qmd
+  repo-url: "https://github.com/loreabad6/app-dev-gis"
+
+# bibliography: 
+#     - packages-index.bib
+#     - packages-vector.bib
+#     - packages-raster.bib
+#     - "https://api.citedrive.com/bib/f67c224b-6fcd-4870-87fc-67374abf013e/references.bib?x=eyJpZCI6ICJmNjdjMjI0Yi02ZmNkLTQ4NzAtODdmYy02NzM3NGFiZjAxM2UiLCAidXNlciI6ICIyNTY4IiwgInNpZ25hdHVyZSI6ICJiZmJhYzUyOThkY2E0ZWI4MjZjNjVkMDQ5MDc2N2I0OGVmMjQ1ZmI4ODMwYmVhYjllYmIwNmJiMTY0MWVlYThmIn0=/bibliography.bib"
+# 
+# nocite: |
+#   @*
+knitr:
+  opts_chunk:
+    classes: styled-output
+    fig-crop: true
+    tidy.opts: { width.cutoff: 80 }
+    # dev.args:
+      # bg: transparent
+    
+format:
+  html:
+    css: html-styling/style.css
+    theme:
+      light: cosmo
+      dark: [cosmo, html-styling/theme-dark.scss]

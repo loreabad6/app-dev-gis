@@ -1,0 +1,9 @@
+# About {.unnumbered}
+
+{{< include README.md >}}
+
+```{r}
+#| include: false
+# automatically create a bib database for R packages
+knitr::write_bib(c('knitr', 'quarto'), 'packages-index.bib')
+```
