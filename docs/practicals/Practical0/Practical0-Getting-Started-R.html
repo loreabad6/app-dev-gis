@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Part 2: R workflows for reproducible spatial analysis - Practical 0 - Getting Started with R</title>
+<title>R for reproducible spatial analysis - 2&nbsp; Practical 0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../lessons/notes.html" rel="prev">
+<link href="../../project/final-project.html" rel="next">
+<link href="../../lessons/placeholder.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practical 0 - Getting Started with R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -98,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Part 2: R workflows for reproducible spatial analysis</a> 
+      <a href="../../">R for reproducible spatial analysis</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/loreabad6/app-dev-gis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -115,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -129,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lessons/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">notes.html</span></span></a>
+  <a href="../../lessons/placeholder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></span></a>
   </div>
 </li>
       </ul>
@@ -147,11 +148,17 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../practicals/Practical0/Practical0-Getting-Started-R.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Practical 0 - Getting Started with R</span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/final-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final project</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -162,17 +169,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#self-paced-introduction-to-r" id="toc-self-paced-introduction-to-r" class="nav-link active" data-scroll-target="#self-paced-introduction-to-r">Self-paced introduction to R</a></li>
-  <li><a href="#interactively-learn-r-with-swirl" id="toc-interactively-learn-r-with-swirl" class="nav-link" data-scroll-target="#interactively-learn-r-with-swirl">Interactively learn R with <code>swirl</code></a></li>
+  <li><a href="#self-paced-introduction-to-r" id="toc-self-paced-introduction-to-r" class="nav-link active" data-scroll-target="#self-paced-introduction-to-r"><span class="header-section-number">2.1</span> Self-paced introduction to R</a></li>
+  <li><a href="#interactively-learn-r-with-swirl" id="toc-interactively-learn-r-with-swirl" class="nav-link" data-scroll-target="#interactively-learn-r-with-swirl"><span class="header-section-number">2.2</span> Interactively learn R with <code>swirl</code></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practical 0 - Getting Started with R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical0/Practical0-Getting-Started-R.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Practical 0 - Getting Started with R</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></h1>
+<p class="subtitle lead">Getting Started with R</p>
 </div>
 
 
@@ -190,9 +198,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>Welcome to Application Development with R!</strong></p>
-<p>As I unfortunately cannot be there this week, I would like you to go through a course to get started with R.</p>
-<section id="self-paced-introduction-to-r" class="level2">
-<h2 class="anchored" data-anchor-id="self-paced-introduction-to-r">Self-paced introduction to R</h2>
+<p>This week you will go through a self-paced introduction to R, to guarantee that you all start at the same level. There will be no on-site class but you can use the GI-Lab computers to fulfill this practical.</p>
+<section id="self-paced-introduction-to-r" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="self-paced-introduction-to-r"><span class="header-section-number">2.1</span> Self-paced introduction to R</h2>
 <p>In this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. It should take you around <em>1h30 to 2h</em> to complete the course.</p>
 <ol type="1">
 <li><p>Go to the following link in <a href="https://rfortherestofus.com/courses/getting-started">R for the Rest of Us - Getting Started with R</a>.</p></li>
@@ -200,8 +208,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>By the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment.</p></li>
 </ol>
 </section>
-<section id="interactively-learn-r-with-swirl" class="level2">
-<h2 class="anchored" data-anchor-id="interactively-learn-r-with-swirl">Interactively learn R with <code>swirl</code></h2>
+<section id="interactively-learn-r-with-swirl" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="interactively-learn-r-with-swirl"><span class="header-section-number">2.2</span> Interactively learn R with <code>swirl</code></h2>
 <p>If you went through the fundamentals of R faster than you expected, feel free to learn or freshen up your R basics interactively via the <code>swirl</code> package.</p>
 <ol type="1">
 <li>Go to the <a href="https://swirlstats.com/students.html">swirl website</a></li>
@@ -772,14 +780,36 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../lessons/notes.html" class="pagination-link" aria-label="notes.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">notes.html</span></span>
+      <a href="../../lessons/placeholder.html" class="pagination-link" aria-label="Arriving soon...">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../project/final-project.html" class="pagination-link" aria-label="Final project">
+        <span class="nav-page-text">Final project</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Winter Semester 2024/2025</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Department of Geoinformatics — Z_GIS, University of Salzburg</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../License.html">
+<p>CC-BY-4.0</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

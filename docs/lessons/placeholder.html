@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lorena Abad">
-<meta name="dcterms.date" content="2024-10-05">
 
-<title>R for reproducible spatial analysis</title>
+<title>R for reproducible spatial analysis - 1&nbsp; Arriving soon…</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,25 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./lessons/placeholder.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../practicals/Practical0/Practical0-Getting-Started-R.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="html-styling/style.css">
+<link rel="stylesheet" href="../html-styling/style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -85,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/placeholder.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/placeholder.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -100,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">R for reproducible spatial analysis</a> 
+      <a href="../">R for reproducible spatial analysis</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/loreabad6/app-dev-gis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -116,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -131,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/placeholder.html" class="sidebar-item-text sidebar-link">
+  <a href="../lessons/placeholder.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></span></a>
   </div>
 </li>
@@ -148,25 +147,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./practicals/Practical0/Practical0-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical0/Practical0-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./practicals/Practical1/Practical1-Base-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical1/Practical1-Base-R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Practical 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./practicals/Practical2/Practical2-Writing-Functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical2/Practical2-Writing-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 2 {.unnumbered}</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./practicals/Practical4/Practical4-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical4/Practical4-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Practical 3</span></span></a>
   </div>
 </li>
@@ -174,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/final-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/final-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final project</span></a>
   </div>
 </li>
@@ -184,55 +183,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#schedule-and-format" id="toc-schedule-and-format" class="nav-link" data-scroll-target="#schedule-and-format">Schedule and format</a>
-  <ul class="collapse">
-  <li><a href="#about-the-use-of-ai" id="toc-about-the-use-of-ai" class="nav-link" data-scroll-target="#about-the-use-of-ai">About the use of AI</a></li>
-  </ul></li>
-  <li><a href="#assignments-and-grading" id="toc-assignments-and-grading" class="nav-link" data-scroll-target="#assignments-and-grading">Assignments and grading</a></li>
-  <li><a href="#required-course-materials" id="toc-required-course-materials" class="nav-link" data-scroll-target="#required-course-materials">Required Course Materials</a></li>
-  <li><a href="#sec-compmaterials" id="toc-sec-compmaterials" class="nav-link" data-scroll-target="#sec-compmaterials">Complementary course materials</a>
-  <ul class="collapse">
-  <li><a href="#install-r-and-co." id="toc-install-r-and-co." class="nav-link" data-scroll-target="#install-r-and-co.">Install R and Co.</a></li>
-  <li><a href="#r-programming-resources" id="toc-r-programming-resources" class="nav-link" data-scroll-target="#r-programming-resources">R programming resources</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/placeholder.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/placeholder.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">R for reproducible spatial analysis</h1>
-<p class="subtitle lead">IP: Application Development (GIS) - Part 2</p>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Lorena Abad <a href="mailto:lorena.abad@plus.ac.at" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-0554-734X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 5, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -242,229 +207,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="syllabus" class="level1 unnumbered">
-<h1 class="unnumbered">Syllabus</h1>
-<div class="smaller">
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Time</td>
-<td>From 25.11.24 - Mondays 15:15-17:45</td>
-</tr>
-<tr class="even">
-<td>Location</td>
-<td><a href="https://online.uni-salzburg.at/plus_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/ris.ris?$ctx=design=ca2;header=max;lang=EN&amp;corg=19091&amp;pActionFlag=A&amp;pQuellGeogrBTypNr=5&amp;pRaumNr=35443&amp;pShowEinzelraum=J&amp;pZielGeogrBTypNr=5&amp;pZielGeogrBerNr=5830001">GI_Lab</a>, 1st Floor, Building 15, Techno_Z, Schillerstr. 30, 5020 Salzburg</td>
-</tr>
-<tr class="odd">
-<td>Expected effort</td>
-<td>Both parts: 6 ECTS (i.e.&nbsp;150 hours), 3 semester hour per week in class</td>
-</tr>
-<tr class="even">
-<td>Office hours</td>
-<td>via Blackboard or by appointment</td>
-</tr>
-</tbody>
-</table>
-</div>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>These are the course materials for the IP: Application Development Course (GIS) - Part 2 where you will learn how to develop reproducible R workflows for spatial analysis. What you can expect:</p>
-<ul>
-<li>Introduction to R and its ecosystem</li>
-<li>Spatial data handling in R (raster and vector data)</li>
-<li>Connecting to GIS software for spatial workflow automation</li>
-<li>Spatial visualization with R (static and interactive)</li>
-</ul>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>By the end of the course you should be able:</p>
-<ul>
-<li>to read and write R code and to navigate the R-spatial package ecosystem</li>
-<li>to perform spatial analysis with vector and raster datasets in R</li>
-<li>to design maps programmatically</li>
-<li>to create reproducible workflows for spatial analysis in R</li>
-</ul>
-</section>
-<section id="schedule-and-format" class="level2">
-<h2 class="anchored" data-anchor-id="schedule-and-format">Schedule and format</h2>
-<p>This is the tentative course schedule of the lessons and assignments.</p>
-<div class="smaller">
-<table class="table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 46%">
-<col style="width: 19%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>DATE</th>
-<th>TOPIC</th>
-<th>ACTIVITY</th>
-<th>DUE DATE</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>25.11.24</td>
-<td>Getting started with R</td>
-<td>Practical 0</td>
-<td>01.12.24</td>
-</tr>
-<tr class="even">
-<td>02.12.24</td>
-<td>R basics and functions; intro to Quarto</td>
-<td>Practical 1 / Practical 2</td>
-<td>End of class</td>
-</tr>
-<tr class="odd">
-<td>09.12.24</td>
-<td>Data cleaning, wrangling &amp; plotting</td>
-<td>Practical 3</td>
-<td>15.12.124</td>
-</tr>
-<tr class="even">
-<td>16.12.24</td>
-<td>Spatial data 1: vector data</td>
-<td>Practical 4</td>
-<td>End of class</td>
-</tr>
-<tr class="odd">
-<td>13.01.25</td>
-<td>Spatial data 2: raster data and data cubes</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>20.01.25</td>
-<td>Making maps with R (static &amp; interactive)</td>
-<td>Practical 5</td>
-<td>26.01.25</td>
-</tr>
-<tr class="odd">
-<td>27.01.25</td>
-<td>Bridges to GIS software</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis. Learning by yourself is highly encouraged and expected. The <a href="#sec-compmaterials" class="quarto-xref"><span>Complementary course materials</span></a> section lists a number of additional resources for your self-learning, and at the end of the lessons you will have references to the relevant chapters for you to go through.</p>
-<p>In class, we will work with hand-on practicals that will allow you to develop R skills from the first lesson.</p>
-<p>If you find yourself taking longer or having trouble with concepts, please ask for help on the course’s Blackboard message board or in class (there is an excellent chance someone else has the same question!) rather than via e-mail.</p>
-<section id="about-the-use-of-ai" class="level3">
-<h3 class="anchored" data-anchor-id="about-the-use-of-ai">About the use of AI</h3>
-<p>Using AI in this course is not discouraged if it helps you understand code or discover new ways of doing a task. Think of AI as an extended version of googling your issues or a Stack Overflow entry. However, beware to always test the code that you receive as an output, and also think about the logic that the AI tool follows. I expect that you learn from this course as much as possible, and copy pasting solutions generated by a LLM without critical thinking is unfortunately not going to meet those expectations.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you select a final project using R, please add a disclaimer section explaining if you used AI for the completion of the project and how you used it.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="assignments-and-grading" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-and-grading">Assignments and grading</h2>
-<ul>
-<li>Practical exercises (~5) – 30%
-<ul>
-<li>To be submitted by the end of the class or by a specific date</li>
-</ul></li>
-<li>End-of-term assignment – 50%
-<ul>
-<li>Programming project, either R or Python or both</li>
-</ul></li>
-<li>Active participation – 20%</li>
-</ul>
-</section>
-<section id="required-course-materials" class="level2">
-<h2 class="anchored" data-anchor-id="required-course-materials">Required Course Materials</h2>
-<p>R, RStudio, and Rtools will be installed in the lab computers. If you use your own laptop, see the <a href="#sec-compmaterials" class="quarto-xref"><span>Complementary course materials</span></a> section below.</p>
-</section>
-<section id="sec-compmaterials" class="level2">
-<h2 class="anchored" data-anchor-id="sec-compmaterials">Complementary course materials</h2>
-<section id="install-r-and-co." class="level3">
-<h3 class="anchored" data-anchor-id="install-r-and-co.">Install R and Co.</h3>
-<p>To work on your own laptop, you need to install R, RStudio and Quarto to follow the course materials.</p>
-<ul>
-<li>Install R (&gt;= 4.0) and RStudio (&gt;= 2024.04.x with Quarto). You can follow the steps in Appendix 1 of <a href="https://rstudio-education.github.io/hopr/starting.html">Hands-On Programming with R</a>.</li>
-<li>If you are on Windows, install <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools for the R version</a> you have.</li>
-<li>Installing R spatial packages in Windows (Rtools is required, see above) and Mac should be straightforward, and we will do it together. If you have a Linux system, please read <a href="https://geocompx.org/post/2020/installing-r-spatial-packages-linux/index.html">this blogpost</a>.</li>
-</ul>
-<p>If you have any problems with installation, please reach out via Blackboard.</p>
-</section>
-<section id="r-programming-resources" class="level3">
-<h3 class="anchored" data-anchor-id="r-programming-resources">R programming resources</h3>
-<section id="intro-basics" class="level4">
-<h4 class="anchored" data-anchor-id="intro-basics">Intro &amp; Basics</h4>
-<ul>
-<li><a href="https://rladiessydney.org/courses/ryouwithme/">RYouWithMe</a> from R-Ladies Sydney.</li>
-<li><a href="https://github.com/matloff/fasteR">fasteR: Fast Lane to Learning R!</a> by Norm Matloff.</li>
-<li><a href="https://tinystats.github.io/teacups-giraffes-and-statistics/index.html">Teacups, Giraffes, &amp; Statistics</a> by Hasse Walum and Desiree de Leon.</li>
-</ul>
-<section id="interactive-r-learning" class="level5">
-<h5 class="anchored" data-anchor-id="interactive-r-learning">Interactive R learning</h5>
-<ul>
-<li>Learn or freshen up R basics interactively with <a href="https://swirlstats.com/students.html">swirl</a>
-<ul>
-<li>Follow the instructions to start interactive courses from the R console.</li>
-<li>Check Step 5 for instructions to download more courses, in different languages available at the <a href="https://swirlstats.com/scn/title.html">Swirl Course Network</a>.</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="books" class="level4">
-<h4 class="anchored" data-anchor-id="books">Books</h4>
-<section id="entry-level" class="level5">
-<h5 class="anchored" data-anchor-id="entry-level">Entry-level</h5>
-<ul>
-<li><a href="https://rstudio-education.github.io/hopr/">Hands-on programming with R</a> by Garrett Grolemund.</li>
-<li><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a> by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund.</li>
-</ul>
-</section>
-<section id="r-spatial" class="level5">
-<h5 class="anchored" data-anchor-id="r-spatial">R-Spatial</h5>
-<ul>
-<li><a href="https://r.geocompx.org/">Geocomputation with R</a> by Robin Lovelace, Jakub Nowosad and Jannes Muenchow.</li>
-<li><a href="https://r-spatial.org/book/">Spatial Data Science: With Applications in R</a> by Edzer Pebesma and Roger Bivand.</li>
-</ul>
-</section>
-<section id="advanced" class="level5">
-<h5 class="anchored" data-anchor-id="advanced">Advanced</h5>
-<ul>
-<li><a href="https://adv-r.hadley.nz/">Advanced R (2e)</a> by Hadley Wickham</li>
-<li><a href="https://r-pkgs.org/">R Packages (2e)</a> by Hadley Wickham and Jennifer Bryan</li>
-</ul>
-<p>All links to these materials are also included in Blackboard.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Disclaimer
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Please note that the specifics of this Course Syllabus can be changed at any time, and you will be responsible for abiding by any such changes. Any changes will be communicated in class, via e-mail, or course announcement via Blackboard.</p>
-</div>
-</div>
+<p>Here is where you will find the contents for each session. Come back closer to the first session to find some content 😀</p>
 
 
-</section>
-</section>
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1022,10 +767,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lessons/placeholder.html" class="pagination-link" aria-label="Arriving soon...">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Arriving soon…</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../practicals/Practical0/Practical0-Getting-Started-R.html" class="pagination-link" aria-label="Practical 0">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 0</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1041,7 +789,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./License.html">
+    <a class="nav-link" href="../License.html">
 <p>CC-BY-4.0</p>
 </a>
   </li>  
