@@ -108,5 +108,5 @@ Please note that the specifics of this Course Syllabus can be changed at any tim
 ```{r}
 #| include: false
 # automatically create a bib database for R packages
-knitr::write_bib(c('knitr', 'quarto'), 'packages-index.bib')
+knitr::write_bib(c('knitr', 'quarto'), 'refs/packages-index.bib')
 ```

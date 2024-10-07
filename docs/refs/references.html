@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dealing with errors – R for reproducible spatial analysis</title>
+<title>References – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../refs/references.html" rel="next">
-<link href="../lessons/placeholder.html" rel="prev">
+<link href="../misc/x_error-handling.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,7 +103,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Practicals</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../refs/references.html">References</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -167,7 +166,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link active">
+  <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
@@ -175,7 +174,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../refs/references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -184,21 +183,15 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#advice-for-dealing-with-errors" id="toc-advice-for-dealing-with-errors" class="nav-link active" data-scroll-target="#advice-for-dealing-with-errors">Advice for dealing with errors</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Practicals</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dealing with errors</h1>
+<h1 class="title">References</h1>
 </div>
 
 
@@ -215,53 +208,28 @@ div.csl-indent {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d6b4f8cb-53bf-49d5-822c-e45cd01204a4.png?h=2a4e19375c89ba7b98c5a21f27029984" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
-</figure>
-</div>
-<p>As you work through the practicals, you will encounter some code that does not work as you want it to. Don’t despair! Errors (when R is unable to run your code) and bugs (when the code doesn’t do what you hoped) are a natural part of coding. Even the best of the best deal with these problems regularly - learning to track down the issue is a skill that you can learn and practice.</p>
-<section id="advice-for-dealing-with-errors" class="level2">
-<h2 class="anchored" data-anchor-id="advice-for-dealing-with-errors">Advice for dealing with errors</h2>
-<p><strong>Errors can be sneaky - check results often</strong></p>
-<p>If a chunk of code runs smoothly without giving you any error or warnings this does not necessarily mean it accomplished the desired task.</p>
-<p>It is a good habit to check the results of your code every time you finish a task.</p>
-<ul>
-<li><p>In the text before the code chunk, make sure to briefly state what the point of the chunk is. This will remind later readers - which might be your future self! - what the desired output is.</p></li>
-<li><p>If you created a new object, take a look at it, either by clicking its name in your <em>Environment</em> tab or by typing its name into the console. Make sure it looks about how you expect.</p></li>
-<li><p>If you created or updated a data frame, make sure your edits did what you hoped. Use the <em>Environment</em> or the <code>head()</code> function to investigate your changes.</p></li>
-</ul>
-<p><strong>Two heads are better than one</strong></p>
-<p>It can be hard to spot bugs in code that you wrote.</p>
-<p>Work with those around you - if something goes wrong, ask a friend to take a peek at your code and see if any glaring errors (like <em>syntax error</em>) pop out.</p>
-<p><strong>Explain your code out loud</strong></p>
-<p>The best way to troubleshoot a sneaky but is to explain out loud each step of your code, and what you hoped to accomplish.</p>
-<p>If you are alone, try <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging</a>!</p>
-<p><strong>Google is your friend</strong></p>
-<p>The whole of the internet is at your disposal! Use it early, use it often.</p>
-<p>Some tricks:</p>
-<ul>
-<li><p>Copy-paste the exact error message into Google. Chances are, somebody else had a similar problem and got a similar message.</p></li>
-<li><p>Include package names in your search terms. For example, “bar plot in ggplot” is a better search than “bar plot in R”.</p></li>
-</ul>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-R-quarto" class="csl-entry" role="listitem">
-Allaire, JJ, and Christophe Dervieux. 2024. <em>Quarto: R Interface to Quarto Markdown Publishing System</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>.
+Allaire, JJ, and Christophe Dervieux. 2024. <em>Quarto: R Interface to
+Quarto Markdown Publishing System</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>.
 </div>
 <div id="ref-knitr2014" class="csl-entry" role="listitem">
-Xie, Yihui. 2014. <span>“Knitr: A Comprehensive Tool for Reproducible Research in <span>R</span>.”</span> In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC.
+Xie, Yihui. 2014. <span>“Knitr: A Comprehensive Tool for Reproducible
+Research in <span>R</span>.”</span> In <em>Implementing Reproducible
+Computational Research</em>, edited by Victoria Stodden, Friedrich
+Leisch, and Roger D. Peng. Chapman; Hall/CRC.
 </div>
 <div id="ref-knitr2015" class="csl-entry" role="listitem">
-———. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+———. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd
+ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-———. 2024. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+———. 2024. <em>Knitr: A General-Purpose Package for Dynamic Report
+Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
 </div>
 </div>
-</section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -830,14 +798,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/placeholder.html" class="pagination-link" aria-label="Coming soon...">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Coming soon…</span></span>
+      <a href="../misc/x_error-handling.html" class="pagination-link" aria-label="Dealing with errors">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dealing with errors</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../refs/references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
