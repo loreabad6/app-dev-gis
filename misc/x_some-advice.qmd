@@ -1,0 +1,9 @@
+::: callout-note
+## Some advice  🤝
+
+-   Work in groups, maximum 2!
+  - Google is your friend! If an error is confusing, copy it into Google and see what other people are saying. If you don't know how to do something, search for it. You can use AI to help you understand code as well, but be critical of the outputs and always double check that it works.
+-   Just because there is no error message, it doesn't mean everything went smoothly. Use the console to check each step and make sure you have accomplished what you wanted to accomplish.
+-   See more tips on [error handling here](https://loreabad6.github.io/app-dev-gis/misc/x_error-handling.html).
+-   Document your process! Use the empty code chunks set-up for you. If you need more remember the keyboard shortcut is `CTRL+ALT+I` or `CMD+ALT+I`.
+:::

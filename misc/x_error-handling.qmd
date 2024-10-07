@@ -1,0 +1,44 @@
+# Dealing with errors {.unnumbered}
+
+![Artwork by [Allison Horst](https://allisonhorst.com/)](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d6b4f8cb-53bf-49d5-822c-e45cd01204a4.png?h=2a4e19375c89ba7b98c5a21f27029984){width="80%"}
+
+As you work through the practicals, you will encounter some code that does not work as you want it to. Don't despair!
+Errors (when R is unable to run your code) and bugs (when the code doesn't do what you hoped) are a natural part of coding.
+Even the best of the best deal with these problems regularly - learning to track down the issue is a skill that you can learn and practice.
+
+## Advice for dealing with errors
+
+**Errors can be sneaky - check results often** 
+
+If a chunk of code runs smoothly without giving you any error or warnings this does not necessarily mean it accomplished the desired task.
+
+It is a good habit to check the results of your code every time you finish a task.
+
+* In the text before the code chunk, make sure to briefly state what the point of the chunk is.  This will remind later readers - which might be your future self! - what the desired output is.
+
+* If you created a new object, take a look at it, either by clicking its name in your *Environment* tab or by typing its name into the console.  Make sure it looks about how you expect.
+
+* If you created or updated a data frame, make sure your edits did what you hoped.  Use the *Environment* or the `head()` function to investigate your changes.
+
+
+**Two heads are better than one**
+
+It can be hard to spot bugs in code that you wrote.  
+
+Work with those around you - if something goes wrong, ask a friend to take a peek at your code and see if any glaring errors (like *syntax error*) pop out.
+
+**Explain your code out loud**
+
+The best way to troubleshoot a sneaky but is to explain out loud each step of your code, and what you hoped to accomplish.
+
+If you are alone, try [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)!
+
+**Google is your friend**
+
+The whole of the internet is at your disposal!  Use it early, use it often.
+
+Some tricks:
+
+* Copy-paste the exact error message into Google. Chances are, somebody else had a similar problem and got a similar message.
+
+* Include package names in your search terms.  For example, "bar plot in ggplot" is a better search than "bar plot in R".

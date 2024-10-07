@@ -18,12 +18,13 @@ book:
         - lessons/placeholder.qmd
     - part: "Practicals"
       chapters: 
-        - practicals/Practical0/Practical0-Getting-Started-R.qmd
-        # - practicals/Practical1/Practical1-Base-R.qmd
-        # - practicals/Practical2/Practical2-Writing-Functions.qmd
-        # - practicals/Practical3/Practical3.qmd
-        # - practicals/Practical4/Practical4-Spatial-Data-Analysis.qmd
-        # - practicals/Practical5/Practical5.qmd
+        # - practicals/Practical1/Practical1-Getting-Started-R.qmd
+        # - practicals/Practical2/Practical2-Base-R.qmd
+        # - practicals/Practical3/Practical3-Writing-Functions.qmd
+        # - practicals/Practical4/Practical4.qmd
+        # - practicals/Practical5/Practical5-Spatial-Data-Analysis.qmd
+        # - practicals/Practical6/Practical6.qmd
+        - misc/x_error-handling.qmd
     # - project/final-project.qmd
   repo-url: "https://github.com/loreabad6/app-dev-gis"
   page-footer:
