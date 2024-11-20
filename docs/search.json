@@ -92,7 +92,7 @@
     "href": "practicals/Practical1/Practical1-Getting-Started-R.html",
     "title": "Practical 1",
     "section": "",
-    "text": "Self-paced introduction to R\nIn this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. It should take you around 1h30 to 2h to complete the course.\nLessons 2 and 3 will show you how to install R and RStudio. If you are working at the GI-Lab you should already have the software on the machines. If you plan to work on your own laptop, then I recommend learning how to install these and to make sure you have the latest versions of the software.\nYou can find more information on installation here.",
+    "text": "Self-paced introduction to R\nIn this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. It should take you around 1h30 to 2h to complete the course.",
     "crumbs": [
       "Practicals",
       "Practical 1"
@@ -103,7 +103,7 @@
     "href": "practicals/Practical1/Practical1-Getting-Started-R.html#self-paced-introduction-to-r",
     "title": "Practical 1",
     "section": "",
-    "text": "Go to the following link in R for the Rest of Us - Getting Started with R.\nPlease register to the course as indicated. This introductory course is free of charge.\nBy the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease make sure to also install Rtools since we will need it to install packages that compile from source.",
+    "text": "Go to the following link in R for the Rest of Us - Getting Started with R.\nPlease register to the course as indicated. This introductory course is free of charge.\nBy the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment.\n\n\nPotential problems\nIf you run into issues, make sure you read the comments under the videos. It is very likely that your questions is already answered there.\nTake a look at the dealing with errors section right here as well. Make sure you read well the error messages you receive.\nIf you still run into issues, post them on the Blackboard forum for R and we will go through any problems together.\n\n\n\n\n\n\nImportant\n\n\n\nIf by some weird reason you don’t manage to complete the course by the deadline time submit some sentences with how far you got, a screenshot of your progress and the specific error you encountered.\n\n\n\n\nMore info on software installation\nLessons 2 and 3 will show you how to install R and RStudio. If you are working at the GI-Lab you should already have the software on the machines. If you plan to work on your own laptop, then I recommend learning how to install these and to make sure you have the latest versions of the software.\nYou can find more information on installation here.\n\n\n\n\n\n\nImportant\n\n\n\nPlease make sure to also install Rtools since we will need it to install packages that compile from source.",
     "crumbs": [
       "Practicals",
       "Practical 1"

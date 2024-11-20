@@ -18,7 +18,7 @@ book:
         - lessons/placeholder.qmd
     - part: "Practicals"
       chapters: 
-        # - practicals/Practical1/Practical1-Getting-Started-R.qmd
+        - practicals/Practical1/Practical1-Getting-Started-R.qmd
         # - practicals/Practical2/Practical2-Base-R.qmd
         # - practicals/Practical3/Practical3-Writing-Functions.qmd
         # - practicals/Practical4/Practical4.qmd
