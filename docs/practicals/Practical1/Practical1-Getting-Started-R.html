@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dealing with errors – R for reproducible spatial analysis</title>
+<title>Practical 1 – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,26 +43,26 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../refs/references.html" rel="next">
-<link href="../practicals/Practical1/Practical1-Getting-Started-R.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../misc/x_error-handling.html" rel="next">
+<link href="../../lessons/placeholder.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,7 +92,7 @@ div.csl-indent {
 }</script>
 
 
-<link rel="stylesheet" href="../html-styling/style.css">
+<link rel="stylesheet" href="../../html-styling/style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -104,7 +104,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicals/Practical1/Practical1-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical1/Practical1-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical1/Practical1-Getting-Started-R.html">Practical 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +119,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">R for reproducible spatial analysis</a> 
+      <a href="../../">R for reproducible spatial analysis</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/loreabad6/app-dev-gis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -135,7 +135,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -150,7 +150,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/placeholder.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons/placeholder.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Coming soon…</span></span></a>
   </div>
 </li>
@@ -167,13 +167,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 1 | Getting Started with R</span></a>
+  <a href="../../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Practical 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
@@ -181,7 +181,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../refs/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -195,16 +195,18 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#advice-for-dealing-with-errors" id="toc-advice-for-dealing-with-errors" class="nav-link active" data-scroll-target="#advice-for-dealing-with-errors">Advice for dealing with errors</a></li>
+  <li><a href="#self-paced-introduction-to-r" id="toc-self-paced-introduction-to-r" class="nav-link active" data-scroll-target="#self-paced-introduction-to-r">Self-paced introduction to R</a></li>
+  <li><a href="#interactively-learn-r-with-swirl-optional-but-recommended" id="toc-interactively-learn-r-with-swirl-optional-but-recommended" class="nav-link" data-scroll-target="#interactively-learn-r-with-swirl-optional-but-recommended">Interactively learn R with <code>swirl</code> (<em>optional but recommended</em>)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicals/Practical1/Practical1-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical1/Practical1-Getting-Started-R.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical1/Practical1-Getting-Started-R.html">Practical 1</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Dealing with errors</h1>
+<h1 class="title">Practical 1</h1>
+<p class="subtitle lead">Getting Started with R</p>
 </div>
 
 
@@ -221,36 +223,56 @@ div.csl-indent {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d6b4f8cb-53bf-49d5-822c-e45cd01204a4.png?h=2a4e19375c89ba7b98c5a21f27029984" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
-</figure>
+<p><strong>Welcome to Application Development GIS with R!</strong></p>
+<p>This week you will go through a self-paced introduction to R, to guarantee that you all start at the same level. There will be no on-site class but you can use the GI-Lab computers to fulfill this practical.</p>
+<section id="self-paced-introduction-to-r" class="level2">
+<h2 class="anchored" data-anchor-id="self-paced-introduction-to-r">Self-paced introduction to R</h2>
+<p>In this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. It should take you around <em>1h30 to 2h</em> to complete the course.</p>
+<ol type="1">
+<li><p>Go to the following link in <a href="https://rfortherestofus.com/courses/getting-started">R for the Rest of Us - Getting Started with R</a>.</p></li>
+<li><p>Please register to the course as indicated. This introductory course is free of charge.</p></li>
+<li><p>By the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment.</p></li>
+</ol>
+<p>Lessons 2 and 3 will show you how to install R and RStudio. If you are working at the GI-Lab you should already have the software on the machines. If you plan to work on your own laptop, then I recommend learning how to install these and to make sure you have the latest versions of the software.</p>
+<p>You can find <a href="https://loreabad6.github.io/app-dev-gis/#sec-compmaterials">more information on installation here</a>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>As you work through the practicals, you will encounter some code that does not work as you want it to. Don’t despair! Errors (when R is unable to run your code) and bugs (when the code doesn’t do what you hoped) are a natural part of coding. Even the best of the best deal with these problems regularly - learning to track down the issue is a skill that you can learn and practice.</p>
-<section id="advice-for-dealing-with-errors" class="level2">
-<h2 class="anchored" data-anchor-id="advice-for-dealing-with-errors">Advice for dealing with errors</h2>
-<p><strong>Errors can be sneaky - check results often</strong></p>
-<p>If a chunk of code runs smoothly without giving you any error or warnings this does not necessarily mean it accomplished the desired task.</p>
-<p>It is a good habit to check the results of your code every time you finish a task.</p>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please make sure to also install <em>Rtools</em> since we will need it to install packages that compile from source.</p>
+</div>
+</div>
+</section>
+<section id="interactively-learn-r-with-swirl-optional-but-recommended" class="level2">
+<h2 class="anchored" data-anchor-id="interactively-learn-r-with-swirl-optional-but-recommended">Interactively learn R with <code>swirl</code> (<em>optional but recommended</em>)</h2>
+<p>Since you have gone through the fundamentals of R already, you can now learn or freshen up your R basics interactively via the <code>swirl</code> package.</p>
+<ol type="1">
+<li>Go to the <a href="https://swirlstats.com/students.html">swirl website</a></li>
+<li>Follow the instructions to start interactive R courses from the R console.
 <ul>
-<li><p>In the text before the code chunk, make sure to briefly state what the point of the chunk is. This will remind later readers - which might be your future self! - what the desired output is.</p></li>
-<li><p>If you created a new object, take a look at it, either by clicking its name in your <em>Environment</em> tab or by typing its name into the console. Make sure it looks about how you expect.</p></li>
-<li><p>If you created or updated a data frame, make sure your edits did what you hoped. Use the <em>Environment</em> or the <code>head()</code> function to investigate your changes.</p></li>
-</ul>
-<p><strong>Two heads are better than one</strong></p>
-<p>It can be hard to spot bugs in code that you wrote.</p>
-<p>Work with those around you - if something goes wrong, ask a friend to take a peek at your code and see if any glaring errors (like <em>syntax error</em>) pop out.</p>
-<p><strong>Explain your code out loud</strong></p>
-<p>The best way to troubleshoot a sneaky but is to explain out loud each step of your code, and what you hoped to accomplish.</p>
-<p>If you are alone, try <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging</a>!</p>
-<p><strong>Google is your friend</strong></p>
-<p>The whole of the internet is at your disposal! Use it early, use it often.</p>
-<p>Some tricks:</p>
-<ul>
-<li><p>Copy-paste the exact error message into Google. Chances are, somebody else had a similar problem and got a similar message.</p></li>
-<li><p>Include package names in your search terms. For example, “bar plot in ggplot” is a better search than “bar plot in R”.</p></li>
-</ul>
+<li>You can skip steps 1 and 2, since you did this already in the course above.</li>
+</ul></li>
+<li>Check Step 5 for instructions to download more courses, in different languages available at the Swirl Course Network.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This part of the practical is optional and you don’t need to prove completion. I do recommend you to test a couple of <code>swirl</code> modules though since we will get full hands-on in the next session.</p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -833,13 +855,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="pagination-link" aria-label="Practical 1 | Getting Started with R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Practical 1 | Getting Started with R</span>
+      <a href="../../lessons/placeholder.html" class="pagination-link" aria-label="Coming soon...">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Coming soon…</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../refs/references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../misc/x_error-handling.html" class="pagination-link" aria-label="Dealing with errors">
+        <span class="nav-page-text">Dealing with errors</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -855,7 +877,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../License.html">
+    <a class="nav-link" href="../../License.html">
 <p>CC-BY-4.0</p>
 </a>
   </li>  
