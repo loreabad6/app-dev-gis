@@ -1,0 +1,58 @@
+---
+subtitle: "Getting Started with R"
+---
+
+# Practical 1 {.unnumbered}
+
+**Welcome to Application Development GIS with R!**
+
+This week you will go through a self-paced introduction to R, to guarantee that you all start at the same level.
+There will be no on-site class but you can use the GI-Lab computers to fulfill this practical.
+
+## Self-paced introduction to R
+
+In this course you will learn the very basics of R, from installation, working with files and projects to loading and exploring your first dataset in R. 
+It should take you around *1h30 to 2h* to complete the course. 
+
+1. Go to the following link in [R for the Rest of Us - Getting Started with R](https://rfortherestofus.com/courses/getting-started).
+
+2. Please register to the course as indicated. This introductory course is free of charge.
+
+3. By the end of the course you should receive a certificate. Upload the certificate to the Blackboard Assignment. 
+
+### Potential problems
+
+If you run into issues, make sure you read the comments under the videos. It is very likely that your questions is already answered there. 
+
+Take a look at the [dealing with errors](https://loreabad6.github.io/app-dev-gis/misc/x_error-handling.html) section right here as well. Make sure you read well the error messages you receive.
+
+If you still run into issues, post them on the Blackboard forum for R and we will go through any problems together. 
+
+::: callout-important
+If by some weird reason you don't manage to complete the course by the deadline time submit some sentences with how far you got, a screenshot of your progress and the specific error you encountered. 
+:::
+
+### More info on software installation
+
+Lessons 2 and 3 will show you how to install R and RStudio. 
+If you are working at the GI-Lab you should already have the software on the machines. 
+If you plan to work on your own laptop, then I recommend learning how to install these and to make sure you have the latest versions of the software. 
+
+You can find [more information on installation here](https://loreabad6.github.io/app-dev-gis/#sec-compmaterials). 
+
+::: callout-important
+Please make sure to also install *Rtools* since we will need it to install packages that compile from source. 
+:::
+
+## Interactively learn R with `swirl` (*optional but recommended*)
+
+Since you have gone through the fundamentals of R already, you can now learn or freshen up your R basics interactively via the `swirl` package. 
+
+1. Go to the [swirl website](https://swirlstats.com/students.html)
+2. Follow the instructions to start interactive R courses from the R console.
+    - You can skip steps 1 and 2, since you did this already in the course above. 
+3. Check Step 5 for instructions to download more courses, in different languages available at the Swirl Course Network.
+
+::: callout-note
+This part of the practical is optional and you don't need to prove completion. I do recommend you to test a couple of `swirl` modules though since we will get full hands-on in the next session. 
+:::
