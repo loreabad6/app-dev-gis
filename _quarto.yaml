@@ -16,14 +16,14 @@ book:
     - part: "Lessons"
       chapters:
         - lessons/placeholder.qmd
+        # - lessons/session_1.qmd
     - part: "Practicals"
       chapters: 
         - practicals/Practical1/Practical1-Getting-Started-R.qmd
         # - practicals/Practical2/Practical2-Base-R.qmd
         # - practicals/Practical3/Practical3-Writing-Functions.qmd
-        # - practicals/Practical4/Practical4.qmd
-        # - practicals/Practical5/Practical5-Spatial-Data-Analysis.qmd
-        # - practicals/Practical6/Practical6.qmd
+        # - practicals/Practical5/Practical4-Spatial-Data-Analysis.qmd
+        # - practicals/Practical6/Practical5.qmd
         - misc/x_error-handling.qmd
     # - project/final-project.qmd
     - refs/references.qmd
@@ -44,13 +44,13 @@ format:
       light: cosmo
       dark: [cosmo, html-styling/theme-dark.scss]
 bibliography:
+    - "https://api.citedrive.com/bib/9599d778-9673-485f-93bd-bad1a2f62dd4/references.bib?x=eyJpZCI6ICI5NTk5ZDc3OC05NjczLTQ4NWYtOTNiZC1iYWQxYTJmNjJkZDQiLCAidXNlciI6ICIyNTY4IiwgInNpZ25hdHVyZSI6ICI2N2I0ZTc3NTYxOTBhYzc1NTIxMzViNGQ0ODM3NmNmNTEyY2Y1ZjgzYTlkMzgzYmM3ZTc3MDI0ZTA0OTk2NGVhIn0=/bibliography.bib"
     - refs/packages-index.bib
 #     - packages-vector.bib
 #     - packages-raster.bib
-#     - "https://api.citedrive.com/bib/f67c224b-6fcd-4870-87fc-67374abf013e/references.bib?x=eyJpZCI6ICJmNjdjMjI0Yi02ZmNkLTQ4NzAtODdmYy02NzM3NGFiZjAxM2UiLCAidXNlciI6ICIyNTY4IiwgInNpZ25hdHVyZSI6ICJiZmJhYzUyOThkY2E0ZWI4MjZjNjVkMDQ5MDc2N2I0OGVmMjQ1ZmI4ODMwYmVhYjllYmIwNmJiMTY0MWVlYThmIn0=/bibliography.bib"
-# 
 nocite: |
   @*
+csl: https://raw.githubusercontent.com/citation-style-language/styles/refs/heads/master/apa.csl
 knitr:
   opts_chunk:
     classes: styled-output

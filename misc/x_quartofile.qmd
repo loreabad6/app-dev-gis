@@ -1,0 +1,29 @@
+---
+title: I am a Quarto file
+date: today
+format: html
+---
+
+In this document, we will load a *spatial dataset* 
+with the `sf` package.
+
+```{r}
+#| label: setup
+#| message: false
+library(sf)
+nc = read_sf(system.file("shape/nc.shp", package="sf"))
+```
+
+We can see how the `nc` object looks like:
+
+```{r}
+nc
+```
+
+And we can also **plot** it:
+
+```{r}
+#| label: plot
+#| echo: false
+plot(nc['AREA'])
+```
