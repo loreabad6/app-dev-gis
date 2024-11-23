@@ -23,12 +23,12 @@ This is the tentative course schedule of the lessons and assignments.
 | DATE     | TOPIC                      |	ACTIVITY	  | DUE DATE    |
 | -------- | -------------------------- | ----------- | ----------- |
 | 25.11.24 | Getting started with R	    | Practical 1 |	01.12.24    |
-| 02.12.24 | R basics and functions; intro to Quarto |	Practical 2 / Practical 3	| End of class |
-| 09.12.24 | Data cleaning, wrangling & plotting |	Practical 4	| 15.12.124 |
-| 16.12.24 | Spatial data 1: vector data |	Practical 5	| End of class |
-| 13.01.25 | Spatial data 2: raster data and data cubes |  Define final project   |    |
-| 20.01.25 | Making maps with R (static & interactive) | Practical 6 | 26.01.25 |
-| 27.01.25 | Bridges to GIS software |    |    |
+| 02.12.24 | Fundamentals of R; Intro to Quarto |	Practical 2 / Practical 3	| End of class |
+| 09.12.24 | (Spatial) data cleaning, wrangling & plotting |	Practical 4	| End of class |
+| 16.12.24 | Gridded data: rasters and data cubes |	Define final project	|   |
+| 13.01.25 | Making maps with R (static & interactive) |  Practical 5 | 19.01.25 |
+| 20.01.25 | Bridges to GIS software |    |    |
+| 27.01.25 | R packages & Shiny apps |    |    |
 :::
 
 The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis.
