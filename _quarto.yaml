@@ -20,8 +20,8 @@ book:
     - part: "Practicals"
       chapters: 
         - practicals/Practical1/Practical1-Getting-Started-R.qmd
-        # - practicals/Practical2/Practical2-Base-R.qmd
-        # - practicals/Practical3/Practical3-Writing-Functions.qmd
+        - practicals/Practical2/Practical2-Base-R.qmd
+        - practicals/Practical3/Practical3-Writing-Functions.qmd
         # - practicals/Practical5/Practical4-Spatial-Data-Analysis.qmd
         # - practicals/Practical6/Practical5.qmd
         - misc/x_error-handling.qmd
