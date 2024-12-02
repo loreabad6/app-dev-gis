@@ -12,7 +12,7 @@ unnumbered: true
 
 # Practical 2 {.unnumbered}
 
-Download the [raw document here](https://github.com/loreabad6/app-dev-gis/tree/main/practicals/Practical2/Practical2-Base-R.qmd) 
+Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical2/Practical2-Base-R.qmd) 
 
 Today you will be creating and manipulating vectors, and data frames to uncover a top secret message.
 
