@@ -15,8 +15,8 @@ book:
     - index.qmd
     - part: "Lessons"
       chapters:
-        - lessons/placeholder.qmd
-        # - lessons/session_1.qmd
+        # - lessons/placeholder.qmd
+        - lessons/session_1.qmd
     - part: "Practicals"
       chapters: 
         - practicals/Practical1/Practical1-Getting-Started-R.qmd
