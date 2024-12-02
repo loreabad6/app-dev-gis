@@ -12,6 +12,8 @@ embed-resources: true
 
 # Practical 3 {.unnumbered}
 
+Download the [raw document here](https://github.com/loreabad6/app-dev-gis/tree/main/practicals/Practical3/Practical3-Writing-Functions.qmd) 
+
 This activity will ask you to write several small functions, then use them to unscramble a message.
 
 <!-- Remove or comment out the following line if you are getting errors  -->
