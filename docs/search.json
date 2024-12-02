@@ -176,6 +176,83 @@
     ]
   },
   {
+    "objectID": "practicals/Practical2/Practical2-Base-R.html",
+    "href": "practicals/Practical2/Practical2-Base-R.html",
+    "title": "Practical 2",
+    "section": "",
+    "text": "Part One: Setup\nEach of the following R chunks will cause an error and/or do the desired task incorrectly. Find the mistake, and correct it to complete the intended action.\nlower_case &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\")\n\nupper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\")\n\npunctuation &lt;- c(\".\", \",\", \"!\", \"?\", \"'\", \"\"\", \"(\", \")\", \" \", \"-\", \";\", \"—\")\n\nError in parse(text = input): &lt;text&gt;:3:56: unexpected string constant\n2: \n3: upper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\"\n                                                          ^\nmy_symbols &lt;- cbind(lower_case, upper_case, punctuation)\n\nError: object 'lower_case' not found\nmy_symbols &lt;- dataframe(my_symbols)\n\nError in dataframe(my_symbols): could not find function \"dataframe\"\n\nnames(my_symbols) = Symbol\n\nError: object 'Symbol' not found\nlen &lt;- length(my_symbols)\n\nError: object 'my_symbols' not found\nmy_symbols%Num &lt;- 1:len\n\nError in parse(text = input): &lt;text&gt;:1:11: unexpected input\n1: my_symbols%Num &lt;- 1:len\n              ^",
+    "crumbs": [
+      "Practicals",
+      "Practical 2"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical2/Practical2-Base-R.html#part-one-setup",
+    "href": "practicals/Practical2/Practical2-Base-R.html#part-one-setup",
+    "title": "Practical 2",
+    "section": "",
+    "text": "Create vectors containing the upper case letters, lower case letters, and some punctuation marks.\n\n\n\nMake one long vector containing all the symbols.\n\n\n\nTurn the my_symbols vector into a data frame, with the variable name “Symbol”\n\n\n\nFind the total number of symbols we have in our data frame.\n\n\n\nCreate a new variable in your dataframe that assigns a number to each symbol.",
+    "crumbs": [
+      "Practicals",
+      "Practical 2"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical2/Practical2-Base-R.html#part-two-decoding-the-secret-message.",
+    "href": "practicals/Practical2/Practical2-Base-R.html#part-two-decoding-the-secret-message.",
+    "title": "Practical 2",
+    "section": "Part Two: Decoding the secret message.",
+    "text": "Part Two: Decoding the secret message.\nThis chunk (which should NOT have errors) will load up the encoded secret message as a vector:\n\ntop_secret &lt;- read.csv(\n  \"https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/practicals/Practical2/Secret_Code_AppDev\", \n  header = TRUE)$x\n\nBy altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.\n\nAdd 14 to every number (already done for you 😉)\n\n\ntop_secret &lt;- top_secret + 14\n\n\nMultiply every number by 18, then subtract 257.\n\n\n# write your solution to prompt 1\n\n\nExponentiate every number. (That is, do e^[number].)\n\n\n# write your solution to prompt 2\n\n\nSquare every number.\n\n\n# write your solution to prompt 3\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nHeadquarters has informed you that at this stage of decoding, there should be 1053 numbers in the secret message that are below 17.\n\n\nHint: This is what is called a “relational” comparison, where you compare an object to a number and R will give you a vector of TRUEs and FALSEs based on whether the comparison is / is not met. You can then use these TRUEs and FALSEs as numbers, since TRUE = 1 and FALSE = 0 in R land. This is called a Boolean variable type.\n\n# Write code to verify that there are 352 numbers with values **below** 17\n\n\nTurn your vector of numbers into a matrix with 5 columns.\n\n\n# write your solution to prompt 4\n\n\nSeparately from your top_secret numbers, create a new vector called “evens” of all the even numbers between 1 and 428. That is, “evens” should contain 2, 4, 6, 8 …, 428.\n\n\n# write your solution to prompt 5\n\n\nSubtract the “evens” vector from the first column of your secret message matrix.\n\n\n# write your solution to prompt 6\n\n\nSubtract 100 from all numbers 18-24th rows of the 3rd column.\n\n\n# write your solution to prompt 7\n\n\nMultiply all numbers in the 4th and 5th column by 2.\n\n\n# write your solution to prompt 8\n\n\nTurn your matrix back into a vector.\n\n\n# write your solution to prompt 9\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nHeadquarters has informed you that at this stage of decoding, all numbers in indices 1000 and beyond are below 70.\n\n\nHint: Use a relational comparison similar to what you used in the last checkpoint, but here you will need to subset values from your vector! It may be helpful to think of below 100 as not equal to or greater than 70.\n\n# Write code to verify that indices 1000 and beyond have values **below** 70\n# should be 0!\n\n\nTake the square root of all numbers in indices 38 to 465.\n\n\n# write your solution to prompt 10\n\n\nRound all numbers to the nearest whole number.\n\n\n# write your solution to prompt 11\n\n\nReplace all instances of the number 39 with 20.\n\n\n# write your solution to prompt 12\n\n\n\n\n\n\n\nCheckpoint\n\n\n\nHeadquarters has informed you that your final message should have 820 even numbers.\n\n\nHint: Checking for divisibility is an interesting operation that isn’t done much in R. Modulus is the operation you are interested in, where you are checking for whether the numbers are divisible by 2, with no remainder. See what you can find about modulus in R!\n\n# Code to verify how many even numbers are in your top_secret vector\n# Should be 820!",
+    "crumbs": [
+      "Practicals",
+      "Practical 2"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical2/Practical2-Base-R.html#part-3-the-secret-message",
+    "href": "practicals/Practical2/Practical2-Base-R.html#part-3-the-secret-message",
+    "title": "Practical 2",
+    "section": "Part 3: The secret message!",
+    "text": "Part 3: The secret message!\nUse your final vector of numbers as indices for my_symbols to discover the final message!\nHint: to make your solution more legible, checkout the function cat(), you can access the help file by typing ?cat on your console.\n\n# write code to decode the message\n\nGoogle the message, if you do not recognize it, and find its title and author.\n\n\n\n\n\n\nSolution 🎉\n\n\n\nWrite the title and author here!\n\n\nUpload the .qmd doc and the rendered html to Blackboard (don’t forget to add all your teammates names!). The first team receives an extra point each in class participation 🏃\n\n\n\n\nWatson, S. S. (n.d.). A julia-python-r reference sheet. Retrieved November 21, 2024, from https://docslib.org/doc/2547802/julia-python-r-cheatsheet\n\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science (2nd ed.). O’Reilly Media.\n\n\nXie, Y. (2014). Knitr: A comprehensive tool for reproducible research in R. In V. Stodden, F. Leisch, & R. D. Peng (Eds.), Implementing reproducible computational research. Chapman; Hall/CRC.\n\n\nXie, Y. (2015). Dynamic documents with R and knitr (2nd ed.). Chapman; Hall/CRC. https://yihui.org/knitr/\n\n\nXie, Y. (2024). Knitr: A general-purpose package for dynamic report generation in r. https://yihui.org/knitr/",
+    "crumbs": [
+      "Practicals",
+      "Practical 2"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical3/Practical3-Writing-Functions.html",
+    "href": "practicals/Practical3/Practical3-Writing-Functions.html",
+    "title": "Practical 3",
+    "section": "",
+    "text": "Part One: Create your functions\nMany of the functions have been started for you below, but none of them are complete as-is.\nTest it by running the code below the function.\ndivide_and_round &lt;- function(nums){\n  \n  my_min &lt;- min(nums, na.rm = TRUE)\n  divided &lt;- nums/my_min\n  \n}\n\n\ntest &lt;- c(1:5, NA)\n\ndivide_and_round(test)\nno_nines_or_twelves &lt;- function(nums){\n  \n  check &lt;- !(nums %% 9 == 0 | nums %% 12 == 0)\n  \n}\n\ntest &lt;- c(1:10*5, NA)\n\nno_nines_or_twelves(test)\nInclude an optional argument called “start” which lets you choose where to start skipping; that is, if start = 1, we return the 1st value, 3rd, 5th, etc. and if start = 2, we return the 2nd, 4th, 6th, etc.\nevery_other &lt;- function(vec){\n  \n  if(start == 2){\n\n    \n  } else if(start == 1) {\n    \n    \n    \n    \n  }\n  \n}\n\ntest &lt;- c(1:10)\n\nevery_other(test)\n\nError in start == 2: comparison (==) is possible only for atomic and list types\n\nevery_other(test, start = 2)\n\nError in every_other(test, start = 2): unused argument (start = 2)\nBe sure to test your function.\nshorten &lt;- function(){\n\n  \n}",
+    "crumbs": [
+      "Practicals",
+      "Practical 3"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical3/Practical3-Writing-Functions.html#part-one-create-your-functions",
+    "href": "practicals/Practical3/Practical3-Writing-Functions.html#part-one-create-your-functions",
+    "title": "Practical 3",
+    "section": "",
+    "text": "Write a function called divide_and_round(), which takes a number or vector of numbers, divides them all by their smallest value, and rounds the results to the nearest whole number.\n\n\n\n\nWrite a function called no_nines_or_twelves(), which takes a number or vector of numbers and returns TRUE if the number is NOT divisible by 9 or 12, FALSE otherwise.\n\n\n\nWrite a function called every_other() which takes a vector and returns every other value in the vector.\n\n\n\n\n\n\n\nHint 🔍\n\n\n\nYou could achieve this with a for-loop but there are definitely more efficient ways to do it!\n\n\n\n\n\nWrite a function called shorten() which takes a vector and keeps dropping the first value, until the sum of the vector is less than 350 Return the remaining values.\n\n\n\n\n\n\n\nHint 🔍\n\n\n\nYou probably want to either use the cumsum() function, or write a while() loop.",
+    "crumbs": [
+      "Practicals",
+      "Practical 3"
+    ]
+  },
+  {
+    "objectID": "practicals/Practical3/Practical3-Writing-Functions.html#part-two-your-functions-are-the-key",
+    "href": "practicals/Practical3/Practical3-Writing-Functions.html#part-two-your-functions-are-the-key",
+    "title": "Practical 3",
+    "section": "Part Two: Your functions are the key",
+    "text": "Part Two: Your functions are the key\n\nOnce you have written your four functions correctly, run the following code:\n\n\nmy_vec &lt;- c(39, 1.87, 48, 11, 8, 45, 21, 5, 12, 33, 9, 11, 108, 4, 18, 5, 16, 17, 8, 48, 27, 24, 4, 22, 12, 27, 23, 46, 42, 35, 15, 34, 36, 26, 18, 10, 18.21, 72.04, 36.9, 41.81, 29, 89.75, 34.03, 20.18, 48.74, 15.76, 31.86, 83.6, 43.55, 39.99, 23.55, 8.54, 24.71, 22.02, 9.71, 62.14, 35.46, 16.61, 15.66, 21.29, 30.52, 201.07, 45.81, 7.85, 30.13, 34.14, 22.62, 10.2, 6.02, 30.12, 10.64, 31.72, 24.57, 14.43, 43.37, 89.93, 44.72, 51.32, 13.62, 45.56, 22.96, 7.05, 29.99, 41.38, 26.59, 23.04, 19.82, 50.73, 39.56, 43.79, 30.22, 85.85, 5.78, 78.85, 29.52, 66.27, 44.06, 27.28, 24.43, 64.32, 3.35, 67.45, 46.72, 48.44, 48.65, 33.3, 40.28, 19.04)\n\nmy_vec &lt;- every_other(my_vec, start = 2)\n\nError in every_other(my_vec, start = 2): unused argument (start = 2)\n\nmy_vec &lt;- divide_and_round(my_vec)\nmy_vec &lt;- every_other(my_vec, start = 1)\n\nError in every_other(my_vec, start = 1): unused argument (start = 1)\n\nmy_vec &lt;- shorten(my_vec)\n\nError in shorten(my_vec): unused argument (my_vec)\n\nmy_vec &lt;- my_vec[no_nines_or_twelves(my_vec)]\n\nmy_vec &lt;- sort(my_vec)\n\nmy_vec\n\n  [1]   1.000000   1.791444   2.139037   2.139037   2.673797   2.673797\n  [7]   3.090909   3.219251   3.770053   4.197861   4.278075   4.278075\n [13]   4.566845   4.812834   5.192513   5.347594   5.454545   5.689840\n [19]   5.882353   5.882353   6.417112   6.417112   7.283422   7.716578\n [25]   8.021390   8.374332   8.427807   8.556150   8.882353   9.090909\n [31]   9.625668   9.625668   9.737968  10.181818  10.598930  10.791444\n [37]  11.229947  11.385027  11.764706  11.775401  12.096257  12.278075\n [43]  12.299465  12.320856  12.593583  12.834225  13.064171  13.139037\n [49]  13.213904  13.903743  14.219251  14.438503  14.438503  14.588235\n [55]  15.508021  15.786096  16.037433  16.106952  16.112299  16.160428\n [61]  16.320856  16.962567  17.037433  17.647059  17.807487  18.181818\n [67]  18.197861  18.256684  18.716578  18.962567  19.251337  19.732620\n [73]  20.855615  21.155080  21.385027  21.540107  22.128342  22.358289\n [79]  22.459893  23.192513  23.288770  23.417112  23.561497  23.914439\n [85]  24.064171  24.363636  24.497326  24.598930  24.983957  25.668449\n [91]  25.668449  25.903743  26.016043  26.064171  27.128342  27.443850\n [97]  33.229947  34.395722  35.438503  36.069519  38.524064  42.165775\n[103]  44.705882  45.909091  47.994652  48.090909  57.754011 107.524064\n\n\nIf you have done everything correctly, your final vector will be six numbers long. Google these six numbers to find a TV show as your final answer.\n\n\n\n\n\n\nSolution 🎉\n\n\n\nWrite the name of the TV show here.\n\n\nUpload the .qmd doc and the rendered html to Blackboard (don’t forget to add all your teammates names!). The first team receives an extra point each in class participation 🏃\n\n\n\n\nWatson, S. S. (n.d.). A julia-python-r reference sheet. Retrieved November 21, 2024, from https://docslib.org/doc/2547802/julia-python-r-cheatsheet\n\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science (2nd ed.). O’Reilly Media.\n\n\nXie, Y. (2014). Knitr: A comprehensive tool for reproducible research in R. In V. Stodden, F. Leisch, & R. D. Peng (Eds.), Implementing reproducible computational research. Chapman; Hall/CRC.\n\n\nXie, Y. (2015). Dynamic documents with R and knitr (2nd ed.). Chapman; Hall/CRC. https://yihui.org/knitr/\n\n\nXie, Y. (2024). Knitr: A general-purpose package for dynamic report generation in r. https://yihui.org/knitr/",
+    "crumbs": [
+      "Practicals",
+      "Practical 3"
+    ]
+  },
+  {
     "objectID": "misc/x_error-handling.html",
     "href": "misc/x_error-handling.html",
     "title": "Dealing with errors",
