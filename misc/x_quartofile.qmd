@@ -4,8 +4,7 @@ date: today
 format: html
 ---
 
-In this document, we will load a *spatial dataset* 
-with the `sf` package.
+In this document, we will load a *spatial dataset* with the `sf` package.
 
 ```{r}
 #| label: setup
