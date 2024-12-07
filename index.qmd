@@ -25,14 +25,15 @@ This is the tentative course schedule of the lessons and assignments.
 | 25.11.24 | Getting started with R	    | Practical 1 |	01.12.24    |
 | 02.12.24 | Fundamentals of R; Intro to Quarto |	Practical 2 / Practical 3	| End of class |
 | 09.12.24 | (Spatial) data cleaning, wrangling & plotting |	Practical 4 | 09.01.25 |
-| 16.12.24 | R-spatial ecosystem, vector, raster, data cubes |	Practical 5, Define final project	|  End of class |
-| 13.01.25 | Bridges to GIS software |    |    |
+| 16.12.24 | R-spatial ecosystem, vector, raster, data cubes |	Practical 5, final project	ideas |  End of class |
+| 13.01.25 | Bridges to GIS software |  Data visualisation showcase  |    |
 | 20.01.25 | R package development   |    |    |
-| 27.01.25 | WebR & Shiny apps       |    |    |
+| 27.01.25 | Quarto interactive dashboards   |    |    |
 :::
 
 The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis.
-Learning by yourself is highly encouraged and expected.
+_**Learning by yourself is highly encouraged and expected!**_
+
 The @sec-compmaterials section lists a number of additional resources for your self-learning, and at the end of the lessons you will have references to the relevant chapters for you to go through. 
 
 In class, we will work with hand-on practicals that will allow you to develop R skills from the first lesson.
