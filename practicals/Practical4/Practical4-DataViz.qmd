@@ -1,0 +1,102 @@
+---
+subtitle: "Spatial data visualisation: In search of the ugliest map!"
+execute:
+  error: true
+  eval: false
+---
+
+# Practical 4 {.unnumbered}
+
+In this practical you are going to let your creativity unleash... for evil 😈
+
+You will be creating the **WORST spatial data visualisation you can imagine**.
+You can use any data visualisation package in R (see some suggestions and guides below). 
+
+*The internet will be your main guide!*
+Make sure to ask/prompt your questions correctly so that you get good code. 
+*Package documentation is crucial as well!*
+Read what the developers of the packages have ardously worked on for your ease of using their package.
+
+You are free to use ANY spatial data you have! If you can't find anything suitable, you can use the datasets shared in class.
+
+**We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd).**
+
+::: {.callout-important}
+
+## Due date: 09.01.2025
+
+You have plenty of time for this practical! 
+In the next sessions you will be using plots to visualise your data, so hopefully you get the hang of it. 
+
+If you have trouble or questions, don't hesitate to ask! 
+If you had an idea, and did not find ANY way to do that with the available R packages out there, write it in your .R file (as a comment) or in your .qmd. 
+
+We will be doing a showcase of your maps in the session of the 13.01.2025
+:::
+
+## Packages you can use:
+
+### `{ggplot2}`
+
+Part of the tidyverse, ggplot2 is one of the go to packages for data visualisation in R. 
+
+There are plenty of tutorials out there on how to use ggplot2 for your data visualisation. [Here is a very nice one by Cedric Scherer](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/) and [another three-part one focused on maps by Mel Moreno and Mathieu Basille](https://r-spatial.org/r/2018/10/25/ggplot2-sf.html).
+
+You will find native support to plot both `sf` ([`geom_sf()`](https://ggplot2.tidyverse.org/reference/ggsf.html)) and `stars` (raster; [`geom_stars()`](https://r-spatial.github.io/stars/articles/stars3.html#geom_stars)) objects. 
+
+Choosing ggplot will allow you to use some of its many extensions. For example, the package [`{ggtext}`](https://wilkelab.org/ggtext/) let's you customise colors in the text in your plot. For spatial elements such as north arrows and scales you can check out [`{ggspatial}`](https://paleolimbot.github.io/ggspatial/index.html).
+
+To save your ggplot you can use the following:
+
+```{r}
+#| eval: false
+
+mymap = ggplot() +
+  geom_sf(...) +
+  theme(...)
+
+ggsave(filename = "path/to/your/plot/location/mymap.png", plot = mymap,
+       width = 15, height = 10, units = "cm", dpi = 300) # adjust as necessary
+```
+
+
+### `{tmap}`
+
+An R package for drawing thematic maps.
+This package tries to follow on the grammar of graphics principles of `{ggplot2}` but also provides a bit more flexibility.
+I personally use it for its versatility in switching between static and interactive, for its ease to build facet plots with free spatial axes and for the thought they put in particular cartography principles. 
+
+Version 4.0 has been cooking for a while and [you will find the documentation here](https://r-tmap.github.io/tmap/). You will also find a [guide for making maps with `{tmap}` in the Geocomputation with R book](https://r.geocompx.org/adv-map#tmap-basics).
+
+To save your tmap you can use the following:
+
+```{r}
+#| eval: false
+
+mymap = tm_shape() +
+  tm_fill()
+
+tmap_save(tm = mymap, filename = "path/to/your/plot/location/mymap.png",
+       width = 15, height = 10, units = "cm", dpi = 300) # adjust as necessary
+```
+
+
+### Base R
+
+Although not the easiest to customise, you can definitely make nice maps using base R. Can you also make ugly maps with it? 
+
+You will find some basics on plotting `sf` objects in the [{sf} plotting vignette in the package documentation here](https://r-spatial.github.io/sf/articles/sf5.html).
+
+To save your plot to disk you can use the following code:
+
+```{r}
+#| eval: false
+png(filename = "path/to/your/plot/location/mymap.png",
+    width = 15, height = 10, units = "cm") # adjust as necessary
+
+plot(...) # the code for your plot goes here
+
+device.off()
+```
+
+With this code your plot will not render on the RStudio viewer but directly on the file you created. I recommend you to wrap your `plot()` code at the complete end, once you are done with your editing.
