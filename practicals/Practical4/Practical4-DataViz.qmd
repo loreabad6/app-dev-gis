@@ -18,6 +18,7 @@ Make sure to ask/prompt your questions correctly so that you get good code.
 Read what the developers of the packages have ardously worked on for your ease of using their package.
 
 You are free to use ANY spatial data you have! If you can't find anything suitable, you can use the datasets shared in class.
+See below for data packages you can use as base layers.
 
 **We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd).**
 
@@ -34,7 +35,7 @@ If you had an idea, and did not find ANY way to do that with the available R pac
 We will be doing a showcase of your maps in the session of the 13.01.2025
 :::
 
-## Packages you can use:
+## Data visualisation packages
 
 ### `{ggplot2}`
 
@@ -100,3 +101,19 @@ device.off()
 ```
 
 With this code your plot will not render on the RStudio viewer but directly on the file you created. I recommend you to wrap your `plot()` code at the complete end, once you are done with your editing.
+
+## Data packages
+
+### {`rnaturalearth`}
+
+[Natural Earth](https://www.naturalearthdata.com/) is a public domain map dataset including vector country and other administrative boundaries.
+With the package you can access the data easily within R and load it as an `sf` object.
+See the [package documentation here](https://docs.ropensci.org/rnaturalearth/articles/rnaturalearth.html).
+
+### {`osmdata`}
+
+To fetch data from [OpenStreetMap](openstreetmap.org) you can use this package. Check the [documentation on how to query data for your area here](https://docs.ropensci.org/osmdata/).
+
+### {`elevatr`}
+
+To get elevation data you can use this package. See the [package vignettes here](https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html) and the [GitHub repository here](https://github.com/USEPA/elevatr)

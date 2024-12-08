@@ -247,11 +247,17 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#packages-you-can-use" id="toc-packages-you-can-use" class="nav-link active" data-scroll-target="#packages-you-can-use">Packages you can use:</a>
+  <li><a href="#data-visualisation-packages" id="toc-data-visualisation-packages" class="nav-link active" data-scroll-target="#data-visualisation-packages">Data visualisation packages</a>
   <ul class="collapse">
   <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><code>{ggplot2}</code></a></li>
   <li><a href="#tmap" id="toc-tmap" class="nav-link" data-scroll-target="#tmap"><code>{tmap}</code></a></li>
   <li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r">Base R</a></li>
+  </ul></li>
+  <li><a href="#data-packages" id="toc-data-packages" class="nav-link" data-scroll-target="#data-packages">Data packages</a>
+  <ul class="collapse">
+  <li><a href="#rnaturalearth" id="toc-rnaturalearth" class="nav-link" data-scroll-target="#rnaturalearth">{<code>rnaturalearth</code>}</a></li>
+  <li><a href="#osmdata" id="toc-osmdata" class="nav-link" data-scroll-target="#osmdata">{<code>osmdata</code>}</a></li>
+  <li><a href="#elevatr" id="toc-elevatr" class="nav-link" data-scroll-target="#elevatr">{<code>elevatr</code>}</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -282,7 +288,7 @@ div.csl-indent {
 <p>In this practical you are going to let your creativity unleash… for evil 😈</p>
 <p>You will be creating the <strong>WORST spatial data visualisation you can imagine</strong>. You can use any data visualisation package in R (see some suggestions and guides below).</p>
 <p><em>The internet will be your main guide!</em> Make sure to ask/prompt your questions correctly so that you get good code. <em>Package documentation is crucial as well!</em> Read what the developers of the packages have ardously worked on for your ease of using their package.</p>
-<p>You are free to use ANY spatial data you have! If you can’t find anything suitable, you can use the datasets shared in class.</p>
+<p>You are free to use ANY spatial data you have! If you can’t find anything suitable, you can use the datasets shared in class. See below for data packages you can use as base layers.</p>
 <p><strong>We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd).</strong></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -299,8 +305,8 @@ Due date: 09.01.2025
 <p>We will be doing a showcase of your maps in the session of the 13.01.2025</p>
 </div>
 </div>
-<section id="packages-you-can-use" class="level2">
-<h2 class="anchored" data-anchor-id="packages-you-can-use">Packages you can use:</h2>
+<section id="data-visualisation-packages" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualisation-packages">Data visualisation packages</h2>
 <section id="ggplot2" class="level3">
 <h3 class="anchored" data-anchor-id="ggplot2"><code>{ggplot2}</code></h3>
 <p>Part of the tidyverse, ggplot2 is one of the go to packages for data visualisation in R.</p>
@@ -344,6 +350,21 @@ Due date: 09.01.2025
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">device.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>With this code your plot will not render on the RStudio viewer but directly on the file you created. I recommend you to wrap your <code>plot()</code> code at the complete end, once you are done with your editing.</p>
+</section>
+</section>
+<section id="data-packages" class="level2">
+<h2 class="anchored" data-anchor-id="data-packages">Data packages</h2>
+<section id="rnaturalearth" class="level3">
+<h3 class="anchored" data-anchor-id="rnaturalearth">{<code>rnaturalearth</code>}</h3>
+<p><a href="https://www.naturalearthdata.com/">Natural Earth</a> is a public domain map dataset including vector country and other administrative boundaries. With the package you can access the data easily within R and load it as an <code>sf</code> object. See the <a href="https://docs.ropensci.org/rnaturalearth/articles/rnaturalearth.html">package documentation here</a>.</p>
+</section>
+<section id="osmdata" class="level3">
+<h3 class="anchored" data-anchor-id="osmdata">{<code>osmdata</code>}</h3>
+<p>To fetch data from <a href="openstreetmap.org">OpenStreetMap</a> you can use this package. Check the <a href="https://docs.ropensci.org/osmdata/">documentation on how to query data for your area here</a>.</p>
+</section>
+<section id="elevatr" class="level3">
+<h3 class="anchored" data-anchor-id="elevatr">{<code>elevatr</code>}</h3>
+<p>To get elevation data you can use this package. See the <a href="https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html">package vignettes here</a> and the <a href="https://github.com/USEPA/elevatr">GitHub repository here</a></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
