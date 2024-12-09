@@ -50,7 +50,7 @@ If you find yourself taking longer or having trouble with concepts, please ask f
     - Programming project, either R or Python or both
 -	Active participation – 20%
 
-## Required Course Materials
+## Required course materials
 
 R, RStudio, and Rtools will be installed in the lab computers.
 If you use your own laptop, see the @sec-compmaterials section below.
