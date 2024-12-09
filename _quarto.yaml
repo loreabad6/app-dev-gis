@@ -17,7 +17,7 @@ book:
       chapters:
         # - lessons/placeholder.qmd
         - lessons/session_1.qmd
-        # - lessons/session_2.qmd
+        - lessons/session_2.qmd
         # - lessons/session_3.qmd
         # - lessons/session_4.qmd
         # - lessons/session_5.qmd
