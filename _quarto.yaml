@@ -28,9 +28,9 @@ book:
         - practicals/Practical2/Practical2-Base-R.qmd
         - practicals/Practical3/Practical3-Writing-Functions.qmd
         - practicals/Practical4/Practical4-DataViz.qmd
-        # - practicals/Practical6/Practical5.qmd
+        # - practicals/Practical5/Practical5-Spatial-Data-Analysis.qmd
         - misc/x_error-handling.qmd
-    # - project/final-project.qmd
+    # - final-project.qmd
     - refs/references.qmd
   repo-url: "https://github.com/loreabad6/app-dev-gis"
   page-footer:

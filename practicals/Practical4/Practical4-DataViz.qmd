@@ -20,7 +20,7 @@ Read what the developers of the packages have ardously worked on for your ease o
 You are free to use ANY spatial data you have! If you can't find anything suitable, you can use the datasets shared in class.
 See below for data packages you can use as base layers.
 
-**We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd).**
+**We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd). Don't forget to include any data you used that is not publicly accessible.**
 
 ::: {.callout-important}
 

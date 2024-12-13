@@ -1,4 +1,4 @@
-### About the use of AI
+### About the use of AI {#sec-ai}
 
 Using AI in this course is not discouraged if it helps you understand code or discover new ways of doing a task.
 Think of AI as an extended version of googling your issues or a Stack Overflow entry.

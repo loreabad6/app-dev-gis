@@ -45,3 +45,8 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 /.quarto/
+
+# Course materials
+lessons/
+grading/
+project/
