@@ -104,7 +104,7 @@ Headquarters has informed you that at this stage of decoding, there should be 10
 *Hint*: This is what is called a “relational” comparison, where you compare an object to a number and R will give you a vector of `TRUE`s and `FALSE`s based on whether the comparison is / is not met. You can then use these `TRUE`s and `FALSE`s as numbers, since `TRUE = 1` and `FALSE = 0` in R land. This is called a Boolean variable type.
 
 ```{r}
-# Write code to verify that there are 352 numbers with values **below** 17
+# Write code to verify that there are 1053 numbers with values **below** 17
 ```
 
 4.  Turn your vector of numbers into a matrix with 5 columns.
