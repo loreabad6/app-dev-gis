@@ -49,4 +49,5 @@ rsconnect/
 # Course materials
 lessons/
 grading/
-project/
+!docs/lessons/
+*.pdf
