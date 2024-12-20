@@ -6,6 +6,7 @@ author:
   - Team member 2
 execute:
   error: true
+  eval: true
 embed-resources: true
 ---
 
@@ -235,6 +236,8 @@ For this you will find a `.tif` file here: <https://github.com/loreabad6/app-dev
 You can load this raster dataset using the `rast()` function from the `{terra}` package.
 
 ::: column-margin
+Note how when you load `{terra}` you get a conflict warning. There is another package `{tidyr}` from the tidyverse with a function `extract()`. We will be using that function, so when we call it, we will use `terra::extract()` to be specific.
+
 The maximum temperature dataset is from [Wordclim](https://www.worldclim.org/) data. To download it with R, I used the package `{geodata}` and the function `worldclim_country()`. See the [script here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical5/scripts/wordclim_query.R).
 :::
 
@@ -278,7 +281,7 @@ We can use the `terra::extract()` function to do this.
 
 ```{r}
 # We need to add the `terra::` in front of the function 
-# because of a bug with terra
+# because ofthe conflict with the package tidyr
 # The first argument is the raster object and 
 # the second one can be an sf object.
 # You can include the huts_enrich object here.

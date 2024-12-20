@@ -6,6 +6,7 @@ author:
   - Team member 2
 execute:
   error: true
+  eval: true
 unnumbered: true
 embed-resources: true
 ---
@@ -17,7 +18,7 @@ Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/m
 This activity will ask you to write several small functions, then use them to unscramble a message.
 
 <!-- Remove or comment out the following line if you are getting errors  -->
-{{< include ../../misc/x_some-advice.qmd >}}
+<!-- {{< include ../../misc/x_some-advice.qmd >}} -->
 <!-- End of commenting  -->
 
 ## Part One: Create your functions

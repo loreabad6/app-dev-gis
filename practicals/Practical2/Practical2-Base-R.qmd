@@ -6,6 +6,7 @@ author:
   - Team member 2
 execute:
   error: true
+  eval: true
 embed-resources: true
 unnumbered: true
 ---
@@ -17,7 +18,7 @@ Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/m
 Today you will be creating and manipulating vectors, and data frames to uncover a top secret message.
 
 <!-- Remove or comment out the following line if you are getting errors  -->
-{{< include ../../misc/x_some-advice.qmd >}}
+<!-- {{< include ../../misc/x_some-advice.qmd >}} -->
 <!-- End of commenting  -->
 
 ## Part One: Setup
