@@ -6,7 +6,7 @@ author:
   - Team member 2
 execute:
   error: true
-  eval: true
+  eval: false
 embed-resources: true
 ---
 
@@ -22,7 +22,7 @@ You will also learn how to perform spatial queries using the [`sf`](https://r-sp
 There are extra notes on the margins to give you more information on the functions you are using.
 
 <!-- Remove or comment out the following line if you are getting errors  -->
-<!-- {{< include ../../misc/x_some-advice.qmd >}} -->
+{{< include ../../misc/x_some-advice.qmd >}}
 <!-- End of commenting  -->
 
 ## Part 1: Data import
