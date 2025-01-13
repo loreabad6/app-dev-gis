@@ -19,7 +19,7 @@ book:
         - lessons/session_1.qmd
         - lessons/session_2.qmd
         - lessons/session_3.qmd
-        # - lessons/session_4.qmd
+        - lessons/session_4.qmd
         # - lessons/session_5.qmd
         # - lessons/session_6.qmd
     - part: "Practicals"
@@ -53,7 +53,7 @@ bibliography:
     - refs/packages-index.bib
     - refs/packages-tidyr.bib
     - refs/packages-rspatial.bib
-    # - refs/packages-rbridges.bib
+    - refs/packages-rbridges.bib
 nocite: |
   @*
 csl: https://raw.githubusercontent.com/citation-style-language/styles/refs/heads/master/apa.csl
