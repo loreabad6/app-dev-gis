@@ -1,5 +1,6 @@
 ---
 subtitle: "Spatial data visualisation: In search of the ugliest map!"
+lightbox: auto
 execute:
   error: true
   eval: false
@@ -10,12 +11,14 @@ execute:
 In this practical you are going to let your creativity unleash... for evil 😈
 
 You will be creating the **WORST spatial data visualisation you can imagine**.
+See [terrible maps](https://www.farandwide.com/s/hilarious-terrible-maps-ed81c3193fbb4d98) and [viz.wtf](https://viz.wtf/archive/tagged/map) for inspiration.
+
 You can use any data visualisation package in R (see some suggestions and guides below). 
 
 *The internet will be your main guide!*
 Make sure to ask/prompt your questions correctly so that you get good code. 
 *Package documentation is crucial as well!*
-Read what the developers of the packages have ardously worked on for your ease of using their package.
+Read what the developers of the packages have arduously worked on for your ease of using their package.
 
 You are free to use ANY spatial data you have! If you can't find anything suitable, you can use the datasets shared in class.
 See below for data packages you can use as base layers.
@@ -117,3 +120,28 @@ To fetch data from [OpenStreetMap](openstreetmap.org) you can use this package. 
 ### {`elevatr`}
 
 To get elevation data you can use this package. See the [package vignettes here](https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html) and the [GitHub repository here](https://github.com/USEPA/elevatr)
+
+## Gallery
+
+::: {#fig-uglymaps layout-ncol=3}
+
+![Angelica Moreno - South American countries](gallery/Angelica-Moreno_FinalMap.png){group="ugly-maps" description="Uses {ggspatial} for scale and north arrow, plays with text size and color, applied different projection"}
+
+![Emanuel Farias - Ostrich Osterreich - DEM](gallery/Emanuel-Farias_Osterreich_DEM.jpg){group="ugly-maps" description="Uses {magick} to overlap an image to the generated map"}
+
+![Emanuel Farias - Ostrich Osterreich - Rivers](gallery/Emanuel-Farias_Osterreich_River.jpg){group="ugly-maps" description="Uses {magick} to overlap an image to the generated map"}
+
+![Joshua Magotang - Map of Russia](gallery/Joshua-Magotang_MapOfRussia.png){group="ugly-maps" description="Applies a projection that distorts Russia, changes parameters from geoms and theme"}
+
+![Max Schneeberger - Trumps view from Space](gallery/Max-Schneeberger_uglymap.png){group="ugly-maps" description="Explores {ggplot2} parameters, applies custom palettes, changes projection for distortion"}
+
+![Mia Huebner - Alligators in the US](gallery/Mia-Huebner_BadAlligatorMap.png){group="ugly-maps" description="Generates random data, distorts the map with a polar projection, uses rivers and lakes in a distorted way so they don't match the map, changes parameters in geoms and theme"}
+
+![Saeed Ullah - COVID vaccinations](gallery/Saeed-Ullah_Rplot.png){group="ugly-maps" description="Red-green palette, uses geodetic coordinates"}
+
+![Saule Amambayeva - Wooorld map](gallery/Saule-Amambayeva_ugly_map.png){group="ugly-maps" description="Changes parameters in geoms and theme, changes coordinates to generate distortion"}
+
+![Yana Nikolova - A map (of trees)](gallery/Yana-Nikolova_map_trees.png){group="ugly-maps" description="Uses the {tmap} package and explores the different customisation possibilities, removes x axis text"}
+
+Ugly maps!
+:::
