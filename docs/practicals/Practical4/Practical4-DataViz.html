@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -97,6 +97,9 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -200,6 +203,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lessons/session_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -283,6 +292,7 @@ div.csl-indent {
   <li><a href="#osmdata" id="toc-osmdata" class="nav-link" data-scroll-target="#osmdata">{<code>osmdata</code>}</a></li>
   <li><a href="#elevatr" id="toc-elevatr" class="nav-link" data-scroll-target="#elevatr">{<code>elevatr</code>}</a></li>
   </ul></li>
+  <li><a href="#gallery" id="toc-gallery" class="nav-link" data-scroll-target="#gallery">Gallery</a></li>
   </ul>
 </nav>
     </div>
@@ -310,8 +320,9 @@ div.csl-indent {
 
 
 <p>In this practical you are going to let your creativity unleash… for evil 😈</p>
-<p>You will be creating the <strong>WORST spatial data visualisation you can imagine</strong>. You can use any data visualisation package in R (see some suggestions and guides below).</p>
-<p><em>The internet will be your main guide!</em> Make sure to ask/prompt your questions correctly so that you get good code. <em>Package documentation is crucial as well!</em> Read what the developers of the packages have ardously worked on for your ease of using their package.</p>
+<p>You will be creating the <strong>WORST spatial data visualisation you can imagine</strong>. See <a href="https://www.farandwide.com/s/hilarious-terrible-maps-ed81c3193fbb4d98">terrible maps</a> and <a href="https://viz.wtf/archive/tagged/map">viz.wtf</a> for inspiration.</p>
+<p>You can use any data visualisation package in R (see some suggestions and guides below).</p>
+<p><em>The internet will be your main guide!</em> Make sure to ask/prompt your questions correctly so that you get good code. <em>Package documentation is crucial as well!</em> Read what the developers of the packages have arduously worked on for your ease of using their package.</p>
 <p>You are free to use ANY spatial data you have! If you can’t find anything suitable, you can use the datasets shared in class. See below for data packages you can use as base layers.</p>
 <p><strong>We aim for a static map that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the map (either as an R script or a .qmd). Don’t forget to include any data you used that is not publicly accessible.</strong></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -389,14 +400,188 @@ Due date: 09.01.2025
 <section id="elevatr" class="level3">
 <h3 class="anchored" data-anchor-id="elevatr">{<code>elevatr</code>}</h3>
 <p>To get elevation data you can use this package. See the <a href="https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html">package vignettes here</a> and the <a href="https://github.com/USEPA/elevatr">GitHub repository here</a></p>
+</section>
+</section>
+<section id="gallery" class="level2">
+<h2 class="anchored" data-anchor-id="gallery">Gallery</h2>
+<div id="fig-uglymaps" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uglymaps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Angelica-Moreno_FinalMap.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-1;title:Angelica Moreno - South American countries;" title="Angelica Moreno - South American countries"><img src="gallery/Angelica-Moreno_FinalMap.png" class="img-fluid figure-img"></a></p>
+<figcaption>Angelica Moreno - South American countries</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Emanuel-Farias_Osterreich_DEM.jpg" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-2;title:Emanuel Farias - Ostrich Osterreich - DEM;" title="Emanuel Farias - Ostrich Osterreich - DEM"><img src="gallery/Emanuel-Farias_Osterreich_DEM.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Emanuel Farias - Ostrich Osterreich - DEM</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Emanuel-Farias_Osterreich_River.jpg" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-3;title:Emanuel Farias - Ostrich Osterreich - Rivers;" title="Emanuel Farias - Ostrich Osterreich - Rivers"><img src="gallery/Emanuel-Farias_Osterreich_River.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Emanuel Farias - Ostrich Osterreich - Rivers</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Joshua-Magotang_MapOfRussia.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-4;title:Joshua Magotang - Map of Russia;" title="Joshua Magotang - Map of Russia"><img src="gallery/Joshua-Magotang_MapOfRussia.png" class="img-fluid figure-img"></a></p>
+<figcaption>Joshua Magotang - Map of Russia</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Max-Schneeberger_uglymap.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-5;title:Max Schneeberger - Trumps view from Space;" title="Max Schneeberger - Trumps view from Space"><img src="gallery/Max-Schneeberger_uglymap.png" class="img-fluid figure-img"></a></p>
+<figcaption>Max Schneeberger - Trumps view from Space</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Mia-Huebner_BadAlligatorMap.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-6;title:Mia Huebner - Alligators in the US;" title="Mia Huebner - Alligators in the US"><img src="gallery/Mia-Huebner_BadAlligatorMap.png" class="img-fluid figure-img"></a></p>
+<figcaption>Mia Huebner - Alligators in the US</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Saeed-Ullah_Rplot.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-7;title:Saeed Ullah - COVID vaccinations;" title="Saeed Ullah - COVID vaccinations"><img src="gallery/Saeed-Ullah_Rplot.png" class="img-fluid figure-img"></a></p>
+<figcaption>Saeed Ullah - COVID vaccinations</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Saule-Amambayeva_ugly_map.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-8;title:Saule Amambayeva - Wooorld map;" title="Saule Amambayeva - Wooorld map"><img src="gallery/Saule-Amambayeva_ugly_map.png" class="img-fluid figure-img"></a></p>
+<figcaption>Saule Amambayeva - Wooorld map</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="gallery/Yana-Nikolova_map_trees.png" class="lightbox" data-gallery="ugly-maps" data-glightbox="description: .lightbox-desc-9;title:Yana Nikolova - A map (of trees);" title="Yana Nikolova - A map (of trees)"><img src="gallery/Yana-Nikolova_map_trees.png" class="img-fluid figure-img"></a></p>
+<figcaption>Yana Nikolova - A map (of trees)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uglymaps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Ugly maps!
+</figcaption>
+</figure>
+</div>
 
 
+<div class="hidden" aria-hidden="true">
+<div class="glightbox-desc lightbox-desc-1">
+<p>Uses {ggspatial} for scale and north arrow, plays with text size and color, applied different projection</p>
+</div>
+<div class="glightbox-desc lightbox-desc-2">
+<p>Uses {magick} to overlap an image to the generated map</p>
+</div>
+<div class="glightbox-desc lightbox-desc-3">
+<p>Uses {magick} to overlap an image to the generated map</p>
+</div>
+<div class="glightbox-desc lightbox-desc-4">
+<p>Applies a projection that distorts Russia, changes parameters from geoms and theme</p>
+</div>
+<div class="glightbox-desc lightbox-desc-5">
+<p>Explores {ggplot2} parameters, applies custom palettes, changes projection for distortion</p>
+</div>
+<div class="glightbox-desc lightbox-desc-6">
+<p>Generates random data, distorts the map with a polar projection, uses rivers and lakes in a distorted way so they don’t match the map, changes parameters in geoms and theme</p>
+</div>
+<div class="glightbox-desc lightbox-desc-7">
+<p>Red-green palette, uses geodetic coordinates</p>
+</div>
+<div class="glightbox-desc lightbox-desc-8">
+<p>Changes parameters in geoms and theme, changes coordinates to generate distortion</p>
+</div>
+<div class="glightbox-desc lightbox-desc-9">
+<p>Uses the {tmap} package and explores the different customisation possibilities, removes x axis text</p>
+</div>
+</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-R-quarto" class="csl-entry" role="listitem">
-Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
+<div id="ref-andreo2024grass" class="csl-entry" role="listitem">
+Andreo, V. (2024). <em>Get started with GRASS &amp; r: The rgrass package</em>. <a href="https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html" class="uri">https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html</a>.
+</div>
+<div id="ref-R-gdalcubes" class="csl-entry" role="listitem">
+Appel, M. (2024). <em>Gdalcubes: Earth observation data cubes from satellite image collections</em>. <a href="https://github.com/appelmar/gdalcubes">https://github.com/appelmar/gdalcubes</a>
+</div>
+<div id="ref-gdalcubes2019" class="csl-entry" role="listitem">
+Appel, M., &amp; Pebesma, E. (2019). On-demand processing of data cubes from satellite image collections with the gdalcubes library. <em>Data</em>, <em>4</em>(3). <a href="https://www.mdpi.com/2306-5729/4/3/92">https://www.mdpi.com/2306-5729/4/3/92</a>
+</div>
+<div id="ref-gdalcubes2021" class="csl-entry" role="listitem">
+Appel, M., Pebesma, E., &amp; Mohr, M. (2021). <em>Cloud-based processing of satellite image collections in r using STAC, COGs, and on-demand data cubes</em>. <a href="https://r-spatial.org/r/2021/04/23/cloud-based-cubes.html">https://r-spatial.org/r/2021/04/23/cloud-based-cubes.html</a>
 </div>
 <div id="ref-R-mapview" class="csl-entry" role="listitem">
 Appelhans, T., Detsch, F., Reudenbach, C., &amp; Woellauer, S. (2023). <em>Mapview: Interactive viewing of spatial data in r</em>. <a href="https://github.com/r-spatial/mapview">https://github.com/r-spatial/mapview</a>
+</div>
+<div id="ref-R-rgee" class="csl-entry" role="listitem">
+Aybar, C. (2023). <em>Rgee: R bindings for calling the earth engine API</em>. <a href="https://github.com/r-spatial/rgee/">https://github.com/r-spatial/rgee/</a>
+</div>
+<div id="ref-spatstat2015" class="csl-entry" role="listitem">
+Baddeley, A., Rubak, E., &amp; Turner, R. (2015). <em>Spatial point patterns: Methodology and applications with <span>R</span></em>. Chapman; Hall/CRC Press. <a href="https://www.routledge.com/Spatial-Point-Patterns-Methodology-and-Applications-with-R/Baddeley-Rubak-Turner/p/book/9781482210200/">https://www.routledge.com/Spatial-Point-Patterns-Methodology-and-Applications-with-R/Baddeley-Rubak-Turner/p/book/9781482210200/</a>
+</div>
+<div id="ref-spatstat2005" class="csl-entry" role="listitem">
+Baddeley, A., &amp; Turner, R. (2005). <span class="nocase">spatstat</span>: An <span>R</span> package for analyzing spatial point patterns. <em>Journal of Statistical Software</em>, <em>12</em>(6), 1–42. <a href="https://doi.org/10.18637/jss.v012.i06">https://doi.org/10.18637/jss.v012.i06</a>
+</div>
+<div id="ref-spatstat2013" class="csl-entry" role="listitem">
+Baddeley, A., Turner, R., Mateu, J., &amp; Bevan, A. (2013). Hybrids of gibbs point process models and their implementation. <em>Journal of Statistical Software</em>, <em>55</em>(11), 1–43. <a href="https://doi.org/10.18637/jss.v055.i11">https://doi.org/10.18637/jss.v055.i11</a>
+</div>
+<div id="ref-bivand2022rgrass" class="csl-entry" role="listitem">
+Bivand, R. (2022). <em>Modernizing the r-GRASS interface: Confronting barn-raised OSGeo libraries and the evolving r.*spatial package ecosystem</em>. <a href="https://rsbivand.github.io/foss4g_2022/modernizing_220822.html" class="uri">https://rsbivand.github.io/foss4g_2022/modernizing_220822.html</a>.
+</div>
+<div id="ref-R-rgrass" class="csl-entry" role="listitem">
+Bivand, R. (2024a). <em>Rgrass: Interface between GRASS geographical information system and r</em>. <a href="https://rsbivand.github.io/rgrass/">https://rsbivand.github.io/rgrass/</a>
+</div>
+<div id="ref-R-spdep" class="csl-entry" role="listitem">
+Bivand, R. (2024b). <em>Spdep: Spatial dependence: Weighting schemes, statistics</em>. <a href="https://github.com/r-spatial/spdep/">https://github.com/r-spatial/spdep/</a>
+</div>
+<div id="ref-spdep2013" class="csl-entry" role="listitem">
+Bivand, R. S., Pebesma, E., &amp; Gómez-Rubio, V. (2013). <em>Applied spatial data analysis with <span>R</span>, second edition</em>. Springer, NY. <a href="https://asdar-book.org/">https://asdar-book.org/</a>
+</div>
+<div id="ref-R-spData" class="csl-entry" role="listitem">
+Bivand, R., Nowosad, J., &amp; Lovelace, R. (2024). <em>spData: Datasets for spatial analysis</em>. <a href="https://jakubnowosad.com/spData/">https://jakubnowosad.com/spData/</a>
+</div>
+<div id="ref-spdep2018" class="csl-entry" role="listitem">
+Bivand, R., &amp; Wong, D. W. S. (2018). Comparing implementations of global and local indicators of spatial association. <em>TEST</em>, <em>27</em>(3), 716–748. <a href="https://doi.org/10.1007/s11749-018-0599-x">https://doi.org/10.1007/s11749-018-0599-x</a>
+</div>
+<div id="ref-Camara_sits_2023" class="csl-entry" role="listitem">
+Câmara, G., Simoes, R., Souza, F., Pelletier, C., Sanchez, A., Andrade, P., Ferreira, K., &amp; Queiroz, G. (2023). <em><span class="nocase">sits</span>: Satellite image time series analysis on <span>Earth</span> observation data cubes</em>. <a href="https://e-sensing.github.io/sitsbook/index.html">https://e-sensing.github.io/sitsbook/index.html</a>
+</div>
+<div id="ref-R-qgisprocess" class="csl-entry" role="listitem">
+Dunnington, D., Vanderhaeghe, F., Caha, J., &amp; Muenchow, J. (2024a). <em>Qgisprocess: Use QGIS processing algorithms</em>. <a href="https://r-spatial.github.io/qgisprocess/">https://r-spatial.github.io/qgisprocess/</a>
+</div>
+<div id="ref-qgisprocess2024" class="csl-entry" role="listitem">
+Dunnington, D., Vanderhaeghe, F., Caha, J., &amp; Muenchow, J. (2024b). <em>R package qgisprocess: Use QGIS processing algorithms. Version 0.4.1</em>. <a href="https://r-spatial.github.io/qgisprocess/">https://r-spatial.github.io/qgisprocess/</a>
+</div>
+<div id="ref-R-digest" class="csl-entry" role="listitem">
+Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</em>. <a href="https://github.com/eddelbuettel/digest">https://github.com/eddelbuettel/digest</a>
+</div>
+<div id="ref-gstat2016" class="csl-entry" role="listitem">
+Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -410,8 +595,20 @@ Hijmans, R. J. (2024a). <em>Spatial data science with <span class="nocase">R and
 <div id="ref-R-terra" class="csl-entry" role="listitem">
 Hijmans, R. J. (2024b). <em>Terra: Spatial data analysis</em>. <a href="https://rspatial.org/">https://rspatial.org/</a>
 </div>
+<div id="ref-R-rgeoda" class="csl-entry" role="listitem">
+Li, X., &amp; Anselin, L. (2024). <em>Rgeoda: R library for spatial data analysis</em>. <a href="https://github.com/geodacenter/rgeoda/">https://github.com/geodacenter/rgeoda/</a>
+</div>
 <div id="ref-lovelace2019geocomputation" class="csl-entry" role="listitem">
 Lovelace, R., Nowosad, J., &amp; Muenchow, J. (2019). <em>Geocomputation with <span>R</span></em>. CRC Press.
+</div>
+<div id="ref-rsi" class="csl-entry" role="listitem">
+Mahoney, M. (n.d.). <em>Rsi: Efficiently retrieve and process satellite imagery</em> (Version 0.2.0.9000). <a href="https://doi.org/10.5281/zenodo.10926857">https://doi.org/10.5281/zenodo.10926857</a>
+</div>
+<div id="ref-R-rsi" class="csl-entry" role="listitem">
+Mahoney, M. (2024). <em>Rsi: Efficiently retrieve and process satellite imagery</em>. <a href="https://github.com/Permian-Global-Research/rsi">https://github.com/Permian-Global-Research/rsi</a>
+</div>
+<div id="ref-dodgr2019" class="csl-entry" role="listitem">
+Mark Padgham. (2019). Dodgr: An r package for network flow aggregation. <em>Transport Findings</em>. <a href="https://doi.org/10.32866/6945">https://doi.org/10.32866/6945</a>
 </div>
 <div id="ref-R-rnaturalearth" class="csl-entry" role="listitem">
 Massicotte, P., &amp; South, A. (2023). <em>Rnaturalearth: World map data from natural earth</em>. <a href="https://docs.ropensci.org/rnaturalearth/">https://docs.ropensci.org/rnaturalearth/</a>
@@ -419,20 +616,41 @@ Massicotte, P., &amp; South, A. (2023). <em>Rnaturalearth: World map data from n
 <div id="ref-R-tibble" class="csl-entry" role="listitem">
 Müller, K., &amp; Wickham, H. (2023). <em>Tibble: Simple data frames</em>. <a href="https://tibble.tidyverse.org/">https://tibble.tidyverse.org/</a>
 </div>
+<div id="ref-R-dodgr" class="csl-entry" role="listitem">
+Padgham, M., Petutschnig, A., &amp; Cooley, D. (2024). <em>Dodgr: Distances on directed graphs</em>. <a href="https://github.com/UrbanAnalyst/dodgr">https://github.com/UrbanAnalyst/dodgr</a>
+</div>
+<div id="ref-R-sfdep" class="csl-entry" role="listitem">
+Parry, J., &amp; Locke, D. (2024). <em>Sfdep: Spatial dependence for simple features</em>. <a href="https://sfdep.josiahparry.com">https://sfdep.josiahparry.com</a>
+</div>
+<div id="ref-R-Rsagacmd" class="csl-entry" role="listitem">
+Pawley, S. (2024). <em>Rsagacmd: Linking r with the open-source SAGA-GIS software</em>. <a href="https://stevenpawley.github.io/Rsagacmd/">https://stevenpawley.github.io/Rsagacmd/</a>
+</div>
 <div id="ref-sf2018" class="csl-entry" role="listitem">
 Pebesma, E. (2018). <span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>. <em><span>The R Journal</span></em>, <em>10</em>(1), 439–446. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>
 </div>
-<div id="ref-R-sf" class="csl-entry" role="listitem">
-Pebesma, E. (2024a). <em>Sf: Simple features for r</em>. <a href="https://r-spatial.github.io/sf/">https://r-spatial.github.io/sf/</a>
-</div>
 <div id="ref-R-stars" class="csl-entry" role="listitem">
-Pebesma, E. (2024b). <em>Stars: Spatiotemporal arrays, raster and vector data cubes</em>. <a href="https://r-spatial.github.io/stars/">https://r-spatial.github.io/stars/</a>
+Pebesma, E. (2024). <em>Stars: Spatiotemporal arrays, raster and vector data cubes</em>. <a href="https://r-spatial.github.io/stars/">https://r-spatial.github.io/stars/</a>
+</div>
+<div id="ref-R-sf" class="csl-entry" role="listitem">
+Pebesma, E. (2025). <em>Sf: Simple features for r</em>. <a href="https://r-spatial.github.io/sf/">https://r-spatial.github.io/sf/</a>
+</div>
+<div id="ref-gstat2004" class="csl-entry" role="listitem">
+Pebesma, E. J. (2004). Multivariable geostatistics in <span>S</span>: The gstat package. <em>Computers &amp; Geosciences</em>, <em>30</em>, 683–691.
 </div>
 <div id="ref-sf2023" class="csl-entry" role="listitem">
-Pebesma, E., &amp; Bivand, R. (2023a). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
+Pebesma, E., &amp; Bivand, R. (2023). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
 </div>
-<div id="ref-stars2023" class="csl-entry" role="listitem">
-Pebesma, E., &amp; Bivand, R. (2023b). <em><span class="nocase">Spatial Data Science: With applications in R</span></em> (p. 352). Chapman; Hall/CRC. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
+<div id="ref-R-gstat" class="csl-entry" role="listitem">
+Pebesma, E., &amp; Graeler, B. (2024). <em>Gstat: Spatial and spatio-temporal geostatistical modelling, prediction and simulation</em>. <a href="https://github.com/r-spatial/gstat/">https://github.com/r-spatial/gstat/</a>
+</div>
+<div id="ref-R-tidygraph" class="csl-entry" role="listitem">
+Pedersen, T. L. (2024). <em>Tidygraph: A tidy API for graph manipulation</em>. <a href="https://tidygraph.data-imaginist.com">https://tidygraph.data-imaginist.com</a>
+</div>
+<div id="ref-nlme2000" class="csl-entry" role="listitem">
+Pinheiro, J. C., &amp; Bates, D. M. (2000). <em>Mixed-effects models in s and s-PLUS</em>. Springer. <a href="https://doi.org/10.1007/b98882">https://doi.org/10.1007/b98882</a>
+</div>
+<div id="ref-R-nlme" class="csl-entry" role="listitem">
+Pinheiro, J., Bates, D., &amp; R Core Team. (2024). <em>Nlme: Linear and nonlinear mixed effects models</em>. <a href="https://svn.r-project.org/R-packages/trunk/nlme/">https://svn.r-project.org/R-packages/trunk/nlme/</a>
 </div>
 <div id="ref-R-abind" class="csl-entry" role="listitem">
 Plate, T., &amp; Heiberger, R. (2024). <em>Abind: Combine multidimensional arrays</em>.
@@ -440,8 +658,32 @@ Plate, T., &amp; Heiberger, R. (2024). <em>Abind: Combine multidimensional array
 <div id="ref-R-base" class="csl-entry" role="listitem">
 R Core Team. (2024). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
+<div id="ref-spdep2022" class="csl-entry" role="listitem">
+Roger Bivand. (2022). R packages for analyzing spatial data: A comparative case study with areal data. <em>Geographical Analysis</em>, <em>54</em>(3), 488–518. <a href="https://doi.org/10.1111/gean.12319">https://doi.org/10.1111/gean.12319</a>
+</div>
+<div id="ref-rydzik2024" class="csl-entry" role="listitem">
+Rydzik, M. (2024, January 10). <em>An Overview of the RSI <span>R</span> Package for Retrieving Satellite Imagery and Calculating Spectral Indices</em>. <a href="https://geocompx.org/post/2024/rsi-bp1/">https://geocompx.org/post/2024/rsi-bp1/</a>
+</div>
+<div id="ref-sits2021" class="csl-entry" role="listitem">
+Simoes, R., Camara, G., Queiroz, G., Souza, F., Andrade, P., Santos, L., Carvalho, A., &amp; Ferreira, K. (2021). Satellite image time series analysis for big earth observation data. <em>Remote Sensing</em>, <em>13</em>(13), 2428. <a href="https://doi.org/10.3390/rs13132428">https://doi.org/10.3390/rs13132428</a>
+</div>
+<div id="ref-R-sits" class="csl-entry" role="listitem">
+Simoes, R., Camara, G., Souza, F., &amp; Carlos, F. (2024). <em>Sits: Satellite image time series analysis for earth observation data cubes</em>. <a href="https://github.com/e-sensing/sits/">https://github.com/e-sensing/sits/</a>
+</div>
+<div id="ref-R-rstac" class="csl-entry" role="listitem">
+Simoes, R., Carvalho, F., &amp; Brazil Data Cube Team. (2024). <em>Rstac: Client library for SpatioTemporal asset catalog</em>. <a href="https://brazil-data-cube.github.io/rstac/">https://brazil-data-cube.github.io/rstac/</a>
+</div>
+<div id="ref-rstac2021" class="csl-entry" role="listitem">
+Simoes, R., Souza, F., Zaglia, M., Queiroz, G. R., Santos, R., &amp; Ferreira, K. (2021). Rstac: An r package to access spatiotemporal asset catalog satellite imagery. <em>2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS</em>, 7674–7677. <a href="https://doi.org/10.1109/IGARSS47720.2021.9553518">https://doi.org/10.1109/IGARSS47720.2021.9553518</a>
+</div>
 <div id="ref-R-lubridate" class="csl-entry" role="listitem">
 Spinu, V., Grolemund, G., &amp; Wickham, H. (2023). <em>Lubridate: Make dealing with dates a little easier</em>. <a href="https://lubridate.tidyverse.org">https://lubridate.tidyverse.org</a>
+</div>
+<div id="ref-R-rpart" class="csl-entry" role="listitem">
+Therneau, T., &amp; Atkinson, B. (2023). <em>Rpart: Recursive partitioning and regression trees</em>. <a href="https://github.com/bethatkinson/rpart">https://github.com/bethatkinson/rpart</a>
+</div>
+<div id="ref-R-sfnetworks" class="csl-entry" role="listitem">
+van der Meer, L., Abad, L., Gilardi, A., &amp; Lovelace, R. (2025). <em>Sfnetworks: Tidy geospatial networks</em>. <a href="https://luukvdmeer.github.io/sfnetworks/">https://luukvdmeer.github.io/sfnetworks/</a>
 </div>
 <div id="ref-julia-python-r_cheatsheet" class="csl-entry" role="listitem">
 Watson, S. S. (n.d.). <em><span class="nocase">A Julia-Python-R reference sheet</span></em>. Retrieved November 21, 2024, from <a href="https://docslib.org/doc/2547802/julia-python-r-cheatsheet">https://docslib.org/doc/2547802/julia-python-r-cheatsheet</a>
@@ -495,7 +737,6 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed
 Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1095,6 +1336,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

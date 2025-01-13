@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../practicals/Practical1/Practical1-Getting-Started-R.html" rel="next">
+<link href="../lessons/session_4.html" rel="next">
 <link href="../lessons/session_2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -201,6 +201,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
   </div>
 </li>
       </ul>
@@ -346,10 +352,10 @@ A small survey 📝
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="R-spatial ecosystem from @sf2023"><img src="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R-spatial ecosystem from Pebesma &amp; Bivand (2023a)"></a></p>
+<p><a href="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="R-spatial ecosystem from @sf2023"><img src="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R-spatial ecosystem from E. Pebesma &amp; Bivand (2023)"></a></p>
 </figure>
 </div>
-<figcaption>R-spatial ecosystem from <span class="citation" data-cites="sf2023">Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023a</a>)</span></figcaption>
+<figcaption>R-spatial ecosystem from <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 <section id="rspatial-counterpart" class="level3" data-number="3.1.1">
@@ -385,7 +391,7 @@ A small survey 📝
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Linking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.3.1; sf_use_s2() is TRUE</code></pre>
+<pre><code>Linking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.4.0; sf_use_s2() is TRUE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(ls <span class="ot">&lt;-</span> <span class="fu">st_linestring</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -475,7 +481,7 @@ A small survey 📝
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="We can define a full polygon which comprises the entire surface of the Earth. Source: @sf2023"><img src="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="img-fluid figure-img"></a></p>
-<figcaption>We can define a full polygon which comprises the entire surface of the Earth. Source: <span class="citation" data-cites="sf2023">Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023a</a>)</span></figcaption>
+<figcaption>We can define a full polygon which comprises the entire surface of the Earth. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -483,7 +489,7 @@ A small survey 📝
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: @sf2023"><img src="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="img-fluid figure-img"></a></p>
-<figcaption>Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: <span class="citation" data-cites="sf2023">Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023a</a>)</span></figcaption>
+<figcaption>Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -518,15 +524,15 @@ Figure&nbsp;3.1: Particularities of spherical geometries
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://r-spatial.org/book/01-hello_files/figure-html/fig-rastertypes01-1.png" class="img-fluid figure-img"></p>
-<figcaption>Raster types. Source: <span class="citation" data-cites="sf2023">Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023a</a>)</span></figcaption>
+<figcaption>Raster types. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
-<p>The packages <code>{stars}</code> <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">Pebesma, 2024b</a>)</span> and <code>{terra}</code> <span class="citation" data-cites="R-terra">(<a href="../refs/references.html#ref-R-terra" role="doc-biblioref">Hijmans, 2024b</a>)</span> are the engines to handle raster datasets in R.</p>
+<p>The packages <code>{stars}</code> <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span> and <code>{terra}</code> <span class="citation" data-cites="R-terra">(<a href="../refs/references.html#ref-R-terra" role="doc-biblioref">Hijmans, 2024b</a>)</span> are the engines to handle raster datasets in R.</p>
 <p>Due to its performance, <code>{terra}</code> took a significant role in the spatial handling of raster data.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>terra 1.7.71</code></pre>
+<pre><code>terra 1.7.83</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tif <span class="ot">=</span> <span class="fu">system.file</span>(<span class="st">"tif/L7_ETMs.tif"</span>, <span class="at">package =</span> <span class="st">"stars"</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast1 =</span> <span class="fu">rast</span>(tif))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -535,7 +541,7 @@ Figure&nbsp;3.1: Particularities of spherical geometries
 dimensions  : 352, 349, 6  (nrow, ncol, nlyr)
 resolution  : 28.5, 28.5  (x, y)
 extent      : 288776.3, 298722.8, 9110729, 9120761  (xmin, xmax, ymin, ymax)
-coord. ref. : SIRGAS 2000 / UTM zone 25S 
+coord. ref. : SIRGAS 2000 / UTM zone 25S (EPSG:31985) 
 source      : L7_ETMs.tif 
 names       : L7_ETMs_1, L7_ETMs_2, L7_ETMs_3, L7_ETMs_4, L7_ETMs_5, L7_ETMs_6 </code></pre>
 </div>
@@ -577,20 +583,74 @@ time    1   2      NA    NA                         NA    NA    </code></pre>
 <section id="further-reading" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">3.5</span> Further reading:</h2>
 <ul>
-<li><a href="https://r-spatial.org/book/part-1.html">Spatial data</a> section, chapters 1-6 <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">Pebesma &amp; Bivand, 2023a</a>)</span></li>
-<li><a href="https://r-spatial.org/book/07-Introsf.html">Introduction to sf and stars</a> chapter <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">Pebesma &amp; Bivand, 2023a</a>)</span></li>
+<li><a href="https://r-spatial.org/book/part-1.html">Spatial data</a> section, chapters 1-6 <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
+<li><a href="https://r-spatial.org/book/07-Introsf.html">Introduction to sf and stars</a> chapter <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
 <li><a href="https://rspatial.org/spatial/index.html#">Spatial data with terra</a> section <span class="citation" data-cites="rspatial_hijmans">(<a href="../refs/references.html#ref-rspatial_hijmans" role="doc-biblioref">Hijmans, 2024a</a>)</span></li>
-<li><a href="https://r-spatial.github.io/sf/articles/sf7.html">Spherical geometry in sf using s2geometry</a> vignette <span class="citation" data-cites="sf2018">(<a href="../refs/references.html#ref-sf2018" role="doc-biblioref">Pebesma, 2018</a>)</span></li>
-<li><a href="https://r-spatial.github.io/stars/index.html"><code>{stars}</code> articles</a> in package documentation <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">Pebesma, 2024b</a>)</span></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf7.html">Spherical geometry in sf using s2geometry</a> vignette <span class="citation" data-cites="sf2018">(<a href="../refs/references.html#ref-sf2018" role="doc-biblioref">E. Pebesma, 2018</a>)</span></li>
+<li><a href="https://r-spatial.github.io/stars/index.html"><code>{stars}</code> articles</a> in package documentation <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span></li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-R-quarto" class="csl-entry" role="listitem">
-Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
+<div id="ref-andreo2024grass" class="csl-entry" role="listitem">
+Andreo, V. (2024). <em>Get started with GRASS &amp; r: The rgrass package</em>. <a href="https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html" class="uri">https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html</a>.
+</div>
+<div id="ref-R-gdalcubes" class="csl-entry" role="listitem">
+Appel, M. (2024). <em>Gdalcubes: Earth observation data cubes from satellite image collections</em>. <a href="https://github.com/appelmar/gdalcubes">https://github.com/appelmar/gdalcubes</a>
+</div>
+<div id="ref-gdalcubes2019" class="csl-entry" role="listitem">
+Appel, M., &amp; Pebesma, E. (2019). On-demand processing of data cubes from satellite image collections with the gdalcubes library. <em>Data</em>, <em>4</em>(3). <a href="https://www.mdpi.com/2306-5729/4/3/92">https://www.mdpi.com/2306-5729/4/3/92</a>
+</div>
+<div id="ref-gdalcubes2021" class="csl-entry" role="listitem">
+Appel, M., Pebesma, E., &amp; Mohr, M. (2021). <em>Cloud-based processing of satellite image collections in r using STAC, COGs, and on-demand data cubes</em>. <a href="https://r-spatial.org/r/2021/04/23/cloud-based-cubes.html">https://r-spatial.org/r/2021/04/23/cloud-based-cubes.html</a>
 </div>
 <div id="ref-R-mapview" class="csl-entry" role="listitem">
 Appelhans, T., Detsch, F., Reudenbach, C., &amp; Woellauer, S. (2023). <em>Mapview: Interactive viewing of spatial data in r</em>. <a href="https://github.com/r-spatial/mapview">https://github.com/r-spatial/mapview</a>
+</div>
+<div id="ref-R-rgee" class="csl-entry" role="listitem">
+Aybar, C. (2023). <em>Rgee: R bindings for calling the earth engine API</em>. <a href="https://github.com/r-spatial/rgee/">https://github.com/r-spatial/rgee/</a>
+</div>
+<div id="ref-spatstat2015" class="csl-entry" role="listitem">
+Baddeley, A., Rubak, E., &amp; Turner, R. (2015). <em>Spatial point patterns: Methodology and applications with <span>R</span></em>. Chapman; Hall/CRC Press. <a href="https://www.routledge.com/Spatial-Point-Patterns-Methodology-and-Applications-with-R/Baddeley-Rubak-Turner/p/book/9781482210200/">https://www.routledge.com/Spatial-Point-Patterns-Methodology-and-Applications-with-R/Baddeley-Rubak-Turner/p/book/9781482210200/</a>
+</div>
+<div id="ref-spatstat2005" class="csl-entry" role="listitem">
+Baddeley, A., &amp; Turner, R. (2005). <span class="nocase">spatstat</span>: An <span>R</span> package for analyzing spatial point patterns. <em>Journal of Statistical Software</em>, <em>12</em>(6), 1–42. <a href="https://doi.org/10.18637/jss.v012.i06">https://doi.org/10.18637/jss.v012.i06</a>
+</div>
+<div id="ref-spatstat2013" class="csl-entry" role="listitem">
+Baddeley, A., Turner, R., Mateu, J., &amp; Bevan, A. (2013). Hybrids of gibbs point process models and their implementation. <em>Journal of Statistical Software</em>, <em>55</em>(11), 1–43. <a href="https://doi.org/10.18637/jss.v055.i11">https://doi.org/10.18637/jss.v055.i11</a>
+</div>
+<div id="ref-bivand2022rgrass" class="csl-entry" role="listitem">
+Bivand, R. (2022). <em>Modernizing the r-GRASS interface: Confronting barn-raised OSGeo libraries and the evolving r.*spatial package ecosystem</em>. <a href="https://rsbivand.github.io/foss4g_2022/modernizing_220822.html" class="uri">https://rsbivand.github.io/foss4g_2022/modernizing_220822.html</a>.
+</div>
+<div id="ref-R-rgrass" class="csl-entry" role="listitem">
+Bivand, R. (2024a). <em>Rgrass: Interface between GRASS geographical information system and r</em>. <a href="https://rsbivand.github.io/rgrass/">https://rsbivand.github.io/rgrass/</a>
+</div>
+<div id="ref-R-spdep" class="csl-entry" role="listitem">
+Bivand, R. (2024b). <em>Spdep: Spatial dependence: Weighting schemes, statistics</em>. <a href="https://github.com/r-spatial/spdep/">https://github.com/r-spatial/spdep/</a>
+</div>
+<div id="ref-spdep2013" class="csl-entry" role="listitem">
+Bivand, R. S., Pebesma, E., &amp; Gómez-Rubio, V. (2013). <em>Applied spatial data analysis with <span>R</span>, second edition</em>. Springer, NY. <a href="https://asdar-book.org/">https://asdar-book.org/</a>
+</div>
+<div id="ref-R-spData" class="csl-entry" role="listitem">
+Bivand, R., Nowosad, J., &amp; Lovelace, R. (2024). <em>spData: Datasets for spatial analysis</em>. <a href="https://jakubnowosad.com/spData/">https://jakubnowosad.com/spData/</a>
+</div>
+<div id="ref-spdep2018" class="csl-entry" role="listitem">
+Bivand, R., &amp; Wong, D. W. S. (2018). Comparing implementations of global and local indicators of spatial association. <em>TEST</em>, <em>27</em>(3), 716–748. <a href="https://doi.org/10.1007/s11749-018-0599-x">https://doi.org/10.1007/s11749-018-0599-x</a>
+</div>
+<div id="ref-Camara_sits_2023" class="csl-entry" role="listitem">
+Câmara, G., Simoes, R., Souza, F., Pelletier, C., Sanchez, A., Andrade, P., Ferreira, K., &amp; Queiroz, G. (2023). <em><span class="nocase">sits</span>: Satellite image time series analysis on <span>Earth</span> observation data cubes</em>. <a href="https://e-sensing.github.io/sitsbook/index.html">https://e-sensing.github.io/sitsbook/index.html</a>
+</div>
+<div id="ref-R-qgisprocess" class="csl-entry" role="listitem">
+Dunnington, D., Vanderhaeghe, F., Caha, J., &amp; Muenchow, J. (2024a). <em>Qgisprocess: Use QGIS processing algorithms</em>. <a href="https://r-spatial.github.io/qgisprocess/">https://r-spatial.github.io/qgisprocess/</a>
+</div>
+<div id="ref-qgisprocess2024" class="csl-entry" role="listitem">
+Dunnington, D., Vanderhaeghe, F., Caha, J., &amp; Muenchow, J. (2024b). <em>R package qgisprocess: Use QGIS processing algorithms. Version 0.4.1</em>. <a href="https://r-spatial.github.io/qgisprocess/">https://r-spatial.github.io/qgisprocess/</a>
+</div>
+<div id="ref-R-digest" class="csl-entry" role="listitem">
+Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</em>. <a href="https://github.com/eddelbuettel/digest">https://github.com/eddelbuettel/digest</a>
+</div>
+<div id="ref-gstat2016" class="csl-entry" role="listitem">
+Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -604,8 +664,20 @@ Hijmans, R. J. (2024a). <em>Spatial data science with <span class="nocase">R and
 <div id="ref-R-terra" class="csl-entry" role="listitem">
 Hijmans, R. J. (2024b). <em>Terra: Spatial data analysis</em>. <a href="https://rspatial.org/">https://rspatial.org/</a>
 </div>
+<div id="ref-R-rgeoda" class="csl-entry" role="listitem">
+Li, X., &amp; Anselin, L. (2024). <em>Rgeoda: R library for spatial data analysis</em>. <a href="https://github.com/geodacenter/rgeoda/">https://github.com/geodacenter/rgeoda/</a>
+</div>
 <div id="ref-lovelace2019geocomputation" class="csl-entry" role="listitem">
 Lovelace, R., Nowosad, J., &amp; Muenchow, J. (2019). <em>Geocomputation with <span>R</span></em>. CRC Press.
+</div>
+<div id="ref-rsi" class="csl-entry" role="listitem">
+Mahoney, M. (n.d.). <em>Rsi: Efficiently retrieve and process satellite imagery</em> (Version 0.2.0.9000). <a href="https://doi.org/10.5281/zenodo.10926857">https://doi.org/10.5281/zenodo.10926857</a>
+</div>
+<div id="ref-R-rsi" class="csl-entry" role="listitem">
+Mahoney, M. (2024). <em>Rsi: Efficiently retrieve and process satellite imagery</em>. <a href="https://github.com/Permian-Global-Research/rsi">https://github.com/Permian-Global-Research/rsi</a>
+</div>
+<div id="ref-dodgr2019" class="csl-entry" role="listitem">
+Mark Padgham. (2019). Dodgr: An r package for network flow aggregation. <em>Transport Findings</em>. <a href="https://doi.org/10.32866/6945">https://doi.org/10.32866/6945</a>
 </div>
 <div id="ref-R-rnaturalearth" class="csl-entry" role="listitem">
 Massicotte, P., &amp; South, A. (2023). <em>Rnaturalearth: World map data from natural earth</em>. <a href="https://docs.ropensci.org/rnaturalearth/">https://docs.ropensci.org/rnaturalearth/</a>
@@ -613,20 +685,41 @@ Massicotte, P., &amp; South, A. (2023). <em>Rnaturalearth: World map data from n
 <div id="ref-R-tibble" class="csl-entry" role="listitem">
 Müller, K., &amp; Wickham, H. (2023). <em>Tibble: Simple data frames</em>. <a href="https://tibble.tidyverse.org/">https://tibble.tidyverse.org/</a>
 </div>
+<div id="ref-R-dodgr" class="csl-entry" role="listitem">
+Padgham, M., Petutschnig, A., &amp; Cooley, D. (2024). <em>Dodgr: Distances on directed graphs</em>. <a href="https://github.com/UrbanAnalyst/dodgr">https://github.com/UrbanAnalyst/dodgr</a>
+</div>
+<div id="ref-R-sfdep" class="csl-entry" role="listitem">
+Parry, J., &amp; Locke, D. (2024). <em>Sfdep: Spatial dependence for simple features</em>. <a href="https://sfdep.josiahparry.com">https://sfdep.josiahparry.com</a>
+</div>
+<div id="ref-R-Rsagacmd" class="csl-entry" role="listitem">
+Pawley, S. (2024). <em>Rsagacmd: Linking r with the open-source SAGA-GIS software</em>. <a href="https://stevenpawley.github.io/Rsagacmd/">https://stevenpawley.github.io/Rsagacmd/</a>
+</div>
 <div id="ref-sf2018" class="csl-entry" role="listitem">
 Pebesma, E. (2018). <span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>. <em><span>The R Journal</span></em>, <em>10</em>(1), 439–446. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>
 </div>
-<div id="ref-R-sf" class="csl-entry" role="listitem">
-Pebesma, E. (2024a). <em>Sf: Simple features for r</em>. <a href="https://r-spatial.github.io/sf/">https://r-spatial.github.io/sf/</a>
-</div>
 <div id="ref-R-stars" class="csl-entry" role="listitem">
-Pebesma, E. (2024b). <em>Stars: Spatiotemporal arrays, raster and vector data cubes</em>. <a href="https://r-spatial.github.io/stars/">https://r-spatial.github.io/stars/</a>
+Pebesma, E. (2024). <em>Stars: Spatiotemporal arrays, raster and vector data cubes</em>. <a href="https://r-spatial.github.io/stars/">https://r-spatial.github.io/stars/</a>
+</div>
+<div id="ref-R-sf" class="csl-entry" role="listitem">
+Pebesma, E. (2025). <em>Sf: Simple features for r</em>. <a href="https://r-spatial.github.io/sf/">https://r-spatial.github.io/sf/</a>
+</div>
+<div id="ref-gstat2004" class="csl-entry" role="listitem">
+Pebesma, E. J. (2004). Multivariable geostatistics in <span>S</span>: The gstat package. <em>Computers &amp; Geosciences</em>, <em>30</em>, 683–691.
 </div>
 <div id="ref-sf2023" class="csl-entry" role="listitem">
-Pebesma, E., &amp; Bivand, R. (2023a). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
+Pebesma, E., &amp; Bivand, R. (2023). <em><span class="nocase">Spatial Data Science: With applications in R</span></em>. <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
 </div>
-<div id="ref-stars2023" class="csl-entry" role="listitem">
-Pebesma, E., &amp; Bivand, R. (2023b). <em><span class="nocase">Spatial Data Science: With applications in R</span></em> (p. 352). Chapman; Hall/CRC. <a href="https://doi.org/10.1201/9780429459016">https://doi.org/10.1201/9780429459016</a>
+<div id="ref-R-gstat" class="csl-entry" role="listitem">
+Pebesma, E., &amp; Graeler, B. (2024). <em>Gstat: Spatial and spatio-temporal geostatistical modelling, prediction and simulation</em>. <a href="https://github.com/r-spatial/gstat/">https://github.com/r-spatial/gstat/</a>
+</div>
+<div id="ref-R-tidygraph" class="csl-entry" role="listitem">
+Pedersen, T. L. (2024). <em>Tidygraph: A tidy API for graph manipulation</em>. <a href="https://tidygraph.data-imaginist.com">https://tidygraph.data-imaginist.com</a>
+</div>
+<div id="ref-nlme2000" class="csl-entry" role="listitem">
+Pinheiro, J. C., &amp; Bates, D. M. (2000). <em>Mixed-effects models in s and s-PLUS</em>. Springer. <a href="https://doi.org/10.1007/b98882">https://doi.org/10.1007/b98882</a>
+</div>
+<div id="ref-R-nlme" class="csl-entry" role="listitem">
+Pinheiro, J., Bates, D., &amp; R Core Team. (2024). <em>Nlme: Linear and nonlinear mixed effects models</em>. <a href="https://svn.r-project.org/R-packages/trunk/nlme/">https://svn.r-project.org/R-packages/trunk/nlme/</a>
 </div>
 <div id="ref-R-abind" class="csl-entry" role="listitem">
 Plate, T., &amp; Heiberger, R. (2024). <em>Abind: Combine multidimensional arrays</em>.
@@ -634,8 +727,32 @@ Plate, T., &amp; Heiberger, R. (2024). <em>Abind: Combine multidimensional array
 <div id="ref-R-base" class="csl-entry" role="listitem">
 R Core Team. (2024). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
+<div id="ref-spdep2022" class="csl-entry" role="listitem">
+Roger Bivand. (2022). R packages for analyzing spatial data: A comparative case study with areal data. <em>Geographical Analysis</em>, <em>54</em>(3), 488–518. <a href="https://doi.org/10.1111/gean.12319">https://doi.org/10.1111/gean.12319</a>
+</div>
+<div id="ref-rydzik2024" class="csl-entry" role="listitem">
+Rydzik, M. (2024, January 10). <em>An Overview of the RSI <span>R</span> Package for Retrieving Satellite Imagery and Calculating Spectral Indices</em>. <a href="https://geocompx.org/post/2024/rsi-bp1/">https://geocompx.org/post/2024/rsi-bp1/</a>
+</div>
+<div id="ref-sits2021" class="csl-entry" role="listitem">
+Simoes, R., Camara, G., Queiroz, G., Souza, F., Andrade, P., Santos, L., Carvalho, A., &amp; Ferreira, K. (2021). Satellite image time series analysis for big earth observation data. <em>Remote Sensing</em>, <em>13</em>(13), 2428. <a href="https://doi.org/10.3390/rs13132428">https://doi.org/10.3390/rs13132428</a>
+</div>
+<div id="ref-R-sits" class="csl-entry" role="listitem">
+Simoes, R., Camara, G., Souza, F., &amp; Carlos, F. (2024). <em>Sits: Satellite image time series analysis for earth observation data cubes</em>. <a href="https://github.com/e-sensing/sits/">https://github.com/e-sensing/sits/</a>
+</div>
+<div id="ref-R-rstac" class="csl-entry" role="listitem">
+Simoes, R., Carvalho, F., &amp; Brazil Data Cube Team. (2024). <em>Rstac: Client library for SpatioTemporal asset catalog</em>. <a href="https://brazil-data-cube.github.io/rstac/">https://brazil-data-cube.github.io/rstac/</a>
+</div>
+<div id="ref-rstac2021" class="csl-entry" role="listitem">
+Simoes, R., Souza, F., Zaglia, M., Queiroz, G. R., Santos, R., &amp; Ferreira, K. (2021). Rstac: An r package to access spatiotemporal asset catalog satellite imagery. <em>2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS</em>, 7674–7677. <a href="https://doi.org/10.1109/IGARSS47720.2021.9553518">https://doi.org/10.1109/IGARSS47720.2021.9553518</a>
+</div>
 <div id="ref-R-lubridate" class="csl-entry" role="listitem">
 Spinu, V., Grolemund, G., &amp; Wickham, H. (2023). <em>Lubridate: Make dealing with dates a little easier</em>. <a href="https://lubridate.tidyverse.org">https://lubridate.tidyverse.org</a>
+</div>
+<div id="ref-R-rpart" class="csl-entry" role="listitem">
+Therneau, T., &amp; Atkinson, B. (2023). <em>Rpart: Recursive partitioning and regression trees</em>. <a href="https://github.com/bethatkinson/rpart">https://github.com/bethatkinson/rpart</a>
+</div>
+<div id="ref-R-sfnetworks" class="csl-entry" role="listitem">
+van der Meer, L., Abad, L., Gilardi, A., &amp; Lovelace, R. (2025). <em>Sfnetworks: Tidy geospatial networks</em>. <a href="https://luukvdmeer.github.io/sfnetworks/">https://luukvdmeer.github.io/sfnetworks/</a>
 </div>
 <div id="ref-julia-python-r_cheatsheet" class="csl-entry" role="listitem">
 Watson, S. S. (n.d.). <em><span class="nocase">A Julia-Python-R reference sheet</span></em>. Retrieved November 21, 2024, from <a href="https://docslib.org/doc/2547802/julia-python-r-cheatsheet">https://docslib.org/doc/2547802/julia-python-r-cheatsheet</a>
@@ -1272,8 +1389,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="pagination-link" aria-label="Practical 1">
-        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lessons/session_4.html" class="pagination-link" aria-label="GIS: in-house and bridges">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1297,7 +1414,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
