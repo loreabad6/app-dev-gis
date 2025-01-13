@@ -26,7 +26,7 @@ This is the tentative course schedule of the lessons and assignments.
 | 02.12.24 | Fundamentals of R; Intro to Quarto |	Practical 2 / Practical 3	| End of class |
 | 09.12.24 | (Spatial) data cleaning, wrangling & plotting |	Practical 4 | 09.01.25 |
 | 16.12.24 | R-spatial ecosystem, vector, raster, data cubes |	Practical 5, final project	ideas |  End of class |
-| 13.01.25 | Bridges to GIS software |  Data visualisation showcase  |    |
+| 13.01.25 | GIS: in-house and bridges |  Data visualisation showcase  |    |
 | 20.01.25 | R package development   |    |    |
 | 27.01.25 | Quarto interactive dashboards   |    |    |
 :::
