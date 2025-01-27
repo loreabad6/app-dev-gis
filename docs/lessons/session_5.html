@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../practicals/Practical1/Practical1-Getting-Started-R.html" rel="next">
+<link href="../lessons/session_6.html" rel="next">
 <link href="../lessons/session_4.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -213,6 +213,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/session_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></a>
   </div>
 </li>
       </ul>
@@ -432,6 +438,10 @@ A note on Licenses
 <p>A <a href="https://github.com/luukvdmeer/sfnetworks/blob/main/R/travel.R">documented function</a> in the wild.</p>
 </div></div><div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?sfnetworks<span class="sc">::</span>st_network_travel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>No documentation for 'st_network_travel' in specified packages and libraries:
+you could try '??st_network_travel'</code></pre>
+</div>
 </div>
 <p>When you develop a package, writing this documentation is your job! 🎉</p>
 <p>As you just saw, your code and your documentation are located in the same R file. That way, if you do any changes to your function, you will (hopefully) remember to update the documentation too!</p>
@@ -483,8 +493,8 @@ Figure&nbsp;5.4: Basic git workflow by <a href="https://allisonhorst.com/">Allis
 <li>Install the relevant R packages</li>
 </ol>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pkgdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pkgdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Create a new RStudio project with a package structure</li>
@@ -499,9 +509,9 @@ Figure&nbsp;5.4: Basic git workflow by <a href="https://allisonhorst.com/">Allis
 <li>Load the necessary packages in the new RStudio session</li>
 </ol>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis) <span class="co"># installed with devtools</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pkgdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis) <span class="co"># installed with devtools</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pkgdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li><p>Edit the <code>DESCRIPTION</code> file</p></li>
@@ -511,7 +521,7 @@ Figure&nbsp;5.4: Basic git workflow by <a href="https://allisonhorst.com/">Allis
 </ol>
 <p>The functions you wrote last week all depend on other packages. To import those libraries into your package, you can use the function below from <code>{usethis}</code>:</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_package</span>(<span class="st">"packagename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_package</span>(<span class="st">"packagename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="8" type="1">
 <li>Document your function.</li>
@@ -540,7 +550,7 @@ Figure&nbsp;5.4: Basic git workflow by <a href="https://allisonhorst.com/">Allis
 </ol>
 <p>Once you know which License you want to add, you can add it to your package using the <code>{usethis}</code> package functions <code>use_*_license()</code>. If you are still not versed in licensing, you can choose a permissive license, without too many restrictions (which are usually the go-to for open-source projects), such as Apache 2.0 or MIT.</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_apache_license</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_apache_license</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can also add the license to your <code>README.md</code> file with the text:</p>
 <pre><code>## License
@@ -594,6 +604,9 @@ limitations under the License.</code></pre>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-R-quarto" class="csl-entry" role="listitem">
+Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
+</div>
 <div id="ref-andreo2024grass" class="csl-entry" role="listitem">
 Andreo, V. (2024). <em>Get started with GRASS &amp; r: The rgrass package</em>. <a href="https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html" class="uri">https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html</a>.
 </div>
@@ -642,6 +655,9 @@ Bivand, R., &amp; Wong, D. W. S. (2018). Comparing implementations of global and
 <div id="ref-Camara_sits_2023" class="csl-entry" role="listitem">
 Câmara, G., Simoes, R., Souza, F., Pelletier, C., Sanchez, A., Andrade, P., Ferreira, K., &amp; Queiroz, G. (2023). <em><span class="nocase">sits</span>: Satellite image time series analysis on <span>Earth</span> observation data cubes</em>. <a href="https://e-sensing.github.io/sitsbook/index.html">https://e-sensing.github.io/sitsbook/index.html</a>
 </div>
+<div id="ref-cetinkaya2024quarto" class="csl-entry" role="listitem">
+Çetinkaya-Rundel, M. (2024). <em>Quarto dashboards video series</em>. <a href="https://quarto.org/docs/blog/posts/2024-11-22-dashboards-workshop/" class="uri">https://quarto.org/docs/blog/posts/2024-11-22-dashboards-workshop/</a>.
+</div>
 <div id="ref-R-qgisprocess" class="csl-entry" role="listitem">
 Dunnington, D., Vanderhaeghe, F., Caha, J., &amp; Muenchow, J. (2024a). <em>Qgisprocess: Use QGIS processing algorithms</em>. <a href="https://r-spatial.github.io/qgisprocess/">https://r-spatial.github.io/qgisprocess/</a>
 </div>
@@ -668,6 +684,9 @@ Hijmans, R. J. (2024a). <em>Spatial data science with <span class="nocase">R and
 </div>
 <div id="ref-R-terra" class="csl-entry" role="listitem">
 Hijmans, R. J. (2024b). <em>Terra: Spatial data analysis</em>. <a href="https://rspatial.org/">https://rspatial.org/</a>
+</div>
+<div id="ref-jenny_bryan2025let" class="csl-entry" role="listitem">
+Jenny Bryan, J. H., the STAT 545 TAs. (2025). <em>Let’s git started | happy git and GitHub for the useR</em>. <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a>.
 </div>
 <div id="ref-R-rgeoda" class="csl-entry" role="listitem">
 Li, X., &amp; Anselin, L. (2024). <em>Rgeoda: R library for spatial data analysis</em>. <a href="https://github.com/geodacenter/rgeoda/">https://github.com/geodacenter/rgeoda/</a>
@@ -785,6 +804,9 @@ Wickham, H. (2016). <em>ggplot2: Elegant graphics for data analysis</em>. Spring
 </div>
 <div id="ref-Wickham_2019" class="csl-entry" role="listitem">
 Wickham, H. (2019). <em>Advanced <span>R</span></em> (p. 588). CRC Press.
+</div>
+<div id="ref-Wickham2021" class="csl-entry" role="listitem">
+Wickham, H. (2021). <em>Mastering shiny</em>. "O’Reilly Media, Inc.".
 </div>
 <div id="ref-R-forcats" class="csl-entry" role="listitem">
 Wickham, H. (2023a). <em>Forcats: Tools for working with categorical variables (factors)</em>. <a href="https://forcats.tidyverse.org/">https://forcats.tidyverse.org/</a>
@@ -1421,8 +1443,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="pagination-link" aria-label="Practical 1">
-        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lessons/session_6.html" class="pagination-link" aria-label="Quarto dashboards">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1446,7 +1468,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

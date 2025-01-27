@@ -84,25 +84,25 @@ data_world |>
 ```{r}
 #| eval: false
 #| include: false
-pal = colorNumeric(
-  "Blues", domain = data_world$life_exp,
-  na.color = NA)
-
-m = leaflet(data_world) |>
-  setView(lat = 0, lng = 0, zoom = 1) |>
-  addProviderTiles(providers$Esri.WorldGrayCanvas) |>
-  addPolygons(
-    fillColor = ~pal(life_exp),
-    weight = 1,
-    color = "white",
-    fillOpacity = 0.9,
-    highlightOptions = highlightOptions(
-      weight = 5,
-      color = "orange",
-      fillOpacity = 0.7,
-      bringToFront = TRUE),
-    label = glue::glue("{World$name}: {round(World$life_exp, 1)}")
-  ) |>
-  addLegend(pal = pal, values = ~life_exp, opacity = 0.9, title = "Life expectancy", position = "bottomright")
+# pal = colorNumeric(
+#   "Blues", domain = data_world$life_exp,
+#   na.color = NA)
+# 
+# m = leaflet(data_world) |>
+#   setView(lat = 0, lng = 0, zoom = 1) |>
+#   addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+#   addPolygons(
+#     fillColor = ~pal(life_exp),
+#     weight = 1,
+#     color = "white",
+#     fillOpacity = 0.9,
+#     highlightOptions = highlightOptions(
+#       weight = 5,
+#       color = "orange",
+#       fillOpacity = 0.7,
+#       bringToFront = TRUE),
+#     label = glue::glue("{World$name}: {round(World$life_exp, 1)}")
+#   ) |>
+#   addLegend(pal = pal, values = ~life_exp, opacity = 0.9, title = "Life expectancy", position = "bottomright")
 ```
 
