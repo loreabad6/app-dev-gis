@@ -1,0 +1,108 @@
+---
+title: "Quarto dashboard example"
+subtitle: "Application development GIS - Part II: R"
+format: dashboard
+orientation: rows
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(crosstalk)
+library(leaflet)
+library(plotly)
+library(reactable)
+library(sf)
+library(tidyverse)
+library(tmap)
+```
+
+## {.sidebar}
+Left: A basic interactive map of the world’s life expectancy. {tmap} already takes care of basic interactive map features for you like zooming, popups and basemaps.
+
+Right: A simple table with countries, HPI, life expectancy, carbon footprint and continent linked to an interactive plot.
+{reactable} takes in your data frame and turns it into a paginated table, that you can filter, sort or search, depending on your configuration.
+The scatterplot is a ggplot graph that was made interactive with the {plotly} package. The tooltip includes also the country name,
+Both elements interact with each other via {crosstalk} and can be further filtered with the controllers below.
+
+```{r}
+data_world = World |> 
+  st_drop_geometry() |> 
+  select(name, HPI, life_exp, footprint, continent) |> 
+  drop_na() |> 
+  SharedData$new()
+```
+
+```{r}
+filter_slider("HPI", "HPI", data_world, ~HPI, round = TRUE)
+filter_slider("life_exp", "Life expectancy", data_world, ~life_exp, round = TRUE)
+filter_slider("footprint", "Carbon footprint", data_world, ~footprint, round = TRUE)
+filter_select("continent", "Continent", data_world, ~continent)
+```
+
+## {width=40%}
+
+```{r}
+#| padding: 1px
+tmap_mode("view")
+tm_shape(World) +
+  tm_polygons(
+    col = "white",
+    popup.vars = c("name", "HPI", "life_exp", "footprint"),
+    fill = "life_exp",
+    fill.legend = tm_legend("Life expectancy")
+  ) +
+  tm_view(set_view = 2)
+```
+
+##
+
+### 
+
+```{r}
+#| padding: 1px
+g = ggplot(data_world) +
+  aes(y = HPI, x = life_exp, fill = footprint, text = name) +
+  geom_point(shape = 21, color = "white", size = 3) +
+  scale_fill_viridis_c("Carbon<br>footprint") +
+  labs(x = "Life expectancy", y = "Happy Planet Indicator (HPI)")
+ggplotly(g) |> 
+    highlight(on = "plotly_selected", opacityDim = 0.012)
+
+data_world |> 
+  reactable(
+    columns = list(
+      name = colDef("Country", filterable = TRUE),
+      HPI = colDef(format = colFormat(digits = 2)),
+      life_exp = colDef("Life expectancy", format = colFormat(digits = 2)),
+      footprint = colDef("Carbon footprint", format = colFormat(digits = 2)),
+      continent = colDef("Continent")
+    )
+  )
+```
+
+```{r}
+#| eval: false
+#| include: false
+pal = colorNumeric(
+  "Blues", domain = data_world$life_exp,
+  na.color = NA)
+
+m = leaflet(data_world) |>
+  setView(lat = 0, lng = 0, zoom = 1) |>
+  addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+  addPolygons(
+    fillColor = ~pal(life_exp),
+    weight = 1,
+    color = "white",
+    fillOpacity = 0.9,
+    highlightOptions = highlightOptions(
+      weight = 5,
+      color = "orange",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+    label = glue::glue("{World$name}: {round(World$life_exp, 1)}")
+  ) |>
+  addLegend(pal = pal, values = ~life_exp, opacity = 0.9, title = "Life expectancy", position = "bottomright")
+```
+
