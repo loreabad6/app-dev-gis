@@ -492,8 +492,8 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 </div></div><p>Here you have a non-exhaustive overview of some of the packages that you might find most useful.</p>
 <div class="cell styled-output">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c352494e4d02322b6703" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c352494e4d02322b6703">{"x":{"filter":"none","vertical":false,"class":"display","data":[["<a href=https://rstudio.github.io/leaflet/>leaflet<\/a>","<a href=https://r-spatial.github.io/mapview/>mapview<\/a>","<a href=https://r-tmap.github.io/tmap/>tmap<\/a>","<a href=https://plotly.com/R/>plotly<\/a>","<a href=https://plotly.com/ggplot2/>plotly + ggplot2<\/a>","<a href=https://rstudio.github.io/DT/>DT<\/a>","<a href=https://glin.github.io/reactable/index.html>reactable<\/a>"],["✔️","✔️","✔️","✔️","✔️","❌","❌"],["❌","❌","❌","✔️","✔️","❌","❌"],["❌","❌","❌","❌","❌","✔️","✔️"],["✔️","❌","❌","✔️","✔️","✔️","✔️"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th rowspan=\"2\">Package<\/th>\n      <th colspan=\"3\">Application<\/th>\n      <th rowspan=\"2\">Crosstalk integration<\/th>\n    <\/tr>\n    <tr>\n      <th>Maps<\/th>\n      <th>Plots<\/th>\n      <th>Tables<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":7,"dom":"tip","columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]},{"width":"100px","targets":4},{"name":"url_label","targets":0},{"name":"app_map","targets":1},{"name":"app_plots","targets":2},{"name":"app_tables","targets":3},{"name":"crosstalk","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[7,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0732672a72430ae64853" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0732672a72430ae64853">{"x":{"filter":"none","vertical":false,"class":"display","data":[["<a href=https://rstudio.github.io/leaflet/>leaflet<\/a>","<a href=https://r-spatial.github.io/mapview/>mapview<\/a>","<a href=https://r-tmap.github.io/tmap/>tmap<\/a>","<a href=https://plotly.com/r/>plotly<\/a>","<a href=https://plotly.com/ggplot2/>plotly + ggplot2<\/a>","<a href=https://rstudio.github.io/DT/>DT<\/a>","<a href=https://glin.github.io/reactable/index.html>reactable<\/a>"],["✔️","✔️","✔️","✔️","✔️","❌","❌"],["❌","❌","❌","✔️","✔️","❌","❌"],["❌","❌","❌","❌","❌","✔️","✔️"],["✔️","❌","❌","✔️","✔️","✔️","✔️"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th rowspan=\"2\">Package<\/th>\n      <th colspan=\"3\">Application<\/th>\n      <th rowspan=\"2\">Crosstalk integration<\/th>\n    <\/tr>\n    <tr>\n      <th>Maps<\/th>\n      <th>Plots<\/th>\n      <th>Tables<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":7,"dom":"tip","columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]},{"width":"100px","targets":4},{"name":"url_label","targets":0},{"name":"app_map","targets":1},{"name":"app_plots","targets":2},{"name":"app_tables","targets":3},{"name":"crosstalk","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[7,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -526,25 +526,18 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 <section id="step-1-prepare-your-quarto-project" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="step-1-prepare-your-quarto-project">Step 1: Prepare Your Quarto Project</h4>
 <ol type="1">
-<li><p>Open RStudio and create a new Quarto project:</p>
+<li>Open RStudio and create a new Quarto project:
 <ul>
 <li>Go to <strong>File &gt; New Project &gt; Version Control &gt; Git</strong>.</li>
 <li>Go back to your GitHub repository and copy the “https://…” displayed under Quick setup</li>
 </ul></li>
-<li><p>Add content to your dashboard:</p>
+<li>Add content to your dashboard:
 <ul>
 <li>Create an empty <code>index.qmd</code> file (or create additional <code>.qmd</code> files).</li>
 <li>Include your visualisations, tables, text, etc.</li>
+<li>When you have one single html file to show, then it is useful to call it index since this will be automatically be recognised as the landing page of your site.</li>
+<li>If you have more complex websites (created e.g.&nbsp;with a Quarto website project), then the <code>.qmd</code> files are mostly organised inside a <code>_quarto.yaml</code> file. See more information on <a href="https://quarto.org/docs/websites/">Quarto websites here</a>.</li>
 </ul></li>
-<li><p>Configure your <code>_quarto.yml</code> file:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Quarto Dashboard"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 <section id="step-3-render-your-quarto-dashboard" class="level4 unnumbered">
@@ -557,10 +550,10 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 <h4 class="unnumbered anchored" data-anchor-id="step-4-push-your-project-to-github">Step 4: Push Your Project to GitHub</h4>
 <ol type="1">
 <li><p>Commit and push the project to GitHub:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial commit"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial commit"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 <section id="step-5-configure-github-pages" class="level4 unnumbered">
@@ -573,7 +566,10 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 <li><strong>Branch</strong>: <code>main</code> (or your default branch).</li>
 <li><strong>Folder</strong>: <code>/ (root)</code> if your rendered files are in the root directory, or <code>docs/</code> if you’ve configured Quarto to save the site in a <code>docs</code> folder.</li>
 </ul></li>
-<li>Save the settings. GitHub Pages will generate a public URL for your site.</li>
+<li>Save the settings. GitHub Pages will generate a public URL for your site.
+<ul>
+<li>This might take some time, be patient! Once the green tick shows next to the commit message, then it is ready.</li>
+</ul></li>
 </ol>
 </section>
 <section id="step-6-access-your-published-dashboard" class="level4 unnumbered">
@@ -1502,7 +1498,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
