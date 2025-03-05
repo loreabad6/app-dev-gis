@@ -34,5 +34,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs
-        destination_dir: releases/${{ github.ref_name }}  # Deploy to a subdirectory named after the branch
+        destination_dir: archive/${{ github.ref_name }}  # Deploy to a subdirectory named after the branch
         keep_files: true  # Ensure existing files are not overwritten
