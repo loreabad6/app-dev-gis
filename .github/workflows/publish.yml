@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy Site
 
 on:
   push:
@@ -17,19 +17,27 @@ jobs:
       with:
         fetch-depth: 0  # Ensure all history is fetched
 
+    - name: Delete existing tag if it exists
+      run: |
+        TAG_NAME="${GITHUB_REF##*/}"
+        if git show-ref --tags | grep -q "refs/tags/${TAG_NAME}"; then
+          git push origin :refs/tags/${TAG_NAME}
+        fi
+
     - name: Deploy to GitHub Pages
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         if [[ "${GITHUB_REF}" == refs/heads/main ]]; then
           git checkout main
-          git pull origin main
         else
           git checkout --orphan "${GITHUB_REF##*/}"
         fi
         git reset
         git add docs/
         git commit --allow-empty -m "Deploy site for ${GITHUB_REF##*/}"
-        git push origin "${GITHUB_REF##*/}" --force
+        git push origin "${GITHUB_REF##*/}"
+        git tag -f "${GITHUB_REF##*/}"
+        git push origin --tags
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
