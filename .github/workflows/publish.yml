@@ -21,11 +21,15 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
 
+    - name: Debug - Show GitHub Ref
+      run: echo "GITHUB_REF=${GITHUB_REF}"
+
     - name: Deploy to GitHub Pages
       run: |
         BRANCH="${GITHUB_REF##*/}"
         if [ "${BRANCH}" = "main" ]; then
           git checkout main
+          git pull origin main
         else
           git checkout --orphan "${BRANCH}"
         fi
