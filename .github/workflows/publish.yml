@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - 'arch-*'  # Adjust this pattern to match your branch naming convention
+      - 'releases/*'  # Adjust this pattern to match your branch naming convention
 
 jobs:
   deploy:
