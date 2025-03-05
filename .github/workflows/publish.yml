@@ -24,7 +24,11 @@ jobs:
     - name: Deploy to GitHub Pages
       run: |
         BRANCH="${GITHUB_REF##*/}"
-        git checkout --orphan "${BRANCH}"
+        if [ "${BRANCH}" = "main" ]; then
+          git checkout main
+        else
+          git checkout --orphan "${BRANCH}"
+        fi
         git reset
         git add docs/
         git commit --allow-empty -m "Deploy site for ${BRANCH}"
