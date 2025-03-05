@@ -21,7 +21,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        if [ "${GITHUB_REF##*/}" = "main" ]; then
+        if [[ "${GITHUB_REF}" == refs/heads/main ]]; then
           git checkout main
         else
           git checkout --orphan "${GITHUB_REF##*/}"
