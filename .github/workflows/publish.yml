@@ -12,20 +12,6 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkoutname: Deploy Site
-
-on:
-  push:
-    branches:
-      - main
-      - 'archive/*'  # Adjust this pattern to match your branch naming convention
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
       uses: actions/checkout@v2
       with:
         fetch-depth: 0  # Ensure all history is fetched
@@ -35,33 +21,18 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
 
+    - name: Debug - Show GitHub Ref
+      run: echo "GITHUB_REF=${GITHUB_REF}"
+
+    - name: Debug - Show Branch Name
+      run: |
+        BRANCH="${GITHUB_REF##*/}"
+        echo "Branch name: ${BRANCH}"
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs
-        destination_dir: ${{ github.ref_name }}  # Deploy to a subdirectory named after the branch
-        keep_files: true  # Ensure existing files are not overwritten@v2
-      with:
-        fetch-depth: 0  # Ensure all history is fetched
-
-    - name: Set up Git
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-
-    - name: Deploy to GitHub Pages
-      run: |
-        BRANCH="${GITHUB_REF##*/}"
-        if [ "${BRANCH}" = "main" ]; then
-          git checkout main
-          git pull origin main
-        else
-          git checkout --orphan "${BRANCH}"
-        fi
-        git reset
-        git add docs/
-        git commit --allow-empty -m "Deploy site for ${BRANCH}"
-        git push origin "${BRANCH}" --force
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        destination_dir: releases/${{ github.ref_name }}  # Deploy to a subdirectory named after the branch
+        keep_files: true  # Ensure existing files are not overwritten
