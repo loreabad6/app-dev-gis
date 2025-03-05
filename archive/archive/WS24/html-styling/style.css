@@ -1,0 +1,12 @@
+.styled-output .cell-output {
+  background-color: rgba(194, 231, 255, 0.6);
+  border-radius: 4px;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.x-small {
+  font-size: x-small;
+}
