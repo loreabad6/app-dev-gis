@@ -1,40 +1,35 @@
 # Syllabus {.unnumbered}
 
-::: { .smaller}
-
-|      |                   |
-| ---- | ----------------- |
-| Time | From 25.11.24 - Mondays 15:00-17:30 |
+::: smaller
+|  |  |
+|-----------------|-------------------------------------------------------|
+| Time | From 07.03.25 - Fridays 12:00-14:30 |
 | Location | [GI_Lab](https://online.uni-salzburg.at/plus_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/ris.ris?$ctx=design=ca2;header=max;lang=EN&corg=19091&pActionFlag=A&pQuellGeogrBTypNr=5&pRaumNr=35443&pShowEinzelraum=J&pZielGeogrBTypNr=5&pZielGeogrBerNr=5830001), 1st Floor, Building 15, Techno_Z, Schillerstr. 30, 5020 Salzburg |
-| Expected effort |	Both parts: 6 ECTS (i.e. 150 hours), 3 semester hour per week in class |
+| Expected effort | Both parts: 6 ECTS (i.e. 150 hours), 3 semester hour per week in class |
 | Office hours | via Blackboard or [by appointment](https://outlook.office.com/bookwithme/user/5edd6ea20ab443ed98d843c0da618b2f%40plus.ac.at?anonymous&isanonymous=true) |
-
 :::
 
 {{< include README.md >}}
 
-
 ## Schedule and format
 
-This is the tentative course schedule of the lessons and assignments. 
+This is the tentative course schedule of the lessons and assignments.
 
-::: { .smaller}
-
-| DATE     | TOPIC                      |	ACTIVITY	  | DUE DATE    |
-| -------- | -------------------------- | ----------- | ----------- |
-| 25.11.24 | Getting started with R	    | Practical 1 |	01.12.24    |
-| 02.12.24 | Fundamentals of R; Intro to Quarto |	Practical 2 / Practical 3	| End of class |
-| 09.12.24 | (Spatial) data cleaning, wrangling & plotting |	Practical 4 | 09.01.25 |
-| 16.12.24 | R-spatial ecosystem, vector, raster, data cubes |	Practical 5, final project	ideas |  End of class |
-| 13.01.25 | GIS: in-house and bridges |  Data visualisation showcase  |    |
-| 20.01.25 | R package development   |    |    |
-| 27.01.25 | Quarto interactive dashboards   |    |    |
+::: smaller
+| DATE | TOPIC | ACTIVITY | DUE DATE |
+|:-------------:|-----------------------------|---------------|---------------|
+| 07.03.25 | Intro to R, RStudio, Quarto; how to ask for help? |  |  |
+| 14.03.25 | Fundamentals of R; Functional programming | Practical 1/2 | End of class |
+| 21.03.25 | (Spatial) data cleaning, wrangling & plotting | Practical 3 | 04.04.25 |
+| 28.03.25 | R-spatial ecosystem, vector, raster, data cubes | Practical 4 | End of class |
+| 04.04.25 | GIS: in-house and bridges | Data visualisation showcase |  |
+| 11.04.25 | R package development |  |  |
+| 09.05.25 | Quarto interactive dashboards |  |  |
 :::
 
-The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis.
-_**Learning by yourself is highly encouraged and expected!**_
+The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis. ***Learning by yourself is highly encouraged and expected!***
 
-The @sec-compmaterials section lists a number of additional resources for your self-learning, and at the end of the lessons you will have references to the relevant chapters for you to go through. 
+The @sec-compmaterials section lists a number of additional resources for your self-learning, and at the end of the lessons you will have references to the relevant chapters for you to go through.
 
 In class, we will work with hand-on practicals that will allow you to develop R skills from the first lesson.
 
@@ -44,16 +39,15 @@ If you find yourself taking longer or having trouble with concepts, please ask f
 
 ## Assignments and grading
 
--	Practical exercises (~5) – 30%
-    - To be submitted by the end of the class or by a specific date
--	End-of-term assignment – 50% 
-    - Programming project, either R or Python or both
--	Active participation – 20%
+-   Practical exercises (\~4) – 30%
+    -   To be submitted by the end of the class or by a specific date
+-   End-of-term assignment – 50%
+    -   Programming project, either R or Python or both
+-   Active participation – 20%
 
 ## Required course materials
 
-R, RStudio, and Rtools will be installed in the lab computers.
-If you use your own laptop, see the @sec-compmaterials section below.
+R, RStudio, and Rtools will be installed in the lab computers. If you use your own laptop, see the @sec-compmaterials section below.
 
 ## Complementary course materials {#sec-compmaterials}
 
@@ -61,9 +55,9 @@ If you use your own laptop, see the @sec-compmaterials section below.
 
 To work on your own laptop, you need to install R, RStudio and Quarto to follow the course materials.
 
-- Install R (>= 4.0) and RStudio (>= 2024.04.x with Quarto). You can follow the steps in Appendix 1 of [Hands-On Programming with R](https://rstudio-education.github.io/hopr/starting.html). 
-- If you are on Windows, install [Rtools for the R version](https://cran.r-project.org/bin/windows/Rtools/) you have. 
--	Installing R spatial packages in Windows (Rtools is required, see above) and Mac should be straightforward, and we will do it together. If you have a Linux system, please read [this blogpost](https://geocompx.org/post/2020/installing-r-spatial-packages-linux/index.html).
+-   Install R (\>= 4.0) and RStudio (\>= 2024.04.x with Quarto). You can follow the steps in Appendix 1 of [Hands-On Programming with R](https://rstudio-education.github.io/hopr/starting.html).
+-   If you are on Windows, install [Rtools for the R version](https://cran.r-project.org/bin/windows/Rtools/) you have.
+-   Installing R spatial packages in Windows (Rtools is required, see above) and Mac should be straightforward, and we will do it together. If you have a Linux system, please read [this blogpost](https://geocompx.org/post/2020/installing-r-spatial-packages-linux/index.html).
 
 If you have any problems with installation, please reach out via Blackboard.
 
@@ -71,37 +65,37 @@ If you have any problems with installation, please reach out via Blackboard.
 
 #### Intro & Basics
 
-- [RYouWithMe](https://rladiessydney.org/courses/ryouwithme/) from R-Ladies Sydney.
-- [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR) by Norm Matloff.
-- [Teacups, Giraffes, & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/index.html) by Hasse Walum and Desiree de Leon. 
+-   [RYouWithMe](https://rladiessydney.org/courses/ryouwithme/) from R-Ladies Sydney.
+-   [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR) by Norm Matloff.
+-   [Teacups, Giraffes, & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/index.html) by Hasse Walum and Desiree de Leon.
 
 ##### Interactive R learning
 
-- Learn or freshen up R basics interactively with [swirl](https://swirlstats.com/students.html)
-  - Follow the instructions to start interactive courses from the R console.
-  - Check Step 5 for instructions to download more courses, in different languages available at the [Swirl Course Network](https://swirlstats.com/scn/title.html).
+-   Learn or freshen up R basics interactively with [swirl](https://swirlstats.com/students.html)
+    -   Follow the instructions to start interactive courses from the R console.
+    -   Check Step 5 for instructions to download more courses, in different languages available at the [Swirl Course Network](https://swirlstats.com/scn/title.html).
 
 #### Books
 
 ##### Entry-level
 
-- [Hands-on programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund.
-- [R for Data Science (2e)](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund.
+-   [Hands-on programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund.
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund.
 
 ##### R-Spatial
 
-- [Geocomputation with R](https://r.geocompx.org/) by Robin Lovelace, Jakub Nowosad and Jannes Muenchow.
-- [Spatial Data Science: With Applications in R](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand.
-- [Spatial Data Science with R and “terra”](https://rspatial.org/) by Robert Hijmans.
+-   [Geocomputation with R](https://r.geocompx.org/) by Robin Lovelace, Jakub Nowosad and Jannes Muenchow.
+-   [Spatial Data Science: With Applications in R](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand.
+-   [Spatial Data Science with R and “terra”](https://rspatial.org/) by Robert Hijmans.
 
 ##### Advanced
 
-- [Advanced R (2e)](https://adv-r.hadley.nz/) by Hadley Wickham
-- [R Packages (2e)](https://r-pkgs.org/) by Hadley Wickham and Jennifer Bryan
+-   [Advanced R (2e)](https://adv-r.hadley.nz/) by Hadley Wickham
+-   [R Packages (2e)](https://r-pkgs.org/) by Hadley Wickham and Jennifer Bryan
 
 All links to these materials are also included in Blackboard.
 
-::: {.callout-note}
+::: callout-note
 ### Disclaimer
 
 Please note that the specifics of this Course Syllabus can be changed at any time, and you will be responsible for abiding by any such changes. Any changes will be communicated in class, via e-mail, or course announcement via Blackboard.

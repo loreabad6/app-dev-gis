@@ -1,10 +1,11 @@
 ## Overview 
-These are the course materials for the IP: Application Development Course (GIS) - Part 2 where you will learn how to develop reproducible R workflows for spatial analysis. What you can expect:
+These are the course materials for the IP: Application Development Course (GIS) - Part 1 where you will learn how to develop reproducible R workflows for spatial analysis. What you can expect:
 
 -	Introduction to R and its ecosystem
 -	Spatial data handling in R (raster and vector data)
 -	Connecting to GIS software for spatial workflow automation
 -	Spatial visualization with R (static and interactive)
+- Develop R packages and Quarto dashboards
 
 ## Objectives
 By the end of the course you should be able:

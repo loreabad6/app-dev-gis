@@ -5,7 +5,7 @@ project:
 
 book:
   title: "R for reproducible spatial analysis"
-  subtitle: "IP: Application Development (GIS) - Part 2"
+  subtitle: "IP: Application Development (GIS) - Part 1"
   author:
     - name: Lorena Abad
       email: lorena.abad@plus.ac.at
@@ -15,27 +15,30 @@ book:
     - index.qmd
     - part: "Lessons"
       chapters:
-        # - lessons/placeholder.qmd
-        - lessons/session_1.qmd
-        - lessons/session_2.qmd
-        - lessons/session_3.qmd
-        - lessons/session_4.qmd
-        - lessons/session_5.qmd
-        - lessons/session_6.qmd
+        - lessons/placeholder.qmd
+        # - lessons/session_1.qmd
+        # - lessons/session_2.qmd
+        # - lessons/session_3.qmd
+        # - lessons/session_4.qmd
+        # - lessons/session_5.qmd
+        # - lessons/session_6.qmd
     - part: "Practicals"
       chapters: 
-        - practicals/Practical1/Practical1-Getting-Started-R.qmd
-        - practicals/Practical2/Practical2-Base-R.qmd
-        - practicals/Practical3/Practical3-Writing-Functions.qmd
-        - practicals/Practical4/Practical4-DataViz.qmd
-        - practicals/Practical5/Practical5-Spatial-Data-Analysis.qmd
+        - lessons/placeholder.qmd
+        # - practicals/Practical1/Practical1-Getting-Started-R.qmd
+        # - practicals/Practical2/Practical2-Base-R.qmd
+        # - practicals/Practical3/Practical3-Writing-Functions.qmd
+        # - practicals/Practical4/Practical4-DataViz.qmd
+        # - practicals/Practical5/Practical5-Spatial-Data-Analysis.qmd
+    - part: "Annex"
+      chapters: 
         - misc/x_error-handling.qmd
-    - final-project.qmd
+    # - final-project.qmd
     - refs/references.qmd
   repo-url: "https://github.com/loreabad6/app-dev-gis"
   page-footer:
     center: "Department of Geoinformatics — Z_GIS, University of Salzburg"
-    left: "Winter Semester 2024/2025"
+    left: "Summer Semester 2025"
     right:
       - text: "CC-BY-4.0"
         href: License.md
