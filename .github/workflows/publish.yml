@@ -1,14 +1,33 @@
+name: Deploy Site
+
 on:
   push:
     branches:
       - main
-    tags:
-      - '*'
+      - 'arch-*'  # Adjust this pattern to match your branch naming convention
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Deploy
-        run: echo "Deploying site..."
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Ensure all history is fetched
+
+    - name: Set up Git
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+
+    - name: Deploy to GitHub Pages
+      run: |
+        BRANCH="${GITHUB_REF##*/}"
+        git checkout --orphan "${BRANCH}"
+        git reset
+        git add docs/
+        git commit --allow-empty -m "Deploy site for ${BRANCH}"
+        git push origin "${BRANCH}" --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
