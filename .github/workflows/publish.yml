@@ -21,7 +21,11 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git checkout --orphan "${GITHUB_REF##*/}"
+        if [ "${GITHUB_REF##*/}" = "main" ]; then
+          git checkout main
+        else
+          git checkout --orphan "${GITHUB_REF##*/}"
+        fi
         git reset
         git add docs/
         git commit -m "Deploy site for ${GITHUB_REF##*/}"
