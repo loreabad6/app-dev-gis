@@ -23,12 +23,13 @@ jobs:
         git config --global user.email 'github-actions@github.com'
         if [[ "${GITHUB_REF}" == refs/heads/main ]]; then
           git checkout main
+          git pull origin main
         else
           git checkout --orphan "${GITHUB_REF##*/}"
         fi
         git reset
         git add docs/
         git commit --allow-empty -m "Deploy site for ${GITHUB_REF##*/}"
-        git push origin "${GITHUB_REF##*/}"
+        git push origin "${GITHUB_REF##*/}" --force
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
