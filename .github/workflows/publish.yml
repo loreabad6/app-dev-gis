@@ -1,10 +1,11 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
-    tags: ['*']
-
 name: Publish
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
 
 jobs:
   deploy:
@@ -14,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        fetch-depth: 0  # Ensure all history is fetched
 
     - name: Deploy to GitHub Pages
       run: |
@@ -23,7 +24,7 @@ jobs:
         git checkout --orphan "${GITHUB_REF##*/}"
         git reset
         git add docs/
-        git commit -m "Deploy site for tag ${GITHUB_REF##*/}"
+        git commit -m "Deploy site for ${GITHUB_REF##*/}"
         git push origin "${GITHUB_REF##*/}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
