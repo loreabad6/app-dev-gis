@@ -4,12 +4,7 @@ on:
     branches: main
     tags: ['*']
 
-name: Quarto Publish
-
-on:
-  push:
-    tags:
-      - '*'
+name: Publish
 
 jobs:
   deploy:
