@@ -25,6 +25,6 @@ jobs:
       #     path: docs
       #     render: false
       - name: Publish Quarto Book
-        run: quarto publish gh-pages --no-input
+        run: quarto publish gh-pages --no-render
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
