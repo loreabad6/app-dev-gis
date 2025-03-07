@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Fundamentals of R – R for reproducible spatial analysis</title>
+<title>1&nbsp; Intro to R and Co. – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -84,7 +50,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lessons/session_2.html" rel="next">
+<link href="../lessons/placeholder.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -129,7 +95,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../html-styling/style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -138,7 +104,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -185,37 +151,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
       </ul>
@@ -231,48 +167,35 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 1</span></a>
+  <a href="../lessons/placeholder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coming soon…</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical2/Practical2-Base-R.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical3/Practical3-Writing-Functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical4/Practical4-DataViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical5/Practical5-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 5</span></a>
-  </div>
-</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Annex</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final project</span></a>
+  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
@@ -289,23 +212,27 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#are-r-and-python-really-that-different" id="toc-are-r-and-python-really-that-different" class="nav-link active" data-scroll-target="#are-r-and-python-really-that-different"><span class="header-section-number">1.1</span> Are R and Python really that different?</a></li>
-  <li><a href="#base-or-vanilla-r" id="toc-base-or-vanilla-r" class="nav-link" data-scroll-target="#base-or-vanilla-r"><span class="header-section-number">1.2</span> Base or “vanilla” R</a></li>
-  <li><a href="#r-functions" id="toc-r-functions" class="nav-link" data-scroll-target="#r-functions"><span class="header-section-number">1.3</span> R functions</a></li>
-  <li><a href="#quarto-crash-course" id="toc-quarto-crash-course" class="nav-link" data-scroll-target="#quarto-crash-course"><span class="header-section-number">1.4</span> Quarto crash course</a>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r"><span class="header-section-number">1.1</span> What is R?</a></li>
+  <li><a href="#some-quick-facts-and-good-to-knows" id="toc-some-quick-facts-and-good-to-knows" class="nav-link" data-scroll-target="#some-quick-facts-and-good-to-knows"><span class="header-section-number">1.2</span> Some quick facts and good-to-know’s</a></li>
+  <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r"><span class="header-section-number">1.3</span> Why R?</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.4</span> RStudio</a>
   <ul class="collapse">
-  <li><a href="#anatomy-of-a-quarto-file" id="toc-anatomy-of-a-quarto-file" class="nav-link" data-scroll-target="#anatomy-of-a-quarto-file"><span class="header-section-number">1.4.1</span> Anatomy of a Quarto file</a></li>
+  <li><a href="#rstudio-projects" id="toc-rstudio-projects" class="nav-link" data-scroll-target="#rstudio-projects"><span class="header-section-number">1.4.1</span> RStudio projects</a></li>
   </ul></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">1.5</span> Further reading:</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">1.5</span> Quarto</a>
+  <ul class="collapse">
+  <li><a href="#anatomy-of-a-quarto-file" id="toc-anatomy-of-a-quarto-file" class="nav-link" data-scroll-target="#anatomy-of-a-quarto-file"><span class="header-section-number">1.5.1</span> Anatomy of a Quarto file</a></li>
+  </ul></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">1.6</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></h1>
 </div>
 
 
@@ -322,231 +249,135 @@ div.csl-indent {
 </header>
 
 
-<section id="are-r-and-python-really-that-different" class="level2 page-columns page-full" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="are-r-and-python-really-that-different"><span class="header-section-number">1.1</span> Are R and Python really that different?</h2>
+<section id="what-is-r" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">1.1</span> What is R?</h2>
+<p>From the <a href="https://www.r-project.org/about.html">R project</a> website:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b9063f0c-d776-46da-9dde-10d58bf47832_rw_600.gif?h=0928dff6693c2e75d633534a9229f71d" class="img-fluid"></p>
+</div></div><blockquote class="blockquote">
+<p>R is a language and environment for statistical computing and graphics.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>One of R’s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>R is available as Free Software under the terms of the Free Software Foundation’s GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.</p>
+</blockquote>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Software checks &amp; downloads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are working in your own laptop!</p>
 <ul>
-<li><p>Different to compiled language, like C or JAVA, R’s default implementation is an interpreted language. R is a dynamic programming language, which means R automatically interprets your code as you run it. Python is tipically first compiled and then interpreted, but the compilation is hidden from the user.</p></li>
-<li><p>R packages are organized via <a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a>. Mature R packages are submitted to CRAN where checks are performed on their backward compatibility against other packages and R versions and operating systems. There is no CRAN for Python packages, which sometimes makes it harder to handle versioning of the packages you work with.</p></li>
+<li><p>To check if you have R and its version, go to your terminal and type <code>R --version</code>. If you get an error, you don’t have R installed. If you get a printed output make a note of the version. If it is lower than <code>4</code>, please upgrade. You can <a href="https://cloud.r-project.org/">download R here</a>.</p></li>
+<li><p>If you are using Windows, you will need <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>, which provides toolchains for building R and R packages from source on Windows. Install it for the corresponding R version you downloaded or have.</p></li>
+</ul>
+<p>Find more info in the complementary course materials (<a href="../index.html#sec-compmaterials" class="quarto-xref"><span>Section 6</span></a> of the Syllabus).</p>
+</div>
+</div>
+</section>
+<section id="some-quick-facts-and-good-to-knows" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="some-quick-facts-and-good-to-knows"><span class="header-section-number">1.2</span> Some quick facts and good-to-know’s</h2>
+<ul>
+<li><p>Different to compiled language, like C or JAVA, R’s default implementation is an interpreted language. R is a dynamic programming language, which means R automatically interprets your code as you run it.</p></li>
+<li><p>R packages are organized via <a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a>. Mature R packages are submitted to CRAN where checks are performed on their backward compatibility against other packages and R versions and operating systems.</p></li>
 </ul>
 <blockquote class="blockquote">
-<p>CRAN is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R.</p>
+<p>CRAN is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 </blockquote>
 <ul>
 <li><p>R uses a particular assign operator: <code>&lt;-</code>. However, you will see code and in particular in this lessons using: <code>=</code>. You can use them interchangeably and this won’t affect your code. So if you are used to Python, you can stick to <code>=</code>.</p></li>
 <li><p>R has different coding paradigms, most importantly base or <em>vanilla</em> R, <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://rdatatable.gitlab.io/data.table/">data.table</a>.</p></li>
 <li><p>Piping: if you are familiar with the R tidyverse, you might have seen the use of the <code>%&gt;%</code> operator to concatenate functions. Since R 4.1.0 R introduced a native pipe operator <code>|&gt;</code> and that is what we use in this course. If you are curious about how the native pipe works and differences with the <code>magrittr</code> pipe, see <a href="https://ivelasq.rbind.io/blog/understanding-the-r-pipe/">here</a> and <a href="https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/">here</a>.</p></li>
-<li><p>Code syntax is of course different. For instance, Python indexes from 0 and R from 1. Unfold the note below for cheatsheet, based on <span class="citation" data-cites="julia-python-r_cheatsheet">Watson (<a href="../refs/references.html#ref-julia-python-r_cheatsheet" role="doc-biblioref">n.d.</a>)</span> of the main peculiarities.</p></li>
 </ul>
-<div class="column-page callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="why-r" class="level2 page-columns page-full" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="why-r"><span class="header-section-number">1.3</span> Why R?</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/a3eaa2ec-c0e8-491c-af88-ab5a64ebea61_rw_600.gif?h=a0af8f2bf532a1880e4637acbc8a664c" class="img-fluid"></p>
+</div></div><ul>
+<li><p>Free and open-source software</p></li>
+<li><p>Reproducibility</p></li>
+<li><p>Good package maintenance</p></li>
+<li><p>Statistical capabilities</p></li>
+<li><p>Handling geographic and non-geographic data</p></li>
+<li><p>Visualisation</p></li>
+</ul>
+</section>
+<section id="rstudio" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.4</span> RStudio</h2>
+<p>The most well-known IDE to work with R is <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>, which we will be using throughout this course.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>If you are feeling adventurous and would like to be a beta tester of new IDEs, feel free to explore <a href="https://positron.posit.co/">Positron</a>. Beware though, Positron is an early stage project under active development. Get to know if <a href="https://positron.posit.co/start.html#is-positron-for-me">Positron is a good fit for you here</a>.</p>
+<p><strong>Disclaimer:</strong> I might not be able to help much if you decide to use Positron.</p>
+</div></div><div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-R vs.&nbsp;Python syntax
+Software checks &amp; downloads
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="columns">
-<div class="column" style="width:48%;">
-<p><img src="figs/R.png" class="img-fluid" style="width:25.0%"></p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Strings</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">'Hello'</span>, <span class="st">'World'</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="fu">c</span>(<span class="st">'Hello'</span>, <span class="st">'World'</span>), <span class="at">collapse =</span> <span class="st">''</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Booleans</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">&amp;&amp;</span> <span class="cn">FALSE</span> <span class="sc">==</span> <span class="cn">FALSE</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cn">FALSE</span> <span class="sc">||</span> <span class="cn">TRUE</span> <span class="sc">==</span> <span class="cn">TRUE</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span><span class="cn">TRUE</span> <span class="sc">==</span> <span class="cn">FALSE</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Loops</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditionals</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">'x is positive'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">'x is zero'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">'x is negative'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(x<span class="sc">&gt;</span><span class="dv">0</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Functions</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="cf">function</span>(x,y) {</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  x2 <span class="ot">=</span> x <span class="sc">*</span> x</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  x2 <span class="sc">+</span> <span class="fu">sqrt</span>(y<span class="sc">*</span>x2<span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>{\(x) x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">sqrt</span>(y<span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">1</span>)}()</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Lists</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>myList <span class="ot">=</span> <span class="fu">list</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"a"</span>, <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">8</span>,<span class="dv">9</span>))</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>myList[<span class="dv">3</span>] <span class="sc">==</span> <span class="st">"a"</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>myList[[<span class="dv">4</span>]][<span class="dv">2</span>] <span class="sc">==</span> <span class="dv">8</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>myList[<span class="fu">length</span>(myList)] <span class="co"># returns list(10,8,9)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">%in%</span> myList</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Ranges</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi, <span class="at">length =</span> <span class="dv">100</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span> <span class="sc">==</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Vectors and Matrices</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>),<span class="at">nrow=</span><span class="dv">2</span>) <span class="co"># column-wise!</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(A)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(A)</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">solve</span>(A,b)</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>b <span class="sc">&gt;</span> <span class="dv">0</span> <span class="co"># elementwise comparison</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>A<span class="sc">^</span><span class="dv">2</span> <span class="co"># elementwise product</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>A <span class="sc">%*%</span> A <span class="co"># matrix product</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(b <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">100</span>), <span class="at">nrow=</span><span class="dv">10</span>)</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">diag</span>(<span class="dv">4</span>)</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(A,b)</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(A,b)</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Random numbers</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">runif</span>(<span class="dv">100</span>),<span class="at">nrow=</span><span class="dv">10</span>)</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">10</span><span class="sc">:</span><span class="dv">99</span>,<span class="dv">1</span>)</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">runif</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Look for RStudio on your computer, and check its version. To do so, open RStudio, go to <strong>Help &gt; About Rstudio</strong>. Check your version and that Quarto is also mentioned. You should be having a version higher than RStudio v2022.07, but I recommend to upgrade to the latest version to minimize errors.</p></li>
+<li><p>Download the <a href="https://posit.co/download/rstudio-desktop/">latest RStudio version here</a>.</p></li>
+</ul>
+<p>Find more info in the complementary course materials (<a href="../index.html#sec-compmaterials" class="quarto-xref"><span>Section 6</span></a> of the Syllabus).</p>
 </div>
-</div><div class="column" style="width:4%;">
+</div>
+<p><img src="figs/RStudio-IDE.png" class="img-fluid"></p>
+<p>The things that I usually change straight away in <strong>Tools &gt; Global Options…</strong></p>
+<ul>
+<li>Strongly recommended:
+<ol type="1">
+<li>In <strong>General</strong>, make sure that:
+<ul>
+<li>“Restore .RData into workspace ar startup” is <strong>unticked</strong></li>
+<li>“Save workspace to .RData on exit” is set to <strong>Never</strong></li>
+<li>“Always save history” is <strong>unticked</strong></li>
+</ul></li>
+<li>In <strong>Code</strong>, tick “Use native pipe operator, |&gt; (requires R 4.1+)”</li>
+</ol></li>
+<li>Optional:
+<ol type="1">
+<li>In <strong>Appearance</strong>, you can change your Editor theme and font size</li>
+<li>In <strong>Pane Layout</strong>, you can move the panel order. I usually have the console on the top right and the Environment on the bottom left.</li>
+</ol></li>
+</ul>
+<section id="rstudio-projects" class="level3 page-columns page-full" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="rstudio-projects"><span class="header-section-number">1.4.1</span> RStudio projects</h3>
+<p>For this course, I would like you to get used to working with projects. Projects are a great way to help you stay organised and have all your scripts, data and output documents and figures in one single place.</p>
+<p>You can create a project for this class with the following steps:</p>
+<ol type="1">
+<li>Go to the <strong>File &gt; New Project…</strong>.</li>
+<li>Specify if you would like to create the project in a new directory, or in an existing directory. Select “New Directory”</li>
+<li>RStudio offers dedicated project types if you are working on an R package, or a Shiny Web Application. Here we select “New Project”, which creates an R project</li>
+<li>Give your project a name, something like <strong>app_dev_gis</strong> and choose the location to save your project</li>
+</ol>
+<p><img src="figs/RStudio-Project.png" class="img-fluid"></p>
+<p>You will see that the project name is in the top-right corner and that there is a <code>.Rproj</code> in the files tab. Any new file you add to the directory will appear here.</p>
+<p>I suggest you to use a folder structure that makes sense for your work. In the course, we will have a set of <em>hands-on</em> exercises and <em>practicals</em>, so you can create two sub-directories to store each.</p>
 
-</div><div class="column" style="width:48%;">
-<p><img src="figs/Python.png" class="img-fluid" style="width:15.0%"></p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Strings</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">'Hello'</span> <span class="op">+</span> <span class="st">'World'</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">','</span>.join([<span class="st">'Hello'</span>, <span class="st">'World'</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Booleans</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="va">True</span> <span class="kw">and</span> <span class="va">False</span> <span class="op">==</span> <span class="va">False</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="va">False</span> <span class="kw">or</span> <span class="va">True</span> <span class="op">==</span> <span class="va">True</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">not</span> <span class="va">True</span> <span class="op">==</span> <span class="va">False</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Loops</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">11</span>):</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  x <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditionals</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'x is positive'</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'x is zero'</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'x is negative'</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Functions</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x,y):</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  x2 <span class="op">=</span> x <span class="op">*</span> x</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x2 <span class="op">+</span> (y<span class="op">*</span>x2<span class="op">+</span><span class="dv">1</span>)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y<span class="op">*</span>x<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="dv">1</span>)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Lists</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>myList <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"a"</span>, [<span class="dv">10</span>,<span class="dv">8</span>,<span class="dv">9</span>]]</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>myList[<span class="dv">2</span>] <span class="op">==</span> <span class="st">"a"</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>myList[<span class="dv">3</span>][<span class="dv">2</span>] <span class="op">==</span> <span class="dv">9</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>myList[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> [<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="kw">in</span> myList</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Ranges</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>np.arrange(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, step<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>np.linespace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, num<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">5</span>)) <span class="op">==</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Vectors and Matrices</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>])</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>np.transpose(A) <span class="co"># or A.T</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>A.shape</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>np.linalg.solve(A, b)</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>b <span class="op">&gt;</span> <span class="dv">0</span> <span class="co"># elementwise comparison</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>b<span class="op">**</span><span class="dv">2</span> <span class="co"># elementwise function application</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>A <span class="op">@</span> A <span class="co"># matrix product</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>np.where(b <span class="op">&gt;</span> <span class="dv">0</span>)</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>np.full((<span class="dv">10</span>,<span class="dv">10</span>), <span class="dv">2</span>)</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>np.eye(<span class="dv">4</span>) <span class="co"># 4 x 4 identity matrix</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>np.hstack((A,b[:,np.newaxis]))</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>np.vstack((A,b))</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Random numbers</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1234</span>)</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>np.random.rand(<span class="dv">10</span>,<span class="dv">10</span>)</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>np.random.randn(<span class="dv">10</span>)</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>np.random.randint(<span class="dv">10</span>,<span class="dv">100</span>)</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>plt.plot(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="no-row-height column-margin column-container"><div class="">
+<p>You can also save your final project inside this project if you choose R, however, I suggest you use a completely new project for that, to keep all files separated and a single environment for that.</p>
+</div></div></section>
 </section>
-<section id="base-or-vanilla-r" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="base-or-vanilla-r"><span class="header-section-number">1.2</span> Base or “vanilla” R</h2>
-<p>On the note above you find several examples of code syntax for base or “vanilla” R. R has several coding syntax. Knowing the basics of base R allows you to write R code without having to depend on other packages. However, most data science workflows are facilitated by other coding syntaxes such as <code>tidyverse</code> and <code>data.table</code>. In this lesson, you will be solving a practical using base R (<a href="https://loreabad6.github.io/app-dev-gis/practicals/Practical2/Practical2-Base-R.html">Practical 2</a>). In coming lessons, we will include the tidyverse into our workflows.</p>
-<p>Find some info on <a href="https://r4ds.hadley.nz/workflow-basics#coding-basics">coding basics right here</a>.</p>
-</section>
-<section id="r-functions" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-functions"><span class="header-section-number">1.3</span> R functions</h2>
-<p>Functions let you automate tasks and make your code more organized. If you find yourself repeating a piece of code over and over and just changing one parameter, then you can probably replace that workflow with a function.</p>
-<p>Reasons to create a function, as explained in <span class="citation" data-cites="r_data_science">Wickham, Çetinkaya-Rundel, et al. (<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">2023</a>)</span>:</p>
-<ul>
-<li>When requirements change, you only update code once.</li>
-<li>Eliminate errors from copy-pasting. e.g.&nbsp;you won’t forget to update a variable name in all the places you use it.</li>
-<li>Organized code: you can name your function something intuitive to remind you of the task you are undertaking.</li>
-<li>Reuse workflows between projects, making you more efficient.</li>
-</ul>
-<p>An R function has three elements:</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">=</span> <span class="cf">function</span>(arguments) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  body</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><strong>name</strong></li>
-<li><strong>arguments</strong>: elements that vary across calls</li>
-<li><strong>body</strong>: code that is repeated across calls</li>
-</ul>
-<p>You will find fundamentals of <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">calling functions in R right here</a>.</p>
-<p><a href="https://loreabad6.github.io/app-dev-gis/practicals/Practical3/Practical3-Writing-Functions.html">Practical 3</a> is about writing functions in R. There you will practice this function syntax.</p>
-</section>
-<section id="quarto-crash-course" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="quarto-crash-course"><span class="header-section-number">1.4</span> Quarto crash course</h2>
+<section id="quarto" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.5</span> Quarto</h2>
 <p>In this course, we will be using Quarto documents for the practicals. This website itself is created using Quarto.</p>
 <ul>
 <li><a href="https://quarto.org/">Quarto</a> is an open-source scientific and technical publishing system.</li>
@@ -556,8 +387,8 @@ R vs.&nbsp;Python syntax
 <li>It has native support for multiple programming languages like Python and Julia in addition to R.</li>
 <li>It can also <a href="https://quarto.org/docs/tools/jupyter-lab.html">render Jupyter notebooks</a>.</li>
 </ul>
-<section id="anatomy-of-a-quarto-file" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="anatomy-of-a-quarto-file"><span class="header-section-number">1.4.1</span> Anatomy of a Quarto file</h3>
+<section id="anatomy-of-a-quarto-file" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="anatomy-of-a-quarto-file"><span class="header-section-number">1.5.1</span> Anatomy of a Quarto file</h3>
 <p>A plain text file that has the extension .qmd is a Quarto file:</p>
 <div class="cell styled-output">
 <div class="cell-output cell-output-stdout">
@@ -610,12 +441,10 @@ key: value
 <p>The more you get familiar with Quarto documents, the more you will be able to do. Interactive documents, including dashboards are also supported by Quarto. Your final project should be reported using Quarto.</p>
 </section>
 </section>
-<section id="further-reading" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">1.5</span> Further reading:</h2>
+<section id="further-reading" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">1.6</span> Further reading:</h2>
 <ul>
-<li><a href="https://r4ds.hadley.nz/workflow-basics">Workflow basics</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/base-r">Base R</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/functions">Functions</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://rstudio-education.github.io/hopr/basics.html">The very basics</a> chapter <span class="citation" data-cites="grolemund2014hands">(<a href="../refs/references.html#ref-grolemund2014hands" role="doc-biblioref">Grolemund, 2014</a>)</span></li>
 <li><a href="https://r4ds.hadley.nz/quarto">Quarto</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
 </ul>
 
@@ -686,6 +515,9 @@ Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</e
 </div>
 <div id="ref-gstat2016" class="csl-entry" role="listitem">
 Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
+</div>
+<div id="ref-grolemund2014hands" class="csl-entry" role="listitem">
+Grolemund, G. (2014). <em>Hands-on programming with r</em>. "O’Reilly Media, Inc.".
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -880,6 +712,12 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed
 Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>https://cran.r-project.org/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -1454,8 +1292,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lessons/session_2.html" class="pagination-link" aria-label="Tidy (spatial) data">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lessons/placeholder.html" class="pagination-link" aria-label="Coming soon...">
+        <span class="nav-page-text">Coming soon…</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1463,7 +1301,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Winter Semester 2024/2025</p>
+<p>Summer Semester 2025</p>
 </div>   
     <div class="nav-footer-center">
 <p>Department of Geoinformatics — Z_GIS, University of Salzburg</p>
