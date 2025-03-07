@@ -14,7 +14,7 @@ I will also not be running the same environment as you.
 
 In this cases, you will need to put some extra effort into asking for help. 
 
-## Option 1 - dump it all on the lectuer (not recommended):
+## Option 1 - dump it all on the lecturer (not recommended):
 
 You can send me all your data sources and scripts, explain very well where the error is located and I can try to reproduce your error and check how to help. 
 This might take a while since I will need to go through all your files and data to be able to locate what is going on. 
