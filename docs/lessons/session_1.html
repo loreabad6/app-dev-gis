@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lorena Abad">
-<meta name="dcterms.date" content="2025-03-07">
 
-<title>R for reproducible spatial analysis</title>
+<title>1&nbsp; Intro to R and Co. – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,25 +43,26 @@ div.csl-indent {
 }</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./lessons/session_1.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lessons/placeholder.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,10 +92,10 @@ div.csl-indent {
 }</script>
 
 
-<link rel="stylesheet" href="html-styling/style.css">
+<link rel="stylesheet" href="../html-styling/style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -105,7 +104,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -120,7 +119,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">R for reproducible spatial analysis</a> 
+      <a href="../">R for reproducible spatial analysis</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/loreabad6/app-dev-gis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -136,7 +135,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -151,7 +150,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/session_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
@@ -168,7 +167,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/placeholder.html" class="sidebar-item-text sidebar-link">
+  <a href="../lessons/placeholder.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coming soon…</span></a>
   </div>
 </li>
@@ -185,13 +184,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
+  <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
@@ -199,7 +198,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./refs/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -213,51 +212,34 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r"><span class="header-section-number">1.1</span> What is R?</a></li>
+  <li><a href="#some-quick-facts-and-good-to-knows" id="toc-some-quick-facts-and-good-to-knows" class="nav-link" data-scroll-target="#some-quick-facts-and-good-to-knows"><span class="header-section-number">1.2</span> Some quick facts and good-to-know’s</a></li>
+  <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r"><span class="header-section-number">1.3</span> Why R?</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">1.4</span> RStudio</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#schedule-and-format" id="toc-schedule-and-format" class="nav-link" data-scroll-target="#schedule-and-format">Schedule and format</a>
+  <li><a href="#rstudio-projects" id="toc-rstudio-projects" class="nav-link" data-scroll-target="#rstudio-projects"><span class="header-section-number">1.4.1</span> RStudio projects</a></li>
+  </ul></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">1.5</span> Quarto</a>
   <ul class="collapse">
-  <li><a href="#sec-ai" id="toc-sec-ai" class="nav-link" data-scroll-target="#sec-ai">About the use of AI</a></li>
+  <li><a href="#anatomy-of-a-quarto-file" id="toc-anatomy-of-a-quarto-file" class="nav-link" data-scroll-target="#anatomy-of-a-quarto-file"><span class="header-section-number">1.5.1</span> Anatomy of a Quarto file</a></li>
   </ul></li>
-  <li><a href="#assignments-and-grading" id="toc-assignments-and-grading" class="nav-link" data-scroll-target="#assignments-and-grading">Assignments and grading</a></li>
-  <li><a href="#required-course-materials" id="toc-required-course-materials" class="nav-link" data-scroll-target="#required-course-materials">Required course materials</a></li>
-  <li><a href="#sec-compmaterials" id="toc-sec-compmaterials" class="nav-link" data-scroll-target="#sec-compmaterials">Complementary course materials</a>
-  <ul class="collapse">
-  <li><a href="#install-r-and-co." id="toc-install-r-and-co." class="nav-link" data-scroll-target="#install-r-and-co.">Install R and Co.</a></li>
-  <li><a href="#r-programming-resources" id="toc-r-programming-resources" class="nav-link" data-scroll-target="#r-programming-resources">R programming resources</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">1.6</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">R for reproducible spatial analysis</h1>
-<p class="subtitle lead">IP: Application Development (GIS) - Part 1</p>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Lorena Abad <a href="mailto:lorena.abad@plus.ac.at" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-0554-734X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 7, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -267,225 +249,204 @@ div.csl-indent {
 </header>
 
 
-<section id="syllabus" class="level1 unnumbered">
-<h1 class="unnumbered">Syllabus</h1>
-<div class="smaller">
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td>Time</td>
-<td>From 07.03.25 - Fridays 12:00-14:30</td>
-</tr>
-<tr class="even">
-<td>Location</td>
-<td><a href="https://online.uni-salzburg.at/plus_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/ris.ris?$ctx=design=ca2;header=max;lang=EN&amp;corg=19091&amp;pActionFlag=A&amp;pQuellGeogrBTypNr=5&amp;pRaumNr=35443&amp;pShowEinzelraum=J&amp;pZielGeogrBTypNr=5&amp;pZielGeogrBerNr=5830001">GI_Lab</a>, 1st Floor, Building 15, Techno_Z, Schillerstr. 30, 5020 Salzburg</td>
-</tr>
-<tr class="odd">
-<td>Expected effort</td>
-<td>Both parts: 6 ECTS (i.e.&nbsp;150 hours), 3 semester hour per week in class</td>
-</tr>
-<tr class="even">
-<td>Office hours</td>
-<td>via Blackboard or <a href="https://outlook.office.com/bookwithme/user/5edd6ea20ab443ed98d843c0da618b2f%40plus.ac.at?anonymous&amp;isanonymous=true">by appointment</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>These are the course materials for the IP: Application Development Course (GIS) - Part 1 where you will learn how to develop reproducible R workflows for spatial analysis. What you can expect:</p>
-<ul>
-<li>Introduction to R and its ecosystem</li>
-<li>Spatial data handling in R (raster and vector data)</li>
-<li>Connecting to GIS software for spatial workflow automation</li>
-<li>Spatial visualization with R (static and interactive)</li>
-<li>Develop R packages and Quarto dashboards</li>
-</ul>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>By the end of the course you should be able:</p>
-<ul>
-<li>to read and write R code and to navigate the R-spatial package ecosystem</li>
-<li>to perform spatial analysis with vector and raster datasets in R</li>
-<li>to design maps programmatically</li>
-<li>to create reproducible workflows for spatial analysis in R</li>
-</ul>
-</section>
-<section id="schedule-and-format" class="level2">
-<h2 class="anchored" data-anchor-id="schedule-and-format">Schedule and format</h2>
-<p>This is the tentative course schedule of the lessons and assignments.</p>
-<div class="smaller">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 39%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">DATE</th>
-<th>TOPIC</th>
-<th>ACTIVITY</th>
-<th>DUE DATE</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">07.03.25</td>
-<td>Intro to R, RStudio, Quarto; how to ask for help?</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14.03.25</td>
-<td>Fundamentals of R; Functional programming</td>
-<td>Practical 1/2</td>
-<td>End of class</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">21.03.25</td>
-<td>(Spatial) data cleaning, wrangling &amp; plotting</td>
-<td>Practical 3</td>
-<td>04.04.25</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">28.03.25</td>
-<td>R-spatial ecosystem, vector, raster, data cubes</td>
-<td>Practical 4</td>
-<td>End of class</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">04.04.25</td>
-<td>GIS: in-house and bridges</td>
-<td>Data visualisation showcase</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">11.04.25</td>
-<td>R package development</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">09.05.25</td>
-<td>Quarto interactive dashboards</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis. <strong><em>Learning by yourself is highly encouraged and expected!</em></strong></p>
-<p>The <a href="#sec-compmaterials" class="quarto-xref"><span>Complementary course materials</span></a> section lists a number of additional resources for your self-learning, and at the end of the lessons you will have references to the relevant chapters for you to go through.</p>
-<p>In class, we will work with hand-on practicals that will allow you to develop R skills from the first lesson.</p>
-<p>If you find yourself taking longer or having trouble with concepts, please ask for help on the course’s Blackboard message board or in class (there is an excellent chance someone else has the same question!) rather than via e-mail.</p>
-<section id="sec-ai" class="level3">
-<h3 class="anchored" data-anchor-id="sec-ai">About the use of AI</h3>
-<p>Using AI in this course is not discouraged if it helps you understand code or discover new ways of doing a task. Think of AI as an extended version of googling your issues or a Stack Overflow entry. However, beware to always test the code that you receive as an output, and also think about the logic that the AI tool follows. I expect that you learn from this course as much as possible, and copy pasting solutions generated by a LLM without critical thinking is unfortunately not going to meet those expectations.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<section id="what-is-r" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">1.1</span> What is R?</h2>
+<p>From the <a href="https://www.r-project.org/about.html">R project</a> website:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b9063f0c-d776-46da-9dde-10d58bf47832_rw_600.gif?h=0928dff6693c2e75d633534a9229f71d" class="img-fluid"></p>
+</div></div><blockquote class="blockquote">
+<p>R is a language and environment for statistical computing and graphics.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>One of R’s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>R is available as Free Software under the terms of the Free Software Foundation’s GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.</p>
+</blockquote>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Software checks &amp; downloads
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you select a final project using R, please add a disclaimer section explaining if you used AI for the completion of the project and how you used it.</p>
+<p>If you are working in your own laptop!</p>
+<ul>
+<li><p>To check if you have R and its version, go to your terminal and type <code>R --version</code>. If you get an error, you don’t have R installed. If you get a printed output make a note of the version. If it is lower than <code>4</code>, please upgrade. You can <a href="https://cloud.r-project.org/">download R here</a>.</p></li>
+<li><p>If you are using Windows, you will need <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>, which provides toolchains for building R and R packages from source on Windows. Install it for the corresponding R version you downloaded or have.</p></li>
+</ul>
+<p>Find more info in the complementary course materials (<a href="../index.html#sec-compmaterials" class="quarto-xref"><span>Section 6</span></a> of the Syllabus).</p>
 </div>
 </div>
 </section>
-</section>
-<section id="assignments-and-grading" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-and-grading">Assignments and grading</h2>
+<section id="some-quick-facts-and-good-to-knows" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="some-quick-facts-and-good-to-knows"><span class="header-section-number">1.2</span> Some quick facts and good-to-know’s</h2>
 <ul>
-<li>Practical exercises (~4) – 30%
+<li><p>Different to compiled language, like C or JAVA, R’s default implementation is an interpreted language. R is a dynamic programming language, which means R automatically interprets your code as you run it.</p></li>
+<li><p>R packages are organized via <a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a>. Mature R packages are submitted to CRAN where checks are performed on their backward compatibility against other packages and R versions and operating systems.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>CRAN is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</blockquote>
 <ul>
-<li>To be submitted by the end of the class or by a specific date</li>
-</ul></li>
-<li>End-of-term assignment – 50%
-<ul>
-<li>Programming project, either R or Python or both</li>
-</ul></li>
-<li>Active participation – 20%</li>
+<li><p>R uses a particular assign operator: <code>&lt;-</code>. However, you will see code and in particular in this lessons using: <code>=</code>. You can use them interchangeably and this won’t affect your code. So if you are used to Python, you can stick to <code>=</code>.</p></li>
+<li><p>R has different coding paradigms, most importantly base or <em>vanilla</em> R, <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://rdatatable.gitlab.io/data.table/">data.table</a>.</p></li>
+<li><p>Piping: if you are familiar with the R tidyverse, you might have seen the use of the <code>%&gt;%</code> operator to concatenate functions. Since R 4.1.0 R introduced a native pipe operator <code>|&gt;</code> and that is what we use in this course. If you are curious about how the native pipe works and differences with the <code>magrittr</code> pipe, see <a href="https://ivelasq.rbind.io/blog/understanding-the-r-pipe/">here</a> and <a href="https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/">here</a>.</p></li>
 </ul>
 </section>
-<section id="required-course-materials" class="level2">
-<h2 class="anchored" data-anchor-id="required-course-materials">Required course materials</h2>
-<p>R, RStudio, and Rtools will be installed in the lab computers. If you use your own laptop, see the <a href="#sec-compmaterials" class="quarto-xref"><span>Complementary course materials</span></a> section below.</p>
-</section>
-<section id="sec-compmaterials" class="level2">
-<h2 class="anchored" data-anchor-id="sec-compmaterials">Complementary course materials</h2>
-<section id="install-r-and-co." class="level3">
-<h3 class="anchored" data-anchor-id="install-r-and-co.">Install R and Co.</h3>
-<p>To work on your own laptop, you need to install R, RStudio and Quarto to follow the course materials.</p>
-<ul>
-<li>Install R (&gt;= 4.0) and RStudio (&gt;= 2024.04.x with Quarto). You can follow the steps in Appendix 1 of <a href="https://rstudio-education.github.io/hopr/starting.html">Hands-On Programming with R</a>.</li>
-<li>If you are on Windows, install <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools for the R version</a> you have.</li>
-<li>Installing R spatial packages in Windows (Rtools is required, see above) and Mac should be straightforward, and we will do it together. If you have a Linux system, please read <a href="https://geocompx.org/post/2020/installing-r-spatial-packages-linux/index.html">this blogpost</a>.</li>
-</ul>
-<p>If you have any problems with installation, please reach out via Blackboard.</p>
-</section>
-<section id="r-programming-resources" class="level3">
-<h3 class="anchored" data-anchor-id="r-programming-resources">R programming resources</h3>
-<section id="intro-basics" class="level4">
-<h4 class="anchored" data-anchor-id="intro-basics">Intro &amp; Basics</h4>
-<ul>
-<li><a href="https://rladiessydney.org/courses/ryouwithme/">RYouWithMe</a> from R-Ladies Sydney.</li>
-<li><a href="https://github.com/matloff/fasteR">fasteR: Fast Lane to Learning R!</a> by Norm Matloff.</li>
-<li><a href="https://tinystats.github.io/teacups-giraffes-and-statistics/index.html">Teacups, Giraffes, &amp; Statistics</a> by Hasse Walum and Desiree de Leon.</li>
-</ul>
-<section id="interactive-r-learning" class="level5">
-<h5 class="anchored" data-anchor-id="interactive-r-learning">Interactive R learning</h5>
-<ul>
-<li>Learn or freshen up R basics interactively with <a href="https://swirlstats.com/students.html">swirl</a>
-<ul>
-<li>Follow the instructions to start interactive courses from the R console.</li>
-<li>Check Step 5 for instructions to download more courses, in different languages available at the <a href="https://swirlstats.com/scn/title.html">Swirl Course Network</a>.</li>
-</ul></li>
+<section id="why-r" class="level2 page-columns page-full" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="why-r"><span class="header-section-number">1.3</span> Why R?</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/a3eaa2ec-c0e8-491c-af88-ab5a64ebea61_rw_600.gif?h=a0af8f2bf532a1880e4637acbc8a664c" class="img-fluid"></p>
+</div></div><ul>
+<li><p>Free and open-source software</p></li>
+<li><p>Reproducibility</p></li>
+<li><p>Good package maintenance</p></li>
+<li><p>Statistical capabilities</p></li>
+<li><p>Handling geographic and non-geographic data</p></li>
+<li><p>Visualisation</p></li>
 </ul>
 </section>
-</section>
-<section id="books" class="level4">
-<h4 class="anchored" data-anchor-id="books">Books</h4>
-<section id="entry-level" class="level5">
-<h5 class="anchored" data-anchor-id="entry-level">Entry-level</h5>
-<ul>
-<li><a href="https://rstudio-education.github.io/hopr/">Hands-on programming with R</a> by Garrett Grolemund.</li>
-<li><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a> by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund.</li>
-</ul>
-</section>
-<section id="r-spatial" class="level5">
-<h5 class="anchored" data-anchor-id="r-spatial">R-Spatial</h5>
-<ul>
-<li><a href="https://r.geocompx.org/">Geocomputation with R</a> by Robin Lovelace, Jakub Nowosad and Jannes Muenchow.</li>
-<li><a href="https://r-spatial.org/book/">Spatial Data Science: With Applications in R</a> by Edzer Pebesma and Roger Bivand.</li>
-<li><a href="https://rspatial.org/">Spatial Data Science with R and “terra”</a> by Robert Hijmans.</li>
-</ul>
-</section>
-<section id="advanced" class="level5">
-<h5 class="anchored" data-anchor-id="advanced">Advanced</h5>
-<ul>
-<li><a href="https://adv-r.hadley.nz/">Advanced R (2e)</a> by Hadley Wickham</li>
-<li><a href="https://r-pkgs.org/">R Packages (2e)</a> by Hadley Wickham and Jennifer Bryan</li>
-</ul>
-<p>All links to these materials are also included in Blackboard.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="rstudio" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.4</span> RStudio</h2>
+<p>The most well-known IDE to work with R is <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>, which we will be using throughout this course.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>If you are feeling adventurous and would like to be a beta tester of new IDEs, feel free to explore <a href="https://positron.posit.co/">Positron</a>. Beware though, Positron is an early stage project under active development. Get to know if <a href="https://positron.posit.co/start.html#is-positron-for-me">Positron is a good fit for you here</a>.</p>
+<p><strong>Disclaimer:</strong> I might not be able to help much if you decide to use Positron.</p>
+</div></div><div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Disclaimer
+Software checks &amp; downloads
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Please note that the specifics of this Course Syllabus can be changed at any time, and you will be responsible for abiding by any such changes. Any changes will be communicated in class, via e-mail, or course announcement via Blackboard.</p>
+<ul>
+<li><p>Look for RStudio on your computer, and check its version. To do so, open RStudio, go to <strong>Help &gt; About Rstudio</strong>. Check your version and that Quarto is also mentioned. You should be having a version higher than RStudio v2022.07, but I recommend to upgrade to the latest version to minimize errors.</p></li>
+<li><p>Download the <a href="https://posit.co/download/rstudio-desktop/">latest RStudio version here</a>.</p></li>
+</ul>
+<p>Find more info in the complementary course materials (<a href="../index.html#sec-compmaterials" class="quarto-xref"><span>Section 6</span></a> of the Syllabus).</p>
 </div>
 </div>
+<p><img src="figs/RStudio-IDE.png" class="img-fluid"></p>
+<p>The things that I usually change straight away in <strong>Tools &gt; Global Options…</strong></p>
+<ul>
+<li>Strongly recommended:
+<ol type="1">
+<li>In <strong>General</strong>, make sure that:
+<ul>
+<li>“Restore .RData into workspace ar startup” is <strong>unticked</strong></li>
+<li>“Save workspace to .RData on exit” is set to <strong>Never</strong></li>
+<li>“Always save history” is <strong>unticked</strong></li>
+</ul></li>
+<li>In <strong>Code</strong>, tick “Use native pipe operator, |&gt; (requires R 4.1+)”</li>
+</ol></li>
+<li>Optional:
+<ol type="1">
+<li>In <strong>Appearance</strong>, you can change your Editor theme and font size</li>
+<li>In <strong>Pane Layout</strong>, you can move the panel order. I usually have the console on the top right and the Environment on the bottom left.</li>
+</ol></li>
+</ul>
+<section id="rstudio-projects" class="level3 page-columns page-full" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="rstudio-projects"><span class="header-section-number">1.4.1</span> RStudio projects</h3>
+<p>For this course, I would like you to get used to working with projects. Projects are a great way to help you stay organised and have all your scripts, data and output documents and figures in one single place.</p>
+<p>You can create a project for this class with the following steps:</p>
+<ol type="1">
+<li>Go to the <strong>File &gt; New Project…</strong>.</li>
+<li>Specify if you would like to create the project in a new directory, or in an existing directory. Select “New Directory”</li>
+<li>RStudio offers dedicated project types if you are working on an R package, or a Shiny Web Application. Here we select “New Project”, which creates an R project</li>
+<li>Give your project a name, something like <strong>app_dev_gis</strong> and choose the location to save your project</li>
+</ol>
+<p><img src="figs/RStudio-Project.png" class="img-fluid"></p>
+<p>You will see that the project name is in the top-right corner and that there is a <code>.Rproj</code> in the files tab. Any new file you add to the directory will appear here.</p>
+<p>I suggest you to use a folder structure that makes sense for your work. In the course, we will have a set of <em>hands-on</em> exercises and <em>practicals</em>, so you can create two sub-directories to store each.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>You can also save your final project inside this project if you choose R, however, I suggest you use a completely new project for that, to keep all files separated and a single environment for that.</p>
+</div></div></section>
+</section>
+<section id="quarto" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.5</span> Quarto</h2>
+<p>In this course, we will be using Quarto documents for the practicals. This website itself is created using Quarto.</p>
+<ul>
+<li><a href="https://quarto.org/">Quarto</a> is an open-source scientific and technical publishing system.</li>
+<li>It allows you to combine code, results and text in a single document.</li>
+<li>It uses <a href="https://www.markdownguide.org/">Markdown</a> syntax.</li>
+<li>With Quarto, you can create reproducible documents in several output formats like PDF, HTML, Word, presentations with Reveal.js, etc.</li>
+<li>It has native support for multiple programming languages like Python and Julia in addition to R.</li>
+<li>It can also <a href="https://quarto.org/docs/tools/jupyter-lab.html">render Jupyter notebooks</a>.</li>
+</ul>
+<section id="anatomy-of-a-quarto-file" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="anatomy-of-a-quarto-file"><span class="header-section-number">1.5.1</span> Anatomy of a Quarto file</h3>
+<p>A plain text file that has the extension .qmd is a Quarto file:</p>
+<div class="cell styled-output">
+<div class="cell-output cell-output-stdout">
+<pre><code>---
+title: I am a Quarto file
+date: today
+format: html
+---
+
+In this document, we will load a *spatial dataset* with the `sf` package.
+
+```{r}
+#| label: setup
+#| message: false
+library(sf)
+nc = read_sf(system.file("shape/nc.shp", package="sf"))
+```
+
+We can see how the `nc` object looks like:
+
+```{r}
+nc
+```
+
+And we can also **plot** it:
+
+```{r}
+#| label: plot
+#| echo: false
+plot(nc['AREA'])
+```</code></pre>
+</div>
+</div>
+<p>You will notice three basic components of the file:</p>
+<ol type="1">
+<li>Metadata: YAML</li>
+</ol>
+<p>“Yet Another Markup Language” or “YAML Ain’t Markup Language” is used to provide metadata. Depending on the type of document you are authoring, several parameters are available. Parameters can be nested and therefore indentation is important. It is kept between <code>---</code> in the form:</p>
+<pre><code>---
+key: value
+---</code></pre>
+<ol start="2" type="1">
+<li>Text: Markdown</li>
+</ol>
+<p>Text is done with <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown syntax</a>. If you are not familiar with this, here are some basics: <a href="https://charlotte.quarto.pub/cascadia/2-yaml-markdown-basics/2-yaml-markdown-basics.html#/text">Text section of Intro to Quarto by Charlotte Wickham</a>.</p>
+<ol start="3" type="1">
+<li>Code: R executed via <code>knitr</code></li>
+</ol>
+<p>Executable code is contained in chunks surrounded by <code>```</code>.</p>
+<p>The more you get familiar with Quarto documents, the more you will be able to do. Interactive documents, including dashboards are also supported by Quarto. Your final project should be reported using Quarto.</p>
+</section>
+</section>
+<section id="further-reading" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">1.6</span> Further reading:</h2>
+<ul>
+<li><a href="https://rstudio-education.github.io/hopr/basics.html">The very basics</a> chapter <span class="citation" data-cites="grolemund2014hands">(<a href="../refs/references.html#ref-grolemund2014hands" role="doc-biblioref">Grolemund, 2014</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/quarto">Quarto</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -752,9 +713,11 @@ Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generati
 </div>
 </div>
 </section>
-</section>
-</section>
-</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>https://cran.r-project.org/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -1324,10 +1287,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lessons/session_1.html" class="pagination-link" aria-label="Intro to R and Co.">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lessons/placeholder.html" class="pagination-link" aria-label="Coming soon...">
+        <span class="nav-page-text">Coming soon…</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1343,7 +1309,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./License.html">
+    <a class="nav-link" href="../License.html">
 <p>CC-BY-4.0</p>
 </a>
   </li>  

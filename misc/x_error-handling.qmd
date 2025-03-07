@@ -20,6 +20,7 @@ It is a good habit to check the results of your code every time you finish a tas
 
 * If you created or updated a data frame, make sure your edits did what you hoped.  Use the *Environment* or the `head()` function to investigate your changes.
 
+* Make sure you don't have any overwritten objects between your error and your attempts to solve it. If you are updating objects, it is probably safer to re-run all code chunks to see if the error persists. 
 
 **Two heads are better than one**
 

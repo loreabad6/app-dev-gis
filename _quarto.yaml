@@ -15,8 +15,8 @@ book:
     - index.qmd
     - part: "Lessons"
       chapters:
-        - lessons/placeholder.qmd
-        # - lessons/session_1.qmd
+        # - lessons/placeholder.qmd
+        - lessons/session_1.qmd
         # - lessons/session_2.qmd
         # - lessons/session_3.qmd
         # - lessons/session_4.qmd
@@ -33,6 +33,7 @@ book:
     - part: "Annex"
       chapters: 
         - misc/x_error-handling.qmd
+        - misc/x_ask_help.qmd
     # - final-project.qmd
     - refs/references.qmd
   repo-url: "https://github.com/loreabad6/app-dev-gis"

@@ -1,0 +1,57 @@
+# Asking for help {.unnumbered}
+
+![](https://reprex.tidyverse.org/reference/figures/help-me-help-you.png){out-width=50% fig-align=center}
+
+We all get stuck at some point and need some help.
+When Google is just not giving you answers and ChatGPT is throwing you the same code that does not work without changes, frustration can start to peak.
+
+At this point, you might turn to your lecturer for help ☺️.
+I am always happy to assist with your issues, which will probably arise the most during the class practicals. 
+In this case just come up to my desk or call me and I'll come to you.
+
+When you are not in class and run into issues, I won't have all the data at hand and the whole script in front of me to assist. 
+I will also not be running the same environment as you. 
+
+In this cases, you will need to put some extra effort into asking for help. 
+
+## Option 1 - dump it all on the lectuer (not recommended):
+
+You can send me all your data sources and scripts, explain very well where the error is located and I can try to reproduce your error and check how to help. 
+This might take a while since I will need to go through all your files and data to be able to locate what is going on. 
+
+At the very least, besides including all your data and scripts, please also include your session information so I know which packages you have loaded and your operating system.
+
+Here is how I get my session info:
+
+```{r}
+sessioninfo::session_info()
+```
+
+
+## Option 2 - isolate your problem (recommended):
+
+It is very likely that your problem comes from one single function that is giving you errors. 
+In this case, you will need to create a reproducible example (reprex) of your code and share it. 
+This option is not only going to help you ask for help in this course, but also on any open forum or issue tracker of open source software. 
+Remember to always include your session info as shown above!
+
+The main parts of a reprex include ([source](https://forum.posit.co/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-create-one/5219)):
+
+1. **background information** - Describe what you are trying to do. What have you already done?
+1. **complete set up** - include any library() calls and data to reproduce your issue.
+1. **data for a reprex** Here's a [discussion on setting up data for a reprex](https://forum.posit.co/t/best-practices-how-to-prepare-your-own-data-for-use-in-a-reprex-if-you-can-t-or-don-t-know-how-to-reproduce-a-problem-with-a-built-in-dataset/5346)
+1. **make it run** - include the minimal code required to reproduce your error on the data provided.
+People should be able to copy and paste your `code chunk` and get the same error.
+[How do I format my text so it has nice code chunks?](https://forum.posit.co/t/faq-how-to-make-your-code-look-nice-markdown-formatting/6246)
+1. **minimal** - strip away everything that is not directly related to your problem. This usually involves creating a much smaller and simpler set of code and data compared to that which created your issue.
+
+**Use the reprex-package to Build Your Reproducible Example**
+
+When creating a reprex by hand, it’s easy to accidentally miss something that means your code can’t be run on someone else’s computer. Avoid this problem by using the [`reprex`-package](https://www.tidyverse.org/help/).
+The `reprex` package will save effort for you and others who want to help.
+
+### Further resources:
+
+- [How to use reprex](https://reprex.tidyverse.org/articles/learn-reprex.html)
+- [reprex documentation](https://reprex.tidyverse.org/index.html)
+- [FAQ: What's a reproducible example (`reprex`) and how do I create one?](https://forum.posit.co/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-create-one/5219)
