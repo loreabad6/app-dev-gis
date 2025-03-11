@@ -97,6 +97,9 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -303,7 +306,7 @@ div.csl-indent {
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2025-03-07
+ date     2025-03-11
  pandoc   3.5 @ /usr/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -341,6 +344,12 @@ div.csl-indent {
 <li><strong>minimal</strong> - strip away everything that is not directly related to your problem. This usually involves creating a much smaller and simpler set of code and data compared to that which created your issue.</li>
 </ol>
 <p><strong>Use the reprex-package to Build Your Reproducible Example</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/7f95a7e2-07f9-4345-9b2b-c62c556739e6_rw_1920.png?h=3da3bf53a5ecbc64f5d22d49763ad6ff" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Source: Allison Horst"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/7f95a7e2-07f9-4345-9b2b-c62c556739e6_rw_1920.png?h=3da3bf53a5ecbc64f5d22d49763ad6ff" class="img-fluid figure-img" alt="Source: Allison Horst"></a></p>
+<figcaption>Source: <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
+</figure>
+</div>
 <p>When creating a reprex by hand, it’s easy to accidentally miss something that means your code can’t be run on someone else’s computer. Avoid this problem by using the <a href="https://www.tidyverse.org/help/"><code>reprex</code>-package</a>. The <code>reprex</code> package will save effort for you and others who want to help.</p>
 <section id="further-resources" class="level3">
 <h3 class="anchored" data-anchor-id="further-resources">Further resources:</h3>
@@ -352,6 +361,9 @@ div.csl-indent {
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-agarwal2023r" class="csl-entry" role="listitem">
+Agarwal, A. (2023). <em>R vs python: Which is better for data science in 2023</em>. <a href="https://externlabs.com/blogs/r-vs-python/" class="uri">https://externlabs.com/blogs/r-vs-python/</a>.
+</div>
 <div id="ref-R-quarto" class="csl-entry" role="listitem">
 Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
 </div>
@@ -1214,6 +1226,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
