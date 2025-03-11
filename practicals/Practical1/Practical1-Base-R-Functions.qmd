@@ -1,0 +1,217 @@
+---
+subtitle: "Vector, matrices, dataframes & functions"
+date: today
+author: 
+  - Team member 1
+  - Team member 2
+execute:
+  error: true
+  eval: true
+embed-resources: true
+unnumbered: true
+format: pdf
+---
+
+# Practical 1 {.unnumbered}
+
+Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical1/Practical1-Base-R-Functions.qmd) 
+
+Today you will be creating and manipulating vectors, and data frames to uncover a top secret message.
+
+## Part One: Setup
+
+Each of the following R chunks will cause an error and/or do the desired task incorrectly. Find the mistake, and correct it to complete the intended action.
+
+1.  Create vectors containing the upper case letters, lower case letters, and some punctuation marks.
+
+```{r}
+lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
+
+punctuation <- c(".", ",", "!", "?", "'", """, "(", ")", " ", ":", ";", "—")
+```
+
+2.  Make one long vector containing all the symbols.
+
+```{r}
+my_symbols <- cbind(lower_case, upper_case, punctuation)
+```
+
+3.  Turn the `my_symbols` vector into a data frame, with the variable name "Symbol"
+
+```{r}
+my_symbols <- dataframe(my_symbols)
+names(my_symbols) = Symbol
+```
+
+4.  Find the total number of symbols we have in our data frame.
+
+```{r}
+len <- length(my_symbols)
+```
+
+5.  Create a new variable in your dataframe that assigns a number to each symbol.
+
+```{r}
+my_symbols%Num <- 1:len
+```
+
+## Part Two: Creating functions
+
+Write your own function which includes the steps below.
+
+0.  Add 14 to every number (already done for you 😉)
+1.  Multiply every number by 18, then subtract 257.
+2.  Exponentiate every number. (That is, do e\^\[number\].)
+3.  Square every number.
+
+```{r}
+arithmetics = function(x) {
+  # step 0
+  x = x + 14
+  # step 1
+  x = ... # write your solution to prompt 1
+  # step 2
+  x = ... # write your solution to prompt 2
+  # step 3
+  x = ... # write your solution to prompt 3
+  # print output
+  x
+}
+```
+
+Test your function, do you get any errors when applying it?
+
+```{r}
+test = seq(0, 1, length.out = 5)
+arithmetics(test)
+```
+
+## Part Three: Decoding the secret message
+
+This chunk (which should NOT have errors) will load up the encoded secret message as a vector:
+
+```{r}
+top_secret <- read.csv(
+  "https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/practicals/Practical1/Secret_Code_AppDev",
+  header = TRUE)$x
+```
+
+By altering this top secret set of numbers, you will be able to create a message. Use your function above to alter the `top_secret` object.
+
+```{r}
+# apply your function to the top_secret object and overwrite top_secret
+top_secret = ... 
+```
+
+::: callout-warning
+### Checkpoint
+
+Headquarters has informed you that at this stage of decoding, there should be 552 numbers in the secret message that are below 17.
+:::
+
+*Hint*: This is what is called a “relational” comparison, where you compare an object to a number and R will give you a vector of `TRUE`s and `FALSE`s based on whether the comparison is / is not met. You can then use these `TRUE`s and `FALSE`s as numbers, since `TRUE = 1` and `FALSE = 0` in R land. This is called a Boolean variable type.
+
+```{r}
+# Write code to verify that there are 552 numbers with values **below** 17
+```
+
+4.  Turn your vector of numbers into a matrix with 5 columns.
+
+```{r}
+# write your solution to prompt 4
+```
+
+5.  Separately from your `top_secret` numbers, create a new vector called "evens" of all the even numbers between 1 and 428. That is, "evens" should contain 2, 4, 6, 8 ..., 552.
+
+```{r}
+# write your solution to prompt 5
+```
+
+6.  Subtract the "evens" vector from the first column of your secret message matrix.
+
+```{r}
+# write your solution to prompt 6
+```
+
+7.  Subtract 100 from all numbers 18-24th rows of the 3rd column.
+
+```{r}
+# write your solution to prompt 7
+```
+
+8.  Multiply all numbers in the 4th and 5th column by 2.
+
+```{r}
+# write your solution to prompt 8
+```
+
+9.  Turn your matrix back into a vector.
+
+```{r}
+# write your solution to prompt 9
+```
+
+::: callout-warning
+### Checkpoint
+
+Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are above 70.
+:::
+
+*Hint*: Use a relational comparison similar to what you used in the last checkpoint, but here you will need to subset values from your vector! It may be helpful to think of below as *not equal* to or *greater than* 70.
+
+```{r}
+# Write code to verify that indices 500 and beyond have values **above** 70
+# should be 0!
+```
+
+10. Take the square root of all numbers in indices 38 to 465.
+
+```{r}
+# write your solution to prompt 10
+```
+
+11. Round all numbers to the nearest whole number.
+
+```{r}
+# write your solution to prompt 11
+```
+
+12. Replace all instances of the number 39 with 20.
+
+```{r}
+# write your solution to prompt 12
+```
+
+::: callout-warning
+### Checkpoint
+
+Headquarters has informed you that your final message should have 507 even numbers.
+:::
+
+*Hint*: Checking for divisibility is an interesting operation that isn’t done much in R. Modulus is the operation you are interested in, where you are checking for whether the numbers are divisible by 2, with no remainder. See what you can find about modulus in R!
+
+```{r}
+# Code to verify how many even numbers are in your top_secret vector
+# Should be 507!
+```
+
+## Part Four: The secret message!
+
+Use your final vector of numbers as indices for `my_symbols` to discover the final message! The code to do so is already there for you:
+
+```{r}
+#| output: asis
+cat(my_symbols$Symbol[top_secret], sep = "")
+```
+
+Google the message, if you do not recognize it, and find its title and author.
+
+::: callout-note
+## Solution 🎉
+
+Write the title and author here!
+:::
+
+Upload the .qmd doc and the rendered html to Blackboard (don't forget to add all your teammates names!). The first team receives an extra point each in class participation 🏃

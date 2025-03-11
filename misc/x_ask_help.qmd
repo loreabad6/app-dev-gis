@@ -47,6 +47,8 @@ People should be able to copy and paste your `code chunk` and get the same error
 
 **Use the reprex-package to Build Your Reproducible Example**
 
+![Source: [Allison Horst](https://allisonhorst.com/)](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/7f95a7e2-07f9-4345-9b2b-c62c556739e6_rw_1920.png?h=3da3bf53a5ecbc64f5d22d49763ad6ff){.lightbox}
+
 When creating a reprex by hand, it’s easy to accidentally miss something that means your code can’t be run on someone else’s computer. Avoid this problem by using the [`reprex`-package](https://www.tidyverse.org/help/).
 The `reprex` package will save effort for you and others who want to help.
 
