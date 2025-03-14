@@ -14,7 +14,7 @@ format: pdf
 
 # Practical 1 {.unnumbered}
 
-Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical1/Practical1-Base-R-Functions.qmd) 
+Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical1/Practical1-Base-R-Functions.qmd).
 
 Today you will be creating and manipulating vectors, and data frames to uncover a top secret message.
 

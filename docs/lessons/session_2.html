@@ -680,30 +680,30 @@ $scores
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 4.09477631 5.14604920 0.55689625 2.15930570 4.30729199 4.81506449
- [7] 4.88418574 3.24312901 3.54992558 4.11878602 2.92890408 0.08687824
-[13] 3.77739106 2.92139239 5.73395253 4.54010027 5.16715098 2.07136633
-[19] 3.13219967 4.17613910</code></pre>
+<pre><code> [1]  2.80813099  2.85110379  4.09457538  1.87493980  1.96744621  3.55145813
+ [7]  6.34041289  3.63220652  2.33803707  1.99932756 -0.40670565  0.11334346
+[13]  0.36083462  0.92033929  6.47890543  0.61556695 -0.07387014 -0.21392934
+[19]  1.96633159  5.04345126</code></pre>
 </div>
 </div>
 <p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  3.5564341  4.3082564 -0.6556713  4.9610734  3.3873200  5.8513516
- [7]  3.1982760  5.4365703  2.4664629 -0.4539419  3.8035284  2.0689664
-[13]  0.3118811  1.8660003  2.2689021  2.4817628 -0.3043377  0.7476641
-[19]  5.6472217  4.1133851</code></pre>
+<pre><code> [1]  2.6444285  1.3898471  2.4128789  3.0562298  2.1372251  0.6425678
+ [7]  1.5668427 -1.1124170  4.1515007  2.1725876  5.8493726  7.1395540
+[13]  3.0548264 -0.1806870  3.2122259  2.7913723  3.5674893  4.7743189
+[19]  1.9329931  1.7765118</code></pre>
 </div>
 </div>
 <p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.66838827  0.02034233 -0.24933273  0.53201169 -0.95500929  1.04924349
- [7]  1.00995737 -0.77690675 -1.18985905 -0.92683663  0.81861345 -0.24266812
-[13]  0.16000549 -0.57804267  1.24753586 -1.97832908 -1.10469313  1.97221998
-[19] -0.74827014  1.66792104</code></pre>
+<pre><code> [1] -0.08881723 -0.99873559 -0.69681560  1.01663343  2.64890138 -0.94520680
+ [7]  0.89625938  0.82848918 -0.74930098 -0.38700239 -1.13619216 -1.53530932
+[13]  0.83845152  0.60020330 -1.05129328 -0.01349636  0.60685432 -1.02737784
+[19]  1.49236723 -0.83995795</code></pre>
 </div>
 </div>
 <p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
@@ -1740,7 +1740,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
