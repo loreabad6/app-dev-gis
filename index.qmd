@@ -19,13 +19,15 @@ This is the tentative course schedule of the lessons and assignments.
 | DATE | TOPIC | ACTIVITY | DUE DATE |
 |:-------------:|-----------------------------|---------------|---------------|
 | 07.03.25 | Intro to R, RStudio, Quarto; how to ask for help? |  |  |
-| 14.03.25 | Fundamentals of R; Functional programming | Practical 1 | End of class |
-| 21.03.25 | (Spatial) data cleaning, wrangling & plotting | Practical 2 | 04.04.25 |
+| 14.03.25 | Fundamentals of R; functional programming | Practical 1 | End of class |
+| 21.03.25 | (Spatial) data cleaning, wrangling & plotting | Hands-on;<br>Practical 2[^*] | <br>05.05.25 |
 | 28.03.25 | R-spatial ecosystem, vector, raster, data cubes | Practical 3 | End of class |
-| 04.04.25 | GIS: in-house and bridges | Data visualisation showcase |  |
+| 04.04.25 | GIS: in-house and bridges | Hands-on |  |
 | 11.04.25 | R package development | Practical 4 | End of class |
-| 09.05.25 | Quarto interactive dashboards |  |  |
+| 09.05.25 | Quarto interactive dashboards | Practical 2 showcase |  |
 :::
+
+[^*]: Explanation of assignment
 
 The lessons are meant to give you a broad overview of the basics and of what is possible with R for spatial analysis. ***Learning by yourself is highly encouraged and expected!***
 
