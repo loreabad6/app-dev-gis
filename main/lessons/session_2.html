@@ -299,9 +299,9 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">R and Python differences in syntax</label></li>
-<li><label><input type="checkbox">Base R basics and good practice</label></li>
-<li><label><input type="checkbox">Functional programming in R</label></li>
+<li><label><input type="checkbox" checked="">R and Python differences in syntax</label></li>
+<li><label><input type="checkbox" checked="">Base R basics and good practice</label></li>
+<li><label><input type="checkbox" checked="">Functional programming in R</label></li>
 </ul>
 <section id="i-come-from-python-how-will-i-adapt-to-r" class="level2 page-columns page-full" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="i-come-from-python-how-will-i-adapt-to-r"><span class="header-section-number">2.1</span> I come from Python, how will I adapt to R?</h2>
@@ -680,29 +680,30 @@ $scores
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  4.5819898  3.5424976  1.2599756 -0.5400949  1.6728990  5.1331345
- [7]  2.9265899  5.5747978  2.7285808  3.9180607  4.3708644  1.3664016
-[13]  1.1573499  1.1500767  0.9885138  5.6756399 -0.4482856  1.7969882
-[19]  2.7223086  4.1738820</code></pre>
+<pre><code> [1]  4.14406975  2.40347827  4.47598551 -1.36001814  2.54192546  2.94066959
+ [7]  4.12085713  6.08172457  6.36195870  6.06523553  5.67990267  0.73562638
+[13]  1.71749282  4.79214989  1.30011745  4.43612390 -1.99558147  1.72937951
+[19] -0.07078825  4.73929357</code></pre>
 </div>
 </div>
 <p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.3592716 3.8320164 6.4270836 4.1008388 0.2720648 5.2515897 4.7758685
- [8] 7.2991348 4.1860909 1.5274618 3.3334399 2.3419117 2.0314487 3.5084669
-[15] 3.8706403 5.9257203 7.4654977 0.5645997 5.8809987 1.1482038</code></pre>
+<pre><code> [1]  2.5461276  4.9512000  5.3029109  2.5491940 -2.8623642  1.3237422
+ [7] -0.5340330  3.9303952  1.0117665  8.0528374  3.4532349  3.6319399
+[13]  3.1297015  0.1803919  1.6732090  2.4379385  3.2397439  2.7327963
+[19] -1.3548757  0.5771016</code></pre>
 </div>
 </div>
 <p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.179848996 -0.282587930 -0.274166424  0.364616151  1.268331538
- [6]  1.087135846  0.509376386  0.150351669 -1.413913363  1.602106853
-[11]  1.542027403  0.961107475 -0.304556863  0.250173539 -1.485033122
-[16]  0.375197312 -0.477330268 -0.015663256 -0.009015519 -0.646058964</code></pre>
+<pre><code> [1] -0.80129845 -1.61747245 -1.37759059 -0.54828481 -0.53446168  1.46003587
+ [7] -0.59080903  0.83429354 -0.70943180  0.01610081  0.22273952 -0.02109901
+[13] -0.08019086  0.84955687 -0.89397658  0.45138657  1.86115582  0.18632896
+[19] -0.59583521  0.51036341</code></pre>
 </div>
 </div>
 <p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
@@ -1739,7 +1740,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
