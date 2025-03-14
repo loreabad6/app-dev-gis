@@ -156,14 +156,13 @@ Headquarters has informed you that at this stage of decoding, there should be 55
 ::: callout-warning
 ### Checkpoint
 
-Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are above 70.
+Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 70.
 :::
 
-*Hint*: Use a relational comparison similar to what you used in the last checkpoint, but here you will need to subset values from your vector! It may be helpful to think of below as *not equal* to or *greater than* 70.
+*Hint*: Use a relational comparison similar to what you used in the last checkpoint, but here you will need to subset values from your vector! It may be helpful to think of below as *not equal* to or *smaller than* 70.
 
 ```{r}
-# Write code to verify that indices 500 and beyond have values **above** 70
-# should be 0!
+# Write code to verify that indices 500 and beyond have values **below** 70
 ```
 
 10. Take the square root of all numbers in indices 38 to 465.
