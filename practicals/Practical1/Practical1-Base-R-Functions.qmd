@@ -117,7 +117,7 @@ Headquarters has informed you that at this stage of decoding, there should be 55
 # Write code to verify that there are 552 numbers with values **below** 17
 ```
 
-4.  Turn your vector of numbers into a matrix with 5 columns.
+4.  Turn your vector of numbers into a matrix with 5 columns, fill the values by column and not by row.
 
 ```{r}
 # write your solution to prompt 4
