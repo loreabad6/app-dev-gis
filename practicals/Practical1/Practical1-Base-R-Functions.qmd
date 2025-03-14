@@ -123,7 +123,7 @@ Headquarters has informed you that at this stage of decoding, there should be 55
 # write your solution to prompt 4
 ```
 
-5.  Separately from your `top_secret` numbers, create a new vector called "evens" of all the even numbers between 1 and 428. That is, "evens" should contain 2, 4, 6, 8 ..., 552.
+5.  Separately from your `top_secret` numbers, create a new vector called "evens" of all the even numbers between 1 and 552. That is, "evens" should contain 2, 4, 6, 8 ..., 552.
 
 ```{r}
 # write your solution to prompt 5
