@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dealing with errors – R for reproducible spatial analysis</title>
+<title>Practical 2 – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -43,26 +77,26 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../misc/x_ask_help.html" rel="next">
-<link href="../practicals/Practical2/Practical2-DataViz.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../misc/x_error-handling.html" rel="next">
+<link href="../../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,7 +126,7 @@ div.csl-indent {
 }</script>
 
 
-<link rel="stylesheet" href="../html-styling/style.css">
+<link rel="stylesheet" href="../../html-styling/style.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -104,7 +138,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Annex</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical1/preparation/Practical1-Base-R-Functions.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical2/Practical2-DataViz.html">Practical 2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +153,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">R for reproducible spatial analysis</a> 
+      <a href="../../">R for reproducible spatial analysis</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/loreabad6/app-dev-gis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -135,7 +169,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -150,19 +184,19 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons/session_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons/session_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons/session_3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
   </div>
 </li>
@@ -179,13 +213,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
+  <a href="../../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Practical 2</span></a>
   </div>
 </li>
@@ -202,13 +236,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+  <a href="../../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
@@ -216,7 +250,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../refs/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -230,16 +264,29 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#advice-for-dealing-with-errors" id="toc-advice-for-dealing-with-errors" class="nav-link active" data-scroll-target="#advice-for-dealing-with-errors">Advice for dealing with errors</a></li>
+  <li><a href="#data-visualisation-packages" id="toc-data-visualisation-packages" class="nav-link active" data-scroll-target="#data-visualisation-packages">Data visualisation packages</a>
+  <ul class="collapse">
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><code>{ggplot2}</code></a></li>
+  <li><a href="#tmap" id="toc-tmap" class="nav-link" data-scroll-target="#tmap"><code>{tmap}</code></a></li>
+  <li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r">Base R</a></li>
+  <li><a href="#more-resources" id="toc-more-resources" class="nav-link" data-scroll-target="#more-resources">More resources</a></li>
+  </ul></li>
+  <li><a href="#data-packages" id="toc-data-packages" class="nav-link" data-scroll-target="#data-packages">Data packages</a>
+  <ul class="collapse">
+  <li><a href="#rnaturalearth" id="toc-rnaturalearth" class="nav-link" data-scroll-target="#rnaturalearth">{<code>rnaturalearth</code>}</a></li>
+  <li><a href="#osmdata" id="toc-osmdata" class="nav-link" data-scroll-target="#osmdata">{<code>osmdata</code>}</a></li>
+  <li><a href="#elevatr" id="toc-elevatr" class="nav-link" data-scroll-target="#elevatr">{<code>elevatr</code>}</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Annex</a></li><li class="breadcrumb-item"><a href="../misc/x_error-handling.html">Dealing with errors</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../practicals/Practical1/preparation/Practical1-Base-R-Functions.html">Practicals</a></li><li class="breadcrumb-item"><a href="../../practicals/Practical2/Practical2-DataViz.html">Practical 2</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Dealing with errors</h1>
+<h1 class="title">Practical 2</h1>
+<p class="subtitle lead">Spatial data visualisation: In search of the finest and ugliest map!</p>
 </div>
 
 
@@ -256,37 +303,116 @@ div.csl-indent {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d6b4f8cb-53bf-49d5-822c-e45cd01204a4.png?h=2a4e19375c89ba7b98c5a21f27029984" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Artwork by <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
-</figure>
+<p>In this practical you are going to let your creativity unleash… for good 👼 and for evil 😈</p>
+<p>You will be creating the <strong>BEST and WORST spatial data visualisations you can imagine</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>As you work through the practicals, you will encounter some code that does not work as you want it to. Don’t despair! Errors (when R is unable to run your code) and bugs (when the code doesn’t do what you hoped) are a natural part of coding. Even the best of the best deal with these problems regularly - learning to track down the issue is a skill that you can learn and practice.</p>
-<section id="advice-for-dealing-with-errors" class="level2">
-<h2 class="anchored" data-anchor-id="advice-for-dealing-with-errors">Advice for dealing with errors</h2>
-<p><strong>Errors can be sneaky - check results often</strong></p>
-<p>If a chunk of code runs smoothly without giving you any error or warnings this does not necessarily mean it accomplished the desired task.</p>
-<p>It is a good habit to check the results of your code every time you finish a task.</p>
+<div class="callout-title-container flex-fill">
+Inspiration
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For ideas on nice (or decent) maps see <a href="https://david.frigge.nz/3RDayMapChallenge/maps.html">#30DayMapChallenge map gallery</a> compiled by David Frigge. The maps have also the underlying code to reproduce them.</p>
+<p>For the worst map see <a href="https://www.farandwide.com/s/hilarious-terrible-maps-ed81c3193fbb4d98">terrible maps</a> and <a href="https://viz.wtf/archive/tagged/map">viz.wtf</a> for inspiration.</p>
+</div>
+</div>
+<p>You can use any data visualisation package in R (see some suggestions and guides below).</p>
+<p><em>Package documentation is crucial!</em> Read what the developers of the packages have arduously worked on for your ease of using their package.</p>
+<p><em>The internet will be your main guide!</em> Make sure to ask/prompt your questions correctly so that you get good code.</p>
+<p>You are free to use ANY spatial data you have! If you can’t find anything suitable, you can use the datasets shared in class. See below for data packages you can use as base layers.</p>
+<p><strong>We aim for static maps that you will be saving as a PNG file and submitting to blackboard alongside the code you used to create the maps (either as an R script or a .qmd). Don’t forget to include any data you used that is not publicly accessible.</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Due date: 05.05.2025
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Grading criteria</strong></p>
 <ul>
-<li><p>In the text before the code chunk, make sure to briefly state what the point of the chunk is. This will remind later readers - which might be your future self! - what the desired output is.</p></li>
-<li><p>If you created a new object, take a look at it, either by clicking its name in your <em>Environment</em> tab or by typing its name into the console. Make sure it looks about how you expect.</p></li>
-<li><p>If you created or updated a data frame, make sure your edits did what you hoped. Use the <em>Environment</em> or the <code>head()</code> function to investigate your changes.</p></li>
-<li><p>Make sure you don’t have any overwritten objects between your error and your attempts to solve it. If you are updating objects, it is probably safer to re-run all code chunks to see if the error persists.</p></li>
+<li>Code should be fully reproducible</li>
+<li>All data should be attached in the submission or available online</li>
+<li>Use of extra packages (e.g.&nbsp;ggtext, ggsci, etc.) or exploration of customising functions beyond the typical with ggplot2 and tmap (e.g.&nbsp;changing size of legend items, custom palette, etc.)</li>
+<li>Creativity</li>
+<li>Documentation</li>
 </ul>
-<p><strong>Two heads are better than one</strong></p>
-<p>It can be hard to spot bugs in code that you wrote.</p>
-<p>Work with those around you - if something goes wrong, ask a friend to take a peek at your code and see if any glaring errors (like <em>syntax error</em>) pop out.</p>
-<p><strong>Explain your code out loud</strong></p>
-<p>The best way to troubleshoot a sneaky but is to explain out loud each step of your code, and what you hoped to accomplish.</p>
-<p>If you are alone, try <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging</a>!</p>
-<p><strong>Google is your friend</strong></p>
-<p>The whole of the internet is at your disposal! Use it early, use it often.</p>
-<p>Some tricks:</p>
+<p>You have plenty of time for this practical! In the next sessions you will be using plots to visualise your data, so hopefully you get the hang of it.</p>
+<p>If you have trouble or questions, don’t hesitate to ask! If you had an idea, and did not find ANY way to do that with the available R packages out there, write it in your .R file (as a comment) or in your .qmd.</p>
+<p>We will be doing a showcase of your maps in the session of the 09.05.2025</p>
+</div>
+</div>
+<section id="data-visualisation-packages" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualisation-packages">Data visualisation packages</h2>
+<section id="ggplot2" class="level3">
+<h3 class="anchored" data-anchor-id="ggplot2"><code>{ggplot2}</code></h3>
+<p>Part of the tidyverse, ggplot2 is one of the go to packages for data visualisation in R.</p>
+<p>There are plenty of tutorials out there on how to use ggplot2 for your data visualisation. <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/">Here is a very nice one by Cedric Scherer</a> and <a href="https://r-spatial.org/r/2018/10/25/ggplot2-sf.html">another three-part one focused on maps by Mel Moreno and Mathieu Basille</a>.</p>
+<p>You will find native support to plot both <code>sf</code> (<a href="https://ggplot2.tidyverse.org/reference/ggsf.html"><code>geom_sf()</code></a>) and <code>stars</code> (raster; <a href="https://r-spatial.github.io/stars/articles/stars3.html#geom_stars"><code>geom_stars()</code></a>) objects.</p>
+<p>Choosing ggplot will allow you to use some of its many extensions. For example, the package <a href="https://wilkelab.org/ggtext/"><code>{ggtext}</code></a> let’s you customise colors in the text in your plot. For spatial elements such as north arrows and scales you can check out <a href="https://paleolimbot.github.io/ggspatial/index.html"><code>{ggspatial}</code></a>.</p>
+<p>To save your ggplot you can use the following:</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mymap <span class="ot">=</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(...) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(...)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename =</span> <span class="st">"path/to/your/plot/location/mymap.png"</span>, <span class="at">plot =</span> mymap,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">units =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="dv">300</span>) <span class="co"># adjust as necessary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="tmap" class="level3">
+<h3 class="anchored" data-anchor-id="tmap"><code>{tmap}</code></h3>
+<p>An R package for drawing thematic maps. This package tries to follow on the grammar of graphics principles of <code>{ggplot2}</code> but also provides a bit more flexibility. I personally use it for its versatility in switching between static and interactive, for its ease to build facet plots with free spatial axes and for the thought they put in particular cartography principles.</p>
+<p>Version 4.0 has been cooking for a while and <a href="https://r-tmap.github.io/tmap/">you will find the documentation here</a>. You will also find a <a href="https://r.geocompx.org/adv-map#tmap-basics">guide for making maps with <code>{tmap}</code> in the Geocomputation with R book</a>.</p>
+<p>To save your tmap you can use the following:</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mymap <span class="ot">=</span> <span class="fu">tm_shape</span>() <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tmap_save</span>(<span class="at">tm =</span> mymap, <span class="at">filename =</span> <span class="st">"path/to/your/plot/location/mymap.png"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">units =</span> <span class="st">"cm"</span>, <span class="at">dpi =</span> <span class="dv">300</span>) <span class="co"># adjust as necessary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="base-r" class="level3">
+<h3 class="anchored" data-anchor-id="base-r">Base R</h3>
+<p>Although not the easiest to customise, you can definitely make nice maps using base R. Can you also make ugly maps with it?</p>
+<p>You will find some basics on plotting <code>sf</code> objects in the <a href="https://r-spatial.github.io/sf/articles/sf5.html">{sf} plotting vignette in the package documentation here</a>.</p>
+<p>To save your plot to disk you can use the following code:</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"path/to/your/plot/location/mymap.png"</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">units =</span> <span class="st">"cm"</span>) <span class="co"># adjust as necessary</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(...) <span class="co"># the code for your plot goes here</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">device.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With this code your plot will not render on the RStudio viewer but directly on the file you created. I recommend you to wrap your <code>plot()</code> code at the complete end, once you are done with your editing.</p>
+</section>
+<section id="more-resources" class="level3">
+<h3 class="anchored" data-anchor-id="more-resources">More resources</h3>
 <ul>
-<li><p>Copy-paste the exact error message into Google. Chances are, somebody else had a similar problem and got a similar message.</p></li>
-<li><p>Include package names in your search terms. For example, “bar plot in ggplot” is a better search than “bar plot in R”.</p></li>
+<li><a href="https://nrennie.rbind.io/blog/r-packages-for-visualising-spatial-data/">R packages for visualising spatial data</a> blogpost by Nicola Rennie</li>
 </ul>
+</section>
+</section>
+<section id="data-packages" class="level2">
+<h2 class="anchored" data-anchor-id="data-packages">Data packages</h2>
+<section id="rnaturalearth" class="level3">
+<h3 class="anchored" data-anchor-id="rnaturalearth">{<code>rnaturalearth</code>}</h3>
+<p><a href="https://www.naturalearthdata.com/">Natural Earth</a> is a public domain map dataset including vector country and other administrative boundaries. With the package you can access the data easily within R and load it as an <code>sf</code> object. See the <a href="https://docs.ropensci.org/rnaturalearth/articles/rnaturalearth.html">package documentation here</a>.</p>
+</section>
+<section id="osmdata" class="level3">
+<h3 class="anchored" data-anchor-id="osmdata">{<code>osmdata</code>}</h3>
+<p>To fetch data from <a href="openstreetmap.org">OpenStreetMap</a> you can use this package. Check the <a href="https://docs.ropensci.org/osmdata/">documentation on how to query data for your area here</a>.</p>
+</section>
+<section id="elevatr" class="level3">
+<h3 class="anchored" data-anchor-id="elevatr">{<code>elevatr</code>}</h3>
+<p>To get elevation data you can use this package. See the <a href="https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html">package vignettes here</a> and the <a href="https://github.com/USEPA/elevatr">GitHub repository here</a></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -555,6 +681,7 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed
 Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1124,13 +1251,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../practicals/Practical2/Practical2-DataViz.html" class="pagination-link" aria-label="Practical 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Practical 2</span>
+      <a href="../../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Practical 1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../misc/x_ask_help.html" class="pagination-link" aria-label="Asking for help">
-        <span class="nav-page-text">Asking for help</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../misc/x_error-handling.html" class="pagination-link" aria-label="Dealing with errors">
+        <span class="nav-page-text">Dealing with errors</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1146,7 +1273,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../License.html">
+    <a class="nav-link" href="../../License.html">
 <p>CC-BY-4.0</p>
 </a>
   </li>  
