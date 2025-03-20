@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="next">
+<link href="../lessons/session_3.html" rel="next">
 <link href="../lessons/session_1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -197,6 +197,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -212,6 +218,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical 2</span></a>
   </div>
 </li>
       </ul>
@@ -680,29 +692,30 @@ $scores
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 4.3721840 4.2455422 3.6485097 6.4628306 3.9523484 0.2336571 6.5442830
- [8] 3.2549187 4.2307862 1.5660135 3.7704142 1.9009141 2.5494066 2.2394386
-[15] 0.5652972 1.8422112 3.1132876 6.3040155 1.5732075 2.4430001</code></pre>
+<pre><code> [1]  5.8871746 -0.3115327  2.6923773  2.7010547  1.6260361 -0.5191375
+ [7]  7.7052568  0.8791813  1.8959630  2.3856588  1.3027398  0.2950438
+[13] -0.8316203  4.7478784  5.4339248  2.6881537  2.9805627  0.1065956
+[19]  2.9557439  0.7026494</code></pre>
 </div>
 </div>
 <p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1.7147819  5.7885615  2.3078309  2.2317187 -0.6274164  3.2614020
- [7]  1.6190133  3.3085011  5.1362834  4.3864636 -0.1742007  5.1338881
-[13]  4.7858010  3.1111123  6.6969344 -0.9227236  3.7668182  3.3213058
-[19]  3.2861173  2.3900188</code></pre>
+<pre><code> [1]  2.4328818  4.4032291  2.8942192  2.8912968  0.4861647  4.7438897
+ [7]  0.5454599  0.9973491  5.2968846  1.8234901  2.1481123  2.5649567
+[13]  3.0545873  5.0106632 -0.1483170  2.4883695  3.2881135  6.7130980
+[19]  1.1177695  2.3443668</code></pre>
 </div>
 </div>
 <p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -1.237036100  0.327525117 -0.374327699  0.177863500  0.727198805
- [6]  2.711912644 -0.003167116  0.994637745 -1.446861646  1.075767199
-[11]  0.065323081 -0.245416924  0.075392394  1.287421547 -0.210049054
-[16] -0.402355820  1.705792624  0.122155949 -0.454756015  1.135594570</code></pre>
+<pre><code> [1] -1.06380298 -0.92355397 -0.32677578  1.44268748 -1.18052981 -0.01331366
+ [7] -0.50760097 -0.47028223 -0.63940495 -0.48049965  0.13621599 -0.50808030
+[13] -0.34769663 -0.26509305 -0.63237643  1.12147081 -0.03037257  1.55902404
+[19] -0.50169815  0.10256380</code></pre>
 </div>
 </div>
 <p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
@@ -1714,8 +1727,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
-        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lessons/session_3.html" class="pagination-link" aria-label="Tidy (spatial) data">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1739,7 +1752,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

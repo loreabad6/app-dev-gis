@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; R-spatial ecosystem – R for reproducible spatial analysis</title>
+<title>3&nbsp; Tidy (spatial) data – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lessons/session_4.html" rel="next">
+<link href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="next">
 <link href="../lessons/session_2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -141,7 +141,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,37 +188,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
   </div>
 </li>
       </ul>
@@ -234,48 +216,41 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical2/Practical2-Base-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 2</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical3/Practical3-Writing-Functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical4/Practical4-DataViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical5/Practical5-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 5</span></a>
-  </div>
-</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Annex</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final project</span></a>
+  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
@@ -292,30 +267,28 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-spatial-ecosystem" id="toc-r-spatial-ecosystem" class="nav-link active" data-scroll-target="#r-spatial-ecosystem"><span class="header-section-number">3.1</span> R-spatial ecosystem</a>
+  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link active" data-scroll-target="#installing-packages"><span class="header-section-number">3.1</span> Installing packages</a></li>
+  <li><a href="#tidy-data" id="toc-tidy-data" class="nav-link" data-scroll-target="#tidy-data"><span class="header-section-number">3.2</span> Tidy data</a>
   <ul class="collapse">
-  <li><a href="#rspatial-counterpart" id="toc-rspatial-counterpart" class="nav-link" data-scroll-target="#rspatial-counterpart"><span class="header-section-number">3.1.1</span> Rspatial counterpart</a></li>
+  <li><a href="#tidyverse-packages" id="toc-tidyverse-packages" class="nav-link" data-scroll-target="#tidyverse-packages"><span class="header-section-number">3.2.1</span> Tidyverse packages</a></li>
+  <li><a href="#a-typical-data-analysis-workflow" id="toc-a-typical-data-analysis-workflow" class="nav-link" data-scroll-target="#a-typical-data-analysis-workflow"><span class="header-section-number">3.2.2</span> A typical data analysis workflow</a></li>
   </ul></li>
-  <li><a href="#geometries-r2" id="toc-geometries-r2" class="nav-link" data-scroll-target="#geometries-r2"><span class="header-section-number">3.2</span> Geometries (R<sup>2</sup>)</a>
+  <li><a href="#spatial-data" id="toc-spatial-data" class="nav-link" data-scroll-target="#spatial-data"><span class="header-section-number">3.3</span> Spatial data</a>
   <ul class="collapse">
-  <li><a href="#operations-on-geometries" id="toc-operations-on-geometries" class="nav-link" data-scroll-target="#operations-on-geometries"><span class="header-section-number">3.2.1</span> Operations on geometries</a></li>
+  <li><a href="#the-sf-package" id="toc-the-sf-package" class="nav-link" data-scroll-target="#the-sf-package"><span class="header-section-number">3.3.1</span> The <code>{sf}</code> package</a></li>
+  <li><a href="#turning-xy-data-into-a-sf" id="toc-turning-xy-data-into-a-sf" class="nav-link" data-scroll-target="#turning-xy-data-into-a-sf"><span class="header-section-number">3.3.2</span> Turning X/Y data into a <code>sf</code></a></li>
+  <li><a href="#a-customised-map" id="toc-a-customised-map" class="nav-link" data-scroll-target="#a-customised-map"><span class="header-section-number">3.3.3</span> A customised map</a></li>
   </ul></li>
-  <li><a href="#spherical-geometries-s2" id="toc-spherical-geometries-s2" class="nav-link" data-scroll-target="#spherical-geometries-s2"><span class="header-section-number">3.3</span> Spherical geometries (S<sup>2</sup>)</a>
-  <ul class="collapse">
-  <li><a href="#switching-between-s2-and-r2" id="toc-switching-between-s2-and-r2" class="nav-link" data-scroll-target="#switching-between-s2-and-r2"><span class="header-section-number">3.3.1</span> Switching between S<sup>2</sup> and R<sup>2</sup></a></li>
-  <li><a href="#operations-on-geodetic-unprojected-data" id="toc-operations-on-geodetic-unprojected-data" class="nav-link" data-scroll-target="#operations-on-geodetic-unprojected-data"><span class="header-section-number">3.3.2</span> Operations on geodetic (unprojected) data</a></li>
-  </ul></li>
-  <li><a href="#raster-arrays-and-data-cubes" id="toc-raster-arrays-and-data-cubes" class="nav-link" data-scroll-target="#raster-arrays-and-data-cubes"><span class="header-section-number">3.4</span> Raster, arrays and data cubes</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">3.5</span> Further reading:</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">3.4</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></h1>
 </div>
 
 
@@ -334,276 +307,517 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">the core packages of the R-spatial ecosystem</label></li>
-<li><label><input type="checkbox">the main/particular concepts of spatial data implemented in R</label></li>
-<li><label><input type="checkbox">manipulating vector and raster data in R (with Practical 5)</label></li>
+<li><label><input type="checkbox">how to install packages in R</label></li>
+<li><label><input type="checkbox">what tidy data is, the basic packages and functions</label></li>
+<li><label><input type="checkbox">how to manipulate a data frame in R</label></li>
+<li><label><input type="checkbox">the basics of data visualisation in R</label></li>
+<li><label><input type="checkbox">how to create and manipulate a spatial data frame in R</label></li>
+<li><label><input type="checkbox">how to create your first map in R</label></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="installing-packages" class="level2 page-columns page-full" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="installing-packages"><span class="header-section-number">3.1</span> Installing packages</h2>
+<p>Last session, we mostly worked with base R. In this session we will be using dedicated packages that are particularly helpful for data science and spatial analysis.</p>
+<p>Stable packages are usually installed from <a href="https://cran.r-project.org/web/packages/">CRAN</a>. The function <code>install.packages()</code> takes a vector of names and a destination library, downloads the packages from the repositories and installs them.</p>
+<p>You can also install packages not on CRAN or “development” versions of packages using the <a href="https://remotes.r-lib.org/"><code>{remotes}</code></a> R package. Packages from GitHub, GitLab, Bitbucket as well as local packages are supported.</p>
+<div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💻 Code at Work: Your Turn to Execute
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Open RStudio</li>
+<li>Go to the console</li>
+<li>Copy paste the following code (you can do line by line or just everything at once and R will run it line by line)</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>) <span class="co"># data science package bundle</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>) <span class="co"># simple features in R</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"stars"</span>) <span class="co"># spatio-temporal arrays</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mapview"</span>) <span class="co"># fast interactive maps</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rnaturalearth"</span>) <span class="co"># access to base layers</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rnaturalearthdata"</span>) <span class="co"># access to base layers</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) <span class="co"># install packages in remote repositories</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"r-tmap/tmap"</span>) <span class="co"># data visualisation, static and interactive</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Wait ☕</li>
+<li>Got stuck? Ask for help ✋</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="tidy-data" class="level2 page-columns page-full" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="tidy-data"><span class="header-section-number">3.2</span> Tidy data</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💐 Acknowledgements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Illustrations from the <a href="https://www.openscapes.org/">Openscapes</a> blog <a href="https://www.openscapes.org/blog/2020/10/12/tidy-data/">Tidy Data for reproducibility, efficiency, and collaboration</a> by Julia Lowndes and Allison Horst.</p>
+</div>
+</div>
+<p>TIdy data is data organised in a particular, rectangular structure with one observation per row and one variable per column <span class="citation" data-cites="Wickham_2014">(<a href="../refs/references.html#ref-Wickham_2014" role="doc-biblioref">Wickham, 2014</a>)</span>.</p>
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/85520b8f-4629-4763-8a2a-9ceff27458bf.jpg?h=27c3e74642d8602799d180ff30995d2a" class="img-fluid"></p>
+<p><em><strong>Does this look familiar? Think about your standard GIS GUI.</strong></em></p>
+<p>But the data you find in the wild is not always tidy.</p>
+<p><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6e297111-efb7-4555-93d2-085071d1853c.jpg?h=6495be6d4c37f1148bd0148bc7458a13" class="img-fluid"></p>
+<p>The <a href="https://www.tidyverse.org/">tidyverse</a> group of packages collects the main workbench of functions you can use to clean, wrangle and manipulate your data.</p>
+<p>The ultimate goal of tidy workflows is that you can turn any untidy dataset into a tidy one and then be able to apply reproducible workflows.</p>
+<p><a href="https://openscapes.org/img/blog/tidydata/tidydata_5.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://openscapes.org/img/blog/tidydata/tidydata_5.jpg" class="img-fluid"></a></p>
+<section id="tidyverse-packages" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="tidyverse-packages"><span class="header-section-number">3.2.1</span> Tidyverse packages</h3>
+<div id="fig-tidyverse" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tidyverse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://readr.tidyverse.org/"><img src="https://readr.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{readr} reads rectangular data from delimited files</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://tibble.tidyverse.org/"><img src="https://tibble.tidyverse.org/logo.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{tibble} is a modern reimagining of the data.frame</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://tidyr.tidyverse.org/"><img src="https://tidyr.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{tidyr} helps you create tidy data</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://dplyr.tidyverse.org/"><img src="https://dplyr.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{dplyr} is a grammar of data manipulation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://stringr.tidyverse.org/"><img src="https://stringr.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{stringr} makes working with strings as easy as possible</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://forcats.tidyverse.org/"><img src="https://forcats.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{forcats} has tools that solve common problems with factors</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://purrr.tidyverse.org/"><img src="https://purrr.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{purrr} enhances R’s functional programming with tools for working with functions and vectors</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://ggplot2.tidyverse.org/"><img src="https://ggplot2.tidyverse.org/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figcaption>{ggplot2} creates plots based on the grammar of graphics</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tidyverse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Tidyverse packages
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-typical-data-analysis-workflow" class="level3 page-columns page-full" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="a-typical-data-analysis-workflow"><span class="header-section-number">3.2.2</span> A typical data analysis workflow</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r4ds.hadley.nz/diagrams/data-science/whole-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image from @r_data_science"><img src="https://r4ds.hadley.nz/diagrams/data-science/whole-game.png" class="img-fluid figure-img" alt="Image from Wickham, Çetinkaya-Rundel, et al. (2023)"></a></p>
+<figcaption>Image from <span class="citation" data-cites="r_data_science">Wickham, Çetinkaya-Rundel, et al. (<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+<div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💻 Code at Work: Your Turn to Execute
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Open a new QMD file in your course RStudio project</li>
+<li>Create a new code chunk</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in"># you will be writing your code in this space</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Type the code below, you can use the keyboard shortcut <code>CTRL+ALT+I</code></li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the tidyverse packages</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data with {readr} (already loaded with the code above)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/data/data_session3.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Explore your data with the function <code>glimpse()</code>, what do you have? What is this data about? How many observations do you have? How many columns?</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Some columns are not really so interesting, let’s get rid of them. Use the <code>select()</code> function from the <code>{dplyr}</code> package to do so.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To select a set of columns you can use the `c()` function</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># To keep all the columns except a set you can use a `-` sign in front</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the columns: wikipedia_link, keywords, continent, home_link</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># by replacing the `...` below</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember to save your data, either overwriting it or creating a new object</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">select</span>(data, <span class="sc">-</span><span class="fu">c</span>(...))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also use a pipe syntax `|&gt;` to concatenate your functions</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(...))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>Focus on a particular subset of your data. Can you filter the dataset (<code>filter()</code>) to only show those in your home country? You will find the column <code>iso_country</code> with a <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO 3166 alpha-2 coding</a>. If you don’t know the corresponding code, take a look at the Wikipedia link.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the `...` below you can add boolean comparisons per column, </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the function will check for each row if the comparison is </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># true or false and will only keep the trues</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data_ <span class="ot">=</span> data <span class="sc">|&gt;</span> <span class="fu">filter</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>Now let’s take a look at the variable <code>type</code>. It seems to have categorical information. We can do a check of its categories by calling the <code>unique()</code> function.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The unique() function is from base R.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You can use retrieval operators from base R to select the column you want to check</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also use functions from dplyr such as select() to select a column but keep the tibble structure and pull() to extract the column as a vector</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li>Can you find how many of these types are present in your country? You can use the function <code>count()</code>.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the count() function you can pass your column of interest</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and get a frequency table</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a convenience function to performing </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># data |&gt; group_by(type) |&gt; summarise(n = n())</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>data_ <span class="sc">|&gt;</span> <span class="fu">count</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="9" type="1">
+<li>Shall we make a plot of that info? Let’s use <code>ggplot()</code> functions to do that, in this case a bar plot would be a good fit.</li>
+</ol>
+<div class="cell styled-output" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot functions concatenate layers by using the `+` operator</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># usually the data you want to plot is stated in the first line </span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># as the argument for ggplot()</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the next layer will be in this case the bar plot</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># the aesthetics (aes()) are the ones that map information of the data</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># source to the plot. Here you can pass the arguments a plot needs.</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># whatever is not mapped to the dataset is passed outside of aes()</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># you can see R color guides here: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(...), ...) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="10" type="1">
+<li>You can go a step further and create subplots based on a variable of interest.</li>
+</ol>
+<div class="cell styled-output" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(...), ...) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://ourairports.com/data/">Data source</a>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="spatial-data" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="spatial-data"><span class="header-section-number">3.3</span> Spatial data</h2>
+<p><strong>Spatial data is special</strong>, you already know this. <em>Coordinates, projections and transformations, geometries, vector data types, raster and gridded data</em>: these are a sample of the characteristics spatial software has to take into account.</p>
+<p>Spatial data in R has had a long history and evolution. Spatial packages were developed already from the time R’s predecessor, the S language, was around in the 1990s. Many package developments have taken place until getting to the current state of R-Spatial packages. We will take a look at the current package ecosystem next session.</p>
+<section id="the-sf-package" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="the-sf-package"><span class="header-section-number">3.3.1</span> The <code>{sf}</code> package</h3>
+<p>Simple Features for R <code>{sf}</code> <span class="citation" data-cites="sf2018">(<a href="../refs/references.html#ref-sf2018" role="doc-biblioref">E. Pebesma, 2018</a>)</span> is currently the main R package to handle spatial data. <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple features</a> are a formal <a href="https://www.ogc.org/publications/standard/sfa/">OGC standard (ISO 19125-1:2004)</a> that describes how objects in the real world can be represented in computers.</p>
+<p>Geometry types: points, lines, polygons, or their derivatives are represented by this OGC hierarchical data model. <code>{sf}</code> supports the following geometry types:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r.geocompx.org/images/sf-classes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Simple features supported by {sf} from @lovelace2019geocomputation"><img src="https://r.geocompx.org/images/sf-classes.png" class="img-fluid figure-img" alt="Simple features supported by {sf} from Lovelace et al. (2019)"></a></p>
+<figcaption>Simple features supported by <code>{sf}</code> from <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></figcaption>
+</figure>
+</div>
+<p>The <code>{sf}</code> package was designed to fit tidy data workflows. To do so, it keeps the philosophy of one row per observation, one column per variable. As such, the geometry of each observation is treated as a variable and is place in a geometry column.</p>
+<p>But the geometry column in a <code>sf</code> object is special in different ways:</p>
+<ul>
+<li>it is a “sticky” column, which means it is not easily dropped by any data operations you perform, e.g.&nbsp;when you select a column in a <code>sf</code> object, the geometry column will stay there.</li>
+<li>it is a “list-column”, which means it is a nested column.</li>
+<li>it has its own class: <code>sfc</code>, which is a standalone class where methods for <code>sfc</code> objects can be applied.</li>
+</ul>
+<div class="cell styled-output">
+<details class="code-fold">
+<summary><code>sfc</code> methods</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span>(<span class="at">class =</span> <span class="st">"sfc"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  [1] [                            [&lt;-                         </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  [3] as.data.frame                c                           </span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  [5] coerce                       format                      </span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  [7] identify                     initialize                  </span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  [9] Ops                          points                      </span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [11] print                        rep                         </span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="do">## [13] show                         slotsFromS3                 </span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="do">## [15] st_area                      st_as_binary                </span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="do">## [17] st_as_grob                   st_as_s2                    </span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="do">## [19] st_as_sf                     st_as_text                  </span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="do">## [21] st_bbox                      st_boundary                 </span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="do">## [23] st_break_antimeridian        st_buffer                   </span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="do">## [25] st_cast                      st_centroid                 </span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="do">## [27] st_collection_extract        st_concave_hull             </span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="do">## [29] st_convex_hull               st_coordinates              </span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="do">## [31] st_crop                      st_crs                      </span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="do">## [33] st_crs&lt;-                     st_difference               </span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="do">## [35] st_exterior_ring             st_geometry                 </span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="do">## [37] st_inscribed_circle          st_intersection             </span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="do">## [39] st_intersects                st_is_full                  </span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="do">## [41] st_is_valid                  st_is                       </span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="do">## [43] st_line_merge                st_m_range                  </span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="do">## [45] st_make_valid                st_minimum_bounding_circle  </span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="do">## [47] st_minimum_rotated_rectangle st_nearest_points           </span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="do">## [49] st_node                      st_normalize                </span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="do">## [51] st_point_on_surface          st_polygonize               </span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="do">## [53] st_precision                 st_reverse                  </span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="do">## [55] st_sample                    st_segmentize               </span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="do">## [57] st_set_precision             st_shift_longitude          </span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="do">## [59] st_simplify                  st_snap                     </span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="do">## [61] st_sym_difference            st_transform                </span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="do">## [63] st_triangulate_constrained   st_triangulate              </span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="do">## [65] st_union                     st_voronoi                  </span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="do">## [67] st_wrap_dateline             st_write                    </span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="do">## [69] st_z_range                   st_zm                       </span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="do">## [71] str                          summary                     </span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="do">## [73] text                         vec_cast.sfc                </span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="do">## [75] vec_ptype2.sfc              </span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="do">## see '?methods' for accessing help and source code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6025ee5a-bf25-4275-a211-16f4425089d2_rw_1920.png?h=8df287c0e9803a81d2406fdd7ff938da" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Artwork from Allison Horst"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6025ee5a-bf25-4275-a211-16f4425089d2_rw_1920.png?h=8df287c0e9803a81d2406fdd7ff938da" class="img-fluid figure-img" alt="Artwork from Allison Horst"></a></p>
+<figcaption>Artwork from <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="turning-xy-data-into-a-sf" class="level3 page-columns page-full" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="turning-xy-data-into-a-sf"><span class="header-section-number">3.3.2</span> Turning X/Y data into a <code>sf</code></h3>
+<div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💻 Code at Work: Your Turn to Execute
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Convert your <code>data</code> object to a spatial object. For this we will use the <code>sf</code> package.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The `st_as_sf()` function is used to convert a foreign object into a sf object</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If you have a tabular dataset with X/Y or lat/long columns, this can be </span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># turned into a sf by passing it as a vector to the `coords` parameter</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Don't forget to also assign the correct `crs` to your object</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>data_sf <span class="ot">=</span> <span class="fu">st_as_sf</span>(</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  data_,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">coords =</span> ...,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">crs =</span> ... <span class="co"># this is the projection the data is in</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Take a look at the new spatial object you created, how is it different from the tabular format we had before?</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data_sf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>We can have a quick visual of the dataset now that we have given it coordinates. You can use the base R function <code>plot()</code> for this.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This function will plot the first 9 parameters of the sf object, </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># unless specified otherwise</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This might take a bit depending on how good your computer is, </span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># as we are plotting 80 thousand points ;)</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data_sf)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also create a quick interactive map</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(data_sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>But this basic plot is not really a map just yet. Let’s make a map again for the airports in your home country. You will need to filter the data again, which is something you can do also in <code>sf</code> objects.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We can use ggplot again to create a map! Here the `geom_sf()` function will be of use</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_sf) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(...)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># to do projections on the fly</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>One extra feature we can add is a country base layer to help locate the information. For this we can use the <code>rnaturalearth</code> package.</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You can add the name of your country </span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>country <span class="ot">=</span> <span class="fu">ne_countries</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>Here we plot both layers in one map</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we will call the ggplot function again but with different spatial layers</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Since we want to have the country boundary in the background</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># we will call that function first and then the data object we filtered above</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> country) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> data_sf, <span class="fu">aes</span>(<span class="at">color =</span> ...)) <span class="sc">+</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>Customise your map, play a bit with the options you have. It makes sense you are not familiar with everything but you can start exploring. I customised my map you can see the full code to create it in the next section.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="a-customised-map" class="level3 page-columns page-full" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="a-customised-map"><span class="header-section-number">3.3.3</span> A customised map</h3>
+<div class="cell styled-output page-columns page-full">
+<details class="code-fold">
+<summary>Full code for a more customised map</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the data</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/loreabad6/app-dev-gis/main/data/data_session3.csv"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>data_sf_ec <span class="ot">=</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Directly transform to sf</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"longitude_deg"</span>, <span class="st">"latitude_deg"</span>), <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter for my home country</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(iso_country <span class="sc">==</span> <span class="st">"EC"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transform airport type to nice labels by capitalising the first letter and removing the snakecase</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">str_to_sentence</span>(<span class="fu">str_replace_all</span>(type, <span class="st">"_"</span>, <span class="st">" "</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Relevel or reorder the types to have them in a more logical order</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">fct_relevel</span>(type, <span class="st">"Large airport"</span>, <span class="st">"Medium airport"</span>,</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"Small airport"</span>, <span class="st">"Heliport"</span>, <span class="st">"Closed"</span>)) </span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain Ecuador but also surrounding countries for context</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">=</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="dv">50</span>, <span class="at">country =</span> <span class="fu">c</span>(<span class="st">"Colombia"</span>,<span class="st">"Ecuador"</span>,<span class="st">"Peru"</span>))</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract Ecuador to obtain its bounding box and focus on it in coord_sf</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>ecuador <span class="ot">=</span> countries <span class="sc">|&gt;</span> <span class="fu">filter</span>(sovereignt <span class="sc">==</span> <span class="st">"Ecuador"</span>)</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>ec_bbox <span class="ot">=</span> ecuador <span class="sc">|&gt;</span> </span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transform before getting the bounding box to match the CRS in the plot</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">24817</span>) <span class="sc">|&gt;</span> <span class="fu">st_bbox</span>()</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add the country layer</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> countries, <span class="at">fill =</span> <span class="st">"grey90"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add the data, changed the shape to a dot with a fill and border color, </span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># assgined an alpha or opacity to not oclude the points</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> data_sf_ec, <span class="fu">aes</span>(<span class="at">fill =</span> type, <span class="at">size =</span> type),</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Change the fill palette</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="st">"Airport type"</span>, <span class="at">palette =</span> <span class="st">"Dark2"</span>) <span class="sc">+</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Manually assign point sizes</span></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size_manual</span>(<span class="st">"Airport type"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="fl">0.25</span>)) <span class="sc">+</span></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Change the CRS to a projected one to avoid distorsions. </span></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Focus the map on Ecuador by using the bounding box extent</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">crs =</span> <span class="dv">24817</span>,</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(ec_bbox[<span class="st">"xmin"</span>], ec_bbox[<span class="st">"xmax"</span>]),</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(ec_bbox[<span class="st">"ymin"</span>], ec_bbox[<span class="st">"ymax"</span>])</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>  <span class="co"># use a more minimal theme</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>  <span class="co"># change the legend to the bottom</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="session_3_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img column-page" width="3600"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-A small survey 📝
+Things to try at home…
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To tailor the following sessions to your interests, please fill in this survey. Thank you! 💐</p>
-<iframe width="640px" height="480px" src="https://forms.office.com/e/ENyMphVGf0?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" msallowfullscreen="">
-</iframe>
-</div>
-</div>
-<section id="r-spatial-ecosystem" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="r-spatial-ecosystem"><span class="header-section-number">3.1</span> R-spatial ecosystem</h2>
-<blockquote class="blockquote">
-<p>R-Spatial can be loosely defined as the ecosystem of code, projects and people using R for working with and adding value to spatial data.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</blockquote>
-<p>The <a href="https://github.com/r-spatial">R-spatial organization</a> attempts to harmonise packages for spatial analysis in R, with a large number of R packages depending on <code>{sf}</code>, the core package for spatial data handling.</p>
-<p>A good overview of the available spatial libraries can be found in the <a href="https://cloud.r-project.org/web/views/Spatial.html">CRAN Task View: Analysis of Spatial Data</a></p>
+<p>… you know, if you are bored.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="R-spatial ecosystem from @sf2023"><img src="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R-spatial ecosystem from E. Pebesma &amp; Bivand (2023)"></a></p>
+<p><img src="https://c.tenor.com/TpfmCmRN98gAAAAC/tenor.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
 </figure>
 </div>
-<figcaption>R-spatial ecosystem from <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
-</figure>
+<p>You can keep playing with your map to get familiar with the ggplot package, customise it further, add scale and north arrows… your imagination (and maybe the ggplot extensions available) is the limit.</p>
+<p>Another thing you can try is to create a function that automatically generates the map for a given country.</p>
 </div>
-<section id="rspatial-counterpart" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="rspatial-counterpart"><span class="header-section-number">3.1.1</span> Rspatial counterpart</h3>
-<p>Not to be confused with R-spatial, the Rspatial resources include a different way to handle geospatial data in R. The main package <code>{terra}</code> provides classes and methods to represent raster and vector objects. It works well on large data sets and is a fast implementation mainly because it is written directly in C++. This means that, for example, a Python module could also be built on top of this library<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. <code>{terra}</code> is based on C++ modules like <code>gdal</code>, <code>geos</code> and <code>ncdf</code> and builds it’s own spat module on C++ that interacts with R via the Rcpp module<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://bakaniko.github.io/foss4g2022-getting-started-rspatial/figs/terra-libs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="{terra} set-up from @Hijmans_terra_2020"><img src="https://bakaniko.github.io/foss4g2022-getting-started-rspatial/figs/terra-libs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="{terra} set-up from Hijmans (2020)"></a></p>
-</figure>
-</div>
-<figcaption>{terra} set-up from <span class="citation" data-cites="Hijmans_terra_2020">Hijmans (<a href="../refs/references.html#ref-Hijmans_terra_2020" role="doc-biblioref">2020</a>)</span></figcaption>
-</figure>
 </div>
 </section>
 </section>
-<section id="geometries-r2" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="geometries-r2"><span class="header-section-number">3.2</span> Geometries (R<sup>2</sup>)</h2>
-<p>As the name of the package says, <code>{sf}</code> is meant to deal with <em>simple</em> features. Polygon geometries in particular also have to follow certain rules in order to be valid simple features.</p>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-❓ Why are they called <em>simple</em>?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Linking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.4.0; sf_use_s2() is TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(ls <span class="ot">&lt;-</span> <span class="fu">st_linestring</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>LINESTRING (0 0, 1 1, 2 2, 0 2, 1 1, 2 0)</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="session_3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_is_simple</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div>
-<p>Is the <code>ls</code> object valid?</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_is_valid</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-</div>
-<p><a href="https://r-spatial.org/book/03-Geometries.html#sec-valid">Read more here</a></p>
-</div>
-</div>
-</div>
-<p><code>{sf}</code> also supports a number of spatial concepts:</p>
+<section id="further-reading" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">3.4</span> Further reading:</h2>
 <ul>
-<li>Z and M coordinates (Z referes to elevation and M referes to any other measure)</li>
-<li>Empty geometries</li>
-<li>Text and binary encodings (WKT and WKB)</li>
-</ul>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ls <span class="co"># wkt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>LINESTRING (0 0, 1 1, 2 2, 0 2, 1 1, 2 0)</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ls <span class="sc">|&gt;</span> <span class="fu">st_as_binary</span>() <span class="co"># wkb</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] 01 02 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
- [26] 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 40 00
- [51] 00 00 00 00 00 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00
- [76] 00 00 00 00 f0 3f 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 40 00 00 00
-[101] 00 00 00 00 00</code></pre>
-</div>
-</div>
-<section id="operations-on-geometries" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="operations-on-geometries"><span class="header-section-number">3.2.1</span> Operations on geometries</h3>
-<p>Operations can be applied to a single geometry (<em>unary</em>), to a pair of geometries (<em>binary</em>) and to a set of geometries (<em>n-ary</em> operation).</p>
-<p>Results of this operations include:</p>
-<ul>
-<li>logical (<em>predicates</em>)</li>
-<li>a quantity (<em>measures</em>) area, length, distance</li>
-<li>a new geometry (<em>transformations</em>) e.g.&nbsp;centroid, buffer, bounding box, intersection, union, etc.</li>
-</ul>
-<p>Binary topological relations are represented by the binary predicates. They are implementations of the Dimensionally Extended Nine-Intersection Model (<a href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://r.geocompx.org/figures/relations-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Examples of topological relations from @lovelace2019geocomputation"><img src="https://r.geocompx.org/figures/relations-1.png" class="img-fluid figure-img" alt="Examples of topological relations from Lovelace et al. (2019)"></a></p>
-<figcaption>Examples of topological relations from <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></figcaption>
-</figure>
-</div>
-<p>Read more about <a href="https://r-spatial.org/book/03-Geometries.html#sec-de9im">binary predicates here</a>.</p>
-<p>Understanding the DE-9IM relations allow you to establish your own relations. See how in <a href="https://r.geocompx.org/spatial-operations">section 4.2.4 of the Spatial Data Operations chapter</a> of <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span>.</p>
-</section>
-</section>
-<section id="spherical-geometries-s2" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="spherical-geometries-s2"><span class="header-section-number">3.3</span> Spherical geometries (S<sup>2</sup>)</h2>
-<p>The R<sup>2</sup> geometries explained above are defined on the plane. When we consider geometries on the sphere, we are talking about spherical geometries.</p>
-<p>Most of the geospatial libraries that apply spatial operations (GDAL, GEOS, etc.) do not really consider the ellipsoidal shape of the Earth. This is why the <a href="http://s2geometry.io/">s2geometry</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> library was built, to apply operations on the sphere, a better representation of the ellipsoid than the plane.</p>
-<div id="fig-s2issues" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-s2issues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_wireframe_10deg_6r.svg/1200px-Sphere_wireframe_10deg_6r.svg.png" style="width:80.0%;height:80.0%" class="figure-img"></p>
-<figcaption>Straight lines don’t really exist. The shortest line connecting two points is a great circle segment.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="We can define a full polygon which comprises the entire surface of the Earth. Source: @sf2023"><img src="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="img-fluid figure-img"></a></p>
-<figcaption>We can define a full polygon which comprises the entire surface of the Earth. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: @sf2023"><img src="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="img-fluid figure-img"></a></p>
-<figcaption>Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-s2issues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Particularities of spherical geometries
-</figcaption>
-</figure>
-</div>
-<section id="switching-between-s2-and-r2" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="switching-between-s2-and-r2"><span class="header-section-number">3.3.1</span> Switching between S<sup>2</sup> and R<sup>2</sup></h3>
-<p>Although S<sup>2</sup> is a more accurate way of performing spatial operations, not every operation is implemented fully yet. To switch between using <code>GEOS</code> (R<sup>2</sup>) or <code>s2</code> you can do:</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Spherical geometry (s2) switched off</code></pre>
-</div>
-</div>
-</section>
-<section id="operations-on-geodetic-unprojected-data" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="operations-on-geodetic-unprojected-data"><span class="header-section-number">3.3.2</span> Operations on geodetic (unprojected) data</h3>
-<p>When <code>sf_use_s2()</code> is <code>FALSE</code>, operations like <code>st_area()</code>, <code>st_distance()</code> and <code>st_length()</code> will compute on the geoid using GEOS instead of on the sphere, which is the default. The former is a slower computation.</p>
-<p>For unary operations that receive a distance argument, such as <code>st_buffer()</code> the distance argument is taken in meters when <code>sf_use_s2()</code> is <code>TRUE</code> and in degrees when <code>FALSE</code>, which also gives a warning.</p>
-<blockquote class="blockquote">
-<p>In case x has <strong>geodetic coordinates (lon/lat) and sf_use_s2() is TRUE</strong>, a numeric dist is taken as <strong>distance in meters</strong> and a units object in dist is converted to meters. In case x has <strong>geodetic coordinates (lon/lat) and sf_use_s2() is FALSE</strong>, a numeric dist is taken as <strong>degrees</strong>, and a units object in dist is converted to arc_degree (and warnings are issued). In case x does not have geodetic coordinates (projected) then numeric dist is assumed to have the units of the coordinates, and a units dist is converted to those if st_crs(x) is not NA.</p>
-</blockquote>
-</section>
-</section>
-<section id="raster-arrays-and-data-cubes" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="raster-arrays-and-data-cubes"><span class="header-section-number">3.4</span> Raster, arrays and data cubes</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://r-spatial.org/book/01-hello_files/figure-html/fig-rastertypes01-1.png" class="img-fluid figure-img"></p>
-<figcaption>Raster types. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
-</figure>
-</div>
-<p>The packages <code>{stars}</code> <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span> and <code>{terra}</code> <span class="citation" data-cites="R-terra">(<a href="../refs/references.html#ref-R-terra" role="doc-biblioref">Hijmans, 2024b</a>)</span> are the engines to handle raster datasets in R.</p>
-<p>Due to its performance, <code>{terra}</code> took a significant role in the spatial handling of raster data.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>terra 1.8.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tif <span class="ot">=</span> <span class="fu">system.file</span>(<span class="st">"tif/L7_ETMs.tif"</span>, <span class="at">package =</span> <span class="st">"stars"</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast1 =</span> <span class="fu">rast</span>(tif))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>class       : SpatRaster 
-dimensions  : 352, 349, 6  (nrow, ncol, nlyr)
-resolution  : 28.5, 28.5  (x, y)
-extent      : 288776.3, 298722.8, 9110729, 9120761  (xmin, xmax, ymin, ymax)
-coord. ref. : SIRGAS 2000 / UTM zone 25S (EPSG:31985) 
-source      : L7_ETMs.tif 
-names       : L7_ETMs_1, L7_ETMs_2, L7_ETMs_3, L7_ETMs_4, L7_ETMs_5, L7_ETMs_6 </code></pre>
-</div>
-</div>
-<p>Nevertheless, the <code>{stars}</code> package is not only design to handle raster data, but mainly array representations (list of matrices), which makes it powerful for data cube representations, both as vector and raster representations.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: abind</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast2 =</span> <span class="fu">read_stars</span>(tif))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>stars object with 3 dimensions and 1 attribute
-attribute(s):
-             Min. 1st Qu. Median     Mean 3rd Qu. Max.
-L7_ETMs.tif     1      54     69 68.91242      86  255
-dimension(s):
-     from  to  offset delta                     refsys point x/y
-x       1 349  288776  28.5 SIRGAS 2000 / UTM zone 25S FALSE [x]
-y       1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE [y]
-band    1   6      NA    NA                         NA    NA    </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast3 =</span> <span class="fu">read_stars</span>(<span class="fu">c</span>(tif,tif), <span class="at">along =</span> <span class="st">"time"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>stars object with 4 dimensions and 1 attribute
-attribute(s), summary of first 1e+05 cells:
-             Min. 1st Qu. Median    Mean 3rd Qu. Max.
-L7_ETMs.tif    47      65     76 77.3419      87  255
-dimension(s):
-     from  to  offset delta                     refsys point x/y
-x       1 349  288776  28.5 SIRGAS 2000 / UTM zone 25S FALSE [x]
-y       1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE [y]
-band    1   6      NA    NA                         NA    NA    
-time    1   2      NA    NA                         NA    NA    </code></pre>
-</div>
-</div>
-<p>Raster-vector operations work well with both packages, where <code>{terra}</code> and <code>{stars}</code> can both interact with <code>sf</code> objects.</p>
-</section>
-<section id="further-reading" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">3.5</span> Further reading:</h2>
-<ul>
+<li><a href="https://r4ds.hadley.nz/data-import">Data import</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/data-tidy">Tidy data</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r.geocompx.org/intro#history-of-r-spatial">History of R-Spatial</a> section <span class="citation" data-cites="lovelace2019geocomputation">(<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">Lovelace et al., 2019</a>)</span></li>
 <li><a href="https://r-spatial.org/book/part-1.html">Spatial data</a> section, chapters 1-6 <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
-<li><a href="https://r-spatial.org/book/07-Introsf.html">Introduction to sf and stars</a> chapter <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
-<li><a href="https://rspatial.org/spatial/index.html#">Spatial data with terra</a> section <span class="citation" data-cites="rspatial_hijmans">(<a href="../refs/references.html#ref-rspatial_hijmans" role="doc-biblioref">Hijmans, 2024a</a>)</span></li>
-<li><a href="https://r-spatial.github.io/sf/articles/sf7.html">Spherical geometry in sf using s2geometry</a> vignette <span class="citation" data-cites="sf2018">(<a href="../refs/references.html#ref-sf2018" role="doc-biblioref">E. Pebesma, 2018</a>)</span></li>
-<li><a href="https://r-spatial.github.io/stars/index.html"><code>{stars}</code> articles</a> in package documentation <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span></li>
+<li><a href="https://r.geocompx.org/spatial-class">Geographic Data in R</a> chapter <span class="citation" data-cites="lovelace2019geocomputation">(<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">Lovelace et al., 2019</a>)</span></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf1.html">Simple Features for R</a> vignette <span class="citation" data-cites="R-sf">(<a href="../refs/references.html#ref-R-sf" role="doc-biblioref">E. Pebesma, 2025</a>)</span></li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-agarwal2023r" class="csl-entry" role="listitem">
+Agarwal, A. (2023). <em>R vs python: Which is better for data science in 2023</em>. <a href="https://externlabs.com/blogs/r-vs-python/" class="uri">https://externlabs.com/blogs/r-vs-python/</a>.
+</div>
 <div id="ref-R-quarto" class="csl-entry" role="listitem">
 Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
 </div>
@@ -669,6 +883,9 @@ Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</e
 </div>
 <div id="ref-gstat2016" class="csl-entry" role="listitem">
 Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
+</div>
+<div id="ref-grolemund2014hands" class="csl-entry" role="listitem">
+Grolemund, G. (2014). <em>Hands-on programming with r</em>. "O’Reilly Media, Inc.".
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -863,15 +1080,6 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed
 Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p><a href="https://www.osgeo.org/projects/r-spatial/" class="uri">https://www.osgeo.org/projects/r-spatial/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>In theory, but has not been implemented yet<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Even though a C++ implementation is in many cases faster, it is harder to understand, debug or modify.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>The C++ s2geometry library was written by Google and is used in many of its products (e.g.&nbsp;Google Maps, Google Earth Engine, Bigquery GIS).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -1441,13 +1649,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/session_2.html" class="pagination-link" aria-label="Tidy (spatial) data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span>
+      <a href="../lessons/session_2.html" class="pagination-link" aria-label="R basics &amp; functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lessons/session_4.html" class="pagination-link" aria-label="GIS: in-house and bridges">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
+        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1455,7 +1663,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Winter Semester 2024/2025</p>
+<p>Summer Semester 2025</p>
 </div>   
     <div class="nav-footer-center">
 <p>Department of Geoinformatics — Z_GIS, University of Salzburg</p>
@@ -1471,7 +1679,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
