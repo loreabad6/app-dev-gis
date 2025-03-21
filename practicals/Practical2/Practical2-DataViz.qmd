@@ -135,7 +135,7 @@ See the [package documentation here](https://docs.ropensci.org/rnaturalearth/art
 
 ### {`osmdata`}
 
-To fetch data from [OpenStreetMap](openstreetmap.org) you can use this package. Check the [documentation on how to query data for your area here](https://docs.ropensci.org/osmdata/).
+To fetch data from [OpenStreetMap](https://openstreetmap.org) you can use this package. Check the [documentation on how to query data for your area here](https://docs.ropensci.org/osmdata/). If your data is very large you can also use the package [`{osmextract}`](https://docs.ropensci.org/osmextract/) to not exhaust the OSM API.
 
 ### {`elevatr`}
 
