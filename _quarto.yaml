@@ -19,7 +19,7 @@ book:
         - lessons/session_1.qmd
         - lessons/session_2.qmd
         - lessons/session_3.qmd
-        # - lessons/session_4.qmd
+        - lessons/session_4.qmd
         # - lessons/session_5.qmd
         # - lessons/session_6.qmd
         # - lessons/session_7.qmd
@@ -28,7 +28,7 @@ book:
         # - lessons/placeholder.qmd
         - practicals/Practical1/preparation/Practical1-Base-R-Functions.qmd
         - practicals/Practical2/Practical2-DataViz.qmd
-        # - practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.qmd
+        - practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.qmd
         # - practicals/Practical4/preparation/Practical4-R-package.qmd
     - part: "Annex"
       chapters: 
@@ -62,6 +62,7 @@ bibliography:
 nocite: |
   @*
 csl: https://raw.githubusercontent.com/citation-style-language/styles/refs/heads/master/apa.csl
+prefer-html: true
 knitr:
   opts_chunk:
     classes: styled-output

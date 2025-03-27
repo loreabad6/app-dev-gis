@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; R basics &amp; functions – R for reproducible spatial analysis</title>
+<title>4&nbsp; R-spatial ecosystem – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,8 +84,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lessons/session_3.html" rel="next">
-<link href="../lessons/session_1.html" rel="prev">
+<link href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="next">
+<link href="../lessons/session_3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -132,7 +132,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../html-styling/style.css">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,7 +141,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -193,7 +193,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
@@ -205,7 +205,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
+  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
   </div>
 </li>
@@ -279,32 +279,30 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#i-come-from-python-how-will-i-adapt-to-r" id="toc-i-come-from-python-how-will-i-adapt-to-r" class="nav-link active" data-scroll-target="#i-come-from-python-how-will-i-adapt-to-r"><span class="header-section-number">2.1</span> I come from Python, how will I adapt to R?</a></li>
-  <li><a href="#base-or-vanilla-r" id="toc-base-or-vanilla-r" class="nav-link" data-scroll-target="#base-or-vanilla-r"><span class="header-section-number">2.2</span> Base or “vanilla” R</a></li>
-  <li><a href="#basics-and-good-practice" id="toc-basics-and-good-practice" class="nav-link" data-scroll-target="#basics-and-good-practice"><span class="header-section-number">2.3</span> Basics and good practice</a>
+  <li><a href="#r-spatial-ecosystem" id="toc-r-spatial-ecosystem" class="nav-link active" data-scroll-target="#r-spatial-ecosystem"><span class="header-section-number">4.1</span> R-spatial ecosystem</a>
   <ul class="collapse">
-  <li><a href="#r-objects" id="toc-r-objects" class="nav-link" data-scroll-target="#r-objects"><span class="header-section-number">2.3.1</span> R objects</a></li>
-  <li><a href="#object-naming" id="toc-object-naming" class="nav-link" data-scroll-target="#object-naming"><span class="header-section-number">2.3.2</span> Object naming</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">2.3.3</span> Comments</a></li>
-  <li><a href="#rstudio-diagnostics" id="toc-rstudio-diagnostics" class="nav-link" data-scroll-target="#rstudio-diagnostics"><span class="header-section-number">2.3.4</span> RStudio diagnostics</a></li>
-  <li><a href="#saving-r-scripts-or-quarto-files" id="toc-saving-r-scripts-or-quarto-files" class="nav-link" data-scroll-target="#saving-r-scripts-or-quarto-files"><span class="header-section-number">2.3.5</span> Saving R scripts or Quarto files</a></li>
+  <li><a href="#rspatial-counterpart" id="toc-rspatial-counterpart" class="nav-link" data-scroll-target="#rspatial-counterpart"><span class="header-section-number">4.1.1</span> Rspatial counterpart</a></li>
   </ul></li>
-  <li><a href="#r-functions" id="toc-r-functions" class="nav-link" data-scroll-target="#r-functions"><span class="header-section-number">2.4</span> R functions</a>
+  <li><a href="#geometries-r2" id="toc-geometries-r2" class="nav-link" data-scroll-target="#geometries-r2"><span class="header-section-number">4.2</span> Geometries (R<sup>2</sup>)</a>
   <ul class="collapse">
-  <li><a href="#calling-functions" id="toc-calling-functions" class="nav-link" data-scroll-target="#calling-functions"><span class="header-section-number">2.4.1</span> Calling functions</a></li>
-  <li><a href="#iteration" id="toc-iteration" class="nav-link" data-scroll-target="#iteration"><span class="header-section-number">2.4.2</span> Iteration</a></li>
-  <li><a href="#creating-functions" id="toc-creating-functions" class="nav-link" data-scroll-target="#creating-functions"><span class="header-section-number">2.4.3</span> Creating functions</a></li>
+  <li><a href="#operations-on-geometries" id="toc-operations-on-geometries" class="nav-link" data-scroll-target="#operations-on-geometries"><span class="header-section-number">4.2.1</span> Operations on geometries</a></li>
   </ul></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">2.5</span> Further reading:</a></li>
+  <li><a href="#spherical-geometries-s2" id="toc-spherical-geometries-s2" class="nav-link" data-scroll-target="#spherical-geometries-s2"><span class="header-section-number">4.3</span> Spherical geometries (S<sup>2</sup>)</a>
+  <ul class="collapse">
+  <li><a href="#switching-between-s2-and-r2" id="toc-switching-between-s2-and-r2" class="nav-link" data-scroll-target="#switching-between-s2-and-r2"><span class="header-section-number">4.3.1</span> Switching between S<sup>2</sup> and R<sup>2</sup></a></li>
+  <li><a href="#operations-on-geodetic-unprojected-data" id="toc-operations-on-geodetic-unprojected-data" class="nav-link" data-scroll-target="#operations-on-geodetic-unprojected-data"><span class="header-section-number">4.3.2</span> Operations on geodetic (unprojected) data</a></li>
+  </ul></li>
+  <li><a href="#raster-arrays-and-data-cubes" id="toc-raster-arrays-and-data-cubes" class="nav-link" data-scroll-target="#raster-arrays-and-data-cubes"><span class="header-section-number">4.4</span> Raster, arrays and data cubes</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">4.5</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></h1>
 </div>
 
 
@@ -323,575 +321,257 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">R and Python differences in syntax</label></li>
-<li><label><input type="checkbox" checked="">Base R basics and good practice</label></li>
-<li><label><input type="checkbox" checked="">Functional programming in R</label></li>
+<li><label><input type="checkbox">the core packages of the R-spatial ecosystem</label></li>
+<li><label><input type="checkbox">the main/particular concepts of spatial data implemented in R</label></li>
+<li><label><input type="checkbox">manipulating vector and raster data in R (with Practical 5)</label></li>
 </ul>
-<section id="i-come-from-python-how-will-i-adapt-to-r" class="level2 page-columns page-full" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="i-come-from-python-how-will-i-adapt-to-r"><span class="header-section-number">2.1</span> I come from Python, how will I adapt to R?</h2>
-<p>Some results from the survey last week:</p>
-<div class="cell styled-output">
-<div class="cell-output-display">
+<section id="r-spatial-ecosystem" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="r-spatial-ecosystem"><span class="header-section-number">4.1</span> R-spatial ecosystem</h2>
+<blockquote class="blockquote">
+<p>R-Spatial can be loosely defined as the ecosystem of code, projects and people using R for working with and adding value to spatial data.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>The <a href="https://github.com/r-spatial">R-spatial organization</a> attempts to harmonise packages for spatial analysis in R, with a large number of R packages depending on <code>{sf}</code>, the core package for spatial data handling.</p>
+<p>A good overview of the available spatial libraries can be found in the <a href="https://cloud.r-project.org/web/views/Spatial.html">CRAN Task View: Analysis of Spatial Data</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="session_2_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="poll" title="What is your experience with the following programming languages?"><img src="session_2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672" alt="What is your experience with the following programming languages?"></a></p>
-<figcaption>What is your experience with the following programming languages?</figcaption>
-</figure>
-</div>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/R-python.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Source and interesting read: @agarwal2023r"><img src="figs/R-python.jpg" class="img-fluid figure-img" alt="Source and interesting read: Agarwal (2023)"></a></p>
-<figcaption>Source and interesting read: <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="../refs/references.html#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></figcaption>
+<p><a href="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="R-spatial ecosystem from @sf2023"><img src="https://raw.githubusercontent.com/edzer/sdsr/main/images/sf_deps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R-spatial ecosystem from E. Pebesma &amp; Bivand (2023)"></a></p>
 </figure>
 </div>
+<figcaption>R-spatial ecosystem from <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+<section id="rspatial-counterpart" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="rspatial-counterpart"><span class="header-section-number">4.1.1</span> Rspatial counterpart</h3>
+<p>Not to be confused with R-spatial, the Rspatial resources include a different way to handle geospatial data in R. The main package <code>{terra}</code> provides classes and methods to represent raster and vector objects. It works well on large data sets and is a fast implementation mainly because it is written directly in C++. This means that, for example, a Python module could also be built on top of this library<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. <code>{terra}</code> is based on C++ modules like <code>gdal</code>, <code>geos</code> and <code>ncdf</code> and builds it’s own spat module on C++ that interacts with R via the Rcpp module<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d65eb83f-66e4-4760-8c1f-29d336d1d6df_rw_1920.png?h=fffbca083a9e47c066abf46451710e59" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Source: Allison Horst"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d65eb83f-66e4-4760-8c1f-29d336d1d6df_rw_1920.png?h=fffbca083a9e47c066abf46451710e59" class="img-fluid figure-img" alt="Source: Allison Horst"></a></p>
-<figcaption>Source: <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://bakaniko.github.io/foss4g2022-getting-started-rspatial/figs/terra-libs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="{terra} set-up from @Hijmans_terra_2020"><img src="https://bakaniko.github.io/foss4g2022-getting-started-rspatial/figs/terra-libs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="{terra} set-up from Hijmans (2020)"></a></p>
 </figure>
 </div>
-</div></div><p>The very good thing is that if you come from a Python or any other interpreted language, adapting to R should not be that hard. Code syntax is of course different. For instance, Python indexes from 0 and R from 1. Unfold the note below for cheatsheet, based on <span class="citation" data-cites="julia-python-r_cheatsheet">Watson (<a href="../refs/references.html#ref-julia-python-r_cheatsheet" role="doc-biblioref">n.d.</a>)</span> of the main peculiarities.</p>
-<div class="column-page callout callout-style-default callout-note callout-titled">
+<figcaption>{terra} set-up from <span class="citation" data-cites="Hijmans_terra_2020">Hijmans (<a href="../refs/references.html#ref-Hijmans_terra_2020" role="doc-biblioref">2020</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="geometries-r2" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="geometries-r2"><span class="header-section-number">4.2</span> Geometries (R<sup>2</sup>)</h2>
+<p>As the name of the package says, <code>{sf}</code> is meant to deal with <em>simple</em> features. Polygon geometries in particular also have to follow certain rules in order to be valid simple features.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-R vs.&nbsp;Python syntax
+❓ Why are they called <em>simple</em>?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="columns">
-<div class="column" style="width:48%;">
-<p><img src="figs/R.png" class="img-fluid" style="width:25.0%"></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in"># Packages</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">library(dplyr)</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in"># Strings</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">paste('Hello', 'World')</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">paste(c('Hello', 'World'), collapse = '')</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in"># Booleans</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">TRUE &amp;&amp; FALSE == FALSE</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">FALSE || TRUE == TRUE</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">!TRUE == FALSE</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in"># Loops</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">for (i in 1:10) {</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">  print(i)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">while (x &gt; 0) {</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">  x = x - 1</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in"># Conditionals</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; 0) {</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is positive')</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">} else if (x == 0) {</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is zero')</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is negative')</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="in">ifelse(x&gt;0, 1, -1)</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="in"># Functions</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="in">f = function(x,y) {</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="in">  x2 = x * x</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="in">  x2 + sqrt(y*x2+1)</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="in">{\(x) x^2 + sqrt(y*x^2+1)}()</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="in"># Lists</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="in">myList = list(1, 2, "a", c(10,8,9))</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="in">myList[3] == "a"</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="in">myList[[4]][2] == 8</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="in">myList[length(myList)] # returns list(10,8,9)</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="in">2 %in% myList</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="in"># Ranges</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="in">seq(0, 2*pi, by = 0.1)</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="in">seq(0, 2*pi, length = 100)</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="in">0:5 == c(0, 1, 2, 3, 4, 5)</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="in"># Vectors and Matrices</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="in">A = matrix(c(1,3,2,4),nrow=2) # column-wise!</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="in">b = c(1,2)</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="in">t(A)</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">dim(A)</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="in">solve(A,b)</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">b &gt; 0 # elementwise comparison</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="in">A^2 # elementwise product</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="in">A %*% A # matrix product</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="in">which(b &gt; 0)</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="in">matrix(rep(2,100), nrow=10)</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="in">diag(4)</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="in">cbind(A,b)</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="in">rbind(A,b)</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="in"># Random numbers</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="in">set.seed(1234)</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="in">matrix(runif(100),nrow=10)</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="in">rnorm(10)</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="in">sample(10:99,1)</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="in">plot(runif(100))</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:4%;">
-
-</div><div class="column" style="width:48%;">
-<p><img src="figs/Python.png" class="img-fluid" style="width:15.0%"></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in"># Packages</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">import pandas as pd</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in"># Strings</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">'Hello' + 'World'</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">','.join(['Hello', 'World'])</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in"># Booleans</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">True and False == False</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">False or True == True</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">not True == False</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in"># Loops</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in">for i in range(1,11):</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">  print(i)</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">while x &gt; 0:</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">  x -= 1</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in"># Conditionals</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">if x &gt; 0:</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is positive')</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">elif x == 0:</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is zero')</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="in">else:</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="in">  print('x is negative')</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="in">1 if x &gt; 0 else -1</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="in"># Functions</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="in">def f(x,y):</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="in">  x2 = x * x</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">  return x2 + (y*x2+1)**(1/2)</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="in">lambda x: x**2 + (y*x**2+1)**(1/2)</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="in"># Lists</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="in">myList = [1, 2, "a", [10,8,9]]</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="in">myList[2] == "a"</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">myList[3][2] == 9</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="in">myList[-1] == [10, 8, 9]</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">2 in myList</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="in"># Ranges</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="in">import numpy as np</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="in">np.arrange(0, 2*np.pi, step=0.1)</span></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">np.linespace(0, 2*np.pi, num=100)</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">list(range(5)) == [0,1,2,3,4]</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="in"># Vectors and Matrices</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="in">A = np.array([[1, 2], [3, 4]])</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="in">b = np.array([1, 2])</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="in">np.transpose(A) # or A.T</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="in">A.shape</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="in">np.linalg.solve(A, b)</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="in">b &gt; 0 # elementwise comparison</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="in">b**2 # elementwise function application</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">A @ A # matrix product</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">np.where(b &gt; 0)</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="in">np.full((10,10), 2)</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="in">np.eye(4) # 4 x 4 identity matrix</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="in">np.hstack((A,b[:,np.newaxis]))</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="in">np.vstack((A,b))</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in"># Random numbers</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">np.random.seed(1234)</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="in">np.random.rand(10,10)</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="in">np.random.randn(10)</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="in">np.random.randint(10,100)</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(np.random.uniform(0, 1, 100))</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="base-or-vanilla-r" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="base-or-vanilla-r"><span class="header-section-number">2.2</span> Base or “vanilla” R</h2>
-<p>On the note above you find several examples of code syntax for base or “vanilla” R. R has several coding syntax. Knowing the basics of base R allows you to write R code without having to depend on other packages. However, most data science workflows are facilitated by other coding syntaxes such as <code>tidyverse</code> and <code>data.table</code>. Later in this lesson, you will be solving a practical using base R (<a href="https://loreabad6.github.io/app-dev-gis/main/practicals/Practical1/preparation/Practical1-Base-R-Functions.html">Practical 1</a>). In coming lessons, we will include the tidyverse into our workflows.</p>
-<p>Find some info on <a href="https://r4ds.hadley.nz/workflow-basics#coding-basics">coding basics right here</a>.</p>
-</section>
-<section id="basics-and-good-practice" class="level2 page-columns page-full" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="basics-and-good-practice"><span class="header-section-number">2.3</span> Basics and good practice</h2>
-<section id="r-objects" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="r-objects"><span class="header-section-number">2.3.1</span> R objects</h3>
-<p>The fundamental building blocks of R programming are objects. They can be vectors, matrices, data frames, lists and even functions.</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">my_vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 2 3 4</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.4.0; sf_use_s2() is TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">my_matrix =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(ls <span class="ot">&lt;-</span> <span class="fu">st_linestring</span>(<span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">0</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>LINESTRING (0 0, 1 1, 2 2, 0 2, 1 1, 2 0)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">my_data_frame =</span> <span class="fu">data.frame</span>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>),</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   name age
-1 Alice  25
-2   Bob  30</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">my_list =</span> <span class="fu">list</span>(<span class="at">name =</span> <span class="st">"Alice"</span>, <span class="at">age =</span> <span class="dv">25</span>, <span class="at">scores =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$name
-[1] "Alice"
-
-$age
-[1] 25
-
-$scores
-[1] 90 85 88</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">my_function =</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x <span class="sc">*</span> <span class="dv">2</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>function (x) 
-{
-    return(x * 2)
-}</code></pre>
-</div>
-</div>
-</section>
-<section id="object-naming" class="level3 page-columns page-full" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="object-naming"><span class="header-section-number">2.3.2</span> Object naming</h3>
-<p>You can create objects in R by assigning a value to a string.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
-</div>
-</div>
-<p>Probably <code>a</code> is not the object name you will be using as this is not very explanatory.</p>
-<p>There are certain rules to follow when naming objects in R:</p>
-<ul>
-<li>It should start with a letter</li>
-</ul>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>_my_object <span class="ot">=</span> <span class="st">"foo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in parse(text = input): &lt;text&gt;:2:2: unexpected input
-1: 1 = 2
-2: 1_
-    ^</code></pre>
-</div>
-</div>
-<ul>
-<li>It can only contain letters, numbers, <code>_</code>, and <code>.</code></li>
-</ul>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pa<span class="sc">$</span><span class="er">$</span>word <span class="ot">=</span> <span class="dv">1234</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in parse(text = input): &lt;text&gt;:1:4: unexpected '$'
-1: pa$$
-       ^</code></pre>
-</div>
-</div>
-<p>Once you have followed these rules, you probably want your object names to be descriptive. There are different styles for naming.</p>
-<p>If you are unfamiliar, I recommend:</p>
-<ul>
-<li>using long names that describe your object</li>
-<li>using <em>snakecase</em> (i.e.&nbsp;<code>_</code>) to separate words</li>
-<li>starting with a prefix for related objects (will help you when you use autocompletion)</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Source: Allison Horst"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/dbb99049-2916-4bc8-824f-1816f5c4f06d_rw_1920.png?h=f0b45a30ba31ad414562d1085cd6c172" class="img-fluid figure-img" alt="Source: Allison Horst"></a></p>
-<figcaption>Source: <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
+<p><img src="session_4_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div></div><div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>roads_salzburg</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>roads_linz</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>roads_salzburg_clean_topology</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>roads_salzburg_routing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="comments" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="comments"><span class="header-section-number">2.3.3</span> Comments</h3>
-<p>Everything that is behind a <code>#</code> will be ignored by R inside code chunks and in R scripts. You can use this feature to document what you are doing, especially for complex code that you need to revisit or send to someone else.</p>
-<p>To comment out text on a Quarto file you can use <code>&lt;!-- text to comment out --&gt;</code></p>
-<p>Keyboard shortcut for commenting code or text: <code>Cmd/Ctrl + Shift + C</code></p>
-</section>
-<section id="rstudio-diagnostics" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="rstudio-diagnostics"><span class="header-section-number">2.3.4</span> RStudio diagnostics</h3>
-<p>A useful tool in RStudio is that it tells you when there is something wrong in a line of code. This will show as a red <code>x</code> or a warning sign on the left side of your code chunk, next to the line number, as well as a squiggly line under the potential conflict. You can hover over them to see what the issue is.</p>
-<div class="columns">
-<div class="column" style="width:48%;">
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>my object <span class="ot">=</span> <span class="st">"foo"</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="dv">45</span> <span class="sc">==</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:48%;">
-<p><img src="figs/RStudio-diagnostics.png" class="img-fluid"></p>
-</div>
-</div>
-</section>
-<section id="saving-r-scripts-or-quarto-files" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="saving-r-scripts-or-quarto-files"><span class="header-section-number">2.3.5</span> Saving R scripts or Quarto files</h3>
-<p>Since we did the important settings last class to never save our Environment or History, every time you open RStudio, you will start from a fresh session. That means you need to <strong>save your work</strong>. This will either happen in a script (.R) or Quarto file (.qmd). Here are some tips to name your saved files:</p>
-<ul>
-<li>Make your files <strong>machine</strong> readable
-<ul>
-<li>Avoid spaces, symbols and special characters</li>
-<li>Don’t rely on case sensitivity to distinguish files (e.g.&nbsp;<code>MyScript.R</code> and <code>myscript.R</code> might be the same depending on your OS)</li>
-</ul></li>
-<li>Make your files <strong>human</strong> readable
-<ul>
-<li>Be descriptive about what is in the file</li>
-<li>You can play with the names to influence ordering in your directory, e.g.&nbsp;with numbers or a prefix+numbers to classify certain parts of your workflow (e.g.&nbsp;<code>01_load_data.R</code>, <code>02_esda.R</code>, <code>03_model.R</code>, <code>report1_methods.qmd</code>, <code>report2_validation.qmd</code>)</li>
-</ul></li>
-</ul>
-<p>How do you make sure that your R script holds all the objects in your Environment?</p>
-<ol type="1">
-<li>Save your R script (with hopefully all your work)</li>
-<li>Restart R (keyboard shortcut <code>Cmd/Ctrl + Shift + 0/F10</code>)</li>
-<li>Re-run the script (keyboard shortcut <code>Cmd/Ctrl + Shift + S</code>)</li>
-</ol>
-<p>For Quarto files, a simple solution is to Render your Quarto file. The file won’t render if it does not have all the information contained in it, and you will get an error.</p>
-</section>
-</section>
-<section id="r-functions" class="level2 page-columns page-full" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="r-functions"><span class="header-section-number">2.4</span> R functions</h2>
-<section id="calling-functions" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="calling-functions"><span class="header-section-number">2.4.1</span> Calling functions</h3>
-<p>Several built-in functions are available in base R, and are also the basis of any other library that you import into R.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">function_name</span>(<span class="at">argument1 =</span> value1, <span class="at">argument2 =</span> value2, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For instance, to generate random numbers we can use the function <code>rnorm</code>. To learn the <code>rnorm</code> arguments you can type <code>?rnorm</code> in your R console</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_is_simple</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  2.8059944 -0.1953521  2.2891290  8.3652667  0.8563811  3.0705451
- [7]  5.4577635  2.4143865  3.8744313  2.9963317  1.9907451  5.9161842
-[13]  1.0668969  5.1442755  3.6077046  0.7060836  7.2908007  4.1771496
-[19]  0.5669602  0.8667552</code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
-<p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
+<p>Is the <code>ls</code> object valid?</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  2.0597969  4.8950365  3.0948333  4.9303275 -1.6426487  6.1719643
- [7] -0.8327930  3.3158708  2.3631542  2.1803738  3.2318045 -0.4350599
-[13]  3.3324682  2.6419460  4.2544517 -2.5581995  2.6061132  3.1359110
-[19]  2.2541915  2.7964142</code></pre>
-</div>
-</div>
-<p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] -1.63238405 -0.72797084  0.11828294  0.60894821  1.40986253  0.33823546
- [7] -0.42970050  1.29934066  0.62877588 -1.86495047 -1.97189298 -1.43562378
-[13]  0.29350793  0.05250639  0.95307690 -0.36127500  1.31868992  1.12272655
-[19]  1.04792285 -1.16473385</code></pre>
-</div>
-</div>
-<p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
-</section>
-<section id="iteration" class="level3 page-columns page-full" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="iteration"><span class="header-section-number">2.4.2</span> Iteration</h3>
-<p>When you repeatedly perform on action on different objects, you might find that iteration will become a useful tool.</p>
-<p>R already does this in a way, with its recycling<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> behavior.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  2  6  6 12 10 18 14 24 18 30</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in x * c(2, 3, 4): longer object length is not a multiple of shorter
-object length</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  2  6 12  8 15 24 14 24 36 20</code></pre>
-</div>
-</div>
-<p>In a more general sense, we can make use of tools within <strong>functional programming</strong> that in essence take other functions as inputs.</p>
-<section id="apply-family" class="level4 page-columns page-full" data-number="2.4.2.1">
-<h4 data-number="2.4.2.1" class="anchored" data-anchor-id="apply-family"><span class="header-section-number">2.4.2.1</span> <code>apply</code> family</h4>
-<p>The <strong>apply family</strong> of functions apply a function to each element of an object.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_is_valid</span>(ls)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns a list, hence *l*apply</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, is.numeric)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1]]
-[1] TRUE
-
-[[2]]
-[1] TRUE
-
-[[3]]
-[1] TRUE
-
-[[4]]
-[1] TRUE
-
-[[5]]
-[1] TRUE
-
-[[6]]
-[1] TRUE
-
-[[7]]
-[1] TRUE
-
-[[8]]
-[1] TRUE
-
-[[9]]
-[1] TRUE
-
-[[10]]
-[1] TRUE</code></pre>
+</div>
+<p><a href="https://r-spatial.org/book/03-Geometries.html#sec-valid">Read more here</a></p>
 </div>
 </div>
-<p>Family members of <code>*apply()</code> are:</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns a simplified output, usually a vector or matrix, hence *s*apply</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(x, is.numeric)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># short for *v*ector apply, takes one mor argument to specify expected type</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vapply</span>(x, is.numeric, <span class="fu">logical</span>(<span class="dv">1</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
-</div>
-</div>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># applies a function to subsets of a vector, based on a factor, </span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># useful to compute a single grouped summary</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(mtcars<span class="sc">$</span>mpg, mtcars<span class="sc">$</span>cyl, mean) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       4        6        8 
-26.66364 19.74286 15.10000 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">mat =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># works with matrices and arrays, applies a function to the margins of an array or matrix</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mat, <span class="dv">1</span>, sum) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12 15 18</code></pre>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>If you are wondering where <code>mtcars</code> came from, this is a base R dataset, useful for examples, that is already pre-loaded every time you start R!</p>
-</div></div><p>Most of the functions above will have equivalents in other coding styles like the tidyverse, which will be introduced next session. The most useful function from this set however, is <code>lapply()</code> since it can help you run your own functions over a list, so keep it in mind.</p>
-</section>
-<section id="for-loops" class="level4" data-number="2.4.2.2">
-<h4 data-number="2.4.2.2" class="anchored" data-anchor-id="for-loops"><span class="header-section-number">2.4.2.2</span> <code>for</code> loops</h4>
-<p><code>for</code> loops is what is being used under the hood in the <code>apply</code> family.</p>
-<div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (element <span class="cf">in</span> vector) {</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># do something with element</span></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Although powerful, <code>for</code> loops are usually discouraged in favor of <code>apply</code> functions in R because:</p>
-<ol type="1">
-<li><em>Performance:</em> <code>apply</code> functions are generally faster than for loops because they are optimized for vectorized operations. This can lead to significant performance improvements, especially with large datasets.</li>
-<li><em>Readability:</em> <code>apply</code> functions can make code more concise and easier to read. They abstract away the loop mechanics, allowing you to focus on the operation being performed.</li>
-<li><em>Less error-prone:</em> for loops can be more prone to errors, such as off-by-one errors or incorrect indexing. You may end up if an infinite loop if there is a mistake in your code. <code>apply</code> functions reduce the risk of such mistakes by handling the iteration internally.</li>
-</ol>
-<p>This does not mean that there will be times when they are used, but probably this is done only once the alternatives are not good enough.</p>
-</section>
-</section>
-<section id="creating-functions" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="creating-functions"><span class="header-section-number">2.4.3</span> Creating functions</h3>
-<p>Functions let you automate tasks and make your code more organized. If you find yourself repeating a piece of code over and over and just changing one parameter, then you can probably replace that workflow with a function.</p>
-<p>Reasons to create a function, as explained in <span class="citation" data-cites="r_data_science">Wickham, Çetinkaya-Rundel, et al. (<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">2023</a>)</span>:</p>
+<p><code>{sf}</code> also supports a number of spatial concepts:</p>
 <ul>
-<li>When requirements change, you only update code once.</li>
-<li>Eliminate errors from copy-pasting. e.g.&nbsp;you won’t forget to update a variable name in all the places you use it.</li>
-<li>Organized code: you can name your function something intuitive to remind you of the task you are undertaking.</li>
-<li>Reuse workflows between projects, making you more efficient.</li>
+<li>Z and M coordinates (Z referes to elevation and M referes to any other measure)</li>
+<li>Empty geometries</li>
+<li>Text and binary encodings (WKT and WKB)</li>
 </ul>
-<p>An R function has three elements:</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">=</span> <span class="cf">function</span>(arguments) {</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># body</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ls <span class="co"># wkt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>LINESTRING (0 0, 1 1, 2 2, 0 2, 1 1, 2 0)</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ls <span class="sc">|&gt;</span> <span class="fu">st_as_binary</span>() <span class="co"># wkb</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 01 02 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ [26] 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 40 00
+ [51] 00 00 00 00 00 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00
+ [76] 00 00 00 00 f0 3f 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 40 00 00 00
+[101] 00 00 00 00 00</code></pre>
+</div>
+</div>
+<section id="operations-on-geometries" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="operations-on-geometries"><span class="header-section-number">4.2.1</span> Operations on geometries</h3>
+<p>Operations can be applied to a single geometry (<em>unary</em>), to a pair of geometries (<em>binary</em>) and to a set of geometries (<em>n-ary</em> operation).</p>
+<p>Results of this operations include:</p>
 <ul>
-<li><strong>name</strong></li>
-<li><strong>arguments</strong>: elements that vary across calls</li>
-<li><strong>body</strong>: code that is repeated across calls</li>
+<li>logical (<em>predicates</em>)</li>
+<li>a quantity (<em>measures</em>) area, length, distance</li>
+<li>a new geometry (<em>transformations</em>) e.g.&nbsp;centroid, buffer, bounding box, intersection, union, etc.</li>
 </ul>
+<p>Binary topological relations are represented by the binary predicates. They are implementations of the Dimensionally Extended Nine-Intersection Model (<a href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r.geocompx.org/figures/relations-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Examples of topological relations from @lovelace2019geocomputation"><img src="https://r.geocompx.org/figures/relations-1.png" class="img-fluid figure-img" alt="Examples of topological relations from Lovelace et al. (2019)"></a></p>
+<figcaption>Examples of topological relations from <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></figcaption>
+</figure>
+</div>
+<p>Read more about <a href="https://r-spatial.org/book/03-Geometries.html#sec-de9im">binary predicates here</a>.</p>
+<p>Understanding the DE-9IM relations allow you to establish your own relations. See how in <a href="https://r.geocompx.org/spatial-operations">section 4.2.4 of the Spatial Data Operations chapter</a> of <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span>.</p>
 </section>
 </section>
-<section id="further-reading" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">2.5</span> Further reading:</h2>
+<section id="spherical-geometries-s2" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="spherical-geometries-s2"><span class="header-section-number">4.3</span> Spherical geometries (S<sup>2</sup>)</h2>
+<p>The R<sup>2</sup> geometries explained above are defined on the plane. When we consider geometries on the sphere, we are talking about spherical geometries.</p>
+<p>Most of the geospatial libraries that apply spatial operations (GDAL, GEOS, etc.) do not really consider the ellipsoidal shape of the Earth. This is why the <a href="http://s2geometry.io/">s2geometry</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> library was built, to apply operations on the sphere, a better representation of the ellipsoid than the plane.</p>
+<div id="fig-s2issues" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-s2issues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_wireframe_10deg_6r.svg/1200px-Sphere_wireframe_10deg_6r.svg.png" style="width:80.0%;height:80.0%" class="figure-img"></p>
+<figcaption>Straight lines don’t really exist. The shortest line connecting two points is a great circle segment.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="We can define a full polygon which comprises the entire surface of the Earth. Source: @sf2023"><img src="https://r-spatial.org/book/08-Plotting_files/figure-html/fig-world-1.png" class="img-fluid figure-img"></a></p>
+<figcaption>We can define a full polygon which comprises the entire surface of the Earth. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: @sf2023"><img src="https://r-spatial.org/book/04-Spherical_files/figure-html/fig-antarctica-1.png" class="img-fluid figure-img"></a></p>
+<figcaption>Bounding boxes and rectangles crossing the antimeridean and validity on the sphere. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-s2issues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Particularities of spherical geometries
+</figcaption>
+</figure>
+</div>
+<section id="switching-between-s2-and-r2" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="switching-between-s2-and-r2"><span class="header-section-number">4.3.1</span> Switching between S<sup>2</sup> and R<sup>2</sup></h3>
+<p>Although S<sup>2</sup> is a more accurate way of performing spatial operations, not every operation is implemented fully yet. To switch between using <code>GEOS</code> (R<sup>2</sup>) or <code>s2</code> you can do:</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Spherical geometry (s2) switched off</code></pre>
+</div>
+</div>
+</section>
+<section id="operations-on-geodetic-unprojected-data" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="operations-on-geodetic-unprojected-data"><span class="header-section-number">4.3.2</span> Operations on geodetic (unprojected) data</h3>
+<p>When <code>sf_use_s2()</code> is <code>FALSE</code>, operations like <code>st_area()</code>, <code>st_distance()</code> and <code>st_length()</code> will compute on the geoid using GEOS instead of on the sphere, which is the default. The former is a slower computation.</p>
+<p>For unary operations that receive a distance argument, such as <code>st_buffer()</code> the distance argument is taken in meters when <code>sf_use_s2()</code> is <code>TRUE</code> and in degrees when <code>FALSE</code>, which also gives a warning.</p>
+<blockquote class="blockquote">
+<p>In case x has <strong>geodetic coordinates (lon/lat) and sf_use_s2() is TRUE</strong>, a numeric dist is taken as <strong>distance in meters</strong> and a units object in dist is converted to meters. In case x has <strong>geodetic coordinates (lon/lat) and sf_use_s2() is FALSE</strong>, a numeric dist is taken as <strong>degrees</strong>, and a units object in dist is converted to arc_degree (and warnings are issued). In case x does not have geodetic coordinates (projected) then numeric dist is assumed to have the units of the coordinates, and a units dist is converted to those if st_crs(x) is not NA.</p>
+</blockquote>
+</section>
+</section>
+<section id="raster-arrays-and-data-cubes" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="raster-arrays-and-data-cubes"><span class="header-section-number">4.4</span> Raster, arrays and data cubes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://r-spatial.org/book/01-hello_files/figure-html/fig-rastertypes01-1.png" class="img-fluid figure-img"></p>
+<figcaption>Raster types. Source: <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+<p>The packages <code>{stars}</code> <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span> and <code>{terra}</code> <span class="citation" data-cites="R-terra">(<a href="../refs/references.html#ref-R-terra" role="doc-biblioref">Hijmans, 2024b</a>)</span> are the engines to handle raster datasets in R.</p>
+<p>Due to its performance, <code>{terra}</code> took a significant role in the spatial handling of raster data.</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>terra 1.8.29</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tif <span class="ot">=</span> <span class="fu">system.file</span>(<span class="st">"tif/L7_ETMs.tif"</span>, <span class="at">package =</span> <span class="st">"stars"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast1 =</span> <span class="fu">rast</span>(tif))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class       : SpatRaster 
+dimensions  : 352, 349, 6  (nrow, ncol, nlyr)
+resolution  : 28.5, 28.5  (x, y)
+extent      : 288776.3, 298722.8, 9110729, 9120761  (xmin, xmax, ymin, ymax)
+coord. ref. : SIRGAS 2000 / UTM zone 25S (EPSG:31985) 
+source      : L7_ETMs.tif 
+names       : L7_ETMs_1, L7_ETMs_2, L7_ETMs_3, L7_ETMs_4, L7_ETMs_5, L7_ETMs_6 </code></pre>
+</div>
+</div>
+<p>Nevertheless, the <code>{stars}</code> package is not only designed to handle raster data, but mainly array representations (list of matrices), which makes it powerful for data cube representations, both for vector and raster datasets.</p>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: abind</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast2 =</span> <span class="fu">read_stars</span>(tif))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>stars object with 3 dimensions and 1 attribute
+attribute(s):
+             Min. 1st Qu. Median     Mean 3rd Qu. Max.
+L7_ETMs.tif     1      54     69 68.91242      86  255
+dimension(s):
+     from  to  offset delta                     refsys point x/y
+x       1 349  288776  28.5 SIRGAS 2000 / UTM zone 25S FALSE [x]
+y       1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE [y]
+band    1   6      NA    NA                         NA    NA    </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">rast3 =</span> <span class="fu">read_stars</span>(<span class="fu">c</span>(tif,tif), <span class="at">along =</span> <span class="st">"time"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>stars object with 4 dimensions and 1 attribute
+attribute(s), summary of first 1e+05 cells:
+             Min. 1st Qu. Median    Mean 3rd Qu. Max.
+L7_ETMs.tif    47      65     76 77.3419      87  255
+dimension(s):
+     from  to  offset delta                     refsys point x/y
+x       1 349  288776  28.5 SIRGAS 2000 / UTM zone 25S FALSE [x]
+y       1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE [y]
+band    1   6      NA    NA                         NA    NA    
+time    1   2      NA    NA                         NA    NA    </code></pre>
+</div>
+</div>
+<p>Raster-vector operations work well with both packages, where <code>{terra}</code> and <code>{stars}</code> can both interact with <code>sf</code> objects.</p>
+</section>
+<section id="further-reading" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">4.5</span> Further reading:</h2>
 <ul>
-<li><a href="https://r4ds.hadley.nz/workflow-basics">Workflow basics</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/workflow-scripts">Workflow scripts and projects</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/base-r">Base R</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/functions">Functions</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/iteration">Iteration</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://externlabs.com/blogs/r-vs-python/">R vs Python: Which Programming Language is Better For Data Science in 2023</a> by <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="../refs/references.html#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></li>
+<li><a href="https://r-spatial.org/book/part-1.html">Spatial data</a> section, chapters 1-6 <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
+<li><a href="https://r-spatial.org/book/07-Introsf.html">Introduction to sf and stars</a> chapter <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
+<li><a href="https://rspatial.org/spatial/index.html#">Spatial data with terra</a> section <span class="citation" data-cites="rspatial_hijmans">(<a href="../refs/references.html#ref-rspatial_hijmans" role="doc-biblioref">Hijmans, 2024a</a>)</span></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf7.html">Spherical geometry in sf using s2geometry</a> vignette <span class="citation" data-cites="sf2018">(<a href="../refs/references.html#ref-sf2018" role="doc-biblioref">E. Pebesma, 2018</a>)</span></li>
+<li><a href="https://r-spatial.github.io/stars/index.html"><code>{stars}</code> articles</a> in package documentation <span class="citation" data-cites="R-stars">(<a href="../refs/references.html#ref-R-stars" role="doc-biblioref">E. Pebesma, 2024</a>)</span></li>
 </ul>
 
 
@@ -1165,7 +845,10 @@ Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generati
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Read more about recycling in R <a href="https://r4ds.hadley.nz/numbers#sec-recycling">here</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="https://www.osgeo.org/projects/r-spatial/" class="uri">https://www.osgeo.org/projects/r-spatial/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In theory, but has not been implemented yet<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Even though a C++ implementation is in many cases faster, it is harder to understand, debug or modify.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The C++ s2geometry library was written by Google and is used in many of its products (e.g.&nbsp;Google Maps, Google Earth Engine, Bigquery GIS).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1736,13 +1419,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/session_1.html" class="pagination-link" aria-label="Intro to R and Co.">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span>
+      <a href="../lessons/session_3.html" class="pagination-link" aria-label="Tidy (spatial) data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lessons/session_3.html" class="pagination-link" aria-label="Tidy (spatial) data">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
+        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1766,7 +1449,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

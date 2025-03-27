@@ -203,6 +203,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -224,6 +230,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical 3</span></a>
   </div>
 </li>
       </ul>
@@ -316,7 +328,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.2 (2024-10-31)
+ version  R version 4.4.3 (2025-02-28)
  os       Ubuntu 24.04.1 LTS
  system   x86_64, linux-gnu
  ui       X11
@@ -324,24 +336,25 @@ div.csl-indent {
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2025-03-21
- pandoc   3.5 @ /usr/bin/ (via rmarkdown)
+ date     2025-03-25
+ pandoc   3.6.3 @ /usr/bin/ (via rmarkdown)
+ quarto   1.5.57 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] RSPM (R 4.4.0)
+ cli           3.6.4   2025-02-13 [1] RSPM (R 4.4.0)
  digest        0.6.37  2024-08-19 [1] RSPM (R 4.4.0)
  evaluate      1.0.3   2025-01-10 [1] RSPM (R 4.4.0)
  fastmap       1.2.0   2024-05-15 [1] RSPM (R 4.4.0)
  htmltools     0.5.8.1 2024-04-04 [1] RSPM (R 4.4.0)
  htmlwidgets   1.6.4   2023-12-06 [1] RSPM (R 4.4.0)
- jsonlite      1.8.9   2024-09-20 [1] RSPM (R 4.4.0)
+ jsonlite      1.9.0   2025-02-19 [1] RSPM (R 4.4.0)
  knitr         1.49    2024-11-08 [1] RSPM (R 4.4.0)
  rlang         1.1.5   2025-01-17 [1] RSPM (R 4.4.0)
  rmarkdown     2.29    2024-11-04 [1] RSPM (R 4.4.0)
  rstudioapi    0.17.1  2024-10-22 [1] RSPM (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] RSPM (R 4.4.0)
- xfun          0.50    2025-01-07 [1] RSPM (R 4.4.0)
+ sessioninfo   1.2.3   2025-02-05 [1] RSPM (R 4.4.0)
+ xfun          0.51    2025-02-19 [1] RSPM (R 4.4.0)
 
  [1] /usr/local/lib/R/site-library
  [2] /usr/local/lib/R/library
@@ -1244,7 +1257,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
