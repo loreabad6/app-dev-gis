@@ -1,0 +1,390 @@
+---
+subtitle: "Spatial data querying and wrangling"
+date: today
+author: 
+  - Team member 1
+  - Team member 2
+format: pdf
+---
+
+# Practical 3 {.unnumbered}
+
+Download the [raw document here](https://github.com/loreabad6/app-dev-gis/blob/main/practicals/Practical3/Practical3-Spatial-Data-Analysis.qmd)
+
+::::: columns
+::: {.column width="39%"}
+This is the first summer that Lucia will spend in Salzburg.
+She is looking to visit a mountain hut where she can spend a night during the summer and do some hiking tours.
+**Can you help her?**
+
+In this practical you will train the basics of data wrangling in R using the [`tidyverse`](https://www.tidyverse.org/packages/).
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="59%"}
+
+![](https://www.alpinfux.de/wp-content/uploads/2017/01/Hochgernhaus_Panorama-Sommer.jpg)
+:::
+:::::
+
+You will also learn how to perform spatial queries using the [`sf`](https://r-spatial.github.io/sf/) package and perform raster-vector operations using [`terra`](https://rspatial.org/index.html).
+There are extra notes on the margins to give you more information on the functions you are using.
+
+**Margin/aside/callout-box content, check online instructions**
+
+## Part 1: Data import
+
+In this section we will load a spatial dataset of mountain huts into R and clean it before using it in the next section.
+
+We can use the `sf` package to load data into R.
+In the background, `sf` will use GDAL to identify the driver to properly load the data.
+As you will see, you can load data directly from an URL but also local files.
+
+**Margin/aside/callout-box content, check online instructions**
+
+```{r}
+library(sf)
+huts = read_sf("https://github.com/loreabad6/app-dev-gis/raw/refs/heads/main/data/huts.gpkg")
+```
+
+Now we will start our data wrangling and cleaning workflows.
+For this we will use packages from the `tidyverse` but you can use base R or data.table if you have experience and feel more familiar with those.
+
+**Margin/aside/callout-box content, check online instructions**
+
+```{r}
+library(tidyverse)
+```
+
+`sf` is designed to work with base R but also with tidy workflows, so we can directly use `tidyverse` verbs to wrangle the data.
+
+If we *glimpse* into the data we can have an idea of what we are dealing with.
+
+```{r}
+huts |> 
+  glimpse()
+```
+
+Now that is a long file!
+You might have noticed some interesting patterns here and there, but what gives this data away is the first column: `osm_id`.
+
+Now if this is a spatial file, where are the coordinates?
+Take a look at the last column of the data: `geom`.
+
+```{r}
+huts$geom
+```
+
+These are basically the locations of our huts, and sf already knows to look for those coordinates in this column.
+
+To have a quick view of where your data is located, you can use the `mapview()` function from the `{mapview}` package.
+
+```{r}
+#| eval: false
+library(mapview)
+mapview(huts)
+```
+
+## Part 2: Data cleaning
+
+**Margin/aside/callout-box content, check online instructions**
+
+So now you know this is [OpenStreetMap](https://www.openstreetmap.org/#map=5/51.500/-0.100) data.
+If you have ever worked with OSM data before you will know that their nodes have several tags with their properties attached to them.
+When querying the data with R, you will get in this case the queried huts in each row with all the tags in different columns forming a data frame.
+
+Using this messy data you will be wrangling and tidying a bit so that you can work with a more manageable dataset in the next section.
+
+::: callout-important
+### Watch out!
+
+From now on, each of the code chunks below will cause and error and/or will do the desired task incorrectly.
+(Even the chunks that run without error are not correct!) You will need to find the mistake, and correct it, to complete the intended action.
+:::
+
+You will see a big amount of `NA` values in the huts data.
+That is because not all OSM tags are filled for every mountain hut, but if one hut has it, then it is included in the dataset.
+
+1.  Let's reduce the number of variables in the dataset. Let's narrow the dataset to:
+
+-   Name of the hut
+-   Elevation of the hut
+-   Capacity (no. of beds)
+-   Amenity (is it a restaurant, a bar, a self-service hut?)
+-   Operator of the hut (Alpenverein, Naturfreunde, etc.)
+-   Location of the hut (the coordinates)
+
+```{r}
+#| eval: false
+
+huts_clean = huts > 
+  select(name, ele, capacity, beds, amenity, cuisine, operator)
+huts_clean
+```
+
+
+
+::: callout-tip
+Take a close look at the result of your selection, are all the columns that you asked for there?
+What about the `geom` column?
+Did you ask for it?
+Is it anyway there?
+Let's try to get rid of it.
+
+```{r}
+# THIS CHUNK HAS NO ERROR!!!!
+huts_clean |> select(-geom)
+```
+
+Oh no!
+It is still there!
+Well, that is because of how `sf` objects work.
+The geometry column is a "sticky" column, meaning that it cannot be dropped with tidyverse verbs.
+But, we want to work with spatial data, so we are not really going to remove that column.
+😉
+:::
+
+**Margin/aside/callout-box content, check online instructions**
+
+2.  Now, let's adjust the proper variables to be numeric. We use the `mutate()` function which helps you change existing columns (if you save the result with the same column name) or to create new columns (by giving it a new column name).
+
+```{r}
+#| eval: false
+
+huts_clean = huts_clean |> 
+  mutate(
+    ele = numeric(ele),
+    capacity = numeric(capacity),
+    beds = numeric(beds)
+  )
+```
+
+
+
+3.  We will next create a new variable called "capacity_overall". This column will combine the columns "capacity" and "beds". When there is no capacity value, then the beds value will be taken. Otherwise the capacity value is taken. If both columns are `NA`, then the column will also have an `NA`. For this we can use the function `case_when()` inside the `mutate()` function.
+
+```{r}
+#| eval: false
+
+huts_clean = huts_clean |> 
+  capacity_overall = case_when(is.na(capacity) ~ beds, TRUE ~ capacity)
+```
+
+
+
+4.  Considering that the huts are located in Europe, we can project the data from WGS84 to a more appropriate CRS. Let's use the European Equal Area "EPSG:3035".
+
+```{r}
+#| eval: false
+
+huts_clean = huts_clean |> 
+  st_set_crs("EPSG:3035")
+```
+
+
+
+5.  Finally, note how we started each code chunk with: `huts_clean = huts_clean |>`.
+
+That is very redundant and can cause you trouble if you are recreating your object over and over again.
+
+We can pipe all these steps together to have one single workflow for data cleaning.
+In the code chunk below, combine the (fixed!) code.
+
+```{r}
+#| eval: false
+
+huts_clean = huts # add your fixed code here...
+```
+
+
+
+::: callout-warning
+### Checkpoint
+
+Up to this point, your clean dataset should have 4.6% of the number of columns in the original dataset.
+:::
+
+```{r}
+#| eval: false
+
+# Write code to verify that your huts_clean dataset has 4.6% 
+# of the number of columns in the huts dataset
+```
+
+
+
+## Part 3: Enrich your data
+
+So far we have used only wrangling and cleaning functions.
+Now, we are going to enrich our dataset with other spatial datasets.
+
+::: callout-important
+### Watch out!
+
+In this section, you will get a series of instructions, you should implement code to fulfil the task.
+:::
+
+1.  The huts are located in different regions. You have a `regions` dataset here: <https://github.com/loreabad6/app-dev-gis/raw/refs/heads/main/data/regions.gpkg>. Load the data using the `sf` package.
+
+```{r}
+#| eval: false
+
+regions = # load the data with the sf package. We did something similar before in Part 1.
+```
+
+
+
+2.  Now, we will perform a spatial join of the "huts_clean" data and the "regions" data. For this you can use the function `st_join()`. Remember you can check for function documentation by typing `?st_join` on the console.
+
+*Hint:* you most likely get an error when you first try to do your join.
+**READ THE ERROR MESSAGE CAREFULLY!** What does it tell you?
+
+```{r}
+#| eval: false
+
+# Write code using the st_join function to join in the information on 
+# the regions dataset to the huts_clean dataset. 
+huts_enrich = huts_clean |> 
+  st_join(...)
+```
+
+
+
+**Margin/aside/callout-box content, check online instructions**
+
+3.  Now let's add some data about maximum temperature. For this you will find a `.tif` file here: <https://github.com/loreabad6/app-dev-gis/raw/refs/heads/main/data/AUT_wc2.1_30s_tmax.tif>. You can load this raster dataset using the `rast()` function from the `{terra}` package.
+
+**Margin/aside/callout-box content, check online instructions**
+
+```{r}
+#| eval: false
+
+library(terra)
+tmax = rast()
+tmax
+```
+
+
+
+**Margin/aside/callout-box content, check online instructions**
+
+4.  Note that there are 12 layers in this dataset. These correspond to the 12 months in the year. We can change the names of the layers with:
+
+```{r}
+# you don't need to change anything here!
+names(tmax) = month.abb
+```
+
+5.  We are interested in the summer months (June, July, August, September). Let's get the mean `tmax` for these months.
+
+```{r}
+#| eval: false
+
+tmax_mean = mean(tmax[[c(...)]]) # add the summer months to subset.
+```
+
+
+
+**Margin/aside/callout-box content, check online instructions**
+
+6.  Now, let's actually add the temperature information to the hut dataset. We can use the `terra::extract()` function to do this.
+
+```{r}
+#| eval: false
+
+# We need to add the `terra::` in front of the function 
+# because of the conflict with the package tidyr
+# The first argument is the raster object and 
+# the second one can be an sf object.
+# You can include the huts_enrich object here.
+tmax_mean_huts = terra::extract()
+```
+
+
+
+If you print this data you will notice that this is a data frame with the exact number of points as the `sf` object.
+The order is the same as the one in your dataset.
+Therefore, you can add this information directly as a new column to the "huts_enrich" dataset.
+
+**Margin/aside/callout-box content, check online instructions**
+
+```{r}
+#| eval: false
+
+# add the summer mean tmax here, note that it is the second column in the data
+huts_enrich = huts_enrich |> 
+  mutate(tmax_summer = ) 
+```
+
+
+
+::: callout-warning
+### Checkpoint
+
+Up to this point, your enriched dataset should have mean "tmax" temperatures between 1.15 °C and 21.4 °C.
+:::
+
+```{r}
+#| eval: false
+
+# Write code to verify that the tmax_summer column in 
+# the huts_enrich dataset ranges between the above values
+```
+
+
+
+## Part 4: Find the dream summer hut!
+
+Remember Lucia?
+She is very excited to find the perfect hut for her.
+Now that you have a clean and enriched dataset, you can help her find it!
+
+Here are her requirements:
+
+-   The hut should be at a good enough altitude to enjoy the views, she thinks **huts above 800 m** should be good enough!
+-   Temperature is also an important factor for Lucia. She wants to escape the heat from the valley but not freeze at the top! The **maximum temperature should be higher than 15 °C** on average over the summer months.
+-   She wants to stay in a small hut, nothing with too many other guests (otherwise it gets so hot!), but she doesn't want to be completely alone either. Something **between 10 and 30 overall capacity** sounds good for her.
+-   She needs to be sure she can actually eat at the hut, are there **huts with restaurants**?
+-   She will start close to the train station and doesn't want to drive long... what is the closest hut from Salzburg Hbf?
+
+::: {.callout-tip collapse="true"}
+Hints for the last point...
+
+-   You can find distances with `sf::st_distance()`. Create a `sf` object as `sbg_hbf = st_sfc(st_point(c("x", "y")), crs = "EPSG")`.
+-   Don't forget to handle the CRS correctly! (Set CRS and transform).
+-   You may want to create a new column first and then filter on it...
+:::
+
+Use your `huts_enrich` object and filter for Lucia's requirements.
+After filtering, you should have only one hut as a result.
+
+```{r}
+#| eval: false
+
+result = huts_enrich |> 
+  filter(...) 
+```
+
+
+
+Where is the hut located?
+Make an interactive map!
+
+```{r}
+#| eval: false
+mapview(result)
+```
+
+:::: callout-note
+## Solution 🎉
+
+**Margin/aside/callout-box content, check online instructions**
+
+
+
+::::
+
+Upload the .qmd and PDF to Blackboard (don't forget to add all your teammates/your name(s)!).
+The first team receives an extra point each in class participation 🏃
