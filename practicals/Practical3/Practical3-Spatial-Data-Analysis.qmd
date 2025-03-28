@@ -5,6 +5,8 @@ author:
   - Team member 1
   - Team member 2
 format: pdf
+execute:
+  error: true
 ---
 
 # Practical 3 {.unnumbered}
@@ -117,8 +119,6 @@ That is because not all OSM tags are filled for every mountain hut, but if one h
 -   Location of the hut (the coordinates)
 
 ```{r}
-#| eval: false
-
 huts_clean = huts > 
   select(name, ele, capacity, beds, amenity, cuisine, operator)
 huts_clean
@@ -151,8 +151,6 @@ But, we want to work with spatial data, so we are not really going to remove tha
 2.  Now, let's adjust the proper variables to be numeric. We use the `mutate()` function which helps you change existing columns (if you save the result with the same column name) or to create new columns (by giving it a new column name).
 
 ```{r}
-#| eval: false
-
 huts_clean = huts_clean |> 
   mutate(
     ele = numeric(ele),
@@ -166,8 +164,6 @@ huts_clean = huts_clean |>
 3.  We will next create a new variable called "capacity_overall". This column will combine the columns "capacity" and "beds". When there is no capacity value, then the beds value will be taken. Otherwise the capacity value is taken. If both columns are `NA`, then the column will also have an `NA`. For this we can use the function `case_when()` inside the `mutate()` function.
 
 ```{r}
-#| eval: false
-
 huts_clean = huts_clean |> 
   capacity_overall = case_when(is.na(capacity) ~ beds, TRUE ~ capacity)
 ```
@@ -177,8 +173,6 @@ huts_clean = huts_clean |>
 4.  Considering that the huts are located in Europe, we can project the data from WGS84 to a more appropriate CRS. Let's use the European Equal Area "EPSG:3035".
 
 ```{r}
-#| eval: false
-
 huts_clean = huts_clean |> 
   st_set_crs("EPSG:3035")
 ```
@@ -193,8 +187,6 @@ We can pipe all these steps together to have one single workflow for data cleani
 In the code chunk below, combine the (fixed!) code.
 
 ```{r}
-#| eval: false
-
 huts_clean = huts # add your fixed code here...
 ```
 
@@ -207,8 +199,6 @@ Up to this point, your clean dataset should have 4.6% of the number of columns i
 :::
 
 ```{r}
-#| eval: false
-
 # Write code to verify that your huts_clean dataset has 4.6% 
 # of the number of columns in the huts dataset
 ```
@@ -229,8 +219,6 @@ In this section, you will get a series of instructions, you should implement cod
 1.  The huts are located in different regions. You have a `regions` dataset here: <https://github.com/loreabad6/app-dev-gis/raw/refs/heads/main/data/regions.gpkg>. Load the data using the `sf` package.
 
 ```{r}
-#| eval: false
-
 regions = # load the data with the sf package. We did something similar before in Part 1.
 ```
 
@@ -242,8 +230,6 @@ regions = # load the data with the sf package. We did something similar before i
 **READ THE ERROR MESSAGE CAREFULLY!** What does it tell you?
 
 ```{r}
-#| eval: false
-
 # Write code using the st_join function to join in the information on 
 # the regions dataset to the huts_clean dataset. 
 huts_enrich = huts_clean |> 
@@ -259,8 +245,6 @@ huts_enrich = huts_clean |>
 **Margin/aside/callout-box content, check online instructions**
 
 ```{r}
-#| eval: false
-
 library(terra)
 tmax = rast()
 tmax
@@ -280,8 +264,6 @@ names(tmax) = month.abb
 5.  We are interested in the summer months (June, July, August, September). Let's get the mean `tmax` for these months.
 
 ```{r}
-#| eval: false
-
 tmax_mean = mean(tmax[[c(...)]]) # add the summer months to subset.
 ```
 
@@ -292,8 +274,6 @@ tmax_mean = mean(tmax[[c(...)]]) # add the summer months to subset.
 6.  Now, let's actually add the temperature information to the hut dataset. We can use the `terra::extract()` function to do this.
 
 ```{r}
-#| eval: false
-
 # We need to add the `terra::` in front of the function 
 # because of the conflict with the package tidyr
 # The first argument is the raster object and 
@@ -311,8 +291,6 @@ Therefore, you can add this information directly as a new column to the "huts_en
 **Margin/aside/callout-box content, check online instructions**
 
 ```{r}
-#| eval: false
-
 # add the summer mean tmax here, note that it is the second column in the data
 huts_enrich = huts_enrich |> 
   mutate(tmax_summer = ) 
@@ -327,8 +305,6 @@ Up to this point, your enriched dataset should have mean "tmax" temperatures bet
 :::
 
 ```{r}
-#| eval: false
-
 # Write code to verify that the tmax_summer column in 
 # the huts_enrich dataset ranges between the above values
 ```
@@ -361,8 +337,6 @@ Use your `huts_enrich` object and filter for Lucia's requirements.
 After filtering, you should have only one hut as a result.
 
 ```{r}
-#| eval: false
-
 result = huts_enrich |> 
   filter(...) 
 ```
