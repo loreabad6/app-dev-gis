@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; R package development – R for reproducible spatial analysis</title>
+<title>5&nbsp; GIS: in-house and bridges – R for reproducible spatial analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lessons/session_6.html" rel="next">
+<link href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="next">
 <link href="../lessons/session_4.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -132,7 +132,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../html-styling/style.css">
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,7 +141,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,37 +188,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/session_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
   </div>
 </li>
       </ul>
@@ -234,48 +228,47 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical2/Practical2-Base-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical3/Practical3-Writing-Functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 3</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical4/Practical4-DataViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical5/Practical5-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 5</span></a>
-  </div>
-</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Annex</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final project</span></a>
+  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
@@ -292,26 +285,31 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link active" data-scroll-target="#r-packages"><span class="header-section-number">5.1</span> R packages</a></li>
-  <li><a href="#basic-r-package-structure" id="toc-basic-r-package-structure" class="nav-link" data-scroll-target="#basic-r-package-structure"><span class="header-section-number">5.2</span> Basic R package structure</a></li>
-  <li><a href="#requirements-and-good-practice" id="toc-requirements-and-good-practice" class="nav-link" data-scroll-target="#requirements-and-good-practice"><span class="header-section-number">5.3</span> Requirements and good practice</a>
+  <li><a href="#dedicated-r-packages" id="toc-dedicated-r-packages" class="nav-link active" data-scroll-target="#dedicated-r-packages"><span class="header-section-number">5.1</span> Dedicated R packages</a>
   <ul class="collapse">
-  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">5.3.1</span> Metadata</a></li>
-  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests"><span class="header-section-number">5.3.2</span> Tests</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">5.3.3</span> Documentation</a></li>
-  <li><a href="#distribution" id="toc-distribution" class="nav-link" data-scroll-target="#distribution"><span class="header-section-number">5.3.4</span> Distribution</a></li>
+  <li><a href="#earth-observation-analytics-and-remote-sensing" id="toc-earth-observation-analytics-and-remote-sensing" class="nav-link" data-scroll-target="#earth-observation-analytics-and-remote-sensing"><span class="header-section-number">5.1.1</span> Earth observation analytics and remote sensing</a></li>
+  <li><a href="#spatial-statistics" id="toc-spatial-statistics" class="nav-link" data-scroll-target="#spatial-statistics"><span class="header-section-number">5.1.2</span> Spatial statistics</a></li>
+  <li><a href="#spatial-network-analysis" id="toc-spatial-network-analysis" class="nav-link" data-scroll-target="#spatial-network-analysis"><span class="header-section-number">5.1.3</span> Spatial network analysis</a></li>
   </ul></li>
-  <li><a href="#your-first-r-package" id="toc-your-first-r-package" class="nav-link" data-scroll-target="#your-first-r-package"><span class="header-section-number">5.4</span> Your first R package!</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">5.5</span> Further reading:</a></li>
+  <li><a href="#bridges-to-external-software" id="toc-bridges-to-external-software" class="nav-link" data-scroll-target="#bridges-to-external-software"><span class="header-section-number">5.2</span> Bridges to external software</a>
+  <ul class="collapse">
+  <li><a href="#qgis" id="toc-qgis" class="nav-link" data-scroll-target="#qgis"><span class="header-section-number">5.2.1</span> QGIS</a></li>
+  <li><a href="#saga-gis" id="toc-saga-gis" class="nav-link" data-scroll-target="#saga-gis"><span class="header-section-number">5.2.2</span> SAGA GIS</a></li>
+  <li><a href="#grass-gis" id="toc-grass-gis" class="nav-link" data-scroll-target="#grass-gis"><span class="header-section-number">5.2.3</span> GRASS GIS</a></li>
+  <li><a href="#google-earth-engine-gee" id="toc-google-earth-engine-gee" class="nav-link" data-scroll-target="#google-earth-engine-gee"><span class="header-section-number">5.2.4</span> Google Earth Engine (GEE)</a></li>
+  <li><a href="#r-arcgis-bridge" id="toc-r-arcgis-bridge" class="nav-link" data-scroll-target="#r-arcgis-bridge"><span class="header-section-number">5.2.5</span> R-ArcGIS Bridge</a></li>
+  </ul></li>
+  <li><a href="#hands-on" id="toc-hands-on" class="nav-link" data-scroll-target="#hands-on"><span class="header-section-number">5.3</span> Hands-on</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">5.4</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></h1>
 </div>
 
 
@@ -330,276 +328,604 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">what R packages are and their basic structure</label></li>
-<li><label><input type="checkbox" checked="">most important elements of packaging and sharing your code</label></li>
-<li><label><input type="checkbox" checked="">how to create your first R package</label></li>
+<li><label><input type="checkbox">what packages are available in R to perform GIS analysis</label></li>
+<li><label><input type="checkbox">what packages allow you to connect to external GIS software to automate your analyses</label></li>
+<li><label><input type="checkbox">get familiar with the functions and workflows of at least one topic/package of your choice (code example for some packages provided)</label></li>
 </ul>
-<section id="r-packages" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="r-packages"><span class="header-section-number">5.1</span> R packages</h2>
-<blockquote class="blockquote">
-<p>An R package is the fundamental unit of shareable code<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-</blockquote>
-<p><strong>So why should you write a package?</strong></p>
-<ul>
-<li>to share your code with others</li>
-<li>to share data with others (e.g.&nbsp;<a href="https://jakubnowosad.com/spData/"><code>{spData}</code></a>)</li>
-<li>to automate your workflows (e.g.&nbsp;<a href="https://github.com/loreabad6/terrain"><code>{loreabad6::terrain}</code></a>)</li>
-<li>to document your work (using vignettes, e.g. <span class="citation" data-cites="Loiseau_2020">Loiseau et al. (<a href="../refs/references.html#ref-Loiseau_2020" role="doc-biblioref">2020</a>)</span> with <a href="https://github.com/FRBCesab/ecorar"><code>{ecorar}</code></a>)</li>
-<li>to become a better programmer!</li>
-</ul>
-<p><strong>Package forms</strong></p>
-<p>The set of files you get in your computer when you install a package are different to the ones you work with when you develop its <strong>source</strong> code. When you build your package, it is compressed into a single file called a <strong>bundle</strong> with extension <code>.tar.gz</code>. The way CRAN distributes packages is in their <strong>binary</strong> form. This is also a single file but unlike a bundle, it is platform specific.</p>
-<div id="fig-pkgforms" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pkgforms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://r-pkgs.org/diagrams/package-files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;5.1: Package forms: source vs.&nbsp;bundled vs.&nbsp;binary. Source: @Wickham2023"><img src="https://r-pkgs.org/diagrams/package-files.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pkgforms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.1: Package forms: source vs.&nbsp;bundled vs.&nbsp;binary. Source: <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="basic-r-package-structure" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="basic-r-package-structure"><span class="header-section-number">5.2</span> Basic R package structure</h2>
-<div id="fig-pkgstr" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pkgstr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cosimameyer.com/images/single-blog/CS_Package.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;5.2: Package development - basic structure by @meyer2022"><img src="https://cosimameyer.com/images/single-blog/CS_Package.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pkgstr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.2: Package development - basic structure by <span class="citation" data-cites="meyer2022">Meyer (<a href="../refs/references.html#ref-meyer2022" role="doc-biblioref">2022</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="requirements-and-good-practice" class="level2 page-columns page-full" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="requirements-and-good-practice"><span class="header-section-number">5.3</span> Requirements and good practice</h2>
-<p>We will go through some important elements of an R package and some advice and good practice for package development. This is by all means not a comprehensive list. For a better overview and also to get much more in depth into package development, you have the <a href="https://r-pkgs.org/">“R Packages” book</a> by <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span>.</p>
-<section id="metadata" class="level3 page-columns page-full" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="metadata"><span class="header-section-number">5.3.1</span> Metadata</h3>
-<p>Information on your package is stored in the package metadata. The <code>DESCRIPTION</code> file is the place where you will find the name of the package, its description, maintainers, version, dependencies, license, etc.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>A <a href="https://github.com/luukvdmeer/sfnetworks/blob/main/DESCRIPTION"><code>DESCRIPTION</code> file</a> in the wild.</p>
-</div></div><div id="fig-descfile" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-descfile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre id="fig-descfile"><code>Package: mypackage
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com",
-    role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or 
-    friends to pick a license
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2</code></pre>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-descfile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.3: Basic <code>DESCRIPTION</code> file structure. Source: <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span>.
-</figcaption>
-</figure>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-A note on Licenses
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>From <a href="https://luukvdmeer.github.io/my-first-r-package/guide.html">Lucas van der Meer workshop on R package creation</a>:</p>
-<blockquote class="blockquote">
-<p><strong>Every released open-source project should have a license!</strong> Without a license, the default copyright laws apply, meaning that you retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. Also, a license specifies that the software is released without any kind of warranty. Your are basically telling people: <em>“Do with it what you want, but don’t sue me if anything goes wrong!”</em>. Many licenses will also require people to attribute you once they copy parts of your code.</p>
-</blockquote>
-<p>This page has a good <a href="https://choosealicense.com/licenses/">overview of Licenses</a> to help you choose one for your project.</p>
+<p>Save the code you work on today, we will use it next week. Most importantly, try to automate the workflow using a function!</p>
 </div>
 </div>
-</section>
-<section id="tests" class="level3 page-columns page-full" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="tests"><span class="header-section-number">5.3.2</span> Tests</h3>
-<p><em>Unit</em> testing is a way to validate expected behavior of isolated source code. <em>Integration</em> testing is a way to test multiple parts of a software system as a group. In whatever form, testing is a vital for package development as it ensures your code does what you want it to do.</p>
+<p>Thank you for replying to the poll last week! Here are the results:</p>
+<div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://bilisim.io/wp-content/uploads/2023/01/unit_test_1.jpeg" class="img-fluid"></p>
-</div></div><p>Testing gives you the following benefits: - fewer bugs - better code structure - robust code</p>
-<p><img src="https://testthat.r-lib.org/logo.png" class="img-fluid" style="width:10.0%"> The package <a href="https://testthat.r-lib.org/"><code>{testthat}</code></a> is your companion for R test writing.</p>
-</section>
-<section id="documentation" class="level3 page-columns page-full" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="documentation"><span class="header-section-number">5.3.3</span> Documentation</h3>
-<p>You have learned that when you do <code>?functionname</code> you can access the help page of a specific function in a package.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>A <a href="https://github.com/luukvdmeer/sfnetworks/blob/main/R/travel.R">documented function</a> in the wild.</p>
-</div></div><div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?sfnetworks<span class="sc">::</span>st_network_travel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>When you develop a package, writing this documentation is your job! 🎉</p>
-<p>As you just saw, your code and your documentation are located in the same R file. That way, if you do any changes to your function, you will (hopefully) remember to update the documentation too!</p>
-<p><img src="https://roxygen2.r-lib.org/logo.png" class="img-fluid" style="width:10.0%"> The package <a href="https://roxygen2.r-lib.org/"><code>{roxygen2}</code></a> will help you write documentation.</p>
-<p><strong>Package website</strong></p>
-<p>Writing documentation for your functions is going to be a very good basis for you to build a website for your package.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>A <a href="https://luukvdmeer.github.io/sfnetworks/dev/reference/st_network_travel.html">documented function part of the package website</a>… in the wild.</p>
-</div></div><p>Your website can also host your package vignettes (which are also part of the package itself). Vignettes are useful to show the basic functionalities of your package, specially if there are certain functions that are used together for a specific workflow. They can be written as a Quarto article (which you are familiar with already!). They are shown as articles on the website of the package.</p>
-<p><img src="https://pkgdown.r-lib.org/logo.png" class="img-fluid" style="width:10.0%"> The package <a href="https://pkgdown.r-lib.org/"><code>{pkgdown}</code></a> will help you build your package website.</p>
-</section>
-<section id="distribution" class="level3" data-number="5.3.4">
-<h3 data-number="5.3.4" class="anchored" data-anchor-id="distribution"><span class="header-section-number">5.3.4</span> Distribution</h3>
-<p><strong>Should my package go to CRAN?</strong></p>
-<p>CRAN as you know is the repository for R packages. Here, your package will be reviewed by other people before its first release. This can be a bit of a longer process since some minimum requirements are expected. These include that your package passes checks in different R versions and OS platforms, that your examples, vignettes, tests run completely smooth without errors, etc.</p>
-<p>Once accepted, you will have certain <strong>responsibilities</strong> as package maintainer. CRAN runs automatic checks of your package, and if for some reason your package does not pass these checks, you will get a notice to fix the errors or your package will not be any more on CRAN. The usual time is two weeks.</p>
-<p>Usually, packages that go to CRAN are those that provide something novel and new to the ecosystem of available packages. If you have created a package to reproduce a very specific workflow for your project, or to accompany a research paper, this would typically not be submitted to CRAN. Those packages are usually in other type of repositories like GitHub.</p>
-<p><strong>Version control for R packages</strong></p>
-<div id="fig-git" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-git-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;5.4: Basic git workflow by Allison Horst"><img src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.4: Basic git workflow by <a href="https://allisonhorst.com/">Allison Horst</a>
-</figcaption>
+<div class="cell styled-output quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="session_5_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="poll" title="What spatial methods are you interested in?"><img src="session_5_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672" alt="What spatial methods are you interested in?"></a></p>
+<figcaption>What spatial methods are you interested in?</figcaption>
 </figure>
 </div>
-<p>You are already aware, through the various hints and practicals in the previous sessions, that GitHub or other platforms for version control are commonly used to host R packages. Version control is commonly used in software development to keep track of the changes one does to their code, and to easily revert to previous versions when something breaks.</p>
-<p>Most R packages have a GitHub or GitLab repository where the development version of the work is hosted, while also being submitted to CRAN. Having your package on GitHub or any other platform makes it easier for other people to browse the code, and is also a useful tool to collect issues or open up discussions around the package. In addition, tools like GitHub pages allow you to host the documentation of your package in a fairly easy manner.</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="session_5_files/figure-html/unnamed-chunk-1-2.png" class="lightbox" data-gallery="poll" title="What applications are you interested in?"><img src="session_5_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672" alt="What applications are you interested in?"></a></p>
+<figcaption>What applications are you interested in?</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="dedicated-r-packages" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="dedicated-r-packages"><span class="header-section-number">5.1</span> Dedicated R packages</h2>
+<p>There are several packages in R that are specialised in particular spatial analysis methods so that you can do any analysis in R directly without resorting to external software. This is by all means not an exhaustive list of all the spatial capabilities in R, but just a sample to get you started.</p>
+<section id="earth-observation-analytics-and-remote-sensing" class="level3 page-columns page-full" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="earth-observation-analytics-and-remote-sensing"><span class="header-section-number">5.1.1</span> Earth observation analytics and remote sensing</h3>
+<p>Remote sensing and Earth observation has had a big boost recently, especially since the ability to work with data out-of-memory<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Several workflows have become available to work with EO data within R to harness the statistical and visualisation capabilities of the programming language. Further, packages that allow retreival of EO data from cloud services are also available.</p>
+<section id="i.-statistical-modelling-and-machine-learning" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="i.-statistical-modelling-and-machine-learning">I. Statistical modelling and machine learning</h4>
+<p>Several packages are available to work with raster data as we saw last session, including <code>{stars}</code> and <code>{terra}</code>. One of the main use cases of raster data is to perform machine learning or statistical modelling.</p>
+<p>Resources available:</p>
+<ul>
+<li><a href="https://r-spatial.github.io/stars/articles/stars7.html">How to perform statisticall modelling with <code>{stars}</code></a></li>
+<li><a href="https://rspatial.org/rs/index.html">Basics of remote sensing and classification workflow with <code>{terra}</code></a></li>
+</ul>
 </section>
+<section id="ii.-cloud-data-and-on-demand-data-cubes" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ii.-cloud-data-and-on-demand-data-cubes">II. Cloud data and on-demand data cubes</h4>
+<p>With the advent of common standards and specifications such as the Spatio Temporal Asset Catalog (STAC), accessing data from the cloud has become much easier. Once data can be accessed in an standardised way, working with on-demand data cubes locally becomes a much easier process.</p>
+<p>The package <code>{rstac}</code> provides the workforce to fetch STAC data. This package is the basis for other packages workflows to download data, to create data cubes, or to do it all at once.</p>
+<p><img src="https://brazil-data-cube.github.io/rstac/logo.png" class="img-fluid" style="width:10.0%"> Here you will find the <a href="https://brazil-data-cube.github.io/rstac/">package documentation</a>.</p>
+<p>Another interesting package is <code>{rsi}</code>, which stands for remote sensing indices. The package basically obtains data using <code>{rstac}</code> but also connects to the <a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/">Awesome Spectral Indices</a> catalogue to fetch standardised ways to compute popular spectral indices on your data.</p>
+<p><img src="https://permian-global-research.github.io/rsi/logo.png" class="img-fluid" style="width:10.0%"> Resources for <code>{rsi}</code>:</p>
+<ul>
+<li>Package <a href="https://permian-global-research.github.io/rsi/">documentation</a></li>
+<li>Blogpost: <a href="https://geocompx.org/post/2024/rsi-bp1/index.html">An overview of the rsi R package for retrieving satellite imagery and calculating spectral indices</a> by <span class="citation" data-cites="rydzik2024">Rydzik (<a href="../refs/references.html#ref-rydzik2024" role="doc-biblioref">2024</a>)</span></li>
+</ul>
+<p>Finally, the creation of on-demand data cubes is taken care of in R using the <code>{gdalcubes}</code> package. With this package you can create data cubes from cloud resources or local files, apply data cube operations (apply functions over dimensions, filtering, computing statistics with reductions), extract time series, create training data for machine learning.</p>
+<p><img src="https://gdalcubes.github.io/source/gdalcubes_logo_small.png" class="img-fluid" style="width:10.0%"> Resources for <code>{gdalcubes}</code>:</p>
+<ul>
+<li>Package <a href="https://gdalcubes.github.io/">documentation</a></li>
+<li>Workshop: <a href="https://appelmar.github.io/CONAE_2022/ex03.html">Analyzing satellite image collections on public cloud platforms with R</a></li>
+</ul>
 </section>
-<section id="your-first-r-package" class="level2 page-columns page-full" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="your-first-r-package"><span class="header-section-number">5.4</span> Your first R package!</h2>
-<p>In this section, you will be creating your first (maybe?) R package. We will call this package <code>yournameR</code>, so for me it will be <code>lorenaR</code>.</p>
-<p>We will be using the function you wrote last week as the R code to package, so make sure to have it on hand.</p>
+<section id="iii.-all-in-one-solution" class="level4 unnumbered page-columns page-full">
+<h4 class="unnumbered anchored" data-anchor-id="iii.-all-in-one-solution">III. All-in-one solution</h4>
+<p>To concentrate all the efforts of fetching data from the cloud, creating on-demand data cubes, and performing statistical modelling or applying machine learning algorithms to the data, the <code>{sits}</code> package was created. It build upon the packages shown above and it can be seen as an all-in-one solution that simplifies the usage of satellite imagery time series. The main focus is of course on time series analysis, therefore taking the time component into account for the modelling.</p>
+<p>A typical workflow in <code>{sits}</code> would look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://e-sensing.github.io/sitsbook/images/sits_general_view.png" class="img-fluid figure-img"></p>
+<figcaption>Using time series for land classification. Source: <span class="citation" data-cites="Camara_sits_2023">Câmara et al. (<a href="../refs/references.html#ref-Camara_sits_2023" role="doc-biblioref">2023</a>)</span></figcaption>
+</figure>
+</div>
+<p><img src="https://raw.githubusercontent.com/e-sensing/sits/refs/heads/master/inst/extdata/sticker/sits_sticker.png" class="img-fluid" style="width:10.0%"> Resources for <code>{sits}</code>:</p>
+<ul>
+<li>Book: <a href="https://e-sensing.github.io/sitsbook/">sits: Satellite Image Time Series Analysis on Earth Observation Data Cubes</a></li>
+</ul>
 <div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 💻 Code at Work: Your Turn to Execute
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>We will explore the <code>{gdalcubes}</code> package in the hands-on part of this section. To do so, we follow the example from the <a href="https://loreabad6.github.io/posts/2023-10-17-stac-across-languages/">STAC across Languages</a>.</p>
 <ol type="1">
-<li>Install the relevant R packages</li>
+<li>Install the packages.</li>
 </ol>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pkgdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rstac"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gdalcubes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
-<li>Create a new RStudio project with a package structure</li>
-</ol>
-<ul>
-<li>Go to File/New Project</li>
-<li>Select New Directory -&gt; R Package</li>
-<li>Add your package name, select a directory to save (avoid a directory that is already a RStudio project).</li>
-</ul>
-<p>You can alternative create this from the console using <code>devtools::create_package("path_to_dir")</code></p>
-<ol start="3" type="1">
-<li>Load the necessary packages in the new RStudio session</li>
+<li>Call the necessary libraries</li>
 </ol>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis) <span class="co"># installed with devtools</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pkgdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstac)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gdalcubes)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Set STAC collection</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>api_url <span class="ot">=</span> <span class="st">"https://earth-search.aws.element84.com/v1"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>client <span class="ot">=</span> <span class="fu">stac</span>(api_url)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">collections</span>(client) <span class="sc">|&gt;</span> <span class="fu">get_request</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
-<li><p>Edit the <code>DESCRIPTION</code> file</p></li>
-<li><p>Open a new R script and copy the code for your function from last session. Save it in the <code>R/</code> directory.</p></li>
-<li><p>Run <code>load_all()</code> and test your function!</p></li>
-<li><p>Add dependencies</p></li>
+<li>Define query variables</li>
 </ol>
-<p>The functions you wrote last week all depend on other packages. To import those libraries into your package, you can use the function below from <code>{usethis}</code>:</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_package</span>(<span class="st">"packagename"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># collection ID</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>collection <span class="ot">=</span> <span class="st">'sentinel-2-l2a'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># coordinates</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>lon <span class="ot">=</span> <span class="co"># add your longitude coordinate of interest</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>lat <span class="ot">=</span> <span class="co"># add your latitude coordinate of interest</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>point <span class="ot">=</span> <span class="fu">st_point</span>(<span class="fu">c</span>(lon, lat))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># date range</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>time_extent <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"1970-05-01"</span>, <span class="st">"1980-10-01"</span>) <span class="co"># change times to your interest</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>cloud_cover_min <span class="ot">=</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Fetch the data</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>items <span class="ot">=</span> client  <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stac_search</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">collections =</span> collection,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">intersects =</span> point, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">datetime =</span> <span class="fu">paste0</span>(time_extent,<span class="st">"T00:00:00Z"</span>, <span class="at">collapse =</span> <span class="st">"/"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">limit =</span> <span class="dv">100</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">post_request</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">items_filter</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">filter_fn =</span> <span class="cf">function</span>(x) {x<span class="sc">$</span>properties<span class="sc">$</span><span class="st">`</span><span class="at">eo:cloud_cover</span><span class="st">`</span> <span class="sc">&lt;</span> cloud_cover_min}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">items_length</span>(items)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>View items as an sf</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we add an extra column to be able to subset the original item list</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>items_df <span class="ot">=</span> <span class="fu">items_as_sf</span>(items) <span class="sc">|&gt;</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fid =</span> <span class="fu">row_number</span>())</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># wrap function around st_as_sf and as_tibble just for nicer printing</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">st_as_sf</span>(<span class="fu">as_tibble</span>(items_df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>Set up a bounding box around lat/long coordinates</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bbox <span class="ot">=</span> point <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_sfc</span>(<span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_buffer</span>(<span class="dv">5000</span>, <span class="at">endCapStyle =</span> <span class="st">"SQUARE"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="fu">unique</span>(items_df<span class="sc">$</span><span class="st">`</span><span class="at">proj:epsg</span><span class="st">`</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_bbox</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="8" type="1">
-<li>Document your function.</li>
+<li>Create a data cube</li>
 </ol>
-<p>You can use markdown syntax. At the top of the R file fill in the following fields. Don’t forget to specify the functions you used from other packages in the <code>@importFrom</code> field</p>
-<pre><code>#' Write here a title of your function
-#'
-#' Write here a short description of your function.
-#'
-#' @param name Describe here what the name parameter does. 
-#'
-#' @return Describe here what the function returns.
-#'
-#' @examples
-#' Give here an example of how to use the function.
-#' 
-#' @importFrom package function_name
-#'
-#' @export</code></pre>
-<ol start="9" type="1">
-<li>Run <code>document()</code>.</li>
-</ol>
-<p>This will parse your function documentation and store it in a new directory called man/. It will also automatically update your NAMESPACE file to list your function as an exported object of your package.</p>
-<ol start="10" type="1">
-<li>Add a License</li>
-</ol>
-<p>Once you know which License you want to add, you can add it to your package using the <code>{usethis}</code> package functions <code>use_*_license()</code>. If you are still not versed in licensing, you can choose a permissive license, without too many restrictions (which are usually the go-to for open-source projects), such as Apache 2.0 or MIT.</p>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_apache_license</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>assets <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"green"</span>,<span class="st">"blue"</span>,<span class="st">"nir"</span>,<span class="st">"scl"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>col <span class="ot">=</span> <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features, <span class="at">asset_names =</span> assets)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>extent <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">t0 =</span> time_extent[<span class="dv">1</span>], <span class="at">t1 =</span> time_extent[<span class="dv">2</span>],</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">left =</span> bbox[<span class="st">"xmin"</span>], <span class="at">bottom =</span> bbox[<span class="st">"ymin"</span>], </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">right =</span> bbox[<span class="st">"xmax"</span>], <span class="at">top =</span> bbox[<span class="st">"ymax"</span>]</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>view <span class="ot">=</span> <span class="fu">cube_view</span>(</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">srs =</span> <span class="fu">paste0</span>(<span class="st">"epsg:"</span>, <span class="fu">unique</span>(items_df<span class="sc">$</span><span class="st">`</span><span class="at">proj:epsg</span><span class="st">`</span>)),   </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">extent =</span> extent,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">dx =</span> <span class="dv">100</span>, <span class="at">dy =</span> <span class="dv">100</span>, <span class="at">dt =</span> <span class="st">"P1D"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregation =</span> <span class="st">"median"</span>,</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">resampling =</span> <span class="st">"bilinear"</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a cloud mask</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>s2_mask <span class="ot">=</span> <span class="fu">image_mask</span>(<span class="st">"scl"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">8</span>,<span class="dv">9</span>))</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>cube <span class="ot">=</span> <span class="fu">raster_cube</span>(col, view, <span class="at">mask =</span> s2_mask)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>cube</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You can also add the license to your <code>README.md</code> file with the text:</p>
-<pre><code>## License
-
-Copyright 2025 [your name]
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</code></pre>
-<ol start="11" type="1">
-<li>Check your package</li>
+<ol start="9" type="1">
+<li>Compute the NDVI</li>
 </ol>
-<p>The <code>check()</code> function will make sure that you have filled the metadata sections correctly, that you documented your functions properly, run examples, and ultimately check if the package can be installed.</p>
-<p>Running <code>check()</code> often when developing your package is going to help you identify any bugs. When submitting your package to CRAN, your checks should be all clean!</p>
-<ol start="12" type="1">
-<li>Install your package</li>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cube_ndvi <span class="ot">=</span> <span class="fu">raster_cube</span>(col, view) <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"nir"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply_pixel</span>(<span class="fu">c</span>(<span class="st">"(nir-red)/(nir+red)"</span>), <span class="at">names=</span><span class="st">"NDVI"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="10" type="1">
+<li>Visualise the data</li>
 </ol>
-<p>Running <code>install()</code> will allow you to install and use your package!</p>
-<ol start="13" type="1">
-<li>Extras!</li>
-</ol>
-<p>If you got up to here and you don’t want to go home yet, try the next tasks:</p>
-<ul>
-<li><strong>Write unit tests.</strong> You can get the basic setup using <code>use_testthat()</code> and <code>use_test(yourfunctionname)</code>.</li>
-<li><strong>Write a vignette.</strong> Set it up using <code>use_vignette("filename-of-the-vignette")</code></li>
-<li><strong>Create a package website.</strong> You can use <code>use_pkgdown()</code> to set up the structure. You can view a local rendering with <code>build_site()</code>.</li>
-</ul>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gdalcubes_options</span>(<span class="at">parallel =</span> <span class="dv">4</span>, <span class="at">cache =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Perform an RGB composition</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>rgb <span class="ot">=</span> cube <span class="sc">|&gt;</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"blue"</span>,<span class="st">"green"</span>,<span class="st">"red"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reduce_time</span>(<span class="fu">c</span>(<span class="st">"median(blue)"</span>, <span class="st">"median(green)"</span>, <span class="st">"median(red)"</span>)) </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>rgb <span class="sc">|&gt;</span> </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">rgb =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">1</span>) </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Visualise monthly NDVI values</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>cube_ndvi <span class="sc">|&gt;</span> </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_bands</span>(<span class="st">"NDVI"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aggregate_time</span>(<span class="st">"P1M"</span>, <span class="st">"mean"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>NOW YOU!</strong>: turn this workflow into a function that takes as parameters the lat, long and time inputs. It should output either the RGB plot or the NDVI plots depending on another parameter given by the user.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="further-reading" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">5.5</span> Further reading:</h2>
+</section>
+<section id="spatial-statistics" class="level3 page-columns page-full" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="spatial-statistics"><span class="header-section-number">5.1.2</span> Spatial statistics</h3>
+<p>R is well know for its statistical capabilities, and spatial statistics is no exception. Several packages allow for full statistical analysis workflows like:</p>
+<ol type="a">
+<li>point pattern analysis using <code>{spatstat}</code>
 <ul>
-<li><a href="https://r-pkgs.org/whole-game.html">The Whole Game</a> chapter in <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span> for a quick intro to a simple package. Read the whole book to dive deeper into R package development.</li>
-<li><a href="https://r-pkgs.org/structure.html">Pacakge structure and state</a> chapter in <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span>.</li>
-<li><a href="https://r-pkgs.org/license.html">Licensing</a> chapter in <span class="citation" data-cites="Wickham2023">Hadley Wickham (<a href="../refs/references.html#ref-Wickham2023" role="doc-biblioref">2023</a>)</span>.</li>
-<li>“Sharing and organizing research products as R packages” by <span class="citation" data-cites="Vuorre_2020">Vuorre &amp; Crump (<a href="../refs/references.html#ref-Vuorre_2020" role="doc-biblioref">2020</a>)</span></li>
-<li>“Understanding the Basics of Package Writing in R” by <span class="citation" data-cites="meyer2022">Meyer (<a href="../refs/references.html#ref-meyer2022" role="doc-biblioref">2022</a>)</span></li>
-<li>“Why your research deserves to be an R package” by <span class="citation" data-cites="vreede2023">Vreede (<a href="../refs/references.html#ref-vreede2023" role="doc-biblioref">2023</a>)</span></li>
-<li><a href="https://rstudio.github.io/cheatsheets/package-development.pdf">Package development cheatsheet</a></li>
-<li><a href="https://luukvdmeer.github.io/my-first-r-package/guide.html">Create your first R package</a> workshop at the Geoinformatics PhD seminar by Lucas van der Meer</li>
+<li>Package <a href="https://spatstat.org/resources.html">resources</a></li>
+<li>Chapter: <a href="https://r-spatial.org/book/11-PointPattern.html">Point Pattern Analysis</a> in <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></li>
+</ul></li>
+<li>interpolation and geostatistics with <code>{gstat}</code>
+<ul>
+<li>Chapter: <a href="https://r-spatial.org/book/12-Interpolation.html">Spatial Interpolation</a> in <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></li>
+<li>Package <a href="https://r-spatial.github.io/gstat/">reference</a></li>
+</ul></li>
+<li>autocorrelation and spatial dependence with <code>{spdep}</code> and <code>{rgeoda}</code>
+<ul>
+<li>Chapter: <a href="https://r-spatial.org/book/14-Areal.html">Proximity and Areal Data</a> in <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></li>
+<li>Chapter: <a href="https://r-spatial.org/book/15-Measures.html">Measures of Spatial Autocorrelation</a> in <span class="citation" data-cites="sf2023">E. Pebesma &amp; Bivand (<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">2023</a>)</span></li>
+<li><code>{rgeoda}</code>package <a href="https://geodacenter.github.io/rgeoda/">documentation</a></li>
+<li><code>{spdep}</code> package <a href="https://r-spatial.github.io/spdep/">documentation</a></li>
+<li>Tidyverse friendly package <a href="https://sfdep.josiahparry.com/"><code>{sfdep}</code> documentation</a></li>
+</ul></li>
+<li>… many others (see further reading)</li>
+</ol>
+<div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💻 Code at Work: Your Turn to Execute
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Here we will perform some exploratory data analysis as shown in the documentation of the <code>{rgeoda}</code> package. This is based on the <a href="https://geodacenter.github.io/rgeoda/articles/rgeoda_tutorial.html">tutorial on the <code>{rgeoda}</code> package website</a>.</p>
+<ol type="1">
+<li>Install packages</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rgeoda"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"patchwork"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sfdep"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Load packages</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sfdep)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rgeoda)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>View the data to analyse</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(guerry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Compute local indicators of spatial association (LISA) for the variable “Population per Crime against persons”</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>queen_w <span class="ot">=</span> <span class="fu">queen_weights</span>(guerry)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>lisa <span class="ot">=</span> rgeoda<span class="sc">::</span><span class="fu">local_moran</span>(queen_w,  guerry[<span class="st">'crime_pers'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Compute LISA clusters and p-values - Locan Moran</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>guerry_lisa <span class="ot">=</span> guerry <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">lisa_clusters =</span> <span class="fu">as.factor</span>(<span class="fu">lisa_clusters</span>(lisa)),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">lisa_p =</span> <span class="fu">lisa_pvalues</span>(lisa)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>Create a Local Moran and significance map</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Local Moran</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>lisa_colors <span class="ot">=</span> <span class="fu">lisa_colors</span>(lisa)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>lisa_labels <span class="ot">=</span> <span class="fu">lisa_labels</span>(lisa)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>moran <span class="ot">=</span> <span class="fu">ggplot</span>(guerry_lisa) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> lisa_clusters)) <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">""</span>, <span class="at">values =</span> lisa_colors, <span class="at">labels =</span> lisa_labels) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"Local Moran Map of crime_pers"</span>)) <span class="sc">+</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Significance</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>p_labels <span class="ot">=</span> <span class="fu">rev</span>(<span class="fu">c</span>(<span class="st">"Not significant"</span>, <span class="st">"p &lt;= 0.05"</span>, <span class="st">"p &lt;= 0.01"</span>, <span class="st">"p &lt;= 0.001"</span>))</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>p_colors <span class="ot">=</span> <span class="fu">rev</span>(<span class="fu">c</span>(<span class="st">"#eeeeee"</span>, <span class="st">"#84f576"</span>, <span class="st">"#53c53c"</span>, <span class="st">"#348124"</span>))</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>p_th <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.001</span>, <span class="fl">0.01</span>, <span class="fl">0.05</span>, <span class="dv">1</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>sign <span class="ot">=</span> <span class="fu">ggplot</span>(guerry_lisa) <span class="sc">+</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">cut</span>(lisa_p, p_th))) <span class="sc">+</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">""</span>, <span class="at">values =</span> p_colors, <span class="at">labels =</span> p_labels) <span class="sc">+</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"Significance Map of crime_pers"</span>)) <span class="sc">+</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>moran <span class="sc">+</span> sign</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>NOW YOU!</strong>: turn this workflow into a function that accepts the variable to compute the LISA analysis as input and outputs the final plots.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="spatial-network-analysis" class="level3 page-columns page-full" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="spatial-network-analysis"><span class="header-section-number">5.1.3</span> Spatial network analysis</h3>
+<p>Working with spatial networks in R used to be a bit of a difficult taks before the package <a href="https://luukvdmeer.github.io/sfnetworks/dev/index.html"><code>{sfnetworks}</code></a> arrived. The aim of the package is to bridge between <code>{sf}</code> and <code>{tidygraph}</code> a tidy wrapper of the C++ <code>{igraph}</code> library which is used very often for network analysis.</p>
+<p>With <code>{sfnetworks}</code> you can perform several tasks such as:</p>
+<ul>
+<li>creating networks from points and lines</li>
+<li>network cleaning</li>
+<li>finding shortest paths</li>
+<li>route optimisation</li>
+<li>closest facility analysis</li>
+<li>creating catchment areas</li>
+<li>zoning networks based on their connectivity</li>
+<li>…</li>
+</ul>
+<p>It started as an assignment for an R course in an effort to find an open source solution to the ArcGIS network analysis capabilities and is now downloaded over 2 thousand times a month!</p>
+<p><img src="https://raw.githubusercontent.com/luukvdmeer/sfnetworks/refs/heads/main/man/figures/logo.png" class="img-fluid" style="width:10.0%"> I recommend you to work with the development version (<a href="https://luukvdmeer.github.io/sfnetworks/dev/index.html">here are the docs</a>).</p>
+<div class="column-page callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💻 Code at Work: Your Turn to Execute
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We will create a shortest facility analysis workflow with <code>{sfnetworks}</code>. This is mostly based on the package documentation, specially the vignette: <a href="https://luukvdmeer.github.io/sfnetworks/dev/articles/sfn05_routing.html">Routing on spatial networks</a></p>
+<ol type="1">
+<li>Install packages</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"luukvdmeer/sfnetworks"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidygraph"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggraph"</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dodgr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Call the libraries</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sfnetworks)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygraph)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggraph)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dodgr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Create an undirected spatial network and visualise it</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sfn <span class="ot">=</span> <span class="fu">as_sfnetwork</span>(roxel, <span class="at">directed =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">3035</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sfn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Create random facilities and sites, map them to network indices</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">9284</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>bbox <span class="ot">=</span> <span class="fu">st_convex_hull</span>(<span class="fu">st_combine</span>(sfn))</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>rdm_fac <span class="ot">=</span> <span class="fu">st_sample</span>(bbox, <span class="dv">5</span>) </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="do">## assign node values for plotting</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>rdm_fac_nodes <span class="ot">=</span> rdm_fac <span class="sc">|&gt;</span> </span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">from =</span> <span class="fu">st_nearest_feature</span>(rdm_fac, <span class="fu">st_as_sf</span>(sfn, <span class="st">"nodes"</span>)))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>rdm_sites <span class="ot">=</span> <span class="fu">st_sample</span>(bbox, <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Compute shortest paths between facilities and their closest sites</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>paths <span class="ot">=</span> <span class="fu">st_network_paths</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  sfn,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">from =</span> rdm_fac,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">to =</span> rdm_sites,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># use dodgr for many to many calculations</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">router =</span> <span class="st">"dodgr"</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(to) <span class="sc">|&gt;</span> </span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(cost <span class="sc">==</span> <span class="fu">min</span>(cost))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>Visualise the shortest trip to the closes facility</li>
+</ol>
+<div class="cell styled-output">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(sfn, <span class="at">layout =</span> <span class="st">"sf"</span>) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_sf</span>(<span class="at">color =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_sf</span>(<span class="at">color =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> paths,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">as.factor</span>(from)),</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">linewidth =</span> <span class="dv">1</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> rdm_sites, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> rdm_fac_nodes, </span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">as.factor</span>(from)),</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch =</span> <span class="dv">21</span>,</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>NOW YOU!</strong>: turn this workflow into a function that receives the facilities, the sites and the network as inputs and outputs the final plot.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="bridges-to-external-software" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="bridges-to-external-software"><span class="header-section-number">5.2</span> Bridges to external software</h2>
+<p>Of course, you can also connect to external GIS software to perform operations in R. Why would you want to do that? One good reason is to automate your workflows. Instead of following a click, click, click sequence, you can have your process in a coded written form that allows you to remember what you did as it is written and documented, but also perform the same process over and over via automation.</p>
+<section id="qgis" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="qgis"><span class="header-section-number">5.2.1</span> QGIS</h3>
+<p>One of the best bridges to GIS with R out there is the <code>{qgisprocess}</code> package, which wraps around the “qgis process” command line. There is also a <code>{qgis}</code> package with the same idea but does a function per algorithm. It does not only give you access to native QGIS processing tools but also to any other add-on you have made available via your QGIS installation including plug-ins. That means, GRASS GIS, GDAL, SAGA are fully available to you via inside R with one package!</p>
+<p><img src="https://r-spatial.github.io/qgisprocess/reference/figures/qgisprocess.svg" class="img-fluid" style="width:10.0%"> Resources to bridge with QGIS</p>
+<ul>
+<li><code>{qgisprocess}</code> package <a href="https://r-spatial.github.io/qgisprocess/articles/qgisprocess.html">documentation</a></li>
+<li><code>{qgis}</code> package <a href="https://jancaha.github.io/r_package_qgis/">documentation</a></li>
+<li><a href="https://r.geocompx.org/gis#rqgis">Section in Bridges to GIS software</a> in <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></li>
+<li>Presentation at <a href="https://florisvdh.github.io/user-2024-qgisprocess/">UseR! 2024 by Floris Vanderhaeghe</a> for more info on <code>{qgis}</code> and <code>{qgisprocess}</code></li>
+</ul>
+<p>Naturally, for this to work, you will need a QGIS installation. The package will try to find your installation automatically on your first run. However, you can also pass a custom path if you have multiple installations.</p>
+<p>Depending on your QGIS configuration, you will have access to different providers. You can look at what is available to you with <code>qgis_providers()</code>.</p>
+<!-- ::: {.callout-warning .column-page collapse="true" icon="false"} -->
+<!-- ## 💻 Code at Work: Your Turn to Execute -->
+<!-- This is the only bridge we will test on today's class since hopefully, QGIS is installed either on the lab machines or you have it on your laptops.  -->
+<!-- ::: -->
+</section>
+<section id="saga-gis" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="saga-gis"><span class="header-section-number">5.2.2</span> SAGA GIS</h3>
+<p>You also have individual bridges to GIS software naturally. If you are interested in geomorphology and hydrology, you might be very familiar with SAGA GIS. You can access SAGA algorithms via QGIS, but if you don’t have that linked or if you rather use a package with less dependencies, then <code>{Rsagacmd}</code> is for you. There is also the <code>{RSAGA}</code> package, however, this does not have so good documentation, and its development seems a bit paused.</p>
+<p><img src="https://saga-gis.sourceforge.io/_images/logo_saga.png" class="img-fluid" style="width:10.0%"> Resources for SAGA GIS bridges with R</p>
+<ul>
+<li>Package <a href="https://stevenpawley.github.io/Rsagacmd/index.html">documentation</a> for <code>{Rsagacmd}</code></li>
+<li><a href="https://r.geocompx.org/gis#saga">Section in Bridges to GIS software</a> in <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></li>
+<li>The <a href="https://github.com/r-spatial/RSAGA">GitHub repository of the <code>{RSAGA}</code> package</a></li>
+<li>A <a href="https://github.com/loreabad6/terrain">package I built to automise my workflows</a> based on <code>{RSAGA}</code></li>
+</ul>
+<p>Again, you will need to have a SAGA GIS installation or point the package to the installation path of the SAGA GIS version you would like to use.</p>
+</section>
+<section id="grass-gis" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="grass-gis"><span class="header-section-number">5.2.3</span> GRASS GIS</h3>
+<p><em>Does anyone know what GRASS<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> stands for?</em></p>
+<p>GRASS GIS has been around since the 80s and is one of the most powerful GIS out there. It has been ahead of its time for so long and it keeps up-to-date with current GIS trends. Its community of developers and users is also thriving, even having annual workshops that allow the further development of the tools supported.</p>
+<p>It is a core part of the OSGeo suite of sofware, available in loads of languages, has really good cloud-support and as one of the core members, Vero Andreo always likes to say: <strong>it rocks!</strong></p>
+<p><img src="https://grass.osgeo.org//images/logos/grasslogo.svg" class="img-fluid" style="width:10.0%"> Resources to work with GRASS GIS</p>
+<ul>
+<li><code>{rgrass}</code> package <a href="https://osgeo.github.io/rgrass/">documentation</a></li>
+<li>Tutorial: <a href="https://grass-tutorials.osgeo.org/content/tutorials/get_started/fast_track_grass_and_R.html">Get started with GRASS &amp; R: the rgrass package</a> by <span class="citation" data-cites="andreo2024grass">Andreo (<a href="../refs/references.html#ref-andreo2024grass" role="doc-biblioref">2024</a>)</span></li>
+<li>Presentation at <a href="https://veroandreo.github.io/grass-gis-talks/useR2024.html#/">UseR! 2024 by Vero Andreo</a> (core member of GRASS GIS)</li>
+<li><a href="https://r.geocompx.org/gis#grass">Section in Bridges to GIS software</a> in <span class="citation" data-cites="lovelace2019geocomputation">Lovelace et al. (<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">2019</a>)</span></li>
+<li><a href="https://rsbivand.github.io/foss4g_2022/modernizing_220822.html">Modernizing the R-GRASS interface: confronting barn-raised OSGeo libraries and the evolving R.*spatial package ecosystem</a> by <span class="citation" data-cites="bivand2022rgrass">R. Bivand (<a href="../refs/references.html#ref-bivand2022rgrass" role="doc-biblioref">2022</a>)</span></li>
+</ul>
+<p>Naturally, you will need an installation of GRASS to be able to run the algorithms with this package.</p>
+</section>
+<section id="google-earth-engine-gee" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="google-earth-engine-gee"><span class="header-section-number">5.2.4</span> Google Earth Engine (GEE)</h3>
+<p>Bindings to GEE are available via the <code>{rgee}</code> package. The efforts towards this connection were driven by a former student here at PLUS! It does not only have now the connection to GEE but also functions that build on top of it and a book with good documentation.</p>
+<div id="fig-rgee" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rgee-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://r-spatial.github.io/rgee/"><img src="https://user-images.githubusercontent.com/16768318/118376965-5f7dca80-b5cb-11eb-9a82-47876680a3e6.png" class="img-fluid figure-img"></a></p>
+<figcaption>GEE binding</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/r-earthengine/rgeeExtra/"><img src="https://user-images.githubusercontent.com/16768318/118376968-63a9e800-b5cb-11eb-83e7-3f36299e17cb.png" class="img-fluid figure-img"></a></p>
+<figcaption>Extra functions</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/r-earthengine/rgeebook"><img src="https://user-images.githubusercontent.com/16768318/118376966-60aef780-b5cb-11eb-8df2-ca70dcfe04c5.png" class="img-fluid figure-img"></a></p>
+<figcaption>Book</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rgee-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: RGEE package bundle
+</figcaption>
+</figure>
+</div>
+<p>This bridge of course requires you to have a Google Earth Engine account that will allow you to authenticate. The documentation of the package has all the required steps to get started.</p>
+</section>
+<section id="r-arcgis-bridge" class="level3" data-number="5.2.5">
+<h3 data-number="5.2.5" class="anchored" data-anchor-id="r-arcgis-bridge"><span class="header-section-number">5.2.5</span> R-ArcGIS Bridge</h3>
+<p>ESRI has also made efforts to connect to open source software. You already know how to connect ArcGIS to Python, using the <code>arcpy</code> interface. For R, ESRI has created a bundle of packages that, when you have ArcGIS Pro and a valid license, you can use to run their geoprocessing tools.</p>
+<p><img src="https://raw.githubusercontent.com/R-ArcGIS/arcgislayers/main/man/figures/logo.svg" class="img-fluid" style="width:10.0%"> Here you can find the <a href="https://developers.arcgis.com/r-bridge/">documentation to install and quick start with these packages</a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Disclaimer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I will not support your use of proprietary software in this course, but if you are interested and even if you would like to use it in your project, feel free to do so.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="hands-on" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="hands-on"><span class="header-section-number">5.3</span> Hands-on</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+README
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pick one of the “💻 Code at Work: Your Turn to Execute” sections you are most interested in and work through the code.</p>
+<p>Try to understand what the functions are doing, read the docs and get familiar with the packages and workflows.</p>
+<p><strong>There is an extra task at the end of each to automate the workflow by wrapping it in a function. Make sure to do this step, as we will use the function you create next class.</strong></p>
+<section id="exploring-other-packages" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="exploring-other-packages">Exploring other packages</h4>
+<p>If you feel like exploring other packages outside of the samples I gave or one of the bridges to external GIS software, feel free to do so. Use the materials provided under each section!</p>
+<p><strong>I recommend to play with the bridges if you already have the software installed and you are familiar with it</strong>, otherwise it might take too long for today’s class. You would also need to have a workflow inside a function by the end of the class.</p>
+<p><em>You don’t need to submit today’s work, but save it for next class!</em></p>
+</section>
+</div>
+</div>
+</section>
+<section id="further-reading" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">5.4</span> Further reading:</h2>
+<ul>
+<li><a href="https://r-spatial.org/book/part-3.html">Models for spatial data</a> section, chapters 10-15 <span class="citation" data-cites="sf2023">(<a href="../refs/references.html#ref-sf2023" role="doc-biblioref">E. Pebesma &amp; Bivand, 2023</a>)</span></li>
+<li><a href="https://r.geocompx.org/spatial-cv">Statistical learning</a> chapter <span class="citation" data-cites="lovelace2019geocomputation">(<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">Lovelace et al., 2019</a>)</span></li>
+<li><a href="https://r.geocompx.org/gis">Bridges to GIS software</a> chapter <span class="citation" data-cites="lovelace2019geocomputation">(<a href="../refs/references.html#ref-lovelace2019geocomputation" role="doc-biblioref">Lovelace et al., 2019</a>)</span></li>
+<li><a href="https://github.com/r-spatial/discuss/issues/56">Remote sensing in R</a> discussion on R-Spatial organization on GitHub</li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-agarwal2023r" class="csl-entry" role="listitem">
+Agarwal, A. (2023). <em>R vs python: Which is better for data science in 2023</em>. <a href="https://externlabs.com/blogs/r-vs-python/" class="uri">https://externlabs.com/blogs/r-vs-python/</a>.
+</div>
 <div id="ref-R-quarto" class="csl-entry" role="listitem">
 Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
 </div>
@@ -665,6 +991,9 @@ Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</e
 </div>
 <div id="ref-gstat2016" class="csl-entry" role="listitem">
 Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
+</div>
+<div id="ref-grolemund2014hands" class="csl-entry" role="listitem">
+Grolemund, G. (2014). <em>Hands-on programming with r</em>. "O’Reilly Media, Inc.".
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -856,14 +1185,15 @@ Xie, Y. (2014). Knitr: A comprehensive tool for reproducible research in <span>R
 Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed.). Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+Xie, Y. (2025). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Hadley Wickham, R packages (2nd. edition)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>R has limited memory issues and working with large raster datasets used to be difficult.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Geographic Resources Analysis Support System<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1434,13 +1764,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/session_4.html" class="pagination-link" aria-label="GIS: in-house and bridges">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span>
+      <a href="../lessons/session_4.html" class="pagination-link" aria-label="R-spatial ecosystem">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lessons/session_6.html" class="pagination-link" aria-label="Quarto dashboards">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
+        <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1448,7 +1778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Winter Semester 2024/2025</p>
+<p>Summer Semester 2025</p>
 </div>   
     <div class="nav-footer-center">
 <p>Department of Geoinformatics — Z_GIS, University of Salzburg</p>
@@ -1464,7 +1794,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
