@@ -20,7 +20,7 @@ book:
         - lessons/session_2.qmd
         - lessons/session_3.qmd
         - lessons/session_4.qmd
-        # - lessons/session_5.qmd
+        - lessons/session_5.qmd
         # - lessons/session_6.qmd
         # - lessons/session_7.qmd
     - part: "Practicals"

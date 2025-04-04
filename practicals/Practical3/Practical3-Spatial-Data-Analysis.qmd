@@ -5,8 +5,6 @@ author:
   - Team member 1
   - Team member 2
 format: pdf
-execute:
-  error: true
 ---
 
 # Practical 3 {.unnumbered}
@@ -115,6 +113,7 @@ That is because not all OSM tags are filled for every mountain hut, but if one h
 -   Elevation of the hut
 -   Capacity (no. of beds)
 -   Amenity (is it a restaurant, a bar, a self-service hut?)
+-   What type of cuisine does the restaurant have?
 -   Operator of the hut (Alpenverein, Naturfreunde, etc.)
 -   Location of the hut (the coordinates)
 
