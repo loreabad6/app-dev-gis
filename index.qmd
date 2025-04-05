@@ -24,7 +24,7 @@ This is the tentative course schedule of the lessons and assignments.
 | 28.03.25 | R-spatial ecosystem, vector, raster, data cubes | Practical 3 | End of class |
 | 04.04.25 | GIS: in-house and bridges | Hands-on |  |
 | 11.04.25 | Quarto interactive dashboards | |  |
-| 09.04.25 | R package development | Practical 2 showcase | |
+| 09.05.25 | R package development | Practical 2 showcase | |
 :::
 
 [^*]: Explanation of assignment
@@ -41,7 +41,7 @@ If you find yourself taking longer or having trouble with concepts, please ask f
 
 ## Assignments and grading
 
--   Practical exercises (\~4) – 30%
+-   Practical exercises (3) – 30%
     -   To be submitted by the end of the class or by a specific date
 -   End-of-term assignment – 50%
     -   Programming project, either R or Python or both
