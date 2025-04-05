@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -328,9 +328,9 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">what packages are available in R to perform GIS analysis</label></li>
-<li><label><input type="checkbox">what packages allow you to connect to external GIS software to automate your analyses</label></li>
-<li><label><input type="checkbox">get familiar with the functions and workflows of at least one topic/package of your choice (code example for some packages provided)</label></li>
+<li><label><input type="checkbox" checked="">what packages are available in R to perform GIS analysis</label></li>
+<li><label><input type="checkbox" checked="">what packages allow you to connect to external GIS software to automate your analyses</label></li>
+<li><label><input type="checkbox" checked="">get familiar with the functions and workflows of at least one topic/package of your choice (code example for some packages provided)</label></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -386,7 +386,7 @@ Note
 </section>
 <section id="ii.-cloud-data-and-on-demand-data-cubes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="ii.-cloud-data-and-on-demand-data-cubes">II. Cloud data and on-demand data cubes</h4>
-<p>With the advent of common standards and specifications such as the Spatio Temporal Asset Catalog (STAC), accessing data from the cloud has become much easier. Once data can be accessed in an standardised way, working with on-demand data cubes locally becomes a much easier process.</p>
+<p>With the advent of common standards and specifications such as the<a href="https://stacspec.org/en/get-involved/data-users/">Spatio Temporal Asset Catalog (STAC)</a>, accessing data from the cloud has become much easier. Once data can be accessed in an standardised way, working with on-demand data cubes locally becomes a much easier process.</p>
 <p>The package <code>{rstac}</code> provides the workforce to fetch STAC data. This package is the basis for other packages workflows to download data, to create data cubes, or to do it all at once.</p>
 <p><img src="https://brazil-data-cube.github.io/rstac/logo.png" class="img-fluid" style="width:10.0%"> Here you will find the <a href="https://brazil-data-cube.github.io/rstac/">package documentation</a>.</p>
 <p>Another interesting package is <code>{rsi}</code>, which stands for remote sensing indices. The package basically obtains data using <code>{rstac}</code> but also connects to the <a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/">Awesome Spectral Indices</a> catalogue to fetch standardised ways to compute popular spectral indices on your data.</p>
@@ -449,9 +449,10 @@ Note
 <li>Set STAC collection</li>
 </ol>
 <div class="cell styled-output">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>api_url <span class="ot">=</span> <span class="st">"https://earth-search.aws.element84.com/v1"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>client <span class="ot">=</span> <span class="fu">stac</span>(api_url)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">collections</span>(client) <span class="sc">|&gt;</span> <span class="fu">get_request</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find more APIs here: https://stacspec.org/en/about/datasets/</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>api_url <span class="ot">=</span> <span class="st">"https://earth-search.aws.element84.com/v1"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>client <span class="ot">=</span> <span class="fu">stac</span>(api_url)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">collections</span>(client) <span class="sc">|&gt;</span> <span class="fu">get_request</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li>Define query variables</li>
@@ -464,8 +465,9 @@ Note
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>lat <span class="ot">=</span> <span class="co"># add your latitude coordinate of interest</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>point <span class="ot">=</span> <span class="fu">st_point</span>(<span class="fu">c</span>(lon, lat))</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># date range</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>time_extent <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"1970-05-01"</span>, <span class="st">"1980-10-01"</span>) <span class="co"># change times to your interest</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>cloud_cover_min <span class="ot">=</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># consider that sentinel 2 is only available from 2016</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>time_extent <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"1970-05-01"</span>, <span class="st">"1980-10-01"</span>) <span class="co"># change times to your interest</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>cloud_cover_min <span class="ot">=</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li>Fetch the data</li>
@@ -1185,7 +1187,7 @@ Xie, Y. (2014). Knitr: A comprehensive tool for reproducible research in <span>R
 Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed.). Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-Xie, Y. (2025). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
 </section>
@@ -1794,7 +1796,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
