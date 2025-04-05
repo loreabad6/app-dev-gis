@@ -68,5 +68,3 @@ knitr:
     classes: styled-output
     fig-crop: true
     tidy.opts: { width.cutoff: 80 }
-    # dev.args:
-      # bg: transparent

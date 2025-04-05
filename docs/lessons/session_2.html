@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -712,30 +712,28 @@ $scores
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  3.5675386 -0.2560997  6.1458724  2.9168654  2.9216548  0.2433166
- [7]  1.1636167  5.8144756  0.4696693  2.7199154  0.9907219  2.7655687
-[13]  3.8008117  1.2778728  4.7760633  1.9412927  1.1744701  5.8251572
-[19]  1.4810303  0.1321490</code></pre>
+<pre><code> [1] 4.4590259 4.8490285 2.0103532 4.4369576 4.7314664 5.6427072 3.7955982
+ [8] 4.3320790 2.7932040 5.5114976 2.9537975 5.4752490 4.7115861 2.6394690
+[15] 6.6340710 8.5663079 5.1498755 0.9860358 2.0718076 0.6965157</code></pre>
 </div>
 </div>
 <p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  5.4374297  4.8034369  1.6567780  3.2815074  3.5938073  0.8627602
- [7]  3.8893185  1.2566853  3.3157857  3.4288752  1.3011316  1.7733035
-[13] -2.1307277  4.7955865  1.1890525  2.6649137  2.9817798  3.2363766
-[19]  3.8428123  3.1115207</code></pre>
+<pre><code> [1] 6.4913877 1.1819097 4.5658458 2.1730499 1.3146432 4.8788305 2.2332466
+ [8] 4.9424224 3.3291401 5.5598807 0.4430385 7.0359658 4.8972329 3.5241393
+[15] 1.7087629 1.7528989 0.8886115 2.0680434 1.1243603 4.1753435</code></pre>
 </div>
 </div>
 <p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.21640920 -0.39154609  0.40868048  1.98571187  0.64793075 -1.30954815
- [7]  1.69583521 -2.22469106 -1.24595346  1.20362465  0.90877570 -0.35403777
-[13]  0.79456011 -0.11285294  0.44018737  0.50413535  2.58941296 -0.68353424
-[19] -0.06224036 -1.03153104</code></pre>
+<pre><code> [1] -0.5209867 -0.6254642  0.5512395  0.8511307 -0.5137677 -0.2278019
+ [7]  2.3365677 -0.8049588 -1.0615050 -1.0391143  1.0329081  1.0300733
+[13]  0.9988107  0.9489563 -1.5915421 -0.8933481  0.5050513 -0.1362596
+[19] -0.1403410  0.6623466</code></pre>
 </div>
 </div>
 <p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
@@ -1164,7 +1162,7 @@ Xie, Y. (2014). Knitr: A comprehensive tool for reproducible research in <span>R
 Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed.). Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-Xie, Y. (2025). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
 </section>
@@ -1772,7 +1770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
