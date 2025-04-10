@@ -29,10 +29,30 @@ R Projects can either be delivered as:
       - specify for all group members: 1) How much they contributed (every group member has to contribute at least 40% of the entire work) and 2) What they contributed (programming, documentation, …)
 :::
 
-    
-### Option B. R package
+### Option B. [Quarto dashboard](https://quarto.org/docs/dashboards/)
 
-- **Automate a spatial analysis workflow**. Think of a task that you often have to do an automate it by organising your R code in a package
+- **A quarto dashboard with a spatial component**
+- Be sure to add enough how-to instructions for your dashboard as well as provide the adequate data sources and credits. 
+- You can choose the topic and data you want to work with, including other dashboards you have implemented in other courses and programming languages and "translating" them to R
+- You should include at least one interactive map, and some sort of interaction (either with {crosslink} or Shiny, see @sec-dashboards)
+
+::: {.callout-important}
+## Submission on Blackboard
+
+1. **Quarto document (.qmd)** file
+    - Make sure to include any data not publicly accessible
+    - The .qmd file should be fully reproducible
+2. **Report** including:
+    - two line description of your work
+    - (optional) a link to the published Quarto dashboard on a website (hosted on GitHub) 
+    - an [AI use disclaimer](#sec-ai)
+    - a contribution section when working in groups: 
+      - specify for all group members: 1) How much they contributed (every group member has to contribute at least 40% of the entire work) and 2) What they contributed (programming, documentation, …)
+:::
+
+### Option C. R package
+
+- **Automate a spatial analysis workflow**. Think of a task that you often have to do and automate it by organising your R code in a package
 - The package should be **released on GitHub** and **should have at least one vignette** explaining the main functionalities
     
 ::: {.callout-important}
@@ -53,10 +73,15 @@ R Projects can either be delivered as:
 
 ### Quarto report ideas
 
+- [Quarto scrollytelling](https://closeread.dev/), where you can tell a visual story of an spatial data analysis you made, think of a Story Map.
+    - See the [winners of the Closeread prize](https://posit.co/blog/closeread-prize-winners/) for inspiration. They have the repository with the code! 
 -	Multi-language Quarto file to compare and benchmark spatial analyses in R and Python. 
     - See an [example of a R and Python combined workflow here](https://loreabad6.github.io/posts/2023-10-17-stac-across-languages/) ([raw .qmd file here](https://github.com/loreabad6/loreabad6.github.io/blob/main/posts/2023-10-17-stac-across-languages/index.qmd))
--	[Quarto dashboard](https://quarto.org/docs/dashboards/) with interactive maps to visualise the results of spatial analysis or an interesting dataset.
-    - See an [example of a R spatial dashboard here](https://pub.demo.posit.team/public/nz-quakes/quakes.html)
+    
+    
+### Quarto dashboard ideas
+- [Quarto dashboard with Shiny interactivity](https://quarto.org/docs/dashboards/interactivity/shiny-r.html)
+   - As this needs a server to be published online, you can send the files to reproduce locally. The QMD should still render. 
 
 ### R package ideas 
 

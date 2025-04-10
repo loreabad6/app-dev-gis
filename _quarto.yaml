@@ -21,7 +21,7 @@ book:
         - lessons/session_3.qmd
         - lessons/session_4.qmd
         - lessons/session_5.qmd
-        # - lessons/session_6.qmd
+        - lessons/session_6.qmd
         # - lessons/session_7.qmd
     - part: "Practicals"
       chapters: 
@@ -29,7 +29,6 @@ book:
         - practicals/Practical1/preparation/Practical1-Base-R-Functions.qmd
         - practicals/Practical2/Practical2-DataViz.qmd
         - practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.qmd
-        # - practicals/Practical4/preparation/Practical4-R-package.qmd
     - part: "Annex"
       chapters: 
         - misc/x_error-handling.qmd
