@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../practicals/Practical1/Practical1-Getting-Started-R.html" rel="next">
+<link href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" rel="next">
 <link href="../lessons/session_5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -128,15 +128,25 @@ div.csl-indent {
   }
 }</script>
 <link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
 <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
 <link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
 <script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+
 <script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
 <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
 <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
 <script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
 <link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
 <script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
 
 
 <link rel="stylesheet" href="../html-styling/style.css">
@@ -198,31 +208,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentals of R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to R and Co.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R basics &amp; functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidy (spatial) data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R-spatial ecosystem</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/session_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -244,48 +254,47 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical2/Practical2-Base-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical2/Practical2-DataViz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical3/Practical3-Writing-Functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../practicals/Practical3/preparation/Practical3-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical 3</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical4/Practical4-DataViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../practicals/Practical5/Practical5-Spatial-Data-Analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical 5</span></a>
-  </div>
-</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Annex</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../misc/x_error-handling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dealing with errors</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final project</span></a>
+  <a href="../misc/x_ask_help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asking for help</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../refs/references.html" class="sidebar-item-text sidebar-link">
@@ -309,12 +318,13 @@ div.csl-indent {
   <li><a href="#dashboard-basics" id="toc-dashboard-basics" class="nav-link" data-scroll-target="#dashboard-basics"><span class="header-section-number">6.2</span> Dashboard basics</a></li>
   <li><a href="#packages-for-interactivity" id="toc-packages-for-interactivity" class="nav-link" data-scroll-target="#packages-for-interactivity"><span class="header-section-number">6.3</span> Packages for interactivity</a></li>
   <li><a href="#dashboard-example" id="toc-dashboard-example" class="nav-link" data-scroll-target="#dashboard-example"><span class="header-section-number">6.4</span> Dashboard example</a></li>
-  <li><a href="#publish-your-dashboard" id="toc-publish-your-dashboard" class="nav-link" data-scroll-target="#publish-your-dashboard"><span class="header-section-number">6.5</span> Publish your dashboard!</a>
+  <li><a href="#other-visual-ideas" id="toc-other-visual-ideas" class="nav-link" data-scroll-target="#other-visual-ideas"><span class="header-section-number">6.5</span> Other visual ideas</a></li>
+  <li><a href="#publish-your-dashboard" id="toc-publish-your-dashboard" class="nav-link" data-scroll-target="#publish-your-dashboard"><span class="header-section-number">6.6</span> Publish your dashboard!</a>
   <ul class="collapse">
-  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">6.5.1</span> Requirements</a></li>
-  <li><a href="#step-by-step-guide" id="toc-step-by-step-guide" class="nav-link" data-scroll-target="#step-by-step-guide"><span class="header-section-number">6.5.2</span> Step by step guide</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">6.6.1</span> Requirements</a></li>
+  <li><a href="#step-by-step-guide" id="toc-step-by-step-guide" class="nav-link" data-scroll-target="#step-by-step-guide"><span class="header-section-number">6.6.2</span> Step by step guide</a></li>
   </ul></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">6.6</span> Further reading:</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">6.7</span> Further reading:</a></li>
   </ul>
 </nav>
     </div>
@@ -323,7 +333,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/session_1.html">Lessons</a></li><li class="breadcrumb-item"><a href="../lessons/session_6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></h1>
+<h1 class="title"><span id="sec-dashboards" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></h1>
 </div>
 
 
@@ -342,9 +352,10 @@ div.csl-indent {
 
 <p>In this session you should learn:</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">How to create a Quarto interactive dashboard</label></li>
-<li><label><input type="checkbox" checked="">What Shiny does and how it can help you enhance your dashboard</label></li>
-<li><label><input type="checkbox" checked="">How to create a public web page for your dashboard showcase (using GitHub)</label></li>
+<li><label><input type="checkbox">How to create a Quarto interactive dashboard</label></li>
+<li><label><input type="checkbox">What Shiny does and how it can help you enhance your dashboard</label></li>
+<li><label><input type="checkbox">A glimpse of Quarto scrollytelling options with Closereads</label></li>
+<li><label><input type="checkbox">How to create a public web page for your dashboard showcase (using GitHub)</label></li>
 </ul>
 <section id="what-is-a-dashboard" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="what-is-a-dashboard"><span class="header-section-number">6.1</span> What is a dashboard?</h2>
@@ -357,7 +368,7 @@ div.csl-indent {
 <li><p>Quarto dashboards are fairly new, so even though they might not have the popularity of Shiny, they are getting used more and more.</p></li>
 <li><p>Quarto dashboards are much easier to create and learn than using Shiny.</p></li>
 </ol>
-<p>This by no means is to be interpret as a “don’t use Shiny”. Actually, the contrary. The more customisation you want to give to your dashboard and tools, the more you will be needing what Shiny apps offers. You can include Shiny inside your Quarto dashboards as a matter of fact.</p>
+<p>This by no means is to be interpret as a “don’t use Shiny”. Actually, <strong>the contrary</strong>. The more customisation you want to give to your dashboard and tools, the more you will be needing what Shiny apps offers. You can include Shiny inside your Quarto dashboards as a matter of fact.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -404,7 +415,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you decide to use Shiny in your Quarto dashboard project and have problems with deploying with the server, write all the problems you encountered down. The Quarto + Shiny dashboard should still be able to built locally!</p>
+<p>If you decide to use Shiny in your Quarto dashboard project and have problems with deploying with the server, write all the problems you encountered down. The Quarto + Shiny dashboard should still be able to build locally!</p>
 </div>
 </div>
 </section>
@@ -482,21 +493,29 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 </div></div><p>Here you have a non-exhaustive overview of some of the packages that you might find most useful.</p>
 <div class="cell styled-output">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c8b62e126267be20901a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c8b62e126267be20901a">{"x":{"filter":"none","vertical":false,"class":"display","data":[["<a href=https://rstudio.github.io/leaflet/>leaflet<\/a>","<a href=https://r-spatial.github.io/mapview/>mapview<\/a>","<a href=https://r-tmap.github.io/tmap/>tmap<\/a>","<a href=https://plotly.com/r/>plotly<\/a>","<a href=https://plotly.com/ggplot2/>plotly + ggplot2<\/a>","<a href=https://rstudio.github.io/DT/>DT<\/a>","<a href=https://glin.github.io/reactable/index.html>reactable<\/a>"],["✔️","✔️","✔️","✔️","✔️","❌","❌"],["❌","❌","❌","✔️","✔️","❌","❌"],["❌","❌","❌","❌","❌","✔️","✔️"],["✔️","❌","❌","✔️","✔️","✔️","✔️"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th rowspan=\"2\">Package<\/th>\n      <th colspan=\"3\">Application<\/th>\n      <th rowspan=\"2\">Crosstalk integration<\/th>\n    <\/tr>\n    <tr>\n      <th>Maps<\/th>\n      <th>Plots<\/th>\n      <th>Tables<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":7,"dom":"tip","columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]},{"width":"100px","targets":4},{"name":"url_label","targets":0},{"name":"app_map","targets":1},{"name":"app_plots","targets":2},{"name":"app_tables","targets":3},{"name":"crosstalk","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[7,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-e3279f7a0a46592096af" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e3279f7a0a46592096af">{"x":{"filter":"none","vertical":false,"class":"display","data":[["<a href=https://rstudio.github.io/leaflet/>leaflet<\/a>","<a href=https://r-spatial.github.io/mapview/>mapview<\/a>","<a href=https://r-tmap.github.io/tmap/>tmap<\/a>","<a href=https://plotly.com/r/>plotly<\/a>","<a href=https://plotly.com/ggplot2/>plotly + ggplot2<\/a>","<a href=https://rstudio.github.io/DT/>DT<\/a>","<a href=https://glin.github.io/reactable/index.html>reactable<\/a>"],["✔️","✔️","✔️","✔️","✔️","❌","❌"],["❌","❌","❌","✔️","✔️","❌","❌"],["❌","❌","❌","❌","❌","✔️","✔️"],["✔️","❌","❌","✔️","✔️","✔️","✔️"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th rowspan=\"2\">Package<\/th>\n      <th colspan=\"3\">Application<\/th>\n      <th rowspan=\"2\">Crosstalk integration<\/th>\n    <\/tr>\n    <tr>\n      <th>Maps<\/th>\n      <th>Plots<\/th>\n      <th>Tables<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":7,"dom":"tip","columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]},{"width":"100px","targets":4},{"name":"url_label","targets":0},{"name":"app_map","targets":1},{"name":"app_plots","targets":2},{"name":"app_tables","targets":3},{"name":"crosstalk","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[7,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="dashboard-example" class="level2" data-number="6.4">
+<section id="dashboard-example" class="level2 page-columns page-full" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="dashboard-example"><span class="header-section-number">6.4</span> Dashboard example</h2>
-<iframe width="780" height="500" src="https://loreabad6.github.io/dashboard-example/" title="Quarto dashboard example"></iframe>
+<div class="column-page">
+<iframe width="1300" height="750" src="https://loreabad6.github.io/dashboard-example/" title="Quarto dashboard example"></iframe>
+</div>
 <p><a href="https://loreabad6.github.io/dashboard-example/">Dashboard deployed on GitHub pages</a> | <a href="https://github.com/loreabad6/app-dev-gis/blob/main/misc/x_dashboard.qmd">Quarto raw file</a></p>
 </section>
-<section id="publish-your-dashboard" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="publish-your-dashboard"><span class="header-section-number">6.5</span> Publish your dashboard!</h2>
+<section id="other-visual-ideas" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="other-visual-ideas"><span class="header-section-number">6.5</span> Other visual ideas</h2>
+<p>Scrollytelling is a super nice idea to tell a story in a way that engages the user. You might be familiar with Story Maps from ArcGIS and that is exactly the scrollytelling principle.</p>
+<p>The Quarto extension <a href="https://closeread.dev/">Closeread</a> allows you to do that quite well!</p>
+<p>Here are some examples from their gallery and Closeread competition: <a href="https://posit.co/blog/closeread-prize-winners/" class="uri">https://posit.co/blog/closeread-prize-winners/</a></p>
+</section>
+<section id="publish-your-dashboard" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="publish-your-dashboard"><span class="header-section-number">6.6</span> Publish your dashboard!</h2>
 <p>The easiest way (at least for me) to publish any HTML content you create with Quarto is via GitHub pages. A free account let’s you create a website from a public repository in a very easy way.</p>
-<section id="requirements" class="level3" data-number="6.5.1">
-<h3 data-number="6.5.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">6.5.1</span> Requirements</h3>
+<section id="requirements" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">6.6.1</span> Requirements</h3>
 <ol type="1">
 <li><p>Get a <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F&amp;source=header-home">Github account</a></p></li>
 <li><p>Install <a href="https://git-scm.com/downloads">git</a> - get some guidance <a href="https://happygitwithr.com/install-git.html">here</a>.</p></li>
@@ -504,8 +523,8 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 <li><p>Set up HTTPS or SSH protocols - see <a href="https://happygitwithr.com/connect-intro">here</a> - sections 9 to 11</p></li>
 </ol>
 </section>
-<section id="step-by-step-guide" class="level3" data-number="6.5.2">
-<h3 data-number="6.5.2" class="anchored" data-anchor-id="step-by-step-guide"><span class="header-section-number">6.5.2</span> Step by step guide</h3>
+<section id="step-by-step-guide" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="step-by-step-guide"><span class="header-section-number">6.6.2</span> Step by step guide</h3>
 <section id="step-1-create-a-new-github-repository" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="step-1-create-a-new-github-repository">Step 1: Create a new GitHub repository</h4>
 <ol type="1">
@@ -570,8 +589,8 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 </section>
 </section>
 </section>
-<section id="further-reading" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">6.6</span> Further reading:</h2>
+<section id="further-reading" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">6.7</span> Further reading:</h2>
 <ul>
 <li><a href="https://quarto.org/docs/dashboards/">Quarto dashboards</a></li>
 <li><a href="https://quarto.org/docs/blog/posts/2024-11-22-dashboards-workshop/">Quarto dashboards video series</a></li>
@@ -580,12 +599,16 @@ Figure&nbsp;6.1: Dashboard components. Source: <span class="citation" data-cites
 <li><a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny basics</a> tutorial</li>
 <li><a href="https://tbep-tech.github.io/shiny-workshop/">Dashboards: Using R to create actionable science</a></li>
 <li><a href="https://learning.nceas.ucsb.edu/2024-03-ucsb-faculty/session_10.html">UCSB Faculty Seminar Series: Grow Your Data &amp; Team Science Skills: Quarto dashboards</a></li>
+<li><a href="https://closeread.dev/">Closeread</a>, a Quarto custom format for scrollytelling</li>
 <li><a href="https://happygitwithr.com/">Happy Git and GitHub for the UseR</a> book by <span class="citation" data-cites="jenny_bryan2025let">Jenny Bryan (<a href="../refs/references.html#ref-jenny_bryan2025let" role="doc-biblioref">2025</a>)</span></li>
 <li><a href="https://rstudio.github.io/cheatsheets/git-github.pdf">Using Git and GitHub in RStudio cheatsheet</a></li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-agarwal2023r" class="csl-entry" role="listitem">
+Agarwal, A. (2023). <em>R vs python: Which is better for data science in 2023</em>. <a href="https://externlabs.com/blogs/r-vs-python/" class="uri">https://externlabs.com/blogs/r-vs-python/</a>.
+</div>
 <div id="ref-R-quarto" class="csl-entry" role="listitem">
 Allaire, J., &amp; Dervieux, C. (2024). <em>Quarto: R interface to quarto markdown publishing system</em>. <a href="https://github.com/quarto-dev/quarto-r">https://github.com/quarto-dev/quarto-r</a>
 </div>
@@ -651,6 +674,9 @@ Eddelbuettel, D. (2024). <em>Digest: Create compact hash digests of r objects</e
 </div>
 <div id="ref-gstat2016" class="csl-entry" role="listitem">
 Gräler, B., Pebesma, E., &amp; Heuvelink, G. (2016). Spatio-temporal interpolation using gstat. <em>The R Journal</em>, <em>8</em>, 204–218. <a href="https://journal.r-project.org/archive/2016/RJ-2016-014/index.html">https://journal.r-project.org/archive/2016/RJ-2016-014/index.html</a>
+</div>
+<div id="ref-grolemund2014hands" class="csl-entry" role="listitem">
+Grolemund, G. (2014). <em>Hands-on programming with r</em>. "O’Reilly Media, Inc.".
 </div>
 <div id="ref-lubridate2011" class="csl-entry" role="listitem">
 Grolemund, G., &amp; Wickham, H. (2011). Dates and times made easy with <span class="nocase">lubridate</span>. <em>Journal of Statistical Software</em>, <em>40</em>(3), 1–25. <a href="https://www.jstatsoft.org/v40/i03/">https://www.jstatsoft.org/v40/i03/</a>
@@ -842,7 +868,7 @@ Xie, Y. (2014). Knitr: A comprehensive tool for reproducible research in <span>R
 Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed.). Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+Xie, Y. (2025). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
 </section>
@@ -1458,12 +1484,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/session_5.html" class="pagination-link" aria-label="R package development">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R package development</span></span>
+      <a href="../lessons/session_5.html" class="pagination-link" aria-label="GIS: in-house and bridges">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../practicals/Practical1/Practical1-Getting-Started-R.html" class="pagination-link" aria-label="Practical 1">
+      <a href="../practicals/Practical1/preparation/Practical1-Base-R-Functions.html" class="pagination-link" aria-label="Practical 1">
         <span class="nav-page-text">Practical 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1472,7 +1498,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Winter Semester 2024/2025</p>
+<p>Summer Semester 2025</p>
 </div>   
     <div class="nav-footer-center">
 <p>Department of Geoinformatics — Z_GIS, University of Salzburg</p>
@@ -1488,7 +1514,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

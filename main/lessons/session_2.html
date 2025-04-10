@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -215,6 +215,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">GIS: in-house and bridges</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/session_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quarto dashboards</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -351,7 +357,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="figs/R-python.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Source and interesting read: @agarwal2023r"><img src="figs/R-python.jpg" class="img-fluid figure-img" alt="Source and interesting read: Agarwal (2023)"></a></p>
-<figcaption>Source and interesting read: <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></figcaption>
+<figcaption>Source and interesting read: <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="../refs/references.html#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -360,7 +366,7 @@ div.csl-indent {
 <figcaption>Source: <a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
 </figure>
 </div>
-</div></div><p>The very good thing is that if you come from a Python or any other interpreted language, adapting to R should not be that hard. Code syntax is of course different. For instance, Python indexes from 0 and R from 1. Unfold the note below for cheatsheet, based on <span class="citation" data-cites="julia-python-r_cheatsheet">Watson (<a href="#ref-julia-python-r_cheatsheet" role="doc-biblioref">n.d.</a>)</span> of the main peculiarities.</p>
+</div></div><p>The very good thing is that if you come from a Python or any other interpreted language, adapting to R should not be that hard. Code syntax is of course different. For instance, Python indexes from 0 and R from 1. Unfold the note below for cheatsheet, based on <span class="citation" data-cites="julia-python-r_cheatsheet">Watson (<a href="../refs/references.html#ref-julia-python-r_cheatsheet" role="doc-biblioref">n.d.</a>)</span> of the main peculiarities.</p>
 <div class="column-page callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -712,29 +718,28 @@ $scores
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  3.1237343  3.5409618  2.7067458  2.2531855  2.9384889  3.0882830
- [7] -1.5834313  2.7902189  1.0386701  4.5171138  4.3518172  3.2531699
-[13]  5.0585939 -1.0819725  2.1363320  2.9992226  4.6487260  1.0778172
-[19] -0.2238759  0.3221441</code></pre>
+<pre><code> [1] 3.7522881 1.9175253 5.0753426 5.5485323 0.5897940 1.6246797 6.1697586
+ [8] 1.5835052 0.8340036 4.5483872 3.1691230 1.5419973 4.6020305 4.4242452
+[15] 2.5477296 2.8507865 4.1058413 1.4882255 3.8729388 3.8733444</code></pre>
 </div>
 </div>
 <p>It is not necessary to name the arguments, when you follow the intended function order. This is useful when you call functions often and already know what to expect. But be careful, this could be a source of errors.</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 3.8807724 0.1933637 2.5868197 1.8949127 1.4163163 3.3558320 1.4427583
- [8] 3.9315086 4.0182351 3.6965495 2.0339061 2.2920034 2.4654468 3.7830087
-[15] 4.9559080 2.5242608 7.3908660 0.1062845 1.4699450 6.4672570</code></pre>
+<pre><code> [1] 5.2568914 6.0994907 3.4218424 3.0532382 3.5609369 3.9902230 0.7136070
+ [8] 3.6097589 1.5302034 4.0800409 5.0086449 4.3036964 1.8804318 3.9689288
+[15] 3.5773657 3.8885775 2.7655724 3.4772708 0.6311512 1.4783737</code></pre>
 </div>
 </div>
 <p>Some functions have <strong>default</strong> values for certain arguments. That means you don’t need to explicitely define each argument, but the function is coded with a default in mind. For <code>rnorm</code>, <code>mean</code> and <code>sd</code> have the defaults <code>0</code> and <code>1</code> respectively. So you can do:</p>
 <div class="cell styled-output">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.591063111  1.334380572  0.220985088 -0.230266812  0.720150377
- [6]  1.833582451 -0.522705712 -1.611418380  0.327589951 -0.720771112
-[11]  0.006969004 -0.263402094 -0.940095505 -0.925075520 -0.800948224
-[16] -0.745863470 -1.223864544 -0.415556934  0.339048602  0.525370772</code></pre>
+<pre><code> [1] -1.66014444 -2.11715200 -0.81905700 -0.91044606 -1.68031028  0.94580627
+ [7] -0.25567588 -0.50171466  0.47033467  1.45066041  1.35485226  0.04867679
+[13]  1.14797705  0.50376185 -1.59551285 -1.50410030 -1.71209020 -0.79645217
+[19]  1.28732472 -0.21076189</code></pre>
 </div>
 </div>
 <p>You can use autocompletion tools to help you find function names or the arguments. For this you can use <code>TAB</code> when typing a function. Read more on RStudio helpful functionalities <a href="https://r4ds.hadley.nz/workflow-basics#calling-functions">here</a> or discover them yourself on the go!</p>
@@ -868,7 +873,7 @@ object length</code></pre>
 <section id="creating-functions" class="level3" data-number="2.4.3">
 <h3 data-number="2.4.3" class="anchored" data-anchor-id="creating-functions"><span class="header-section-number">2.4.3</span> Creating functions</h3>
 <p>Functions let you automate tasks and make your code more organized. If you find yourself repeating a piece of code over and over and just changing one parameter, then you can probably replace that workflow with a function.</p>
-<p>Reasons to create a function, as explained in <span class="citation" data-cites="r_data_science">Wickham, Çetinkaya-Rundel, et al. (<a href="#ref-r_data_science" role="doc-biblioref">2023</a>)</span>:</p>
+<p>Reasons to create a function, as explained in <span class="citation" data-cites="r_data_science">Wickham, Çetinkaya-Rundel, et al. (<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">2023</a>)</span>:</p>
 <ul>
 <li>When requirements change, you only update code once.</li>
 <li>Eliminate errors from copy-pasting. e.g.&nbsp;you won’t forget to update a variable name in all the places you use it.</li>
@@ -891,16 +896,16 @@ object length</code></pre>
 <section id="further-reading" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">2.5</span> Further reading:</h2>
 <ul>
-<li><a href="https://r4ds.hadley.nz/workflow-basics">Workflow basics</a> chapter <span class="citation" data-cites="r_data_science">(<a href="#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/workflow-scripts">Workflow scripts and projects</a> chapter <span class="citation" data-cites="r_data_science">(<a href="#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/base-r">Base R</a> chapter <span class="citation" data-cites="r_data_science">(<a href="#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/functions">Functions</a> chapter <span class="citation" data-cites="r_data_science">(<a href="#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://r4ds.hadley.nz/iteration">Iteration</a> chapter <span class="citation" data-cites="r_data_science">(<a href="#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
-<li><a href="https://externlabs.com/blogs/r-vs-python/">R vs Python: Which Programming Language is Better For Data Science in 2023</a> by <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/workflow-basics">Workflow basics</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/workflow-scripts">Workflow scripts and projects</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/base-r">Base R</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/functions">Functions</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://r4ds.hadley.nz/iteration">Iteration</a> chapter <span class="citation" data-cites="r_data_science">(<a href="../refs/references.html#ref-r_data_science" role="doc-biblioref">Wickham, Çetinkaya-Rundel, et al., 2023</a>)</span></li>
+<li><a href="https://externlabs.com/blogs/r-vs-python/">R vs Python: Which Programming Language is Better For Data Science in 2023</a> by <span class="citation" data-cites="agarwal2023r">Agarwal (<a href="../refs/references.html#ref-agarwal2023r" role="doc-biblioref">2023</a>)</span></li>
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-agarwal2023r" class="csl-entry" role="listitem">
 Agarwal, A. (2023). <em>R vs python: Which is better for data science in 2023</em>. <a href="https://externlabs.com/blogs/r-vs-python/" class="uri">https://externlabs.com/blogs/r-vs-python/</a>.
 </div>
@@ -1163,7 +1168,7 @@ Xie, Y. (2014). Knitr: A comprehensive tool for reproducible research in <span>R
 Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (2nd ed.). Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-Xie, Y. (2024). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
+Xie, Y. (2025). <em>Knitr: A general-purpose package for dynamic report generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>
 </div>
 </div>
 </section>
@@ -1771,7 +1776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
